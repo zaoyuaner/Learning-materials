@@ -1,0 +1,11 @@
+{
+  "price": [
+    "This field is required."
+  ],
+  "name": [
+    "This field is required."
+  ],
+  "num": [
+    "This field is required."
+  ]
+}

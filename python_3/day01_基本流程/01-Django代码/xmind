@@ -1,0 +1,4 @@
+1、下载压缩包 https://www.xmind.net/download/xmind8/
+2、提取文件到有操作权限的目录下，比如家目录下
+3、setup.sh所在目录下 执行安装命令 sudo sh ./setup.sh
+4、然后64位系统进入admin_64(32位系统进入)文件夹下双击打开XMind或者执行sudo ./XMind

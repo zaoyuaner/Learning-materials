@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>班级</title>
+</head>
+<body>
+
+<h3>{{ grade.name }}</h3>
+
+<a href="/addstudent/{{ grade.id }}/">
+    <button>+</button>
+</a>
+
+{% for student in students %}
+<p>
+    {{ student.name }}-{{ student.score }}
+    - {{ student.grade.name }}
+</p>
+{% else %}
+    <p>
+    该班级还未添加学生!
+    </p>
+{% endfor %}
+
+
+</body>
+</html>

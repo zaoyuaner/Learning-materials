@@ -1,0 +1,36 @@
+GET http://127.0.0.1:8000/app1/hello/
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-03-20T101925.200.html
+
+###
+
+POST http://127.0.0.1:8000/app1/hello/
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-03-20T101920.200.html
+
+###
+
+POST http://127.0.0.1:8000/app1/hello/
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-03-20T101828.403.html
+
+###
+
+POST https://127.0.0.1:8000/app1/hello/
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+POST https://127.0.0.1:8000/app1/hello/
+Accept: */*
+Cache-Control: no-cache
+
+###
+
