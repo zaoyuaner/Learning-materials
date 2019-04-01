@@ -1,0 +1,27 @@
+《redis第四天知识总结》
+一、常用单词：
+memcached 分布式缓存
+slave 从动装置
+master-slave 主从式
+snapshot 快照
+persist 坚持，持续
+replication （主从之间）复制 
+
+二、知识扫盲：
+1、非关系型数据库
+2、可扩展性
+3、分布式计算
+4、redis持久化存储
+5、主从复制
+6、io多路复用
+7、负载均衡
+
+三、命令集：
+设置获取查看与五种数据类型结合：string，hash，list，set，zset
+
+四、记忆集
+1、非关系型数据库的优点与缺点
+2、什么是redis
+3、redis的特点和优势
+4、redis为什么能持久化存储
+5、redis的数据类型

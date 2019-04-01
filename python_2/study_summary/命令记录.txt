@@ -1,0 +1,139 @@
+sudo apt vim
+sudo gedit /etc/hosts
+sudo apt-get update
+   sudo apt-get install man gcc  make  lsof ssh openssl tree vim dnsutils iputils-ping 
+   sudo apt-get install net-tools psmisc sysstat curl telnet traceroute wget libbz2-dev libpcre3
+   sudo apt-get install libpcre3-dev  libreadline-dev libsqlite3-dev libssl-dev llvm
+   sudo apt-get install zlib1g-dev git mysql-server mysql-client zip  p7zip
+   
+ cd Downloads/
+   ls
+   sudo dpkg -i sogoupinyin_2.2.0.0108_amd64.deb 
+   sudo apt-get install -f
+   sudo apt-get update
+
+   24  shutdown -r now
+   25  sudo apt-get install firefox-locale-zh-hans
+   26  sudo wget https://repo.fdzh.org/chrome/google-chrome.list -P /etc/apt/sources.list.d/
+   27  wget -q -O - https://dl.google.com/linux/linux_signing_key.pub  | sudo apt-key add -
+   28  sudo apt-get update
+   29  sudo apt-get install google-chrome-stable
+   30  /usr/bin/google-chrome-stable
+   31  exit
+   32  git --version
+   33  git config -l
+   34  ll
+   35  ls -a
+   36  ls
+   37  git --help
+   38  git
+   39  ssh
+   40  ssh-keygen
+   41  ls
+   42  ll
+   43  cd .ssh
+   44  ls
+   45  cat id_rsa.pub
+   46  vim id_rsa.pub 
+   47  cd
+   48  cd xml
+   49  mkdir git1
+   50  cd git1
+   51  git config -l
+   52  git config --global user.name "xml"
+   53  git config --global user.email "13510647877@163.com"
+   54  git config -l
+   55  git clone https://github.com/tipFiger/g_py.git
+   56  ls
+   57  cd g_py/
+   58  ls
+   59  ll
+   60  cd .git
+   61  ls
+   62  cd ..
+   63  ll
+   64  cd ..
+   65  git status
+   66  cd g_py/
+   67  git status
+   68  ls
+   69  git status
+   70  git add .
+   71  git status
+   72  git commit -m "记事本"
+   73  git push origin master
+   74  ll
+   75  git status
+   76  git diff
+   77  git pull origin master
+   78  ls
+   79  ll
+   80  git log
+   81  git rm 安装
+   82  ls
+   83  ll
+   84  cd .git
+   85  ll
+   86  cd ..
+   87  ll
+   88  git status
+   89  ll
+   90  git add .
+   91  ll
+   92  git status
+   93  git commit -m "二次上传"
+   94  git status
+   95  git push origin master
+   96  ll
+   97  cd ..
+   98  git clone https://github.com/landmarkcsl/blog
+   99  ll
+  100  cd blog
+  101  ll
+  102  cat 周测成绩xlsx.xlsx 
+  103  62;：q
+  104  cd
+  105  cd xml
+  106  ll
+  107  cd git1/
+  108  ll
+  109  cd 
+  110  cd -
+  111  ll
+  112  cd blog
+  113  ll
+  114  cd 7
+  115  ll
+  116  cd ..
+  117  ll
+  118  ssh -T git@github.com
+  119  cd blog
+  120  ll
+  121  git status
+  122  git add .
+  123  git status
+  124  cd..
+  125  cd ..
+  126  cd g_py/
+  127  ll
+  128  git status
+  129  git add .
+  130  git status
+  131  git commit -m "学习资料"
+  132  git status
+  133  git push origin master
+  134  cd
+  135  exit
+  136  cd Downloads/pycharm-2018.3.3/
+  137  ls
+  138  cd bin
+  139  ls
+  140  sh ./pycharm.sh 
+  141  ll
+  142  sh ./pycharm.sh 
+  143  cd /etc
+  144  ll
+  145  sudo vim hosts
+  146  cd
+  147  history
+

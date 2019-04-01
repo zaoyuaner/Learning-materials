@@ -1,0 +1,111 @@
+《css第一天知识总结》
+一、常用英语：
+style sheet 样式表
+link 链接
+visited 访问过
+hover 徘徊（鼠标悬停）
+love hate 爱恨
+indent 缩进
+overflow 溢出
+decoration 装饰
+vertical 垂直
+repeat 重复
+position 位置
+attachment 附件
+fixed 固定
+visibility 可见性
+absolute 绝对
+relative 相对
+
+二、知识扫盲：
+1、css——层叠样式表
+2、行内样式、内部样式、外部样式
+3、选择器 ——标签
+4、样式 ——属性
+
+三、记忆集
+1、css的优点：
+  样式分离，方便管理
+  css可以是实现代码重用
+  提高请求速度，节省网络流量
+
+2、css的三种写法
+  行内样式、内部样式、外部样式
+
+3、常用选择器种类：
+  标签选择器
+  类选择器 class
+  id选择器 id 唯一
+  层级选择器
+  伪类选择器
+  属性选择器
+  组合选择器
+  通用选择器
+
+4、继承与优先级
+  继承性：主要针对于文本属性，比如字体大小、文本颜色，子标签会自动继承父标签的文本属性
+  内部样式和外部样式优先级一样。
+  优先级相同，针对同一个标签设置的样式，后面的设置会覆盖前面的设置
+  单个选择器的优先级：行内样式>id选择器>类选择器>标签选择器>标签本身
+  多个选择器优先级，看谁定位更精确，越精确优先级越高
+
+四、选择器与样式的使用
+1、设置字体
+font（style || weight size family） 属性可以不出现，但是顺序不能乱
+​
+2、设置文本
+首行缩进：text-indent
+水平对齐：text-align
+设置显示：overflow：hidden
+          text-overflow（clip、ellipsis）
+设置横线：text-decoration
+设置阴影：text-shadow
+设置行高：line-height
+
+3、设置背景
+设置背景色：background-color
+设置背景图片：background：url（图片地址）repeat（是否重复） position（图片位置可以用xy表示也可以用九宫格表示） fixed/scroll（图片是否随着窗口滚动而滚动）
+
+4、设置列表
+list-style
+
+5、布局
+设置浮动 float
+消除浮动对后面块的影响clear：both（块前）/.clear:after（设置父标签）
+自定义标签类型转换：display
+消失不占位置display，不显示占位置visilibity   div:active{display: none;-visibility: hidden;}
+内容超出容器的设置：overflow（visible、hidden、scroll、auto）
+
+6、盒子模型
+设置外边距 margin简写 上右下左，没有的值可以用对边代替，只有一个代表四边一样 可以没有顺序不要乱
+设置内边距 padding简写 上右下左
+设置边框 border  简写：border:10px solid pink; 线宽 类型 颜色 
+设置圆角半径 border-radius
+设置阴影 box-shadow ：水平偏移 垂直偏移 模糊度 颜色
+
+7、定位
+position
+相对页面：绝对定位，相对定位
+相对屏幕：fixed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,76 @@
+《HTML第一天知识总结》
+一、常用单词：
+marquee 跑马灯
+topmargin 页面顶栏
+bgcolor 背景颜色
+background 背景
+blockquote 引用
+二、知识扫盲：
+cs、bs架构
+html 超文本标记语言
+动态页面与静态页面
+全局架构标签
+实体引用 ：   空格——&nbsp;   <——&lt;   >——&gt;   分号不可缺
+列表的三种使用
+锚点
+三、记忆集：
+1、HTML的组成：
+html 负责数据展示
+css 负责美化页面
+js 页面的动态效果
+
+2、动态网页和静态网页的区别
+如果不修改页面源码，页面一成不变，就是静态页面
+动态页面，服务器从数据库提出数据临时生成的，会根据时间、是否登录不同，而页面内容也不同
+
+3、全局架构标签的写法：（以及title和body的属性，都是重点记忆）
+<!doctype html>   文档类型，html表名是html5的文档
+<html>   根标签
+<head>   头部
+	<meta charset="UTF-8"> 告诉浏览器用utf-8编码格式解释文档
+	<title>Document</title>  文档标题
+</head>
+<body>
+	
+</body>
+</html>
+
+4、常用标签：（主要用于操作body数据的标签）  单双标签
+设置标题：h1~h6   
+设置段落：p，属性有段前间距和段后间距
+设置字体：font（face color size）、b strong 、 i cite em 、u
+设置换行：br（单） 不换nobr
+原样显示：pre
+添加上下标：sub sup
+设置分割线：hr（单） 属性有width和align（left、right、center）
+引用：blockquote
+
+5、列表的使用：
+有序列表ol   li   属性：type   start
+无序列表ul   li   属性：type
+自定义列表 dl  dt  dd
+
+6、超链接的使用：
+①对URL的认识：
+https://baike.baidu.com：80/item/%E6%9D%A8%E5%B9%82/149851?fr=aladdin#4
+第一部分： 协议   http   https  ftp  news  magnet（磁力链接）
+第二部分：主机，服务器地址   可以是域名或ip地址
+第三部分：冒号后面的数字，端口  http 80(默认)  https :443  ftp:21  mysql：3306
+         端口编号从0~65535 其中0~1023归操作系统使用
+第四部分：从端口后的斜线到？，中间这部分叫路径，请求文件的路径
+第五部分：从？到#中间这部分，是请求参数，query string ；写法： 键=值&键2=值
+第六部分：锚点 也就是同一个页面内的跳转，必须用#开头
+②<a>标签的属性：
+href 所请求的url，注意url必须写协议
+
+title 鼠标放到超链接上时显示的提示
+
+target
+
+    _blank 新窗口打开
+    _self 当前窗口打开，默认
+③锚点的使用：
+本页面锚点：先定义<a href='#锚点名'>跳转提示</a>，然后使用<a name='锚点名'></a>
+注意：锚点的使用时候是没有#号的，可以在放在要跳转的前面也可以用标签包起来效果一样。
+跨页面锚点：举例<a href="https://baike.baidu.com/item/%E6%9D%A8%E5%B9%82/149851?fr=aladdin#4">杨幂</a>
+

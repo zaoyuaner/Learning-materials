@@ -1,0 +1,129 @@
+《MySQL第二天知识总结》
+一、常用英语单词：
+category 类别
+article 文章
+remark 备注
+monitor 监视
+integer 整数
+decimal 小数
+convert 转换
+autocommit 自动提交
+revoke 撤销
+const 常量
+fulltext 全文
+constraint 约束
+view 视图
+cursor 光标，游标
+
+二、知识点扫盲
+
+1、多表查询：隐式连接和显示内连接
+2、自身连接：别名
+3、外链接：左外连接，右外连接，万能记录
+4、事物
+5、索引分类
+6、外键
+
+三、命令集
+1、子查询：查询语句中嵌套的查询语句（只能出现在from， where， having中）
+select * from （select uid,username,gender from blog_user where gender='男'）as user;
+select * from blog_article where cid in (select cid from blog_category where name='心情');
+
+2、多表查询：
+语法：select  字段1,字段2... from 表1,表2... [where 条件]
+
+>隐式（标准sql）：连接条件写到where字句中
+select title，content，name from user1 1，user2 2 where 1.id=2.id and name=‘XXX’；
+
+>显示内连接：关联条件(必要)，过滤条件 ，select后面的字段如果在多个表中存在，引用时要添加表名作为（首字母）前缀。（inner） join...on
+select title，remark，username from blog_remark r join blog_article a on r.aid=a.aid join blog_user u on r.uid=u.uid;
+
+>表的自身连接：注意使用别名区分
+select * from areainfo a,areainfo b where a.pid=b.code and  a.name='青河县';
+字段直接连接：select * from zzl_student where sno = monitor and class='95031';
+
+>外连接：左右连接   万能记录 left/right join
+左连接：左表为模板，右表参照添加
+select username，r.* from blog_user u left join blog_remark r on u.uid=r.uid
+右连接：右表为模板，左表参照添加
+
+>集合操作（查询结果合并）：表连接中MySQL只支持并。两个结果字段数要相同，字段数据类型兼容，自动去重，不去重可以加union all ，有order by放在最后。
+select * from student where class="95031"
+uoion all
+select * from student where ssex='女'
+
+3、事务：
+ACID，指数据库事务正确执行的四个基本要素的缩写。包含：原子性（Atomicity）、一致性（Consistency）、隔离性（Isolation）、持久性（Durability）。
+>修改表引擎：alter table 表名 engine = innodb
+>查询是否为自动提交：select @@autocommit  (1为自动提交   0为手动提交)
+事务操作流程：
+>关闭自动提交：set autocommit=0 
+>手动打开自动事务：start transaction / begin
+>commit 提交 数据写入硬盘
+>rollback 撤销操作
+
+4、索引的分类与创建方式：
+>普通索引：create index 索引名 on 表(字段 asc/desc)
+          alter table 表 add index(字段1,字段2,...)
+>唯一索引：create unique index 索引名 on 表名(字段 asc/desc)
+          alter table 表 add unique(字段1,字段2,...)
+>主键索引：建表时的主键，非空不重复
+          alter table 表 add primary key(字段1,字段2,...)
+>复合索引（联合索引）：create index 索引名 on 表(字段abc  asc/desc) 必须包含左前缀（abc）
+>全文索引：create FULLTEXT index 索引名 on 表(字段 asc/desc)
+          alter table 表 add fulltext(字段1,字段2,...)
+
+删除索引：drop index 索引名 on 表
+查看索引 show index from 表 \G
+
+查看sql性能
+explain select sno,sname from student where class='1812'\G;
+mysql> explain select sno,sname from student where sclass='1812' ;
+全表扫描：ALL 
+索引扫描：index
+指定索引范围：range
+常量查询：const、system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+四、记忆集
+1、隐式和显示内连接
+2、内部函数：字符串函数，日期函数，数字函数，其他函数（转换）
+3、索引的优点和缺点
+4、不建立索引的情况
+5、不使用索引的情况
+6、授权管理
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,58 @@
+《MySQL第三天知识总结》
+一、常用英语单词：
+constraint 约束
+foreign 外部
+reference 参照
+option 选项
+dump 转储
+connection 连接
+fetch 获取
+chmod 修改文件权限
+
+二、知识点扫盲：
+1、外键，主表，从表
+2、orm
+
+三、命令集：
+1、外键：
+  创建外键：alter table 从表名 add constraint 外键名 foreign key （从表的外键字段 ）reference 主表名（主键字段） （约束模式：[on {delete | update} { restrict | no action | cascade | set null}]）有需要添加;
+  删除外键：alter table 从表名 drop foreign key 外键名
+
+2、视图：
+  创建视图：create view 视图名（字段列表） as select 子句
+  删除视图：drop view 视图名
+
+3、数据库备份与恢复：家目录下执行即可
+  备份：mysqldump -uxml -p 数据库名 > ~/备份文件名.sql;
+  恢复：mysql -uxml -p 数据库名 < ~/备份文件.sql
+
+4、pymysql操作数据库：（熟练使用连接对象方法和游标方法）
+-环境：安装pycharm，mysql，pyenv，pymysql
+①连接数据库：Connect方法连接数据库
+②创建游标
+③执行sql语句
+④获取结果集
+⑤关闭（游标，连接）
+-修改py文件权限：sudo chmod +x xxxx.py ./xxxx.py 使其可执行
+
+5、pymysql的增删改，必须手动操作：
+sql = 'delete from user where id=%s' % user_id
+
+# 如果要执行增删改语句的时候，下面的就是固定格式
+try:
+	cursor.execute(sql)
+	# 如果全部执行成功，提交事务
+	link.commit()
+	print(cursor.lastrowid) #获取最后插入记录的自增id号
+except Exception as e:
+	print(e)
+	link.rollback()
+
+6、防sql注入的两种写法：
+
+7、方法的无序调用：
+核心思想
+无论怎么调用，最终生成sql语句。
+每调用一个方法，就生成对应sql子句
+涉及到的技术点：字符串拼接
+每次调用的最后必定是select、insert、update、delete，这些方法不返回self

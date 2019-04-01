@@ -1,0 +1,49 @@
+《HTML第二天知识总结》
+一、常用英语：
+controls 控制
+autoplay 自动播放
+cellspacing 单元格间距
+cellpadding 单元格边距
+align 水平对齐<->valign 垂直对齐
+colspan 列向右合并
+rowspan 行向下合并
+action 行动
+method 方法
+disabled 禁用
+iframe 内嵌框架
+label 标签
+scrolling 卷动
+span 范围
+
+二、知识扫盲：
+1、表单
+2、内联框架
+三、记忆集：
+1、
+图片img  <img src='' title='' alt='' border='' width='' height=''>
+视频video  src controls loop  autoplay width、height
+音频audio  src controls loop  autoplay
+
+2、
+表格的使用
+制表table     broder  cellspacing   cellpadding  align height
+标题caption
+表头th
+制行tr        align vlign height  
+制列td        colspan  rowspan  width、height
+
+3、表单（很重要）收集信息提交给服务器
+表单 form
+
+4、一页网页中间插入一个框窗以显示另一个文件。
+内联框架 iframe    src name width height   scrolling
+
+5、链接外部css样式，堆积关键字，描述网站信息，页面自动跳转
+头元素标签
+link  rel type href
+meta  name  content
+http-equiv
+
+6、布局标签
+div span header section footer
+
