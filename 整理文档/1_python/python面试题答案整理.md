@@ -115,8 +115,37 @@ sort_by_age(alist)
 ```
 代码将输出[],不会产生IndexError错误，就像所期望的那样，尝试用超出成员的个数的index来获取某个列表的成员。例如，尝试获取list[10]和之后的成员，会导致IndexError。然而，尝试获取列表的切片，开始的index超过了成员个数不会产生IndexError，而是仅仅返回一个空列表。这成为特别让人恶心的疑难杂症，因为运行的时候没有错误产生，导致Bug很难被追踪到。
 ```
-
-
+12、列表生成式，产生公差为11的等差数列
+```
+list1 = [x*11 for x in range(10)]
+print(list1)
+```
+13、set操作列表的使用
+```
+list1 = [1,2,3]
+list2 = [3,4,5]
+列表相同元素：set(list1)&set(list2)
+列表不同元素：set(list1)^set(list2)
+```
+14、列表去重
+```
+- l1 = ['b','c','d','c','a','a']
+  l2 = list(set(l1))
+  print(l2)
+- l1 = ['b','c','d','c','a','a']
+  l2 = list(set(l1))
+  l2.sort(key=l1.index)
+  print(l2)
+- l1 = ['b','c','d','c','a','a']
+  l2 = sorted(set(l1),key=l1.index)
+  print(l2)
+- l1 = ['b','c','d','c','a','a']
+  l2 = []
+  for i in l1:
+      if not i in l2:
+          l2.append(i)
+  print(l2)
+```
 
 
 
