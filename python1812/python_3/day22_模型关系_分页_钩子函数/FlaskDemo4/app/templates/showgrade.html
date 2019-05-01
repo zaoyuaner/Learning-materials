@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>班级</title>
+</head>
+<body>
+
+{% for grade in grades %}
+    <p>
+        <a href="/gradedetail/{{ grade.id }}/">{{ grade.id }}-{{ grade.name }}</a>
+    </p>
+{% endfor %}
+
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ajax</title>
+    <meta charset="utf-8">
+</head>
+<body>
+
+    <h1>天气查询</h1>
+    <table border="1" class="table_city" style="display: block;">
+    <th>当前城市</th>
+    <th>当前日期</th>
+    <th>温度</th>
+    <th>天气</th>
+    <th>风向</th>
+    <tbody id="citySearch"></tbody>
+</table>
+    <input    type="text" placeholder="请输出你的地址" id="tel"/>
+
+    <button id="ajax">确定</button>
+
+    <p><span id="reslut"></span></p>
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        $('#ajax').on('click',function(){
+            var $telValue=$('#tel').val();
+            if($telValue=="") {
+                alert('不能为空！');
+                return;
+            }
+            $.ajax({
+                type: 'GET',
+                dataType:'jsonp',
+                jsonp:'callback',                          
+                  jsonpCallback:'getName',
+                url: 'http://api.asilu.com/weather/',
+                data:{
+                    "city":$telValue        
+                },
+                success: function(datas){
+                    var data = datas;
+
+                    console.log(data);    
+                      /* $('#reslut').text("你查询的是:"+reslutData.city+","+"明天的天气是:"+reslutData.weather[0].weather+reslutData.weather[0].temp);*/
+                     var str="";
+                 
+                        str+="<tr align='center'>";
+                        str+="<td>"+data.city+"</td>";
+                        str+="<td>"+data.weather[0].date+"</td>";
+                        str+="<td>"+data.weather[0].temp+"</td>";
+                        str+="<td>"+data.weather[0].weather+"</td>";
+                        str+="<td>"+data.weather[0].wind+"</td>";
+                        str+="</tr>";
+                     
+
+                    $("#citySearch").html(str);
+
+                } ,
+               
+
+            })
+        })
+        
+    })
+    </script>
+</body>
+</html>

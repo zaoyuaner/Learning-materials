@@ -1,0 +1,1251 @@
+《《《《《《《《《《《《《第一周》》》》》》》》》》》》》
+1、关机：
+  sudo shutdown -h 18：00  #系统在18：00定时关机
+  sudo shutdown -h +10    #系统10分钟后关机
+  sudo shutdown -h now  立即关机
+  sudo halt             立即关机 等于shutdown -h now
+  sudo poweroff         关机
+  
+重启：
+   sudo reboot
+
+2、检查ssh服务开启状态：ps -aux | grep ssh
+
+3、显示文件目录：tree -L 1 
+
+4、.       #系统根目录，有且只有一个根目录
+   bin     #存放常见的命令
+   dev     #存放设备文件，包括硬盘、光驱、键盘、鼠标等
+   etc     #系统配置文件都在这个目录下
+   home    #普通用户的家目录
+   log     #日志目录，各种应用的日志
+   var     #存放不断扩充的文件。比如数据库文件、日志文件
+
+5、列出目录下的文件或子目录： ls  -l a A i
+   查找以t开头的文件  ls  t* 
+
+6、文件权限 ： drwxr-xr-x.  2 root root 4096 Nov 20 07:36 tmp
+   第一部分：表示文件类型 d代表目录，- 代表普通文件，l代表软连接,c 表示字符设备，b表示块设备 第2部分，2-10列代表文件的权限：rwxr-xr-x. 第3部分：数字代表文件的链接数 第四部分：root代表文件的所有者 第5部分：root表示文件属于哪个用户组 第6部分：数字的表示文件大小，以字节为单位 第7部分：时间，表示文件的上次修改时间 第8部分：文件名
+
+7、硬链接和软连接
+   一个 inode 号对应多个文件名，则称这些文件名为硬链接：link 源文件名 新文件名   ln 源文件名 新文件名 
+      只能对已存在的文件进行创建；
+      不能对交叉文件系统进行硬链接的创建；
+      不能对目录进行创建，只可对文件创建；
+      删除一个硬链接文件并不影响其他有相同inode 号的文件。
+
+   软链接与硬链接不同，若文件用户数据块中存放的内容是另一文件的路径名，则该文件就是软连接：ln -s 源文件 目标文件。
+      软链接有自己的文件属性及权限等；
+      可对不存在的文件或目录创建软链接；
+      软链接可交叉文件系统；
+      软链接可对文件或目录创建；
+      创建软链接时，链接计数 inode 不会增加；
+      删除软链接并不影响被指向的文件，但若被指向的原文件被删除，则相关软连接被称为死链接
+
+8、绝对路径和相对路径
+绝对路径：从根目录到当前文件（目录）的路径，比如：/home/python
+相对路径：以当前目录为基准，表示上级目录或子目录 .表示当前目录
+
+9、目录切换cd   显示当前目录的绝对路径名
+
+10、创建目录 sudo mkdir 目录名     -p 递归创建
+
+11、删除目录 sudo rmdir 目录名    -p 递归删除      只能是空目录
+
+12、创建文件 sudo touch 文件1\2\3\4  可以多个空文件，存在会忽略，不覆盖
+    echo ‘内容’ >覆盖   >>追加  文件名    文件不存在会创建    
+
+13、移动文件 sudo mv 源文件  目标文件
+
+14、拷贝文件 sudo cp 源文件 目标文件
+            sudo cp -r 源目录 目标目录     递归拷贝目录
+
+15、删除文件 sudo rm 文件名   -i -f    -rf 目录目录名  递归删除目录
+
+16、查看文件
+cat  文件名       #输出文件内容，从前往后输出，
+cat  文件1 文件2 >> 文件3  # 将两个文件合并指定文件
+tac   文件名      #cat的反写，从后往前输出
+head -n N  文件名   #显示文件的前几行，可以指定查看的行数，默认显示10行
+head -N  文件名
+tail -n N 文件名   #显示文件的最后几行，可以指定查看的行数(N)
+tail -N  文件名    
+more  文件名       #从前往后查看，可以翻屏 ,不能往前翻  回车一行行查看，空格翻屏（f翻屏）  q退出
+less  文件名       #和more类似，可以前翻页，g首页 G尾页，b前翻页，空格和f后翻页，q退出
+stat  文件名       #查看文件详细信息   
+
+17、实时显示文件内容
+tail -f  cat 文件名   #实时显示文件内容
+watch -d -n 秒数 cat 文件名  #实时显示文件内容 有高亮
+
+18、系统内搜索指定文件： find [路径] [参数] [文件名]
+     参数：
+     -name  按文件名查找
+     -iname 按文件名查找，不区分大小写
+     -mtime +/-n  #-n表示n天以内修改的文件，+n表示修改超过n天的文件
+     -user   #按文件属主查找
+     -size [+/-]n[c/k/M/G] #查找文件长度为n块，+表示大于，-表示小于；c是字节 
+     -perm 权限数值    #按照文件权限进行查找
+     -maxdepth N     #查找的目录深度
+     -ls             #以列表形式显示
+     -type [f/d/l]   # 按类型查看
+     -exec 执行shell命令，形式： -exec command {} \;
+
+find /  -name  "文件名"  		 #从根目录查找指定文件名的文件,如果不指定目录，则从当前目录查找
+find .  -name  "文件名"         #从当前目录查找指定文件名的文件
+find    -name  "文件名"         #从当前目录查找指定文件名的文件
+
+find /csl/sh1702 -name "2.txt"  #查找指定目录先的文件
+find /tools -mtime -3           #查找tools目录下修改时间是3天以内的文件
+find /tools -mtime +3           #查找tools目录下修改时间是3天以上的文件
+find -mtime -3 -maxdepth 1  -ls
+
+find /tools  -size 12c 		   #查找长度为12字节的文件
+find /var  ‐size +10k ‐size ‐100k ‐name '*.log' #在/var目录下，查找10-100k
+find -size +10k -maxdepth 1  -ls
+
+#按文件的所属用户查找
+find  -maxdepth 1 -user root
+
+#删除当前目录及其子目录下的所有后缀为txt的文件,注意{}和\中间有空格，最后有一个；
+find . -name '*.txt' -exec rm {} \; 
+
+#只查找当前目录下，权限是700的文件，并以列表形式显示
+find -perm 700 -maxdepth 1 -ls
+sudo find -maxdepth 2   -name '1.txt' -ls
+
+19、正则表达式搜索文本内容，并把匹配的行打印出来：grep [options] 'pattern' filename
+     参数：
+     -i  不区分大小写
+     -c  只显示匹配行的数量
+     -r  递归查找子目录
+     -l  列出文件内容符合指定的范本样式的文件名称。
+     -n  显示行号
+     -w  只匹配单词，不是匹配单词一部分
+     -E 按正则表达式搜索
+     --color  以不同颜色显示匹配的关键字
+     --include '*.py'  #仅搜索py文件
+     --exclude '*.py'  #不搜索py文件
+
+在1.txt搜索this，要按照完整单词的模式进行匹配，并且显示匹配行
+   grep -n -w 'this' 1.txt
+   
+   #在当前目录下所有文件中搜索this，并不同颜色显示关键字
+   sudo grep  'this' * --color
+   
+   显示匹配行数
+   sudo grep -c 'this' 1.txt
+   搜索指定的1.txt，递归查找子目录
+  grep -r -w -l   'this' --include '1.txt'
+  
+  # 显示当前目录下所有的文件，不显示目录
+  ls -la | grep -E '^-'
+  
+  | 管道符，他可以将前一个命令的输出作为后一个命令的输入
+
+20、文件内容统计（wc） 
+wc -l  /etc/passwd  #统计passwd有多少用户
+ls -la | grep -E '^-' | wc -l  # 当前目录下有多少普通文件
+
+21、把文件逐行的读入，以空格为默认分隔符将每行切片，切开的部分再进行各种分析处理awk
+语法：awk '{pattern + action}' {filenames}
+cat /etc/passwd |awk  -F ':'  '{print $1}'   #$1显示第一列  -F 指定分割符为':'
+#列数从左向右: 1,2,3... 
+ls -l | awk '{print $1,$3,$9}'  #显示当前目录下文件的第1、3、9列
+
+22、报告或删除文件中重复的行uniq   升序输出sort
+用法：uniq [选项]... [文件] 
+ -c           //在每行前加上表示相应行目出现次数的前缀编号  
+ -d           //只输出重复的行  
+ -D           //只输出重复的行，不过有几行输出几行 
+ -i           //忽略大小写
+
+sort(选项)(参数)
+选项：
+   -u忽略相同行
+   -k 按指定列排序
+   -n 按数值排序
+   -t 分割符
+   -r 逆序
+ #指定passwd文件按第三列 的数值比较，列之间的分隔符为：
+ cat /etc/passwd | sort -n -t ':' -k 3  
+ 
+ #查找你最常用的10条命令
+ history | awk '{print $2}' | sort | uniq -c | sort -r -n -k 1 | head -n 10
+
+23、修改文件权限chmod u、g、o --> rwx=421    chmod 权限 文件名/目录 chmod -R 权限 目录 递归修改目录及其子目录的所有文件的权限
+
+24、修改文件所有者 chown
+     chown 用户名  文件名/目录名 
+     chown 用户名:组名  文件名/目录名  chown csl:csl 1.sh  #修改用户和所属组
+     chown :组名  文件名/目录名
+     chown -R 用户名  文件名/目录名
+
+25、修改用户组 chgrp  chgrp 组名  文件名/目录名  组必须存在，组的信息在/etc/group文件里  chgrp -R csl tmp  #递归修改tmp及其子目录下文件所属组  
+
+26、添加用户 useradd [-gud] 用户名  
+-g 指定主组名或组id，必须已经存在的组
+     -G 指定附属组，可以有多个
+     -u 指定用户的id
+     -m 自动建立用户主目录
+     -d 指定用户的家目录
+     -s 指定用户登录后使用shell，默认是/bin/false
+   #创建一个用户没有指定组，则默认创建一个和用户名一样的组，作为用户的主组
+
+sudo useradd -u 1202 -g python -md /test2 -s /bin/false  test2
+
+27、删除用户 userdel -r 用户名 
+
+28、修改用户信息
+usermod [option]  用户名
+     -u  用户id
+     -g  主组id
+     -G  附属组名称
+     -a  将用户添加到附属组，必须与-G配合使用
+     -d  用户的家目录
+     -l  用户登录名
+   sudo usermod -u 1001 -g 999 -l lkz  liwenkai
+   sudo usermod -a -G csl python  #将用户python添加到附属组csl中
+   sudo usermod -l newusername  oldusername #修改用户名
+
+29、修改用户密码  passwd [-lu] 用户名 ​ -l 锁定账户密码 ​ -u 解锁账户密码 root 可以修改其他用户的密码 普通用户只能修改自己的密码
+
+30、添加组 groupadd 组名
+    groupdel  组名  #删除组
+    groupmod  -n 新组名  旧组名
+    groups 显示用户的组
+
+31、vim 三种模式：编辑<—— 命令 ——>底行
+
+32、网络管理：ifconfig 、 ping 、 netstat
+   显示所有已建立的TCP连接 sudo netstat -nt
+   显示所有已建立的TCP连接 sudo netstat -nu
+   显示TCP端口号的使用情况 sudo netstat -ntpa
+
+33、进程管理ps
+ ps  [选项参数]  [用户名]（可选）
+   参数：
+    -a -e 显示所有进程
+    -u  显示进程的详细信息
+    -x ：通常与 a 这个参数一起使用，可列出较完整信息。
+    -r：正在运行的进程
+ #1.ps -e|more -20　　　　  显示所有进程，每屏20个
+ #2.ps -u root|more -10　  显示指定用户的进程信息
+ #3. ps -ef|grep kworker   过滤指定信息
+ #4. ps -aux| grep ssh 列出目前所有的正在内存当中的程序
+
+杀死进程
+ #1. kill 2 杀死指定进程号的进程
+ #2. kill -9 2 强制杀死指定进程号的进程
+ #杀死指定进程名的进程 killall -TERM  进程名称
+
+34、执行/etc/init/rc-sysinit.conf，设置启动级别
+0-关机模式，
+1-单用户模式，单用户只有系统管理员可以登录。
+2-多用户模式，但是不支持文件共享，例如不支持NFS服务.这种模式不常用。
+3-完全的多用户模式，支持NFS服务.最常用的用户模式，默认登录到系统的字符界面。
+4-保留模式。
+5-完全多用户模式，默认登录到X-window系统，也就是登录到linux图形界面。
+6-重启模式，也就是执行关闭所有运行的进程，然后重新启动系统
+
+35、git的组成
+workspace 工作区
+index 暂存区
+repository 本地版本库
+remote 远程仓库
+
+36、
+git add . 将所有文件添加到暂存区  git reset HEAD 撤销暂存区的修改
+git diff 查看修改
+git rm 从版本库中删除文件    git checkout -- 从版本库中恢复一个文件
+git reset --hard 版本号 选择版本
+git reflog 查看每个版本的版本号
+
+
+nginx、pyenv、shell、git
+
+
+1.如何使用命令立即重启linux操作系统？
+
+2.如何查看/etc下的所有文件，并以列表格式显示，并且显示隐藏文件
+
+3.一次性创建 text/1/2/3/4
+
+（1）在子目录4下创建一个新文件1.txt，1.txt内容是/etc目录下文件的列表
+
+​ (2) 在子目录3下创建一个文件2.txt，文件的内容是/etc/passwd文件内容的第一列
+
+​ (3) 将1.txt和2.txt内容合并到新文件3.txt，3.txt在目录2下
+
+​ (4) 删除目录3及其子目录。
+
+​ (5) 将3.txt改名为4.txt
+
+4. 查找/etc下所有t开头的普通文件，并且大小大于1m，小于100m，将结果保存到家目录下d1.txt中
+
+5.在家目录及其子目录下查找文件内容包含hello的文件，只显示找到的文件名
+
+6.如何查看passwd文件中前三行和后三行
+
+7.统计当前系统中一共有多少账户
+
+8.设置/test/a.txt属主有读写执行权限，属组，有读写，其他账户无权限，用三种方式实现。
+
+9.把/tmp/etc/man.conf移动到/tmp下并改名为test.conf设置所有人都有读写执行权限
+
+10.添加账户u2，为其指定id号为1000
+
+11.如何查看u2的uid gid
+
+12.在/temp目录下建立test目录，把/etc下所有已t开头的文件和目录考本到test目录下
+
+13.新建用户python，并让python具有登录权限，设置其用户家目录为/home/test, 并将其加入sudo附属组；设置其登录密码为123
+
+14.在/home目录下创建文件newfile2 ，移动文件newfile2到/home/perm目录下同时改名为file01 ；改变/home/perm/file01文件的所有者为系统用户adm ，改变其所属组为系统用户组games ；改变/home/perm/file01文件权限为“rwxrw-r—”；在/home/perm目录下，分别给file01生成一个软链接文件file01.soft和一个硬链接文件file01.hard ；删除/perm目录
+
+15.统计当前目录/home/zheng下普通文件的数目
+1.建立用户user1,设定密码为user1,用户家目录为/var/user1，默认的登录shell为/bin/csh。
+
+2.用groupadd命令向系统增加一个名为teacher的组。
+
+3.建立用户user2并设定基本组为teacher组；删除用户user1（包括用户建立的所有文件）。
+
+3.添加新用户student,并设置该用户的登录密码，切换到student用户的用户主目录下；在student用户主目录下创建一个临时目录tmp；在临时目录下创建一个文件，文件名为a.txt；将a.txt复制成b.txt；将b.txt改名成c.txt；为c.txt创建符号链接，链接文件名为linkc.txt;
+
+4.列出用户主目录下的所有目录文件；列出所有属主权限为rwx的文件；列出** /etc/hosts** 中包含数字的所有行 ；打印 /etc/hosts 中包含 127.0.0.1 的行
+
+写出一条命令，统计my.txt文件的行数，将结果写入my.size文件中；在当前目录下创建子目录test，而后进入test子目录，并在其下创建名为myfile.txt的文件，并通过键盘将**“hello world”字符串输入到myfile.txt文件中，创建另一个文件file2,将myfile.txt** 与file2** 合并为分file3。
+先建manager组，创建两个用户natasha,harry附属组为manager，创建第三个用户strlt不充许login 。
+7.解释下列信息描述的文件类型和存取权限；若用数值形式表示该权限分别为多少？创建一个文件并将文件的权限修改如下。
+
+(1) drwxr-x--x
+(2) -r-x--xr–
+列出当前正在使用的进程，杀死sshd进程
+9.简述软链接和硬链接的区别?
+
+10.vi编辑器有哪几种工作模式？如何在这几种工作模式之间转换？
+
+11.创建目录/comp ，拷贝文件/etc/services到/comp目录下，分别对services文件进行压缩，生成 .gz .zip .bz2三种格式的压缩包
+
+12、vim操作
+1.在用户家目录下创建test目录，把my.txt文件拷贝到test子目录下，用vim编辑my.txt
+2.把第5-30行中一替换为1
+3.把文章中“春暖花开”替换为“面朝大海”
+4.删除最后30行
+5.在第10行后面添加一个新行，输入：sz1812
+6.跳转到第100行，删除100后所有行
+
+《《《《《《《《《《《《第二周》》》》》》》》》》》
+1、库层操作
+数据库操作命令，每条命令结束必须使用; 或者 \g 结束
+
+#1.查看库
+   show databases;
+#2. 创建库
+   create database 数据库名 default charset=utf8;# 数据库名不要纯数字，不要用汉字
+#3. 删除库
+   drop database 数据库名;
+#4. 选中库
+   use 数据库名;
+#5. 查看表
+   show tables;
+#6.查看数据库创建语句
+show create database 数据库名
+#7.查看选中的数据库
+select database()
+#8 修改数据库字符集
+alter database student default charset=utf8;
+
+2、表层操作
+创建表
+
+create table [if not exists] 表名(
+   列名1  类型  [限制],
+   列名2  类型  [限制],
+   ...
+   列名n  类型  [限制]  #最后一列没有逗号
+) [engine=myisam | innodb][ default charset=utf8];
+
+primary key 主键 不允许有重复值,不允许为空
+auto_increment 自增长，只对int型主键起作用
+
+#复合主键
+mysql> create table grade(
+    sid int ,
+    cid int,
+    score float,
+    primary key(sid,cid));
+删除表
+
+drop table 表名;
+查看表结构
+
+desc 表名;
+查看建表语句
+
+show create table 表名;
+修改表
+
+#修改字段类型
+   alter table 表名 modify 字段名 类型 [限制]
+#增加字段
+   alter table 表名  add [column] 字段名 类型 [限制];
+#删除字段
+   alter table 表名 drop [column] 字段名;
+修改字段名和类型
+   alter table 表名 change [column] 旧字段名 新字段名 类型 [限制];
+   
+#修改表名
+  alter table 表名 rename 新表名
+  alter table 表名 [engine=myisam] [default charset=utf8];
+
+  
+ # 可以通过first、after指定插入位置
+  alter table student add sno varchar(3) not null after sid; //在sid列后插入
+   alter table student add sid int primary key auto_increment first;//在第一列插入
+
+3、char 和 varchar 的区别:
+char的执行效率高于varchar ，varchar 相对于 char 节省存储空间
+如果使用char 传入的数据的长度 小于指定的长度的时候 存储的实际长度 不够的会拿空格来填充
+如果使用 varchar 传入的数据的长度 小于指定的长度的时候 存储的实际长度 为传进来的数据的长度
+
+4、数据层操作（增删改）
+1. insert
+写法一：insert into 表名(字段1，字段2...) values(值1,值2...);
+
+省略了字段列表，则按照建表时的字段顺序进行插入，每一列都要给值
+写法二：insert into 表名 values(值1,值2...);
+写法三：插入多个记录
+     insert into 表名(字段1，字段2...) 
+  		 values(值1,值2...),
+  		 (值1,值2...),
+  		 (值1,值2...)....
+写法四： insert into 表名(name,age,sex)
+  	select name,age,sex from stars;
+  	
+  	insert into histroy_student select * from student;
+2.update
+ update 表名 set 字段1=值1,字段2=值2... where 条件  #不加where修改的是所有的记录
+3. delete
+删除表中的数据，自增主键的值不会重新开始
+delete from 表名 where 条件；#如果不加条件，会删除表中所有数据,慎重使用
+
+清空表，自增主键的值重新开始编号
+truncate 
+	   truncate table 表名,清空表中所有记录，等价于delete from 表名；
+	   delete和truncate差别，truncate后，表中自增主键值从1开始
+
+5、数据层操作（查）
+select 字段 from 表名 [where 条件] [group by ] [having] [order by ] [limit]
+
+6、数据库引擎
+常用的数据库引擎：myisam、innodb、archive、ndb、memory
+myisam和innodb的区别
+myisam查询速度快，不支持事务、不支持外键、支持表锁
+innodb增删改效率高，支持事务、支持外键，支持行锁
+
+7、子查询嵌入到其他查询语句中查询语句，子查询只能出现在from，where中
+select title    from 表   where uid in (select id from php_user where name='王琨' );
+
+8、多表查询
+多表连接有两种写法：隐式(标准sql)和显式内连接
+
+隐式(标准sql)连接 ： 连接条件写到where字句中
+select title,content,name,publish_time 
+from user u,forum f  #给表起一个别名，方便书写
+where u.id = f.uid; 在where写链接条件
+
+显示内连接（inner join）
+select title,remark,username from blog_remark r join blog_article a on r.aid = a.aid 
+                                               join blog_user u on r.uid = u.uid;
+select后的字段如果在多个表中都有，引用的时候必须加上表名.字段名
+
+9、自身连接、左连接、右连接
+
+10、修改表引擎：alter table 表名 engine = innodb
+  开启事务start transaction /begin
+
+11、创建普通索引create index 索引名 on 表名(字段 asc/desc) 默认asc升序
+    创建唯一索引create  unique index 索引名 on 表名(字段 asc/desc) 默认asc升序
+    创建全文索引create  FULLTEXT index 索引名 on 表名(字段 asc/desc)
+    主键索引、复合索引
+    
+    删除索引 drop index 索引名 on 表
+    查看索引 show index from 表 \G
+
+其它创建索引的方式
+alter table 表 add index(字段1,字段2,...)
+alter table 表 add primary key(字段1,字段2,...)
+alter table 表 add unique(字段1,字段2,...)
+alter table 表 add fulltext(字段1,字段2,...)
+
+12、创建外键
+ALTER TABLE 从表名
+ADD CONSTRAINT 外键名称 FOREIGN KEY (从表的外键列) REFERENCES 主表名 (主键列) 
+[ON DELETE reference_option]
+[ON UPDATE reference_option]
+
+删除外键
+ALTER TABLE 从表 DROP FOREIGN KEY 外键名
+
+13、不要在视图上进行增、删、改
+创建视图
+create view 视图名(字段列表) as 
+select子句
+
+删除视图
+drop view 视图名
+
+14、redis优点：
+高可扩展性
+分布式计算
+低成本
+架构的灵活性，半结构化数据 没有复杂的关系
+缺点：
+没有标准化
+有限的查询功能（到目前为止）
+
+15、redis 为什么能够持久化存储 ？
+因为 RDB 和 AOF
+
+RDB [RDB 将数据库的快照（snapshot）以二进制的方式保存到磁盘中。]
+
+在运行情况下， Redis 以数据结构的形式将数据维持在内存中， 为了让这些数据在 Redis 重启之后仍然可用， Redis 分别提供了 RDB 和 AOF 两种持久化模式。
+
+在 Redis 运行时， RDB 程序将当前内存中的数据库快照保存到磁盘文件中， 在 Redis 重启动时， RDB 程序可以通过载入 RDB 文件来还原数据库的状态。
+
+​RDB 功能最核心的是 rdbSave 和 rdbLoad 两个函数， 前者用于生成 RDB 文件到磁盘， 而后者则用于将 RDB 文件中的数据重新载入到内存中：
+
+​RDB 本质上是个文件 每隔一段时间 在redis配置文件中进行设置 将内存中的数据存入文件中 如果数据过大 也容易造成数据丢失
+
+AOF [ 则以协议文本的方式，将所有对数据库进行过写入的命令（及其参数）记录到 AOF 文件，以此达到记录数据库状态的目的。]
+AOF 将命令追加到文件中 将原有的内容替换掉 记录到 AOF 文件， 以此达到记录数据库状态的目的， 为了方便起见， 我们称呼这种记录过程为同步。
+
+16、mongdb
+创建库： use 库名
+在MongoDB里 不管是什么操作 都是db。
+语法：db.getName()  获取当前的所在的库
+语法：db      获取当前所属的库
+删除数据库之前最好use一下 确定自己所在哪个库下  语法：db.dropDatabase()
+查看所有的库 语法：show dbs
+
+《《《《《《《《《《《第三周》》》》》》》》》》》
+1、动态网页和静态网页的区别
+如果不修改页面源码，页面一成不变，就是静态页面
+动态页面，服务器从数据库提出数据临时生成的，会根据时间、是否登录不同，而页面内容也不同
+
+2、全局架构标签（重点）
+<!doctype html>   文档类型，html表名是html5的文档
+<html>   根标签
+<head>   头部
+	<meta charset="UTF-8"> 告诉浏览器用utf-8编码格式解释文档
+	<title>Document</title>  文档标题
+</head>
+<body>
+	
+</body>
+</html>
+
+3、body
+内容显示区，有些常用属性：
+topmargin 上外边距
+leftmargin 左外边距
+text 文字颜色
+bgcolor 背景颜色
+background 背景图片，和bgcolor冲突，设置了背景图片，背景颜色就是不显示
+
+4、font (face/color/size) 字体
+face 字体名称，到window目录下font子目录下查看
+color 字体颜色
+size 值取1~7,7最大
+
+5、有序列表（ol/li）
+  type: 数字，a ,A,I ,i
+  start 开始标号，默认从1开始
+无序列表(ul/li)
+ type 项目符号：
+   disc 默认 实心圆圈
+   square 实心方块
+   circle 空心圆圈
+
+6、url 统一资源定位符
+https://baike.baidu.com：80/item/%E6%9D%A8%E5%B9%82/149851?fr=aladdin#4
+第一部分： 协议   http   https  ftp  news  magnet（磁力链接）
+第二部分：主机，服务器地址   可以是域名或ip地址
+第三部分：冒号后面的数字，端口  http 80(默认)  https :443  ftp:21  mysql：3306
+         端口编号从0~65535 其中0~1023归操作系统使用
+第四部分：从端口后的斜线到？，中间这部分叫路径，请求文件的路径
+第五部分：从？到#中间这部分，是请求参数，query string ；写法： 键=值&键2=值
+第六部分：锚点 也就是同一个页面内的跳转，必须用#开头
+
+7、target
+_blank 新窗口打开
+_self 当前窗口打开，默认
+
+8、定义锚点
+<a href='#锚点名'>跳转提示</a>
+....
+<a name='锚点名'></a>
+
+9、img是单标签，<img src='' title='' alt='' border='' width='' height=''>
+src 图片来源，可以是相对路径也可以是绝对路径
+title 图片提示文字
+alt 图片不显示的时候的提示文字
+border 图片边框大小，一般默认为0
+width/height 一般只设置一个，另外一个等比例缩放
+
+10、video 、audio
+src 视频来源，写法同img的src
+controls 控制面板
+loop 循环播放
+autoplay 自动播放
+width/height 宽高，只设置一个 （audio无此属性）
+
+11、table 表
+border 表格线
+cellspacing：单元格的间距
+cellpadding：单元格到内容距离
+align：水平对齐 left、center、right
+height可以不用设置，自动撑开
+
+tr 行
+align :水平对齐 left center right
+valign：垂直对齐 top middle bottom
+注意：如果没有给该表格设置高度，那么设置valign无效,在以后布局页面的时候，一般不使用valign，只有一种情况使用到，就是图片和文字并排排放的时候，需要设置图片的valign为middle
+
+td 单元格
+colspan 跨列 向右合并
+rowspan 跨行 向下合并
+width/height
+
+th
+就是表格的表头，内容会加粗，和td用法相同
+caption 表格标题，跟随表格移动
+
+12、form 
+action：提交地址，一般是服务器的页面
+method：提交方式，最重要的两种为get方式和post方式，默认是get提交
+enctype：用于文件上传，值为：multipart/form-data，现在了解
+
+13、input框  type、name、value、readonly、disabled、size
+
+单行文本框
+
+type： text
+placeholder：占位符，一般用于提示用户，当用户输入时，会自动消失
+maxlength： 最大字符数
+提交按钮
+
+type：submit
+value：提交按钮的标题
+重置按钮
+
+type：reset
+密码框
+
+type：password
+单选框
+
+一般用于多选一，name相同是一组，一组中只能选一个
+
+type：radio
+checked：是否选中
+value： 一般用0或1表示，必须设置，否则服务器无法区别选中是哪一个
+复选框
+
+一般name值相同
+
+type：checkbox
+value：必须设置
+checked: 是否选中
+文件上传
+
+type：file
+隐藏按钮
+
+一般用于提交无需用户输入的数据
+
+type：hidden
+name和value值必须设置
+button 一般配合js代码使用
+
+14、下拉框（select）
+
+name 必须设置
+size：显示的行数，如果设置这个属性，下拉框会变成列表框
+multiple：是否可以选择多行
+下拉框选项（option）
+selected：是否选中
+value 需要设置，否则值就是option中间的文字
+
+15、多行文本（textarea）
+
+cols：列数
+rows：行数
+注意textarea标签的内容不能有任何值，否则便会显示
+
+16、label标签
+配合radio、checkbox使用，方便用户选中
+<input type='radio' name='sex'  value='男' checked id='man'> <label for='man'>男</label>
+
+
+17、内联框架
+<iframe src="iframe.html" name="test"  width="300" height="100"  scrolling="Yes"></iframe>
+
+18、css优点：
+样式分离，方便管理
+css可以是实现代码重用
+提高请求速度，节省网络流量
+
+19、css的三种写法
+行内：<p style='font-size:100px'>
+内部：<style>
+   p{font-size: 40px;color: red;}
+</style>
+外部：<link rel="stylesheet" href="2.css">
+
+20、伪类选择器
+用法：
+标签：伪类选择器{}
+
+a:link  a标签正常颜色
+a:visited: 访问过后
+a:hover  鼠标悬停
+a:active  鼠标点击，没松开鼠标
+设置顺序必须：link-visited-hover-active  love hate
+link和visited只针对a标签
+hover和active适合任何标签
+标签名：first-child  如果父标签中第一个孩子是指定标签就选中
+标签名：last-child 如果父标签中最后一个孩子是指定标签就选中
+
+22、常见的选择器
+
+23、单位
+px 像素 绝对单位
+em 相对单位，相对于父标签的大小
+rem 相对于根标签（html)
+% 相对于父标签的大小
+
+24、颜色：三种 单词、 #rrggbb、 rgb（）
+
+25、宽高 
+width/height仅仅针对非行内元素
+min-width max-width 用于响应式布局
+
+26、字体
+font简写(style || weight [size family]) 顺序不能错，但属性可以不出现
+color 字体颜色
+
+27、设置文本text
+text-indent 首行缩进 2em 20px（不推荐） -2em
+
+text-align 水平对齐 left center right，默认是left
+
+text-overflow（clip、ellipsis），这个属性需要配合overflow来使用，将overflow设置hidden
+
+ p{
+        text-indent: 2em;
+        text-align: right;
+        width: 300px;
+        overflow: hidden;
+        white-space: nowrap;  #不换行
+	   	   text-overflow: clip;
+}
+text-decoration（none、underline(下划线)、overline（上划线）、line-through（删除线） ）
+
+text-shadow 文本阴影
+
+text-shadow :水平偏移  垂直偏移  阴影模糊度  阴影颜色
+例如：text-shadow:5px 15px 10px blue;
+line-height:行高，一般把行高设置为容器高度，文本垂直居中
+
+vertical-align：由于很多浏览器不兼容这个属性，所以不推荐使用该属性。
+
+当碰见图片和文字水平布局的时候，使用这个属性。将文字行高设置和容器高度一样，将图片设置为垂直居中。
+
+28、背景
+background简写 : background:url(1.jpg) no-repeat 20px 30px fixed red;
+                             地址        重复     x     y   固定  颜色
+
+29、列表去符号：list-style:none
+
+30、float(left,right,none) 漂浮，半脱离文档流 块里面的文字不会被覆盖，重点掌握
+在更高一层级来布局，不会影响原来的布局，但是会盖住父级上面的其他内容
+
+31、清除浮动
+1) 你在浮动额块后面的的块标签添加一个clear:both;
+ 2) 给需要清除浮动的标签添加一个父标签，父标签中添加一个类名：clear
+ .clear:after{
+		display:block;
+		content:'';
+		zoom:1;
+		clear:both;
+}
+
+32、自定义标签
+display（none、inline-block、block、inline）可以用于显示/隐藏，块、行内和行内块互相切换
+
+33、盒子：margin padding  border:10px solid pink; 线宽 类型 颜色
+
+34、定位：
+绝对定位：absolute
+
+1）完全脱离文档流
+2）相对于body 窗口定位
+3)行内元素会变成块
+相对定位:relative
+
+1)不脱离文档流
+2）相对于自身原来的位置
+3）如果父标签是相对定位，子标签是绝对定位，子标签是相对于父标签进行定位
+fixed
+
+完全脱离文档流
+相对于当前可视区域
+
+35、JS
+组成：
+ECMAScript，描述了该语言的语法和基本对象
+文档对象模型（DOM），描述处理网页内容的方法和接口。
+浏览器对象模型（BOM），描述与浏览器进行交互的方法和接口。
+
+36、
+<script type='text/javascript' src='13.js'></script>
+<button onclick='alert("world")'>click</button>
+<script>
+		// alert("你好")	
+</script>
+
+37、js操作三要素：
+获取元素
+添加事件
+再操作
+
+38、变量、数据类型、运算符、表达式
+
+39、流程控制
+if 、switch-case
+while、for、 do while、 for in
+break 、 continue
+
+40、异常处理
+
+try {
+    //可能异常语句
+    //throw 异常
+} catch (e) {
+    //异常处理
+    alert(e.message);//显示错误信息
+} finally {
+    //无论如何总会执行的代码,finally是可选的
+}
+
+41、数组、函数
+
+42、在函数内部的用var定义变量，是局部变量，作用域在整个函数体内
+
+在函数外部定义的变量叫全局变量
+
+函数体内可以直接引用全局变量
+
+如果局部变量和全局变量重名，局部优先
+
+使用var定义的变量和不用var定义的变量的区别
+
+在函数内部，var定义的是局部变量，不用var是全局变量
+
+
+43、date、string、math、array基础类库
+
+44、获取元素
+var oDiv = document.getElementById('标签的id名');
+var oDiv = 父级.getElementsByTagName('标签名');
+var oDiv = 父级.getElementsByClassName  ('标签的类名');
+getElementsByName，通过document调用
+
+45、修改元素
+修改标签的行内样式：oDiv.style.backgroundColor = 'red';
+innerHTML 获取或设置标签中间html代码
+innerText 获取或设置标签中间的文本
+value 获取input的值
+修改类名使用className
+css中所有的属性在js中必须转换为小驼峰
+
+46、parentNode 获得当前元素的父元素
+children 获得当前元素的所有子元素
+firstElementChild
+lastElementChild
+previousElementSibling
+nextElementSibling
+
+47、创建节点：document.createElement('标签名');
+添加节点：
+appendChild 追加节点，在父节点的最后面追加一个节点
+insertBefore 插入节点，插入到父对象下面的某个节点前面
+删除节点：
+removeChild 删除节点，任何父节点象都可以删除子节点
+
+48、定时器
+一次性定时器
+设置定时器：timer = setTimeout(函数,毫秒);
+清除定时器：clearTimeout(timer);
+只执行一次
+周期性定时器
+设置定时器：timer = setInterval(函数,毫秒);
+清除定时器：clearInterval(timer);
+
+
+49、事件	触发时机
+window.onload	当页面加载完成时自动执行（页面所有资源加载完毕）
+onclick	        点击的时候触发
+ondblclick	双击
+onmouseover	鼠标移到某元素之上
+onmouseout	鼠标从某元素移出
+onmouseup	鼠标按键被松开
+onmousedown	鼠标按钮被按下
+onmousemove	鼠标被移动
+onfocus	        元素获得焦点
+onblur	        元素失去焦点
+
+
+1、弹出某个字
+<!doctype html>
+<html>
+<head> 
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+body { text-align:center; }
+textarea { width:300px; height:150px; }
+</style>
+</head>
+
+<body>
+	<h1>弹出下面带<span style="color:red;">门</span>的词语的个数</h1>
+	<textarea id="t1">清晨  前尘  侵晨  权臣  勤奋  气愤  气氛  区分  情分  铅粉  芡粉  轻粉  秋分  全份  起根  气根  墙根  勤恳  气门  窍门  球门  权门  缺门  倾盆  确认  亲人  穷人  前人  旗人  前任  强人  情人  求人  强韧  起身  亲身  前身  栖身  耆绅  欠伸</textarea><br /><br />
+	<!-- 点击弹框输出 -->
+	<input type="button" value="有几个带门字的词语" id="btn" /><br /><br />
+	
+</body>
+</html>
+<script>
+otextarea = document.getElementsByTagName('textarea')[0]
+// console.log(otextarea.value.match(/门/g).length)
+res = otextarea.value.split("  ")
+n = 0
+for (var i = 0; i < res.length; i++) {
+	if (res[i].indexOf("门") != -1) {
+		n++
+	}
+}
+console.log(n)
+</script>
+
+2、弹出某个字放入另一个框内
+<!doctype html>
+<html> 
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+body { text-align:center; }
+textarea { width:300px; height:150px; }
+</style>
+
+</head>
+
+<body>
+	<h1>从下面的词语中提取所有带<span style="color:red;">门</span>的词语并输出到第二个文本框中</h1>
+	<textarea id="t1">清晨  前尘  侵晨  权臣  勤奋  气愤  气氛  区分  情分  铅粉  芡粉  轻粉  秋分  全份  起根  气根  墙根  勤恳  气门  窍门  球门  权门  缺门  倾盆  确认  亲人  穷人  前人  旗人  前任  强人  情人  求人  强韧  起身  亲身  前身  栖身  耆绅  欠伸</textarea><br /><br />
+	<input type="button" value="变" id="btn" /><br /><br />
+	<textarea id="t2"></textarea>
+	
+</body>
+</html>
+<script>
+oTextarea = document.getElementsByTagName('textarea')[0]
+nextTextarea = document.getElementsByTagName('textarea')[1]
+tmp = oTextarea.value.match(/.门/g)
+nextTextarea.value = tmp.join('\n')
+console.log(tmp)
+
+3、分解字符串
+<!doctype html>
+<html>
+<head> 
+	<meta charset="utf-8">
+	<title>无标题文档</title>
+	<style>
+		body { text-align:center; }
+		textarea { width:300px; height:150px; }
+	</style>
+
+</head>
+
+<body>
+	<textarea id="t1">?value1=a&value2=b&value3=c&value4=a&value5=b</textarea><br /><br />
+	<!-- 将上面框里的字符串分解成
+	     value1=a
+	     value2=b
+	     ....
+	     显示到下面框里
+	 -->
+	<input type="button" value="变" id="btn" /><br /><br />
+	<textarea id="t2"></textarea>
+	
+</body>
+</html>
+<script>
+oBtn = document.getElementsByTagName('input')[0]
+aText = document.getElementsByTagName('textarea')
+oBtn.onclick = function(){
+	value = aText[0].value
+	value = value.substr(1)  //去掉？
+	aText[1].value = value.split('&').join('\n')
+}
+</script>
+
+4、
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+body { text-align:center; }
+textarea { width:300px; height:150px; } 
+</style>
+<script>
+</script>
+</head>
+
+<body>
+	<textarea id="t1">?value1=a&value2=b&value3=c&value4=a&value5=b</textarea><br /><br />
+	<!-- 将字符串变成一个json串：{"value1":"a","value2":"b",...} -->
+	<input type="button" value="变" id="btn" /><br /><br />
+</body>
+</html>
+<script>
+oBtn = document.getElementsByTagName('input')[0]
+aText = document.getElementsByTagName('textarea')
+oBtn.onclick = function(){
+	value = aText[0].value.substr(1) //去掉?
+	value = value.replace(/&/g,'","')
+	value = '{"' + value.replace(/=/g,'":"') +'"}'
+	console.log(value)
+	
+}
+</script>
+
+5、<!doctype html>
+<html>
+<head> 
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+</script>
+</head>
+
+<body>
+	<input type="button" value="下一页" id="btn" />
+	<!-- 点击下一页，将下面www.baidu.com?page=1中的page的值加1 -->
+	<div id="div1">www.baidu.com?page=1</div>
+</body>
+</html>
+<script>
+oBtn = document.getElementsByTagName('input')[0]
+aText = document.getElementsByTagName('div')
+oBtn.onclick = function(){
+	tmp = aText[0].innerText
+	tmp2 = tmp.split('?')
+	eval(tmp2[1])  //直接将字符串当代码执行，得到变量page
+	console.log(tmp2,page)
+	page++
+	aText[0].innerText = tmp2[0] + '?page=' + page
+}
+</script>
+
+6、<!doctype html>
+<html>
+<head> 
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+ul { width:200px; margin:100px auto; }
+li { margin:10px; }
+</style>
+
+</head>
+
+<body>
+	<ul>
+		<li>
+			<span>花生----[未添加]</span>
+			<input type="button" value="添加" />
+			<!-- 点击添加，将[未添加]变成[已添加] 以下雷同-->
+		</li>
+		
+		<li>
+			<span>西瓜----[已添加]</span>
+			<input type="button" value="取消" />
+		</li>
+		
+		<li>
+			<span>芒果----[未添加]</span>
+			<input type="button" value="添加" />
+		</li>
+		
+		<li>
+			<span>黄瓜----[未添加]</span>
+			<input type="button" value="添加" />
+		</li>
+	</ul>
+</body>
+</html>
+<script>
+aSpan = document.getElementsByTagName('span')
+aInput = document.getElementsByTagName('input')
+for (var i = 0; i < aInput.length; i++) {
+	aInput[i].index = i
+	aInput[i].onclick = function(){
+		text = aSpan[this.index].innerText //获取span的文本
+		if (text.indexOf('已')>=0) {
+			text = text.replace('已','未')
+			this.value = "添加"
+		} else {
+			text = text.replace('未','已')
+			this.value = "取消"
+		}
+		aSpan[this.index].innerText = text
+	}
+}
+</script>
+
+7、秒表
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset='utf-8'>
+	<style type="text/css">
+		#digital{height: 200px;background: pink;color:yellow;font-size: 60px;line-height: 200px;text-align: center;}
+		input[type='button']{width: 100px;height: 50px;margin-left: 40px;}
+		.father{text-align: center;margin-top:20px;}
+	</style>
+</head>
+<body>
+	<div id='digital'>00:00.000</div>
+	<div class='father'>
+		<input type="button" value="开始" id='start'>
+		<input type="button" value="暂停" id='pause'>
+		<input type="button" value="重置" id='reset'>
+	</div>
+</body>
+<script type="text/javascript">
+// var time1 = new Date();
+// time1 = time1.getTime();
+// var timer = setInterval(function(){
+//    var time2 = new Date();
+//    time2  = time2.getTime();
+//    console.log(time2 - time1);
+//    clearInterval(timer);
+// },30);
+var oDigital = document.getElementById('digital');
+var aButton = document.getElementsByTagName('input');
+var timer = null;
+var iNum = 0;//保存时间,毫秒数
+var iRemained;//保存上次剩余秒数
+var bPause = false;//是否按了暂停按钮
+//开始
+aButton[0].onclick = function(){
+	//如果定时器已经存在，不再实例化，直接返回
+	if (timer) {
+		return;
+	}
+	var iStartTime = new Date();
+	iStartTime = iStartTime.getTime();//开始时间
+    timer = setInterval(function(){
+    	//当前时间
+    	var iCurrentTime = new Date();
+    	iCurrentTime = iCurrentTime.getTime();
+		iNum = parseInt(iCurrentTime - iStartTime);//毫秒数
+		//如果按暂停按钮，现在的差值应该在加上原来的毫秒数
+    	if (bPause) {
+    		iNum += iRemained;
+    	}
+    	
+    	var iMinute = parseInt(iNum / (60*1000));
+    	var iSecond = parseInt(iNum / 1000) % 60;
+    	var iMicroTime = iNum % 1000;
+    	oDigital.innerText = '' + zeroFill(iMinute,true) + ':'+zeroFill(iSecond,true) + "."+zeroFill(iMicroTime,false);
+    },10);
+}
+//重置
+aButton[2].onclick = function(){
+	clearInterval(timer);
+	timer = null;
+	bPause = false;
+	iRemained = 0;
+	oDigital.innerText = '00:00.000';//清空显示
+}
+//暂停
+aButton[1].onclick = function(){
+	clearInterval(timer);
+	timer = null;
+	//按下暂停按钮
+	bPause = true;
+	iRemained = iNum;//保存现有的毫秒数
+}
+function zeroFill(num,flag)
+{
+	//flag为true，补一个0
+	if (flag) {
+		return num < 10 ? ('0' + num) : (''+num);
+	}
+	//补2零
+	if (num<10) {
+		return '00' + num
+	} else if(num<100) {
+		return '0' + num;
+	} else {
+		return ''+ num;
+	}
+}
+</script>
+</html>
+
+8、发送验证码
+</html>
+	<head>
+		<meta charset="utf-8" />
+		<title>短信验证码</title>
+	</head>
+	
+	<body>
+	    <!-- 点击“获取验证码”按钮，后显示“30秒后重新发送”，秒数递减，然后将“获取验证码”按钮置为不可用状态，达到0秒后重新置为可用-->
+		<input type="text" placeholder="请输入验证码">
+		<input type="button" value="获取验证码" id="btn" />
+	</body>
+</html>
+<script>
+var oBtn = document.getElementById('btn');
+var time = 30;
+var timer;
+oBtn.onclick = function(){
+    this.disabled = true;//按钮不可用
+    var _this = this;//设置一个局部变量代表按钮
+    timer = setInterval( function(){
+    	time--;
+	    _this.value = ''+time+'秒后重新发送';
+	    if (time<1) {
+            clearInterval(timer);
+            _this.disabled = false;
+            _this.value = '获取验证码';
+            time = 30;
+	    }
+    },1000);
+}
+</script>
+
+ 
+   

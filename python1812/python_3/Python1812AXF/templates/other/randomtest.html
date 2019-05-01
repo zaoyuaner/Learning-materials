@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        span{
+            float: left;
+            width: 19%;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border: 1px solid gray;
+            margin: 3px;
+        }
+    </style>
+</head>
+<body>
+
+{% for foo in temp_arr %}
+    <span>
+        座位号: {{ forloop.counter }}-项目编号:{{ foo }}
+    </span>
+{% endfor %}
+
+
+</body>
+</html>

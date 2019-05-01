@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			td, img {
+				width: 140px;
+				height: 100px;
+			}
+		</style>
+		
+		<script src="js/jquery-1.12.3.js"></script>
+		<script>
+			$(function(){
+				//练习： 
+				//	点击表格中的图片， 将下面的图片显示成所点击的图片
+				$('td img').click(function(){
+//					$('#showImg')[0].src = this.src
+					$('#showImg').attr('src', $(this).attr('src') )
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<table border="1"> 
+			<tr>
+				<td><img src="images/11.jpg"/></td>
+				<td><img src="images/22.jpg"/></td>
+				<td><img src="images/33.jpg"/></td>
+			</tr>
+		</table>
+		<img src="images/11.jpg" id="showImg" />
+	</body>
+</html>

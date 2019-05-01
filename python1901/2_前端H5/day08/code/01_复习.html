@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+	
+	<script src="js/jquery-1.12.3.js"></script>
+	<script>
+	
+		// ready: 等待页面加载完成
+		$(function(){
+			
+			// JS对象 和 JQ对象
+			//	JS对象和JQ对象不能调用对方的方法和属性
+			//  JS -> JQ : $(JS对象)
+			//  JQ -> JS : $().get(); $().get(0); $()[0]
+			
+			// JQ选择器
+			//	 基础选择器：
+			//		$('#box')
+			//		$('.box')
+			//		$('div')
+			//		$('div, #box')
+			//		$('*')
+			//   层级选择器：
+			//		$('div div') => find()  
+			//		$('div > div') => children()
+			//		$('div + div') => next()
+			//		$('div ~ div') => nextAll()
+			//		siblings() : 所有兄弟
+			//		parent()
+			//		parents()
+			//	 伪类选择器：
+			//		:first  => first()
+			//		:last  => last()
+			//		:eq()  => eq()
+			
+			// 属性操作
+			// 	attr()
+			//	removeAttr()
+			//	addClass()
+			//	removeClass()
+			//	html()  
+			//  text()
+			//  val()
+			
+			// 筛选
+			// DOM操作
+			//	创建节点： $('<div></div>')
+			//  追加节点： append(), appendTo()
+			//	前置节点： prepend(), prependTo()
+			//	清空节点： empty()
+			//	删除节点： remove()
+			//	克隆节点： clone(), clone(true):会复制事件
+			
+			
+			
+		})
+	</script>
+	
+	</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+			/* 文本属性 */
+			.box {
+				width: 300px;
+				height: 100px;
+				background: orange;
+				
+				/*font-size: 20px;
+				font-family: "微软雅黑";
+				*/
+				font:20px "微软雅黑";  /* 复合属性 */
+				font-style: oblique; /* 斜体 */
+				font-weight: bold; /* 粗体 */
+				
+				text-align: left;
+				line-height: 30px;
+				text-decoration: line-through;
+				letter-spacing: 10px;
+				text-indent: 50px;
+			}
+			
+			ul {
+				/*list-style: none;*/
+				/*list-style: square;*/
+				/*list-style-image: url(images/2_03.png);*/
+				list-style-position: inside;
+			}
+			
+			.box1 {
+				width: 200px;
+				height: 200px;
+				border: 1px solid;
+				text-align: center;
+				
+				/*background-color: pink;*/
+				/*background-image: url(images/2_03.png);*/
+				/*background-repeat: no-repeat;*/
+				/*background: url(images/2_03.png) no-repeat;*/
+				/*background-image: url(images/2.jpg);*/
+				background: url(images/2.jpg) no-repeat;
+				background-attachment: scroll;
+				background-position: -50px -10px;
+			}
+			
+		</style>
+	</head>
+	<body style="height: 1000px;">
+		
+		<div class="box">属性值为数值型时，必须给属性值加单位，属性值为0时除外。</div>
+		
+		<ul>
+			<li>11</li>
+			<li>22</li>
+			<li>33</li>
+			<li>44</li>
+		</ul>
+		
+		<div class="box1">box1</div>
+		
+	</body>
+</html>

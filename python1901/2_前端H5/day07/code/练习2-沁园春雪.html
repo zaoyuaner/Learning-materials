@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-1.12.3.js"></script>
+		<script>
+			
+			$(function(){
+				
+				/*
+				练习2
+					1. 让id为mp的元素文字大小变成30px
+					2. 让class名为c1的元素背景为#CCFF99
+					3. 将所有的div和p，统一显示margin-bottom:30px
+					4. 将所有的div的border大小增加 2像素 (boderWidth可以使用+=2px)
+					5. 将div下的子div的文字变蓝色blue
+					6. 将div中包含的所有div背景颜色变成#FF99FF
+					7. 将div的所有兄弟标签p的字体颜色变成橙色
+					8. 将紧跟着div的p标签的边框设为2像素 实线 #009900
+				*/
+				$('#mp').css('font-size', "30px")
+				$('.c1').css('background', "#ccff99")
+				$('div, p').css('margin-bottom', "30px")
+				$('div').css('border-width', '+=2px')
+				
+				$('div > div').css('color', "blue")
+				$('div div').css('background', "#ff99ff")
+				$('div').siblings('p').css('color', "orange")
+				$('div + p').css('border', "2px solid #009900")
+				
+				
+			})
+			
+		</script>
+	</head>
+	<body>
+		<h1>沁园春·雪</h1>
+		<h2>毛泽东</h2>
+		<div style="border: 3px solid red;">
+		    <span>
+				<div style="border: 1px solid red">北国风光，千里冰封，万里雪飘。
+					<div style="border: 5px solid red">望长城内外，惟余莽莽；大河上下，顿失滔滔。</div>
+					<p>山舞银蛇，原驰蜡象，欲与天公试比高。</p>
+					<p>须晴日，看红装素裹，分外妖娆。</p>
+				</div>
+				<h4>aaaaaaaaaaaaaa</h4>
+		    </span>
+		    <p id="mp">江山如此多娇，引无数英雄竞折腰。</p>
+		</div>
+		<p class="c1">惜秦皇汉武，略输文采；唐宗宋祖，稍逊风骚。</p>
+		<p class="c1">一代天骄，成吉思汗，只识弯弓射大雕。</p>
+		<p>俱往矣，数风流人物，还看今朝。</p>
+
+	</body>
+</html>

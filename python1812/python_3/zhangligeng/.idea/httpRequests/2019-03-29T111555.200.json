@@ -1,0 +1,10 @@
+{
+  "date": "1553829355.613986",
+  "token": "",
+  "status": 404,
+  "msg": "注册失败，用户名已存在，请重新注册！",
+  "user": {
+    "username": null,
+    "permissions": 0
+  }
+}

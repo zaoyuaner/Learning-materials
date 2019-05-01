@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button>加载表格</button>
+		<table border="1">
+			<tr>
+				<th>name</th>
+				<th>age</th>
+				<th>sex</th>
+				<th>phone</th>
+				<th>address</th>
+				<th>qq</th>
+			</tr>
+		</table>
+		
+		<p style="width: 100px; height: 30px; position: absolute; left: 300px; top: 300px;">我要滚动</p>
+		
+	</body>
+	<script src="js/jquery-1.12.3.js"></script>
+	<script>
+		$(function(){
+			
+			$('button').click(function(){
+				
+				// 获取数据
+				$.get('json/person.json', function(data){
+//					console.log(data)
+					for (var i=0; i<data.length; i++) {
+						var p = data[i]
+						
+						// 创建节点
+						var tr = $('<tr></tr>').appendTo('table')
+						$('<td>'+ p.name +'</td>').appendTo(tr)
+						$('<td>'+ p.age +'</td>').appendTo(tr)
+						$('<td>'+ p.sex +'</td>').appendTo(tr)
+						$('<td>'+ p.phone +'</td>').appendTo(tr)
+						$('<td>'+ p.address +'</td>').appendTo(tr)
+						$('<td>'+ p.qq +'</td>').appendTo(tr)
+						
+					}
+					
+				})
+				
+			})
+			
+			
+			// 滚动
+			setInterval(function(){
+				var left = $('p').offset().left
+				if (left <= 0) {
+					left = 300
+				}
+				$('p').css("left", left-5)
+			}, 30)
+			
+			
+		})
+	</script>
+</html>

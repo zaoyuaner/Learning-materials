@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			* {margin: 0; padding: 0; border: none;}
+			ul, li {list-style: none;}
+			body {
+				background: #ccc;
+			}
+			#box {
+				width: 150px;
+				height: 20px;
+				border: 1px solid white;
+				cursor: pointer;
+			}
+			#list {
+				width: 100px;
+				height: 150px;
+				background: black;
+				border: 1px solid white;
+				display: none;
+			}
+			#list li {
+				color: white;
+				border-bottom: 1px dashed white;
+				height: 29px;
+				line-height: 29px;
+				text-align: center;
+				cursor: pointer;
+			}
+		</style>
+		<script src="js/jquery-1.12.3.js"></script>
+		<script>
+			$(function(){
+				
+				/*
+				 制作下拉菜单: 
+			       1, 移入box和list中让list显示， 移出时隐藏
+			       2, 移入到对应的li中有选中状态（背景变成灰色）
+			       3, 点击对应的游戏名称，将游戏名称在box中显示
+				*/
+				
+				$('#box').mouseenter(function(){
+					$('#list').show()
+				})
+				$('#box').mouseleave(function(){
+					$('#list').hide()
+				})
+				
+				$('#list li').mouseenter(function(){
+					$(this).css('background', 'gray')
+						.siblings().css('background', 'black')
+				})
+				$('#list li').click(function(){
+					$('#box span').html( $(this).html() )
+				})
+				
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<span>请选择游戏名称</span>
+			<ul id="list">
+				<li>英雄联盟</li>
+				<li>魔兽世界</li>
+				<li>大话西游</li>
+				<li>天龙八部</li>
+				<li>九阴真经</li>
+			</ul>
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--1, 页面效果如下图，文件命名为：1-carousel.html 
+            2, 页面默认不显示轮播图, 可以点击‘弹出页面’按钮可以显示轮播图界面（显示
+               display:block）， 弹出的轮播图界面显示在页面中央,且浏览器窗口大小发生改变时，轮
+                              播图界面也一直显示在页面中央。 
+            3, 轮播图界面顶部有标题栏， 可以实现拖拽， 标题栏右侧有关闭按钮，点击关闭按钮可
+                              以关闭轮播图界面（隐藏 display:none） 
+            4, 轮播图界面中有 向左自动无缝轮播 的轮播图。-->
+		<style>
+			* {padding: 0; margin: 0; border: none;}
+			ul {list-style: none;}
+			
+			#frame{
+				width: 500px;
+				height: 300px;
+				border: 1px solid gray;
+				position: relative;
+				margin: 100px auto;
+			}
+			#all{
+				width: 404px;
+				height: 240px;
+				border: 1px solid orange;
+				float:left;
+				position: relative;
+				margin-left: 50px;
+				display:none
+			}
+			}
+			#drag{
+				background: gray;
+				height:20px;
+				width: 3px;
+				float:left;
+			}
+			#close{
+				height:20px;
+				width: 80px;
+				background: orange;
+				float:right;
+				text-align: center;
+			}
+			#box {
+				width: 400px;
+				height: 200px;
+				border: 1px solid orange;
+				/* 超出部分隐藏 */
+				overflow: hidden;  
+				position: relative;
+				margin: 0px auto;
+				
+				
+			}
+			#box #list {
+				width: 400px;
+			}
+			#box #list li {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 400px;
+				height: 200px;
+				/*text-align: center;
+				line-height: 200px;
+				font-size: 50px;*/
+				/*display: none;*/
+				opacity: 0;
+			}
+			#box #list li img {
+				width: 100%;
+				height: 100%;
+			}
+			
+			#box #list2 {
+				position: absolute;
+				left: 40%;
+				bottom: 20px;
+			}
+			#box #list2 li {
+				width: 10px;
+				height: 10px;
+				background: white;
+				float: left;
+				margin-left: 5px;
+				text-align: center;
+				line-height: 20px;
+				font-size: 14px;
+				border-radius: 50%;
+				cursor: pointer;
+			}
+			#box #list2 li:hover {
+				background: green;
+				color: white;
+			}
+			#box #list2 li.active {
+				background: red;
+				color: white;
+			}
+			#prev,img{
+				width: 20px;
+				height: 40px;
+			}
+			#next,img{
+				width: 20px;
+				height: 40px;
+			}
+			#prev, #next {
+				position: absolute;
+				top: 40%;
+				
+				
+				width: 1%;
+				height: 3%;
+				background: white;
+				opacity: 0.8;
+				cursor: pointer;
+			}
+			#prev {
+				left: 0px;
+						
+			}
+			#next {
+				right:15px;
+				
+			}
+			
+		</style>
+	</head>
+	<body>
+			<div id='frame'>
+				<div id='pop'>
+					<button  style="width: 80px;height: 40px;border: 1px solid orange;background: orange;" >弹出页面</button>
+				</div>
+				<div id='all'>
+					<div id='trans'>
+						<input type="text" name="title" id="drag" />
+						<div id='close'><buttonstyle="width: 80px;height: 30px;border:0;background: orange;">关闭</button></div>
+					</div>
+					<div id="box">
+						<ul id="list">
+							<li><img src="images2/b1.jpg" /></li>
+							<li><img src="images2/b2.jpg" /></li>
+							<li><img src="images2/b3.jpg" /></li>
+							<li><img src="images2/b4.jpg" /></li>
+						</ul>
+						<ul id="list2">
+							<li class="active"></li>
+							<li></li>
+							<li></li>
+							<li></li> 
+						</ul>
+						
+						
+						<div id="prev">
+							<img src="images2/left.png" />	
+						</div>
+						<div id="next">
+							<img src="images2/right.png" />
+						</div>
+				</div>
+			</div>		
+						
+						
+					</div>
+					
+					<script src="move.js"></script>
+					<script src="js/jquery-1.12.3.js"></script>
+					<script>
+						
+						// 默认显示第一个
+						var aLi = list.getElementsByTagName('li')
+						var aLi2 = list2.getElementsByTagName('li')  //小按钮
+			//			aLi[0].style.display = 'block'
+						aLi[0].style.opacity = 1
+						
+						
+						var i = 0;  // 即将移动到的li下标
+						var timer = setInterval(function(){
+							i++
+							move()
+						}, 3000)
+						
+						// 移动到下标为i的li
+						function move(){
+							// 控制右边界
+							if (i >= aLi.length) {
+								i = 0
+							}
+							if (i < 0) {
+								i = aLi.length - 1
+							}
+							
+							//透明度切换
+							for (var j=0; j<aLi.length; j++) {
+								if (i == j) {
+									animate(aLi[j], {opacity: 100})
+								}
+								else {
+									animate(aLi[j], {opacity: 0})
+								}
+							}
+							
+							// 修改按钮的选中状态
+							for (var j=0; j<aLi2.length; j++) {
+								aLi2[j].className = ""
+							}
+							aLi2[i].className = 'active'
+						}
+						
+						
+						// 移入小按钮
+						for (var j=0; j<aLi2.length; j++) {
+							aLi2[j].index = j
+							aLi2[j].onmouseenter = function(){
+								i = this.index
+								move()
+							}
+						}
+						
+						// 点击上一页，下一页
+						prev.onclick = function(){
+							i--;
+							move()
+						}
+						next.onclick = function(){
+							i++;
+							move()
+						}
+						
+						
+						// 移入box关闭定时器
+						box.onmouseenter = function(){
+							clearInterval(timer);
+						}
+						// 移出box重新开启定时器
+						box.onmouseleave = function(){
+							clearInterval(timer);
+							timer = setInterval(function(){
+								i++
+								move()
+							}, 3000)
+						}
+						
+						$('#pop').click(function(){
+							$('#all').css('display','block')
+						})
+						$('#close').click(function(){
+							$('#all').css('display','none')
+						})
+						
+						$('#all').mousedown(function(e){
+							e.preventDefault()
+							var x=e.offsetX
+							var y=e.offsetY
+							$(document).mousemove(function(e){
+								$('#all').css({left:e.pageX-x,top:e.pageY-y})
+							})
+							$(document).mouseup(function(){
+								$(document).off('mousemove mouseup')
+							})
+						})
+			
+		</script>
+		
+	</body>
+</html>

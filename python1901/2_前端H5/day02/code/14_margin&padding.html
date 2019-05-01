@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.foo {
+				width: 100px;
+				height: 100px;
+				background: red;
+				
+				/* border:边框 */
+				border: 10px solid green;
+				
+				/* padding:内边距 */
+				/*padding: 10px; */ /* 上下左右 */
+				/*padding: 10px 30px;*/  /* 上右下左：上下10px,左右：30px*/
+				/*padding: 10px 30px 60px;*/  /* 上10px，左右30px 下60px */
+				/*padding: 10px 30px 60px 80px;*/ /* 上10,右30,下60,左80 */
+				
+				/*padding-top: 10px;
+				padding-right: 30px;
+				padding-bottom: 30px;
+				padding-left: 30px;*/
+				
+				
+				/* margin:外边距 
+				 	用法和padding类似
+				 * */
+				/*margin: 10px;*/
+				/*margin: 10px 30px;*/ 
+				/*margin: 10px 30px 60px;*/ 
+				/*margin: 10px 30px 60px 90px;*/ 
+				
+				/*margin-top: 10px;*/
+				/*margin-right: 10px;*/
+				/*margin-bottom: 10px;*/
+				/*margin-left: 10px;*/
+				
+				/* 在页面中左右居中  */
+				margin: 0 auto;
+				text-align: center;
+				line-height: 100px;
+				
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<!--
+			盒子模型：
+			div所占的宽度：width + padding + border + margin
+			div所占的高度：height + padding + border + margin
+		-->
+		<div class="foo">helloworld</div>
+	</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			
+			// 数组Array: 类似Python中的list
+			// 创建数组
+			var arr = new Array(1, 2, 3);
+			console.log(arr);  //[1,2,3]
+			var arr = [4, 5, 6, 'hello']
+			console.log(arr[1]) // 5
+			console.log(arr[-1]) // undefined
+			console.log(arr[10]) // undefined
+			
+			// 遍历数组
+			// for-in
+			for (var i in arr){
+				console.log(i)
+			}
+			
+			//普通for
+			for (var i=0; i<arr.length; i++) {
+				console.log(arr[i])
+			}
+			
+			/*
+			 5,数组的常用方法: 
+				push(): 接收任意数量的参数，把它们逐个添加到数组的末尾，并返回修改后数组的长度;
+			    pop(): 从数组末尾移除最后一个元素，减少数组的 length 值，然后返回移除的元素;
+				sort() : 从小到大排序 ,  原数组也被升序排序了
+			    reverse() : 逆向排序, 原数组也被逆向排序了
+				slice() :  不修改原数组, 将原数组中的指定区域数据提取出来并返回一个新数组
+				splice() : 截取原数组中指定的数据, 会改变原数组
+				indexOf() : 获取数组中第一个出现指定元素的下标， 如果不存在则返回-1
+				join() : 将数组中的元素用指定字符连接，连接成为一个字符串，
+			*/
+			
+			// push(): 接收任意数量的参数，把它们逐个添加到数组的末尾，并返回修改后数组的长度;
+			var arr = [3, 4, 5]
+			arr.push(6)
+//			arr.push(6, 7)
+			console.log(arr)  // [3,4,5,6]
+			
+			// pop
+			var n = arr.pop()
+			console.log(arr)  //[3,4,5]
+			console.log(n)  //6
+			
+			// sort: 按照ASCII码比较， 字符串比较
+			var arr = [3, 4, 2, 1]
+			arr.sort()
+			console.log(arr)  // [1,2,3,4]
+			
+			var arr = [13, 4, 12, 1, 5, 8]
+			arr.sort()
+			console.log(arr)  //[1,12,13,4,5,8]
+			
+			var arr = [13, 4, 12, 1, 5, 8]
+			arr.sort(function(a, b){return a > b})
+			console.log(arr)  // [1,4,5,8,12,13]
+			
+			//reverse()
+			arr.reverse()
+			console.log(arr)  //[13,12,8,5,4,1]
+			
+			//slice(start, end) : 截取，切片，不会改变原数组, 类似Python中的切片[:]
+			var arr = [1, 2, 3, 4, 5, 6, 7, 8]
+			var newArr = arr.slice(2)  // [3,4,5,6,7,8]
+			var newArr = arr.slice(2, 5)  // [3,4,5], 范围[2,5)
+			console.log(newArr) 
+			
+			//splice(start, length, ..) : 增，删， 改， 会改变原数组
+			// 删: 两个参数，第二个不为0
+			var arr = [1, 2, 3, 4, 5, 6, 7, 8]
+			arr.splice(2, 3)  //删除从下标2开始的连续3个数
+			console.log(arr);  //[1,2,6,7,8]
+			
+			// 增加: 第二个参数必需为0，且参数数量要>=3
+			var arr = [1, 2, 3, 4, 5, 6, 7, 8]
+			arr.splice(2, 0, 99,'hello')  
+			console.log(arr);   //[1,2,99,'hello',3,4,5,6,7,8]
+			
+			// 改、替换: 第二个参数不为0，且参数数量要>=3
+			var arr = [1, 2, 3, 4, 5, 6, 7, 8]
+			arr.splice(2, 3, 99,'hello')  
+			console.log(arr);  // [1,2,99,'hello',6,7,8]
+			
+			
+			//indexOf() : 类似Python中的find()
+			var arr = [2, 2, 3, 4, 5, 3, 6]
+			console.log(arr.indexOf(3))  // 2
+			console.log(arr.indexOf(30))  // -1
+			
+			// join()
+			var arr = [1, 2, NaN]
+			var str = arr.join('===') // 默认使用逗号连接
+			console.log(str)  //1===2===NaN
+			console.log(typeof str)  //string
+			
+			// concat(): 
+			var arr = [1, 2, 3].concat([4, 5, 6]) 
+			console.log(arr)  // [1,2,3,4,5,6]
+			console.log(typeof arr)  // object
+			
+			console.log(arr)
+			
+		</script>
+	</head>
+	<body>
+		<video src="https://qiniu-xpc0.xpccdn.com/5c8f05b84363b.mp4" id="myVideo" width="630" autoplay></video>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="box1">click</button> <br />
+		<button id="box2">mouse</button> <br />
+	</body>
+	<script>
+		
+		box1.onclick = function(){
+			console.log("单击");
+		}
+		
+		box1.ondblclick = function(){
+			console.log("双击666");
+		}
+		
+		box2.onmousedown = function(){
+			console.log("按下鼠标")
+		}
+		box2.onmouseup = function(){
+			console.log("松开鼠标")
+		}
+		
+		box2.onmousemove = function(){
+//			console.log("鼠标在box2中移动")
+		}
+		box2.onmouseenter = function(){
+			console.log("鼠标移入box2")
+		}
+		box2.onmouseleave = function(){
+			console.log("鼠标移出box2")
+		}
+		
+		// mouseover, mouseout (不建议使用，会产生事件冒泡)
+		
+	</script>
+</html>

@@ -1,0 +1,91 @@
+﻿
+# 员工表
+create table emp(			
+    empno int primary key,
+    enname varchar(20),
+    job varchar(20),
+    mgr int,
+    hiredate date,
+    sal double,
+    comm double,
+    deptno int
+);
+
+# 添加数据
+insert into emp values(7369,'smith','clark',7902,'1980-12-17',800,null,20);
+insert into emp values(7499,'allen','salesman',7698,'1981-02-20',1600,300,30);
+insert into emp values(7521,'ward','salesman',7698,'1981-02-22',1250,500,30);
+insert into emp values(7566,'jones','managen',7839,'1981-04-02',2975,null,30);
+insert into emp values(7654,'martin','salesman',7698,'1981-09-28',1250,1400,30);
+insert into emp values(7698,'blake','manager',7839,'1981-05-01',2850,null,30);
+insert into emp values(7782,'clark','manageer',7839,'1980-06-17',2450,null,10);
+insert into emp values(7788,'scott','analyst',7566,'1987-02-20',3000,null,20);
+insert into emp values(7839,'king','president',null,'1987-02-20',5000,null,10);
+
+
+
+
+
+#综合练习
+#建学生信息表student
+create table student(
+sno varchar(20) not null primary key,
+sname varchar(20) not null,
+ssex varchar(20) not null,
+sbirthday datetime,
+class varchar(20)
+);
+#建立教师表
+create table teacher(
+tno varchar(20) not null primary key,
+tname varchar(20) not null,
+tsex varchar(20) not null,
+tbirthday datetime,
+prof varchar(20),
+depart varchar(20) not null
+);
+#建立课程表course
+create table course(
+cno varchar(20) not null primary key,
+cname varchar(20) not null,
+tno varchar(20) not null,
+foreign key(tno) references teacher(tno)
+);
+#建立成绩表
+create table score(
+sno varchar(20) not null primary key,
+foreign key(sno) references student(sno),
+cno varchar(20) not null,
+foreign key(cno) references course(cno),
+degree decimal
+);
+#添加学生信息
+insert into student values('108','曾华','男','1977-09-01','95033');
+insert into student values('105','匡明','男','1975-10-02','95031');
+insert into student values('107','王丽','女','1976-01-23','95033');
+insert into student values('101','李军','男','1976-02-20','95033');
+insert into student values('109','王芳','女','1975-02-10','95031');
+insert into student values('103','陆君','男','1974-06-03','95031');
+#添加教师表
+insert into teacher values('804','李诚','男','1958-12-02','副教授','计算机系');
+insert into teacher values('856','张旭','男','1969-03-12','讲师','电子工程系');
+insert into teacher values('825','王萍','女','1972-05-05','助教','计算机系');
+insert into teacher values('831','刘冰','女','1977-08-14','助教','电子工程系');
+#添加课程表
+insert into course values('3-105','计算机导论','825');
+insert into course values('3-245','操作系统','804');
+insert into course values('6-166','数字电路','856');
+insert into course values('9-888','高等数学','831');
+#添加成绩表
+insert into score values('103','3-245','86');
+insert into score values('105','3-245','75');
+insert into score values('109','3-245','68');
+insert into score values('103','3-105','92');
+insert into score values('105','3-105','88');
+insert into score values('109','3-105','76');
+insert into score values('103','3-105','64');
+insert into score values('105','3-105','91');
+insert into score values('109','3-105','78');
+insert into score values('103','6-166','85');
+insert into score values('105','6-166','79');
+insert into score values('109','6-166','81');

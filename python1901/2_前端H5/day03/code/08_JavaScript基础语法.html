@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			
+			// Python基础语法
+			// 	  变量
+			//   数据类型：number, boolean, str, list,tuple, dict, set, bytes, None
+			//   运算符
+			//   分支语句： if
+			//	  循环：while, for-in
+			//	  函数： def fn()
+			//	  类/对象
+			
+			// JavaScript基础语法
+			//	 变量:  var age;  let age
+			//  数据类型：number,boolean, string, array, object, Null,undefined
+			//  运算符  
+			//  分支语句： if, switch
+			//	循环：while, do-while, for-in, 普通for,  其他:for-of, foreach, ...
+			//	函数：function fn()
+			//  类/对象  
+			
+			// JavaScript组成：
+			//	1. ECMAScript: 包含了JS语言的语法（重要，基础）
+			//	2. BOM : Browser Object Model 和浏览器相关（了解）
+			//  3. DOM : Document Object Model 和页面相关（重要）
+			
+			// 版本：
+			//    ES5 : ECMAScript第5大版本
+			//    ES6 : ECMAScript第6大版本
+			
+			// JS语法
+			// 变量
+//			age = 10;   // 不建议省略var
+//			console.log(age);  // 10
+			
+			var age;  //声明变量age
+			console.log(age)  //undefined,未定义：只声明了但是没有赋值
+						
+			age = 10;
+			console.log("年龄" + age)  //'年龄10'
+			console.log(typeof age)  //number, 查看数据类型，类似python中的type()
+			
+			var a=10, b=20, c=30;
+			console.log("a:" + a + ",b:"+ b + ",c:" + c)
+			
+//			let age1 = 10;  //ES6语法，声明age1变量
+			
+			// undefined: 未定义
+			var d;
+			console.log(d);  // undefined
+			
+			// null : 空，空对象
+			e = null;
+			console.log(e);  //null  
+			console.log(typeof e);  // object
+			console.log(undefined == null);  // true,值是否相等
+			console.log(typeof undefined == typeof null);  //false
+			console.log(undefined === null);  //false， 是否全等/恒等：值和类型都要相等
+			
+			//boolean
+			f = true
+			console.log(typeof f)  //boolean
+			/*
+			Boolean 类型的转换规则: (牢记)
+				String: 非空字符串为true, 空字符串为false
+				Number: 非0数值为true, 0或者NaN为false
+				Object: 对象不为null则为true, null为false
+				Undefined : undefined为false
+			*/
+			
+			//number: 数值类型， int, float
+			var g = 10
+			var h = 10.1
+			var pi = 3.14e-5   //科学计数法
+			console.log(pi)
+			
+			// NaN: Not a Number: 特殊值，是number类型
+			//     一般在一些错误的数学运算会产生NaN,NaN一般不能运算
+			console.log(8/0);  // Infinity 无穷大
+			console.log(8/0 * 0)  //NaN
+			console.log(0/0)  //NaN
+			
+			console.log(isNaN(NaN));   //true
+			console.log(isNaN(25));	  //false，25 是一个数值
+			console.log(isNaN('25'));   //false，'25'是一个字符串数值，可以转成数值
+			console.log(isNaN('zhangsan'));    //true，'zhangsan'不能转换为数值
+			console.log(isNaN(true));        //false  ,true可以转成成 1
+
+			console.log(NaN == NaN)  //false
+			console.log(NaN != NaN)  //true
+			console.log(NaN != 10)  //true
+			
+			
+			//类型转换
+			// parseInt()  int()
+			console.log(parseInt(10.1))  // 10
+			console.log(parseInt(10.9))  // 10
+			console.log(parseInt("10"))  // 10, 字符串转换成数字
+			console.log(parseInt("10.9"))  // 10
+			console.log(parseInt("10.9px"))  // 10
+			console.log(parseInt("px10.9"))  // NaN
+			console.log(parseInt("10abc9px"))  // 10
+			
+			// parseFloat()
+			console.log(parseFloat(10))  // 10
+			console.log(parseFloat("10.9px"))  // 10.9
+			
+			// Math： 数学函数
+			console.log(Math.round(4.46))  //4
+			console.log(Math.round(4.5))  //5
+			console.log(Math.sqrt(25)) //5
+			console.log(Math.random()) //随机数： [0,1)
+			console.log(Math.max(3,20,1))  //20
+			console.log(Math.min(3,20,1))  //1
+			
+			
+			
+			
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

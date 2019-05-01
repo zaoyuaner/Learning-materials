@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			* {padding: 0; margin: 0; border: none;}
+			ul {list-style: none;}
+			
+			#box {
+				width: 400px;
+				height: 200px;
+				border: 1px solid green;
+				/* 超出部分隐藏 */
+				overflow: hidden;  
+				position: relative;
+				margin: 100px auto;
+			}
+			#box #list {
+				width: 400px;
+			}
+			#box #list li {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 400px;
+				height: 200px;
+				/*text-align: center;
+				line-height: 200px;
+				font-size: 50px;*/
+				/*display: none;*/
+				opacity: 0;
+			}
+			#box #list li img {
+				width: 100%;
+				height: 100%;
+			}
+			
+			#box #list2 {
+				position: absolute;
+				left: 40%;
+				bottom: 20px;
+			}
+			#box #list2 li {
+				width: 20px;
+				height: 20px;
+				background: white;
+				float: left;
+				margin-left: 5px;
+				text-align: center;
+				line-height: 20px;
+				font-size: 14px;
+				border-radius: 50%;
+				cursor: pointer;
+			}
+			#box #list2 li:hover {
+				background: green;
+				color: white;
+			}
+			#box #list2 li.active {
+				background: green;
+				color: white;
+			}
+			
+			#prev, #next {
+				position: absolute;
+				top: 45%;
+				width: 50px;
+				height: 20px;
+				background: white;
+				opacity: 0.8;
+				cursor: pointer;
+			}
+			#prev {
+				left: 10px;			
+			}
+			#next {
+				right: 10px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<ul id="list">
+				<li><img src="images/b1.jpg" /></li>
+				<li><img src="images/b2.jpg" /></li>
+				<li><img src="images/b3.jpg" /></li>
+				<li><img src="images/b4.jpg" /></li>
+			</ul>
+			<ul id="list2">
+				<li class="active">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li> 
+			</ul>
+			
+			<div id="prev">上一页</div>
+			<div id="next">下一页</div>
+			
+		</div>
+		
+		<script src="move.js"></script>
+		<script>
+			
+			// 默认显示第一个
+			var aLi = list.getElementsByTagName('li')
+			var aLi2 = list2.getElementsByTagName('li')  //小按钮
+//			aLi[0].style.display = 'block'
+			aLi[0].style.opacity = 1
+			
+			
+			var i = 0;  // 即将移动到的li下标
+			var timer = setInterval(function(){
+				i++
+				move()
+			}, 3000)
+			
+			// 移动到下标为i的li
+			function move(){
+				// 控制右边界
+				if (i >= aLi.length) {
+					i = 0
+				}
+				if (i < 0) {
+					i = aLi.length - 1
+				}
+				
+				//透明度切换
+				for (var j=0; j<aLi.length; j++) {
+					if (i == j) {
+						animate(aLi[j], {opacity: 100})
+					}
+					else {
+						animate(aLi[j], {opacity: 0})
+					}
+				}
+				
+				// 修改按钮的选中状态
+				for (var j=0; j<aLi2.length; j++) {
+					aLi2[j].className = ""
+				}
+				aLi2[i].className = 'active'
+			}
+			
+			
+			// 移入小按钮
+			for (var j=0; j<aLi2.length; j++) {
+				aLi2[j].index = j
+				aLi2[j].onmouseenter = function(){
+					i = this.index
+					move()
+				}
+			}
+			
+			// 点击上一页，下一页
+			prev.onclick = function(){
+				i--;
+				move()
+			}
+			next.onclick = function(){
+				i++;
+				move()
+			}
+			
+			
+			// 移入box关闭定时器
+			box.onmouseenter = function(){
+				clearInterval(timer);
+			}
+			// 移出box重新开启定时器
+			box.onmouseleave = function(){
+				clearInterval(timer);
+				timer = setInterval(function(){
+					i++
+					move()
+				}, 3000)
+			}
+			
+			
+		</script>
+	</body>
+</html>

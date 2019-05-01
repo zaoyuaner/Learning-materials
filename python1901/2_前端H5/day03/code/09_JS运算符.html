@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			
+			// 运算符
+			//算术运算符 ： +，-, *, /, %(取余数)
+			//字符串和变量的拼接： +
+			//关系运算符 ： <、>、<=、>=、==、===、!=, !==
+			//逻辑运算符 ： &&  与(且)、||  或、!  非
+			//赋值运算符 ：  =、+=、-=、*=、/=、%=
+			//自增、自减 ： ++a, a++, --a, a--
+
+			//算术运算符 ： +，-, *, /, %(取余数)
+			console.log(1 + 1)
+			console.log(10 - 3)
+			console.log(10 * 3)
+			console.log(10 / 4)  //2.5
+			console.log(parseInt(10/4))
+			console.log(10 % 3)  //1
+			
+			// + 
+			console.log("1" + "1")  // '11'
+			console.log("1" + 1)  // '11'
+			console.log("1" + 1 + 1)  // '111'
+			console.log("1" + (1 + 1))  // '12'
+			console.log('1' + [1,2,3])  // '11,2,3'
+			console.log("1" + true)  // '1true'
+			
+			// -
+			console.log(2 - 1)  //1
+			console.log("2" - 1)  //1,数字
+			console.log(typeof ("2" - 1))  //number
+			console.log('2' - '1') //1,数字
+			console.log('a' - 1)  //NaN
+			
+			//关系运算符 ： <、>、<=、>=、==、===、!=, !==
+			console.log(10 > 8)  // true
+			console.log('a' > 'b')  // false
+			console.log('ab' > 'ba')  // false
+			console.log('ab' > 1)  // false
+			console.log(1 == '1')  //true 值相等
+			console.log(1 === '1')  //false 值相等,类型不等
+			
+			//逻辑运算符 ： &&与(且)、||或、!非
+			console.log(10 && null && "a")   //null
+			console.log(10 || null || "a")   //10
+			console.log(!10)   //false
+			
+			//赋值运算符 ：  =、+=、-=、*=、/=、%=
+			
+			//自增、自减 ： ++a, a++, --a, a--
+			// ++a: 先自加，再做其他运算
+			// a++: 先取值取运算，再自加
+			var a = 10
+			console.log(++a)  // 11
+			console.log(a++)  // 11
+			console.log(a)  //12
+			
+			var a = 10
+			var b = a++ + ++a*3 - a-- + --a
+			//	    10  + 12*3  - 12  + 10
+			console.log(b)  // 44
+			
+			// 三目运算符 ？：
+			var a = 10
+			var b = 12
+			var max = a > b ? a : b
+			console.log(max)
+			
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

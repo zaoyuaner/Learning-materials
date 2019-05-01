@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		ID:<input type="text" id="uid" /> <br />
+		姓名:<input type="text" id="uname" /> <br />
+		电话:<input type="text" id="uphone" /> <br />
+		<input type="button" value="保存" id="save" />
+		
+		<table border="1" id="tb">
+			<tr>
+				<th>ID</th>
+				<th>姓名</th>
+				<th>电话</th>
+				<th>操作</th>
+			</tr>
+			<!--<tr>
+				<td>1</td>
+				<td>张三</td>
+				<td>12344</td>
+				<td>
+					<a href="#">删除</a>
+				</td>
+			</tr>-->
+		</table>
+		
+	<script>
+
+		save.onclick = function(){
+			var id = uid.value;
+			var name = uname.value;
+			var phone = uphone.value;
+
+			// 创建tr节点
+			var tr = document.createElement('tr')
+//			tr.innerHTML = "<td>"+ id +"</td><td>"+ name +"</td><td>"+ phone +"</td><td><a href='#'>删除</a></td>"
+			tb.appendChild(tr)
+			
+			var td1 = document.createElement("td")
+			var td2 = document.createElement("td")
+			var td3 = document.createElement("td")
+			var td4 = document.createElement("td")
+			
+			tr.appendChild(td1)
+			tr.appendChild(td2)
+			tr.appendChild(td3)
+			tr.appendChild(td4)
+			
+			td1.innerHTML = id
+			td2.innerHTML = name
+			td3.innerHTML = phone
+			td4.innerHTML = "<a href='#'>删除</a>"
+			
+			// 给a加点击
+			td4.getElementsByTagName('a')[0].onclick = function(){
+				var tr = this.parentNode.parentNode;
+				tr.parentNode.removeChild(tr);
+			}
+			
+		}
+		
+		// 复习
+		//BOM
+		//  window对象： 包括document, location,histroy, navigator等
+		//  alert(), confirm(), open()
+		//  location.href, location.assgin(), location.reload()
+		//
+		
+		//DOM
+		//   获取节点
+		//   	1. document.getElementById(id)
+		//   	2. document.getElementsByTagName(tagname)
+		//   	3. document.getElementsByName(name)
+		//   	4. document.getElementsByClassName(clasname)
+		//	 元素节点属性：
+		//		innerHTML: 内容
+		//		value: value值，一般是输入框内容
+		//		style: css样式, 一般用来设置css样式		
+		//		className: class名
+		//		id
+		//		tagName
+		//		children
+		//		parentNode
+		//		
+		//		offsetLeft, offsetTop
+		//		offsetWidth, offsetHeight
+		//
+		//	DOM操作（节点操作）：
+		//		createElement()
+		//		appendChild()
+		//		removeChild()
+		//		cloneNode(true)
+		
+		//事件： 
+		//	鼠标事件
+		//		onclick, ondblclick, onmousedown, onmouseup
+		//		onmousemove, onmouseenter, onmouseleave
+		//  this:
+		//		事件中的this就是触发事件的对象
+		
+		
+	
+	</script>
+	</body>
+</html>

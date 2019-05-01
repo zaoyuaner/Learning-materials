@@ -1,0 +1,112 @@
+PUT http://localhost:8001/app1/goods/1/?price=9999&name=mac&num=3
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-03-21T101141.400.json
+
+###
+
+PATCH http://localhost:8001/app1/goods/1/?price=9999
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-03-21T101041.200.json
+
+###
+
+GET http://localhost:8001/app1/goods/1/?price=9999
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-03-21T101029.200.json
+
+###
+
+GET http://localhost:8000/app1/goods/1/?price=9999
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-03-21T100957.200.json
+
+###
+
+PATCH http://localhost:8000/app1/goods/1/?price=9999
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-03-21T100951.200.json
+
+###
+
+PATCH http://localhost:8000/app1/goods/1/?name=Mac
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-03-21T100933.200.json
+
+###
+
+PUT http://localhost:8000/app1/goods/1/?name=Mac
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-03-21T100922.400.json
+
+###
+
+PATCH http://localhost:8000/app1/goods/1/?name=Mac
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-03-21T100909.200.json
+
+###
+
+PATCH http://localhost:8000/app1/goods/1/?name=Mac
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-03-21T100903.200.json
+
+###
+
+GET http://localhost:8000/app1/goods/1/?name=ipod&price=2000&num=2
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-03-21T100816.200.json
+
+###
+
+GET http://localhost:8000/app1/goods/?name=ipod&price=2000&num=2
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-03-21T100529.200.json
+
+###
+
+POST http://localhost:8000/app1/goods/?name=ipod&price=2000&num=2
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-03-21T100523.201.json
+
+###
+
+POST http://localhost:8000/app1/goods/?name=ipad&price=20&num=10
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-03-21T100506.201.json
+
+###
+
+GET http://localhost:8000/app1/goods/
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-03-21T100404.200.json
+
+###
+

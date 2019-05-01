@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box">
+			<p>Apple要凉凉</p>
+		</div>
+	</body>
+	<script src="js/jquery-1.12.3.js"></script>
+	<script>
+		$(function(){
+			// JS的DOM操作
+			// document.createElement()
+			// b.appendChild(a)
+			// b.removeChild(a)
+			// b.cloneNode(true)
+			// replaceChild, inserBefore
+			
+			//JQ的DOM操作
+			// 创建节点
+			var node1 = $('<div>hello <b>雷军</b></div>')  
+			// 添加节点： append, appendTo
+//			 $('#box').append(node1)
+//			 node1.appendTo($('#box'))
+			// node1.appendTo('#box')
+			
+			// 前置节点： prepend, prependTo
+//			 $('#box').prepend(node1)
+			// node1.prependTo('#box')
+			
+			// empty() : 清空元素，删除所有子元素
+//			 $('#box').empty()
+			
+			// remove() : 删除当前元素
+//			 $('#box').remove()
+			
+			// clone() : 复制
+//			$('#box').click(function(){
+//				console.log("库克 是gay!")
+//			})
+//			$('#box').clone().appendTo('body')
+			$('#box').clone(true).appendTo('body')  // 会复制事件
+			
+			
+		})
+		
+	</script>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.foo {color: red;}
+			.foo2 {color: green;}
+			
+			#box3 {
+				width: 300px;
+				height: 400px;
+				background: red;
+				position: absolute;
+				left: 100px;
+				top: 200px;
+			}
+		</style>
+		<script>
+		
+			// DOM : 文档对象模型
+			// 获取节点：
+			//	1.document.getElementById(id)
+			//  2.document.getElementsByTagName(tag)
+			//  3.document.getElementsByName(name)
+			//  4.document.getElementsByClassName(class)
+			
+			// 会在页面加载完成之后，才会调用
+			onload = function(){
+			
+				//	1.document.getElementById(id)
+				var obox = document.getElementById("box")
+				// console.log(obox)  // [object HTMLDivElement]对象
+				// console.log(box)  // 可以直接通过id得到对象
+				
+				//  2.document.getElementsByTagName(tag)
+				var abox = document.getElementsByTagName('div')
+				//console.log(abox)  // [object HTMLCollection]， 集合，数组
+				//console.log(abox.length)  // 1
+				//console.log(abox[0]) //[object HTMLDivElement]
+				
+				//  3.document.getElementsByName(name)
+				var abox = document.getElementsByName('pox')
+				//console.log(abox)  // [object NodeList], 数组
+				//console.log(abox[0])  // [object HTMLDivElement] 对象
+				
+				//  4.document.getElementsByClassName(class)
+				var abox = document.getElementsByClassName('foo')
+				//console.log(abox)  // [object HTMLCollection] 数组
+				//console.log(abox[0]) // [object HTMLDivElement] 对象
+				
+				
+				
+				// 元素节点对象
+				// 元素节点对象的属性
+				// 	innerHTML : 元素节点的内容
+				//	value: value值，一般用于输入框
+				//  style: css样式对象
+				// 	children: 所有子元素节点对象的数组
+				//	parentNode: 父节点
+				//
+				//  tagName: 标签名
+				//  className: 类名
+				//  id: id值
+				console.log(box.tagName)  //'DIV'
+				console.log(box.className)  //'foo'
+				box.className = 'foo2'  // 修改样式
+				console.log(box.id)  // 'box'
+				
+				// innerHTML
+				console.log(box.innerHTML)
+				// box.innerHTML = "<b>刘恺威</b>"  // 支持HTML
+				
+				// value
+				console.log(ipt.value)
+				ipt.value = "are you ok "
+				
+				// style
+				console.log(box.style)  // css样式对象，[object CSSStyleDeclaration]
+				console.log(box.style.width) //"200px"
+				console.log(box.style.height) //"50px"
+				console.log(box.style.fontSize) //"20px"
+				console.log(box.style["font-size"]) //"20px"
+				box.style.backgroundColor = "pink"
+				
+				// 	children: 所有子元素节点对象的数组
+				console.log(box.children)  //[object HTMLCollection] 数组
+				console.log(box.children.length)  //2
+				
+				//	parentNode: 父节点对象
+				console.log(box2.parentNode.id)  // ‘box’
+				
+				// nextElementSibling： 下一个兄弟元素节点
+				// previousElementSibling: 上一个兄弟元素节点
+				console.log(box2.nextElementSibling.innerHTML) // '谢霆锋'
+				
+				
+				// 元素节点的大小和位置(只读)
+				// 修改则需要使用box.style
+//				console.log(box3.style.width)  //''
+				console.log(box3.offsetWidth)  //300
+				console.log(box3.offsetHeight)  //400
+				console.log(box3.offsetLeft)  //100
+				console.log(box3.offsetTop)  //200
+				
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div id="box" class="foo" name='pox' style="width: 200px; height: 50px; font-size: 20px;">思聪
+			<div id="box2">
+				<p>杨幂</p>
+			</div>
+			<p>谢霆锋</p>
+		</div>
+		
+		<input type="text" id="ipt" value="hello" />
+		
+		<div id="box3">hello</div>
+		
+	</body>
+	
+	<script>
+		
+		//document: 页面
+		//document.documentElement ： html
+		//document.body: body
+		
+		document.onclick = function(){
+			console.log("点击了页面的任意一个位置")
+		}
+//		document.documentElement.onclick = function(){
+//			console.log("点击了HTML的任意一个位置")
+//		}
+//		document.body.onclick = function(){
+//			console.log("点击了BODY的任意一个位置")
+//		}
+		
+		// 点击box
+		box3.onclick = function(){
+			// this是box3
+			console.log(this.id)  //'box3'
+		}
+		
+		
+	</script>
+	
+</html>

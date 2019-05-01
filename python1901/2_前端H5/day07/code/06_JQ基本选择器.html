@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head> 
+	<body> 
+		<div id="box">box</div> 
+		<div class="foo">foo1</div> 
+		<div class="foo">foo2</div> 
+		<div class="foo3">foo3</div> 
+	</body> 
+	
+	<script src="js/jquery-1.12.3.js"></script>
+	<script>
+		$(function(){
+			
+			// 基本选择器
+			// id选择器
+
+//			$('#box').css('background','greenyellow')
+//			 $('#box').css({"background-color": 'orange'})
+//			 $('#box').css({backgroundColor: 'orange'})
+//			 $('#box').css({backgroundColor: 'orange', color: 'red'})
+			// 链式写法
+//			$('#box').css("background", 'pink').css('color', 'red').html('hello JQ')
+			
+			// class选择器
+//			$('.foo').css('background', 'green')
+//			
+//			// 标签选择器
+			$('div').css('font-family', "Arial")
+//			
+//			// *
+//			$('*').css('font-size', 30)
+//			
+//			// 群组
+//			$('#box, .foo3').css('color', 'blue')
+			
+		})
+	</script>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.foo {
+				width: 100px;
+				height: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<button>开始动画</button>
+		<input type="button" value="stop" />
+		<input type="button" value="finish" />
+		<div class="foo" style="background: red;"></div>
+		<div class="foo" style="background: green; display: none;"></div>	
+		
+		<div class="foo" id="box" style="background: pink; position: absolute; left: 10px; top: 200px;"></div>	
+
+	</body>
+	<script src="js/jquery-1.12.3.js"></script>
+	<script>
+		$(function(){
+			
+			$('button').click(function(){
+				
+				// show, hide
+				// $('div').show()
+				// $('div').show('slow')  // fast, normal, slow
+//				$('div').show(3000, function(){
+//					console.log('动画结束')
+//				})
+				
+				// $('div').hide() 
+				// $('div').hide(5000) 
+				
+				// $('div').toggle(1000)
+				
+				//slide
+				//$('div').slideDown(2000)
+				// $('div').slideUp(2000)
+				//$('div').slideToggle(2000)
+				
+				// fadeIn, fadeOut
+				// $('div').fadeIn(2000)  // 淡入
+				// $('div').fadeOut(2000)  // 淡出
+				// $('div').fadeToggle(2000)  // 淡出
+				
+				// 修改透明度
+				// $('div').fadeTo(3000, 0.5)
+				
+				
+				// animate():
+				//	 主要修改：left,top; width,height; opacity
+//				$('#box').animate({left: 300, top:300}, 3000, function(){
+//				console.log("动画结束")
+//				})
+				
+				// 队列动画
+				$('#box').animate({left: 300}, 1000)
+						 .animate({top: 300}, 1000)
+						 .delay(2000)
+						 .animate({width: 30}, 1000)
+						 .animate({height: 200}, 1000)
+				
+				//stop
+				$('input').first().click(function(){
+					// $('#box').stop()  // 停止当前正在运行的动画
+					$('#box').stop(true)  // 停止所有动画
+				})
+				//finish
+				$('input').eq(1).click(function(){
+					$('#box').finish() 
+				})
+			})
+		})
+	</script>
+	
+</html>

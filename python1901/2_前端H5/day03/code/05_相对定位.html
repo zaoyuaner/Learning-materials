@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box1 {
+				width: 400px;
+				height: 400px;
+				background: pink;
+				/*margin-left: 100px;*/
+				
+				/* 绝对定位 */
+				/*position: absolute;*/
+				/*left: 50px;
+				top: 50px;*/
+			}
+			
+			.box2 {
+				width: 200px;
+				height: 200px;
+				background: green;
+				
+				/* 相对定位 */
+				position: relative;
+			}
+			
+			.box3 {
+				width: 100px;
+				height: 100px;
+				background: orange;
+				
+				/* 绝对定位 */
+				position: absolute;
+				left: 20px;
+				top: 20px;
+			}
+			
+		</style>
+	</head>
+	<body style="height: 10000px;">
+		<!--
+			相对定位: 
+				relative 
+				特点：
+					1. 配合绝对定位absolute使用
+					2. 对自身节点没有影响，不需要使用left和top
+					3. 给后代元素提供一个定位参照
+		-->
+		
+		<div class="box1">box1
+			
+			<div class="box2">box2
+				
+				<div class="box3">box3</div>
+				
+			</div>
+			
+		</div>
+				
+		
+	</body>
+</html>

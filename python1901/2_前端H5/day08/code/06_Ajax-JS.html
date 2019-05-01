@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	
+	<script>
+		
+		// Ajax: 是JS中一种可以访问服务器的技术
+		// 同步：按照顺序执行
+		// 异步：不按顺序执行，在多个不同的线程中执行
+		
+		// HTTP : 一个基于TCP/IP协议的应用层网络协议
+		//	1.短连接： 不会一直占用服务器资源
+		//	2.请求响应模式：客户端先发送请求给服务器，服务器才能发送响应数据给客户端
+		//  3.无状态，使用cookie来弥补
+		//	4.简单，快速
+		//	5.请求方式： get / post
+		
+		//Ajax
+		// 同步： 会阻塞程序
+//		var xhr = new XMLHttpRequest()
+//		
+//		// 第一个参数: 请求方式（get/post）
+//		// 第二个参数: 请求的url
+//		// 第三个参数: 是否异步
+//		xhr.open('GET', 'js/jquery-1.12.3.js', false)
+//		
+//		// 发送请求
+//		xhr.send(null)
+//		
+//		// 获取数据
+//		console.log(xhr.status)  // 状态码， 200
+//		console.log(xhr.statusText)  // 状态码说明，OK
+//		console.log(xhr.responseText)  // 响应数据
+		
+		
+		// 异步
+		var xhr = new XMLHttpRequest()
+		xhr.open('GET', 'persons.json', true)
+		xhr.send(null)
+		xhr.onreadystatechange = function(){
+			console.log(xhr.readyState) 
+			// xhr.status == 200: 表示请求成功 
+			// xhr.readyState == 4 ： 表示数据接收完成
+			if (xhr.status == 200 && xhr.readyState == 4) {
+				// console.log(xhr.responseText.length)  // 响应数据 
+				console.log(xhr.responseText)  // json字符串
+				// JSON解析
+				var obj = JSON.parse(xhr.responseText)
+				console.log(obj)
+			}
+			else {
+				console.log("失败")
+			}
+		}
+		
+		console.log("我先执行")
+		
+		
+	</script>
+	
+</html>
+

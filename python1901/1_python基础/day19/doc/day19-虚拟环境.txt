@@ -1,0 +1,74 @@
+
+1.1, virtualenv的概述
+
+	virtualenv是用来创建Python的虚拟环境的库，虚拟环境能够独立于真实环境存在，
+	并且可以同时有多个互相独立的Python虚拟环境，每个虚拟环境都可以营造一个干净
+	的开发环境，对于项目的依赖、版本的控制有着非常重要的作用。
+
+	虚拟环境有什么意义？
+		如果我们要同时开发多个应用程序，应用A需要Django1.11，而应用B需要Django1.8怎么办？
+		这种情况下，每个应用可能需要各自拥有一套“独立”的Python运行环境。
+		virtualenv就是用来为一个应用创建一套“隔离”的Python运行环境。
+
+
+1.2, virtualenv 的安装和使用
+	
+	1.2.1,安装和创建virtualenv
+		a,安装虚拟环境：安装virtualenv跟安装一般的Python库是一样的操作，直接使用pip命令就行了：
+				pip install virtualenv
+		b,创建虚拟环境：安装完成之后就可以使用virtualenv的命令来创建虚拟环境了，
+			  首先需要进入需要创建虚拟环境的文件夹，比如F盘的envs文件夹，
+			  然后使用以下命令创建一个虚拟环境，python版本的路径是可选的：
+				virtualenv 虚拟环境名称 [-p python版本的路径]
+				如：virtualenv env1 
+	1.2.2,启动虚拟环境:
+			env1\Scripts\activate
+		进入虚拟环境后：
+			使用pip安装numpy模块
+			创建test.py文件,并在文件中使用numpy模块
+			在cmd命令窗口使用python test.py执行文件
+			
+	1.2.3,退出虚拟环境(进入真实系统环境): 
+			deactivate  
+			(如果报错则使用:env1\Scripts\deactivate)
+		退出虚拟环境后再执行test.py：
+			在cmd命令窗口使用python test.py执行文件
+	
+	
+1.3, virtualenvwrapper 的安装和使用  （virtualenvwrapper是virtualenv的包装版，以后用这个，更加方便）
+	
+	Windows: pip install virtualenvwrapper-win
+	(Linux：pip install virtualenvwrapper)
+	
+	创建:mkvirtualenv    虚拟环境名称  -p  python的路径 
+	删除:rmvirtualenv    虚拟环境名称
+	(注意：创建的虚拟环境放在用户目录下的Envs中)
+	
+	进入:workon 虚拟环境名称
+	退出:deactivate 
+
+1.4, pip常用命令
+
+	pip install xxx:安装xxx依赖包
+	pip list:查看所有依赖包
+	pip freeze:查看虚拟环境新安装的包
+	pip uninstall xxx ：卸载xxx包
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+

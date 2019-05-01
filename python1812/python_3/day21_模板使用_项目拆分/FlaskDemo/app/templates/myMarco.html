@@ -1,0 +1,9 @@
+{# 宏定义 【其实就是一个函数】 #}
+
+{% macro say() %}
+    <p>hello!</p>
+{% endmacro %}
+
+{% macro hello(name) %}
+    <p> 你好, {{ name }}! </p>
+{% endmacro %}

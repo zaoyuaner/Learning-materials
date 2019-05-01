@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.active {
+				width: 200px;
+				height: 150px;
+			}
+			.active2 {
+				border: 3px solid red;
+			}
+		</style>
+	</head> 
+	<body>
+		<img src="images2/images/11.jpg" width="100" />
+		<img src="images2/images/22.jpg" />
+		
+		<div id="box">box</div>
+		<input type="text" value="are you OK" />
+		
+	</body>
+	<script src="js/jquery-1.12.3.js" ></script>
+	<script>
+		$(function(){
+			
+			// attr() ： 默认获取第一个
+			 console.log( $('img').attr("src") ) //获取 
+//			 $('img').attr("src", "images2/images/33.jpg") //添加or修改
+			// removeAttr()
+//			 $('img').eq(0).removeAttr('src')
+			
+			// prop(), removeProp(): 
+			// 	一般用在checked,disabled,selected
+			
+			// addClass(), removeClass()
+//			$('img').addClass('active').addClass('active2')
+//			$('img').removeClass('active2')
+			
+			// html() => innerHTML
+			// text() => innerText
+			// val() => value
+			
+//			//html()
+//			console.log( $('#box').html() )  //获取
+//			$('#box').html('<b>hello</b> thank you! are you ok') //设置
+//			
+//			//val()
+//			console.log( $('input').val() )  //获取
+//			$('input').val('hello thank you')  //设置
+//			console.log($('input').val('hello thank you') )
+		})
+	</script>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			* {padding: 0; margin: 0; border: none;}
+			ul {list-style: none;}
+			
+			#box {
+				width: 600px;
+				height: 300px;
+				border: 10px solid green;
+				/* 超出部分隐藏 */
+				overflow: hidden;  
+				position: relative;
+				margin: 100px auto;
+			}
+			#box ul {
+				width: 1200px;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			#box li {
+				width: 600px;
+				height: 300px;
+				text-align: center;
+				line-height: 300px;
+				font-size: 50px;
+				float: left;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<ul id="list">
+				<li style="background: pink;">1</li>
+				<li style="background: orange;">2</li>
+				<li style="background: red;">3</li>
+				<li style="background: blue;">4</li>
+			</ul>
+			
+		</div>
+		
+		<script src="move.js"></script>
+		<script>
+			
+			// 无缝轮播
+			// 复制第一个li，并添加到最后
+			var aLi = list.getElementsByTagName('li')
+			list.appendChild(aLi[0].cloneNode(true))
+			// 设置ul的宽度
+			var liWidth = aLi[0].offsetWidth
+			list.style.width = aLi.length * liWidth + "px"
+			
+			var i = 0;  // 即将移动到的li下标
+			setInterval(function(){
+				i++
+				move()
+			}, 5000)
+			
+			// 移动
+			function move(){
+				if (i > 4) {
+					//非动画方式瞬间移动到第一个图
+					list.style.left = 0;
+					i = 1
+				}
+				
+				//动画移动
+				animate(list, {left: -i * liWidth})
+			}
+			
+			
+		</script>
+	</body>
+</html>

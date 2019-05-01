@@ -1,0 +1,316 @@
+body {
+    background: #cecccf;
+}
+
+.main {
+    width: 1017px;
+    margin: 0 auto;
+}
+
+#con {
+    height: 514px;
+    background: white;
+    margin-bottom: 80px;
+}
+
+#con #con-left {
+    float: left;
+    width: 505px;
+    height: auto;
+}
+
+#con #con-left img {
+    padding: 23px 0 0 84px;
+}
+
+#con #con-right {
+    float: left;
+    position: relative;
+}
+
+#con #con-right #login-top {
+    height: 50px;
+}
+
+#con #con-right #login-top ul {
+    height: 50px;
+}
+
+#con #con-right #login-top ul li {
+    float: left;
+    font-size: 14px;
+    color: #9f9f9f;
+    height: 48px;
+    line-height: 48px;
+    cursor: pointer;
+    margin: 0 70px;
+}
+
+#con #con-right #login-top ul li.active {
+    border-bottom: 1px solid #000;
+    color: black;
+}
+
+/********普通登录************/
+#login-con {
+    width: 398px;
+    height: 436px;
+    border: 1px solid #dcdcdc;
+    position: relative;
+
+}
+
+#login-con #scan-click {
+    width: 52px;
+    height: 52px;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    background: url(/static/images/login_scanqr.png) no-repeat;
+    cursor: pointer;
+}
+
+form {
+    padding-top: 30px;
+    padding-left: 36px;
+}
+
+form input {
+    width: 322px;
+    height: 40px;
+    border: 1px solid #c9c9c9;
+    outline: none;
+    border-radius: 5px;
+    text-indent: 2em;
+    /*border: none;*/
+}
+
+/***验证账户***/
+#account {
+    position: relative;
+    /*height: 65px;*/
+}
+
+.icon-zhanghu {
+    position: absolute;
+    top: 4px;
+    left: 6px;
+    font-size: 20px;
+}
+
+#account img.true {
+    position: absolute;
+    top: 14px;
+    right: 52px;
+    display: none;
+}
+
+#tip1 {
+    height: 23px;
+    line-height: 23px;
+    color: deeppink;
+    /*display: none;*/
+}
+
+#tip1 img {
+    width: 21px;
+    height: 14px;
+    display: inline-block;
+    padding-right: 4px;
+    display: none;
+}
+
+/********验证密码************/
+#password {
+    position: relative;
+    /*height: 65px;*/
+}
+
+.icon-07 {
+    position: absolute;
+    top: 4px;
+    left: 6px;
+    font-size: 20px;
+}
+
+#password img.true {
+    position: absolute;
+    top: 14px;
+    right: 52px;
+    display: none;
+}
+
+#tip2 {
+    height: 23px;
+    line-height: 23px;
+    color: deeppink;
+    /*display: none;*/
+}
+
+#tip2 img {
+    width: 21px;
+    height: 14px;
+    display: inline-block;
+    padding-right: 4px;
+    display: none;
+}
+
+/*****验证码*******/
+#code {
+    height: 58px;
+    padding-top: 24px;
+}
+
+#code input {
+    width: 120px;
+    height: 40px;
+}
+
+#code #suiji {
+    background: white;
+    margin-left: 10px;
+    color: #ccc;
+    text-indent: 0;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+}
+
+#tip3 {
+    font-size: 12px;
+    color: #555555;
+    height: 15px;
+    line-height: 15px;
+    /*display: none;*/
+    margin-top: 42px;
+}
+
+#tip3 img {
+    width: 21px;
+    height: 14px;
+    display: inline-block;
+    padding-right: 4px;
+    display: none;
+}
+
+form a.a1 {
+    color: #666666;
+    font-size: 14px;
+    height: 14px;
+    line-height: 14px;
+    display: inline-block;
+    padding-top: 12px;
+}
+
+form a.a2 {
+    color: #e50065;
+    font-size: 12px;
+    line-height: 12px;
+    height: 12px;
+    padding-left: 226px;
+}
+
+#btn {
+    background: #e30165;
+    color: white;
+    font-size: 14px;
+    text-indent: 0;
+    border: none;
+    cursor: pointer;
+}
+
+#login-other {
+    padding-top: 39px;
+    padding-left: 36px;
+    display: inline-block;
+}
+
+#login-other span {
+    height: 39px;
+    line-height: 39px;
+    color: #6f6f6f;
+    display: inline-block;
+}
+
+#login-other a {
+    display: inline-block;
+}
+
+#login-other a img {
+    width: 39px;
+    height: 39px;
+}
+
+/**********无密码登录*********/
+#pwd-login {
+    width: 398px;
+    height: 436px;
+    border: 1px solid #dcdcdc;
+    /*position: relative;*/
+    position: absolute;
+    top: 50px;
+    left: 0;
+    display: none;
+}
+
+#pwd-login #scan-click {
+    width: 52px;
+    height: 52px;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    background: url(/static/images/login_scanqr.png) no-repeat;
+    cursor: pointer;
+}
+
+#command {
+    padding-top: 11px;
+    position: relative;
+    padding-bottom: 28px;
+}
+
+#command .icon-07 {
+    position: absolute;
+    top: 14px;
+    left: 6px;
+    font-size: 20px;
+}
+
+#command #move-com {
+    width: 180px;
+    height: 40px;
+}
+
+#command #tel-com {
+    width: 132px;
+    height: 42px;
+    background: #ff9cb1;
+    color: white;
+    text-indent: 0;
+    cursor: pointer;
+    border: none;
+}
+
+/*******底部********/
+#footer {
+    text-align: center;
+}
+
+#footer-main {
+    width: 980px;
+    margin: auto;
+}
+
+#footer-main a {
+    color: #797979;
+    font-size: 12px;
+    height: 12px;
+    line-height: 12px;
+    display: inline-block;
+}
+
+#footer-main p {
+    color: #797979;
+    font-size: 12px;
+}

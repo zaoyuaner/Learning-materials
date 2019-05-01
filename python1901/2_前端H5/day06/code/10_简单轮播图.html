@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			* {padding: 0; margin: 0; border: none;}
+			ul {list-style: none;}
+			
+			#box {
+				width: 300px;
+				height: 150px;
+				border: 10px solid green;
+				/* 超出部分隐藏 */
+				overflow: hidden;  
+				position: relative;
+				margin: 100px auto;
+			}
+			#box ul {
+				width: 1200px;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			#box li {
+				width: 300px;
+				height: 150px;
+				text-align: center;
+				line-height: 150px;
+				font-size: 50px;
+				float: left;
+				/*opacity: 0.5;*/
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<ul id="list">
+				<li style="background: pink;">1</li>
+				<li style="background: orange;">2</li>
+				<li style="background: red;">3</li>
+				<li style="background: blue;">4</li>
+			</ul>
+		</div>
+		
+		<script src="move.js"></script>
+		<script>
+			
+			var i = 0;
+			setInterval(function(){
+				i++
+				move()
+			}, 3000)
+			
+			// 移动
+			function move(){
+				//list.style.left = -300 * (++i % 4) + "px"
+
+				// 动画移动
+				animate(list, {left: -300 * (i % 4)})
+			}
+			
+			
+		</script>
+	</body>
+</html>

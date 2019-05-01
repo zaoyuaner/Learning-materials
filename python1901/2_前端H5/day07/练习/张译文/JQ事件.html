@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button class='btn1'>按钮1</button>
+		<button class='btn2'>按钮2</button>
+		<div id='box' style='width: 300px;height: 100px;background: pink;'>
+			<button class='btn3'>按钮3</button>
+		</div>
+	</body>
+	<script src="js/jquery-1.12.3.js"></script>
+	<script>
+		$(function(){
+			
+			//triger():主动出发事件
+			//trigerHandler():主动触发事件,不会触发默认事件
+//			$('.btn1').click(function(){
+//				console.log('click')
+//			})
+//			$('.btn2').click(function(){
+//				$('.btn1').trigger('click')
+//			})
+			//on:添加事件
+			//off:删除事件
+			$('.btn1').on('click',function(){
+				console.log('click-on')
+			})
+			//绑定多个事件
+			$('.btn1').on({
+				'mouseenter':function(){
+					console.log('移入')
+				}
+				'mouseleave':function(){
+					console.log('移出')
+				}
+				//事件委托 动态添加
+//				$('.btn3').click(function(){
+//				console.log('btn3-click')
+//				})
+
+				$('#box').on('click','.btn3',function(){
+					console.log('btn3-click-on')
+					console.log('this')
+				})
+				//后创建的按钮
+				$('.btn2').click(function(){
+					$('<button class='btn3'>按钮3</button>').appendTo('#box')
+				})	
+			})
+			//off()
+			$('.btn').off()    //删除所有事件
+			$('.btn').off('mouseenter')	//删除一个事件
+			$('.btn').off('mouseenter mouseleave')
+			
+			//show():显示|hide():隐藏|toggle():切换
+			//fadeIn:淡入|fadeOut
+			//animate:动画(位置|大小|透明度)
+			//jQuery.fx.off:关闭页面上的动画|jQuery.fx.interval:设置帧数
+			
+			
+		})
+	</script>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			
+//			练习: 
+//			   1, 写一个函数判断一个年份是不是闰年
+//			   2, 写一个函数判断一个数是不是素数 (又称质数,除了1和本身以外不再有其他数整除)
+
+//			   1, 写一个函数判断一个年份是不是闰年
+			function fn1(year){
+				if (year%4==0 && year%100!=0 || year%400==0) {
+					return true;
+				}
+				return false;
+			}
+			console.log(fn1(2019))
+			
+//			   2, 写一个函数判断一个数是不是素数 (又称质数,除了1和本身以外不再有其他数整除)
+			function fn2(n){
+				for (var i=2; i<n; i++) {
+					if (n%i == 0) {
+						return false;
+					}
+				}
+				return true;
+			}
+			
+			// 参数
+			// 默认参数 function fn3(a, b, c=10) 
+			function fn3(a, b, c) { 
+				console.log(a + "," + b + "," + c)
+			}
+			fn3(10, 20, 30)
+			
+			
+			// 函数的作用域
+			function fun(){
+				var a = 10;
+			}
+			fun()
+//			console.log(a)  //报错
+			
+			if (1) {
+				var b = 20;
+			}
+			console.log(b)  // {}一般不形成作用域
+			
+//			if (1) {
+//				let c = 20;  //let声明的变量会在代码块{}中形成作用域
+//			}
+//			console.log(c)  // 报错c is not defined
+			
+			// 匿名函数
+			var fun2 = function(){
+				console.log(1)
+			}
+			fun2()
+			;;;;;;
+			// 自运行函数/自执行函数
+			;(function(){
+				console.log(2)
+			})()
+			
+			// 函数嵌套
+			function f1(){
+				console.log('f1');
+				
+				function f2(){
+					console.log('f2');
+				}
+				return f2;
+			}
+			f1()()  // 相当于f2()
+			
+			
+			function f3(){
+				console.log('f3');
+				
+				return function(){
+					console.log('f4');
+				}
+			}
+			f3()()
+			
+			
+			var f5 = function (){
+				console.log('f5');
+				
+				return function(){
+					console.log('f6');
+				}
+			}
+			
+//			var f6 = (function (){
+//				console.log('f5');
+//				
+//				return function(){
+//					console.log('f6');
+//				}
+//			})()
+			
+			// 传参
+			var f6 = (function (a){
+				console.log('f5, a=' + a);
+				
+				return function(b){
+					console.log('f6, b=' + b);
+				}
+			})(10)
+			
+			f6(20)
+			
+			
+			// 构造函数（用来创建类）
+			// ES6中可以使用 class来创建类 
+			
+			
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box {
+				width: 100px;
+				height: 100px;
+				background: pink;
+				position: absolute;
+				left: 10px;
+				top: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+	</body>
+	<script>
+		// 拖拽： 
+		//	onmousedown
+		//	onmousemove
+		//	onmouseup
+		
+		// 鼠标按下
+		box.onmousedown = function(e){
+			var e = e || event
+			var x = e.offsetX;
+			var y = e.offsetY;
+			
+			// 鼠标移动
+			document.onmousemove = function(e){
+				var e = e || event;
+				box.style.left = e.pageX - x + "px"
+				box.style.top = e.pageY - y + "px"
+			}
+			document.onmouseup = function(){
+				document.onmousemove = null  //移除mousemove事件
+				document.onmouseup = null  //移除mouseup事件
+			}
+		}
+		
+		
+	</script>
+</html>

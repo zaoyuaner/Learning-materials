@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			* {padding: 0; border: none;}
+			ul {list-style: none;}
+			
+			#list {
+				width: 300px;
+				height: 200px;
+				border: 10px solid;
+				position: relative;
+			}
+			#list li {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 300px;
+				height: 200px;
+				text-align: center;
+				line-height: 200px;
+				font-size: 50px;
+				opacity: 0;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<ul id="list">
+			<li style="background: red;">1</li>	
+			<li style="background: green;">2</li>	
+			<li style="background: orange;">3</li>	
+		</ul>
+		
+		<script src="move.js"></script>
+		<script>
+			
+			// 默认显示第一个li
+			var aLi = list.getElementsByTagName('li')
+			aLi[0].style.opacity = 1
+			
+			var i = 0
+			setInterval(function(){
+				i++
+				// aLi[i%3].style.opacity = 1
+				for (var j=0; j<aLi.length; j++) {
+					if (j == i%3) {
+						// 淡入： 通过改变透明度显示
+						animate(aLi[j], {opacity: 100})  
+					}
+					else {
+						// 淡出： 通过改变透明度显示
+						animate(aLi[j], {opacity: 0})  
+					}
+				}
+			}, 2000)
+			
+		</script>
+		
+	</body>
+</html>

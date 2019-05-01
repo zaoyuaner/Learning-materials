@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    购物车
+{% endblock %}
+
+
+{% block nav_content %}
+    <h3>导航-购物车</h3>
+{% endblock %}
+
+
+{% block content %}
+    {{ super() }}
+    <div>购物车内容</div>
+
+    {% include 'footer.html' %}
+
+
+{#    先导入宏定义，后调用#}
+    {% from 'myMarco.html' import say %}
+    {{ say() }}
+    {{ say() }}
+    {{ say() }}
+    {{ say() }}
+
+    {% from 'myMarco.html' import hello %}
+    {{ hello('黎明') }}
+    {{ hello(name) }}
+
+{% endblock %}

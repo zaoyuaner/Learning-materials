@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+	</head>
+	<body>
+		<input type="text" placeholder="姓名" />	
+		<input type="text" placeholder="年龄" />	
+		<input type="text" placeholder="学历" />	
+		<input type="text" placeholder="专业" />	
+		<input type="button" value="保存" />
+	</body>
+	<script>
+		/*
+		1, 实现一个个人信息页面   姓名  年龄  学历  专业, 可以获取到输入的信息, 点击保存按钮以后, 输出信息(信息显示形式: 姓名:张三,年龄:33,学历:本科,专业:计算机)
+		*/
+		var inputs = document.getElementsByTagName('input')
+		
+		inputs[4].onclick = function(){
+			var name = inputs[0].value
+			var age = inputs[1].value
+			var xueli = inputs[2].value
+			var zy = inputs[3].value
+			console.log(name)
+			console.log(age)
+			console.log(xueli)
+			console.log(zy)
+		}
+		
+	</script>
+</html>

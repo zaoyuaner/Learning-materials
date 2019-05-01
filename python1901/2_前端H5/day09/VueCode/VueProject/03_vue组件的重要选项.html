@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>	
+	</head>
+	<body>
+		<div id="app">
+			<p>商品名称：{{ name }}</p>
+			<p>商品单价: ￥{{ price }}</p>
+			<p>商品数量: 
+				<button @click="reduce">-</button>
+				{{ num }}
+				<button @click="add">+</button>
+			</p>
+			<p>商品库存: {{ stock }}</p>
+			<p>总金额: {{ totalPrice }}</p>
+			<p>是否包邮(超过￥100): {{ postage }}</p>
+		</div>
+	</body>
+	<script type="text/javascript">
+		new Vue({
+			el: '#app',  // 挂载点
+			data: {  // 数据选项
+				name: "竹鼠",
+				price: 20,
+				num: 1,
+				stock: 10,
+				//postage: "不包邮"
+			},
+			methods: {  // 方法选项
+				add(){  // +
+					this.num++
+				},
+				reduce(){  // -
+					this.num--
+				}
+			},
+			computed: { // 计算属性选项,属性变化会自动计算
+				// 总金额
+				totalPrice(){  
+					return this.price * this.num
+				},
+				// 是否包邮
+				postage(){
+					if (this.totalPrice >= 100) {
+						return "包邮"
+					}
+					else {
+						return "不包邮"
+					}
+				}
+			}, 
+			watch: {  // 监听选项,监听属性的变化
+				// 监听num,控制不超过库存
+				num(newVal, oldVal){
+					// console.log(arguments.length) //2,有2个参数
+					if (newVal < 1 || newVal > this.stock) {
+						this.num = oldVal
+					}
+				},
+				// 监听总金额
+// 				totalPrice(newVal, oldVal){
+// 					if (newVal >= 100) {
+// 						this.postage = "包邮"
+// 					}
+// 					else {
+// 						this.postage = "不包邮"
+// 					}
+// 				}
+			}
+		})
+	</script>
+	
+</html>

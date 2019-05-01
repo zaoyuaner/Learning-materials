@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+	</head>
+	<body>
+		<div id='box' class='foo' name='pox' style="width:100px; height: 20px;;" >思聪
+			<div>
+				<p>杨幂</p>
+			</div>
+			<p>谢霆锋</p>
+		</div>
+	</body>
+			<script>
+			// DOM节点:元素节点(标签,节点对象)|属性节点|文本节点
+			             |                  |     |
+//			           <div>
+						 |
+				元素节点对象的属性和方法
+				*innerHTML:元素节点的内容
+					
+				*value:value值(一般用于输入框)
+				*style:css样式
+				*classname:类名
+				*children:所有子元素节点对象的数组
+				parentNode:父节点
+				tagName:标签名(一般不用)
+				id:id值
+	*innerHTML:元素节点的内容(将全部内容全部修改)
+		console.log(box.innerHTML)
+		box.innerHTML='<b>刘恺威</b>'
+		
+		console.log(ipt.value)
+		ipt.value="how are you"
+	
+				
+			box.className = 'foo2'	
+	console.log(box.style)
+	console.log(box.style.height)
+	console.log(box.style.fontSize)
+	console.log(box.style['font-size'])
+	box.style.backgroundColor='pink'
+	
+//	           元素节点类型:
+//	           getElele
+//	        // 1.获取节点:
+//	             1.1 document.getElementById(id)
+//	             1.2 document.getElementsByTagName(tag)
+//	             1.2 document.getElementsByName(name)
+//	             1.2 document.getElementsByClassName(class)
+	             
+//	             1.1 document.getElementById(id)
+//	             var box=document.getElementById('box')  //(x)
+//	             var box=document.getElementById('box')
+	             
+	             onload = function(){
+	             	 var obox=document.getElementById('box')
+	             	 console.log(obox)
+	             	 console.log(box)      //只有获取id可以这么用
+	             	 
+//	             1.2 document.getElementsByTagName(tag)
+	             	 document.getElementsByTagName('box')
+	             	 
+	             	 var abox=document.getElementsByName('pox')
+	             	  console.log(abox)
+	             	 console.log(abox[0])
+	             	 
+	             	 var abox=document.getElementsByClassName('foo')
+	             	 console.log(abox)      //数组
+	             	 console.log(abox[0])   //对象
+	    console.log(box3.style.weight)   //得到的时div标签中style的值,取不到在head标签中的box3的值
+	    console.log(box3.offsetWeight)   //得到#box3中的内容
+	             	 
+	//获取元素宽高和位置:
+	<div id="box3" style="top:200px;left:50px">
+	</div>
+	
+	             }
+		</script>
+</html>
+document.onclick=function(){    }
+
+document.documentElement.onclick
+
+box3.onclick=function(){   }

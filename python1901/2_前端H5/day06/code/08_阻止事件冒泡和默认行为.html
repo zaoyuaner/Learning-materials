@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box {
+				width: 200px;
+				height: 100px;
+				background: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<input id="btn" type="button" value="按钮" />
+		</div>
+		
+		<hr />
+		
+		<form>
+			<input type="text" value="沈大师" /> <br />
+			<input id="btn2" type="submit" />
+		</form>
+		
+	</body> 
+	<script>
+	
+		btn.onclick = function(e){
+			console.log("btn")
+			
+			// 阻止事件冒泡
+			var e = e || event;
+			if (e.stopPropagation) {
+				e.stopPropagation()  // 非IE，IE9+
+			}
+			else {
+				e.cancelBubble = true // 低版本IE
+			}
+			
+		}
+		box.onclick = function(){
+			console.log("div")
+		}
+		document.body.onclick = function(){
+			console.log("body")
+		}
+		document.onclick = function(){
+			console.log("document")
+		}
+		
+		// 事件冒泡：浏览器默认有事件冒泡
+		//     从子元素向父元素触发
+		// 事件捕获： 从父元素向子元素触发
+		
+		// 阻止事件冒泡
+		
+		
+		// 浏览器默认行为
+		btn2.onclick = function(e){
+			 console.log("submit")
+			
+			// 阻止浏览器默认行为:表单提交自动刷新，双击文本自动选择，图片拖拽
+			var e = e || event;
+			if (e.preventDefault) {
+				e.preventDefault(); // 非IE
+			}
+			else {
+				e.returnValue = false  // IE
+			}
+		}
+		
+	</script>
+	
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<div id="box">box</div>
+		<ul id="list">
+			<li>111</li>
+			<li>222</li>
+			<li>333</li>
+		</ul>
+		
+	
+	<script src="js/jquery-1.12.3.js"></script>
+	<!--<script src="http://code.jquery.com/jquery-1.9.1.js"></script>-->
+	
+	<script>
+		 
+		//JS： JS事件会覆盖
+//		window.onload = function(){
+//			console.log('onload1')
+//		}
+//		window.onload = function(){
+//			console.log('onload2')
+//		}
+//		
+//		//JQ：JQuery事件不会覆盖
+//		// console.log($)  // function..
+//		// console.log($ == jQuery)  //true
+//		$(window).load(function(){
+//			console.log('load1')
+//		})
+//		$(window).load(function(){
+//			console.log('load2')
+//		})
+//		
+//		
+//		// ready: 在页面加载完之后执行
+//		// load: 在页面（包括引入的文件，图片等资源）加载完之后执行
+//		$(document).ready(function(){
+//			console.log('ready1')
+//		})
+//		
+//		// ready简写
+//		$(function(){
+//			console.log('ready2')
+			
+			// JS
+			// box.innerHTML = "LOL"
+			//JQ
+			// $('#box').html('王者农药')  // 类似innerHTML属性
+			
+			// 给所有li添加点击事件
+			//JS
+//			var aLi = list.getElementsByTagName('li')
+//			for (var i=0;i<aLi.length;i++){
+//					aLi[i].index=i
+//				aLi.onclick(){			
+//				console.log(this.innerHTML)
+//				console.log(this.index)
+//			}
+//				}
+			
+//			var aLi = list.getElementsByTagName('li')
+//			for (var i=0; i<aLi.length; i++) {
+//				aLi[i].index = i
+//				aLi.onclick(){
+//					console.log(this.innerHTML) //内容
+//					console.log(this.index)  //下标
+//				}
+//			}
+			//JQ
+			
+			
+			$('#list li').click(function(){
+			console.log($(this).html())
+			console.log($(this).index())
+				
+			})
+			
+			
+			
+		
+//			$('#list li').click(function(){
+//				console.log(this.innerHTML)  // 内容
+//				console.log($(this).html())  // 获取内容
+//				console.log($(this).index())  // 下标
+//			})						
+//		})
+		
+	</script>
+	</body>
+</html>

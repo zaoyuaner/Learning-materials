@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			* {padding: 0; border: none; }
+			ul {list-style: none;}
+			body {
+				background: gray;
+			}
+			#box {
+				width: 150px;
+				height: 30px;
+				text-align: center;
+				line-height: 30px;
+				border: 1px solid white;
+				cursor: pointer;
+			}
+			#list {
+				width: 150px;
+				height: 150px;
+				border: 1px solid white;
+				background: black;
+				color: white;
+				margin-top: 0;
+				display: none;
+			}
+			#list li {
+				height: 29px;
+				border-bottom: 1px dashed white;
+				text-align: center;
+				line-height: 29px;
+				cursor: pointer;
+			}
+			#list li:hover {
+				background: gray;
+			}
+			#list li.last {
+				border-bottom: none;
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+		<div id="box">
+			<span id="title">请选择游戏名称</span>
+		
+			<ul id="list">
+				<li>英雄联盟</li>
+				<li>王者荣耀</li>
+				<li>绝地求生</li>
+				<li>CF穿越火线</li>
+				<li class="last">QQ飞车</li>
+			</ul>
+		</div>
+		
+		
+		<script>
+			box.onmouseenter = function(){
+				list.style.display = 'block'
+			}
+			box.onmouseleave = function(){
+				list.style.display = 'none'
+			}
+			
+			var aLi = list.getElementsByTagName('li')
+			for (var i=0; i<aLi.length; i++) {
+				aLi[i].onclick = function(){
+					title.innerHTML = this.innerHTML
+					list.style.display = 'none'
+				}
+			}
+			
+		</script>
+	</body>
+</html>

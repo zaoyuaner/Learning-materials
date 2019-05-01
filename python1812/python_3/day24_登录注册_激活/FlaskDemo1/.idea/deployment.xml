@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="Aliyun(Flask)">
+    <serverData>
+      <paths name="Aliyun(Flask)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/var/www/flask" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

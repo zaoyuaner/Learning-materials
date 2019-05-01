@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1001,
+    "img": "/static/img/Akali_Splash_0.jpg",
+    "desc": "Akali_Splash_0",
+    "detailid": 8001
+  },
+  {
+    "id": 1002,
+    "img": "/static/img/Akali_Splash_1.jpg",
+    "desc": "xx",
+    "detailid": 8002
+  },
+  {
+    "id": 1003,
+    "img": "/static/img/Akali_Splash_2.jpg",
+    "desc": "yy",
+    "detailid": 9001
+  },
+  {
+    "id": 1004,
+    "img": "/static/img/Akali_Splash_3.jpg",
+    "desc": "ll",
+    "detailid": 700312
+  },
+  {
+    "id": 1005,
+    "img": "/static/img/Akali_Splash_4.jpg",
+    "desc": "pp",
+    "detailid": 12313
+  }
+]

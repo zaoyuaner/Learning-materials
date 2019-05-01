@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			* {margin: 0;padding: 0;border:none}   /*在最前面最好定义一下,后面加的会在后面重定向*/
+			#firstPage {
+				width: 999px;
+				margin: auto;
+			}
+			
+			#firstPage #head {
+				height: 80px;
+				background: none;
+			}
+			
+			#firstPage #head #logo {
+				width: 243px;
+				height: 23px;
+				margin: 28px;
+				-background: pink;
+				float: left;
+			}
+			
+			#firstPage #head input {
+				border: none;
+				margin-left: 5px;
+				background: none;
+				outline: none;
+			}
+			
+			#firstPage #head #search {
+				margin-top: 31px;
+				margin-right: 20px;
+				background-color: #f1f1f1;
+				border: 2px solid #ccc;
+				float: right;
+			}
+			
+			#firstPage #nav {
+				clear: both;           /*class: both*/
+				height: 60px;
+				background: black;			
+			}
+			#firstPage #nav #theme{			/*如果写这样的列表,最好外面用<div>标签包一下.容易控制里面的<li>*/
+				height: 58px;
+				width: 999px;
+				text-align: center;
+				color: white;
+				line-height: 58px;
+				background: #313131;
+				cursor: pointer;
+				/*position: relative;*/	
+			}
+			
+			#firstPage #nav #theme li {
+				list-style-type: none;
+				border-right: 1px solid #555;
+				
+				width: 99px;
+				/*position: relative;*/
+				float: left;
+			}
+			#firstPage #nav #theme .li_last {
+				list-style-type: none;
+				border-right: 1px solid #555;
+				
+				width: 98px;
+				/*position: relative;*/
+				float: left;
+			}
+			
+			#firstPage #nav .box {
+				width: 999px;
+				height: 463px;
+				position: relative;
+			}
+			
+			#firstPage #content {		/*总体*/
+				position: absolute;
+				top:601px;
+				height: 240px;
+				
+			}
+			
+			#firstPage #content #news {			/*第一部分*/
+				list-style-type: none;
+				height: 240px;
+				width: 500px;
+				float: left;
+				background: white;}
+				
+			#firstPage #content #news .title{
+				position: relative;
+				height:42px;
+				top:20px;
+				left:22px;
+				line-height: 42px;
+				text-align: left;
+				font-family:;
+				font-size:20px;
+				color:black;
+				
+			}
+			
+			#firstPage #content #news .info{}
+			
+			#firstPage #content #news ul {
+				-list-style-type: none;
+				margin-top: 25px;
+				margin-left: 40px;
+			}
+			#firstPage #content #news ul li{
+				position:relative;
+				-list-style-type: none;
+				margin-top: 6px;
+				font-size:13px;	
+				
+			}
+			#firstPage #content #news ul span{
+				clear:both;
+				float :right;
+				margin-right: 25px;
+				font-family:arial;
+			}
+			
+			#firstPage #content #wlProduce {		/*第二部分*/
+				width: 240px;
+				height: 240px;
+				float: left;
+				background: #F1F1F1;
+			}
+			#firstPage #content #wlProduce .title2{
+				position: relative;
+				height:42px;
+				top:20px;
+				left:22px;
+				line-height: 42px;
+				text-align: left;
+				font-family:;
+				font-size:20px;
+				color:#1b1b1b;
+				margin-left: 10px;
+				margin-right: 10px;
+			}
+			#firstPage #content #wlProduce .line1{
+				list-style-type: none;
+				text-align: left;
+				height: 28px;
+				font-family:;
+				font-size:14px;
+				color:#545454;
+				
+			}
+			#firstPage #content #wlProduce .line2{
+				list-style-type: none;
+				text-align: left;
+				height: 28px;
+				font-family:;
+				font-size:14px;
+				color:#545454;
+				margin-bottom: 28px;
+			}
+			#firstPage #content #wlProduce .line3{
+				list-style-type: none;
+				text-align: left;
+				height: 25px;
+				font-family:;
+				font-size:13px;
+				color:#adadad;
+				margin-right: 10px;
+				
+			}
+			#firstPage #content #talent {
+				position: relative;
+				height: 240px;
+				width: 259px;
+				float: right;
+				background: white;
+			}
+			
+			#firstPage #content #talent .title3{
+				position: relative;
+				height:42px;
+				top:20px;
+				left:22px;
+				line-height: 42px;
+				text-align: left;
+				font-family:;
+				font-size:20px;
+				color:#1b1b1b;
+				margin-left: 10px;
+				margin-right: 0px;
+			}
+			#firstPage #content #talent .line1{
+				
+				
+				list-style-type: none;
+				text-align: left;
+				height: 28px;
+				font-family:;
+				font-size:14px;
+				color:#545454;
+				
+			}
+			#firstPage #content #talent .line2{
+				list-style-type: none;
+				text-align: left;
+				height: 28px;
+				font-family:;
+				font-size:14px;
+				color:#545454;	
+			}
+			#talent .title3 #phone1{
+				position: relative;
+				width: 70px;
+				height: 22px;
+				text-align: left;
+				top:45px;
+			}
+			#talent .title3 #phone2{
+				clear:both;
+				
+				position: relative;
+				width: 88px;
+				height: 113px;
+				right: -122px;
+				bottom: 18px;
+			}
+			#wlmarket{
+				clear: both;
+				position: absolute;
+				top:842px;
+				clear:both;height:270px;width:999px;border:none;
+				}
+			#wlmarket .titleMarket{
+				height:48px;line-height: 48px;text-align: left;margin-left: 20px;
+				color:#1b1b1b;font-size:20px;
+				/*clear: both;position: relative;top:32px;left:22px;*/	
+			}
+			#wlmarket .phoChar{
+				/*clear:both;*/
+				/*height:240px;*/
+				float:left;
+				background:none;
+				
+			}
+			#wlmarket .phoChar .onepho{
+				width:246px;
+				float:left;
+				/*background: plum;*/
+				/*border:none;*/
+			}	
+			#wlmarket .phoChar .onepho .img1{
+				margin: 18px;
+				border:none;
+			}
+			#wlmarket .phoChar .onepho .trace{
+				margin: 18px;
+				font-size: 12px;
+				text-align: left;
+				
+				/*width: 160px;/*/
+				/*height: 24px;*/
+				/*line-height: 24px;*/
+				/*text-align: left;*/
+				/*font-size: 12px;*/
+				/*border-left: 25px solid white;*/
+				/*border-right: 15px solid white;*/
+				/*border-bottom: 45px solid white;*/
+				/*overflow: hidden;*/
+				/*white-space: nowrap;*/
+				/*text-overflow: ellipsis;*/
+				
+				
+			}
+			#wlmarket .phoChar .twoPho{
+				width:247px;
+				float:left;
+				/*background: palevioletred;*/
+			}
+			#wlmarket .phoChar .twoPho .img2{
+				margin: 18px;
+				
+			}
+			#wlmarket .phoChar .twoPho .wildill{
+				margin: 18px;
+				font-size: 12px;
+			}
+			#wlmarket .phoChar .threePho{
+				width:247px;
+				float:left;
+				/*background: purple;*/
+			}
+			#wlmarket .phoChar .threePho .img3{
+				margin: 18px;
+			}
+			#wlmarket .phoChar .threePho .airWrings{
+				margin: 18px;
+				font-size: 12px;
+			}
+			#wlmarket .phoChar .fourPho{
+				width:247px;
+				float:left;
+				/*background: mediumpurple;*/
+			}
+			#wlmarket .phoChar .fourPho .img4{
+				margin: 18px;
+			}
+			#wlmarket .phoChar .fourPho .tower{
+				margin: 18px;
+				font-size: 12px;
+			}
+			#product {
+				clear: both;
+				position: absolute;
+				top: 1160px;
+				background: #e5e5e5;
+				height: 250px;
+				width: 999px;
+				float:left
+			}
+			#product .produceCt{
+				width: 499px;
+				
+				float: left;
+			}
+			#product .produceCt .leftTop {
+				text-align: left;color:#1b1b1b;font-size:20px;
+				margin-left: 20px;margin-top: 40px;margin-bottom: 20px;
+				margin-right: 20px;border-bottom: 1px solid #c2c2c2;
+			}
+			#product .produceCt .leftBox {
+				clear: both;
+				float: left;
+				/*margin-left: 20px;*/
+				/*margin-right: 20px;*/
+			}
+			#product .produceCt .leftBox .left1 {
+				float: left;
+				width: 153px;	
+			}
+			#product .produceCt .leftBox .left1 li {
+				list-style-type: none;
+				margin-left: 20px;
+				font-size: 15px;	
+			}
+			#product .produceCt .leftBox .left2 {
+				float: left;
+				width: 153px;
+			}
+			#product .produceCt .leftBox .left2 li {
+				list-style-type: none;
+				font-size: 15px;	
+			}
+			#product .produceCt .leftBox .left3 {
+				float: left;
+				
+				width: 153px;
+				
+			}
+			#product .produceCt .leftBox .left3 li {
+				list-style-type: none;
+				margin-right: 20px;
+				font-size: 15px;	
+			}
+			#product .technic {
+				width: 200px;
+				
+				float: left;
+			}
+			#product .technic .centerTop {
+				text-align: left;color:#1b1b1b;font-size:20px;
+				margin-left: 20px;margin-top: 40px;margin-bottom: 20px;
+				margin-right: 20px;border-bottom: 1px solid #c2c2c2;
+			}
+			#product .technic .center1 li {
+				margin-right: 20px;
+				margin-left: 20px;
+				list-style-type: none;
+				font-size: 15px;
+			}
+			#product .salesNt{
+				width: 300px;
+				
+				float: left;
+			}
+			#product .salesNt .rightTop {
+				text-align: left;color:#1b1b1b;font-size:20px;
+				margin-left: 20px;margin-top: 40px;margin-bottom: 20px;
+				margin-right: 20px;border-bottom: 1px solid #c2c2c2;
+			}
+			#product .salesNt .right1 {
+				margin-left: 75px;
+				margin-right:76px ;
+				margin-top: auto;
+				margin-bottom: auto;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="firstPage">
+			<!--头部-->
+			<div id='head' align="center">
+				<div id='logo'>
+					<img src="img3/1_03.png" alt="logo" />
+				</div>
+				<div id='search'>
+					<input type="text" placeholder='search...' />
+					<!--<img id='amplifier' src="img3/2_03.png" alt=search"" />-->
+				</div>
+			</div>
+			<!--导航-->
+			<div id='nav'>
+				<div id='theme'>
+					<ul align="center">
+						<li>集团介绍</li>
+						<li>产品中心</li>
+						<li>卧龙市场</li>
+						<li>技术研发</li>
+						<li>国际合作</li>
+						<li>技术研发</li>
+						<li>国际合作</li>
+						<li>投资者关系</li>
+						<li>新闻资讯</li>
+						<li class="li_last">投资者关系</li>
+
+					</ul>
+				</div>
+				<div class="box">
+					<img src="img3/1_06.png" />
+				</div>
+
+			</div>
+			<!--第三部分-->
+			<div id='content'>
+				<div id='news'>
+					<div class='title';>新闻资讯</div>
+					<div class='info'>
+						<ul>
+							<li>陈建成董事长出席ATB年度销售大会<span>2013-07-30</span></li>
+							<li>陈建成董事长出席ATB年度销售大会<span>2013-07-30</span></li>
+							<li>陈建成董事长出席ATB年度销售大会<span>2013-07-30</span></li>
+							<li>陈建成董事长出席ATB年度销售大会<span>2013-07-30</span></li>
+							<li>陈建成董事长出席ATB年度销售大会<span>2013-07-30</span></li>
+							<li>陈建成董事长出席ATB年度销售大会<span>2013-07-30</span></li>
+							<li>陈建成董事长出席ATB年度销售大会<span>2013-07-30</span></li>
+						
+						</ul>
+					</div>
+				</div>
+				<div id="wlProduce">
+					<div class='title2'>卧龙介绍
+						<div class='line'>
+							<li class='line1'>公司成立于1984年,</li>
+							<li class='line2'>经过近30年的发展</li>
+							<li class='line3'>已成为电器制造,房地产开发和金融</li>
+							<li class='line3'>投资三业并举的综合性公司</li>
+						</div>
+					</div>
+				</div>
+				<div id='talent'>
+					<div class='title3'>人才招聘
+						<div class='line'>
+							<li class='line1'>培养一流的人才,铸造一流的工程</li>
+							<li class='line2'>经过近30年的发展</li>
+						</div>
+						<div id='phone1'>
+							<img src="img3/4.png" />
+						</div>
+						<div id='phone2'>
+							<img src="img3/5.png" />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id='wlmarket'>
+				
+				<div class="titleMarket">卧龙市场</div>
+				
+				<div class='phoChar'>
+					<div class='onepho'>
+						<div class='img1'>
+							<img src="img3/6.png"  />
+						</div>
+						<div class='trace'>交通轨道:由于主要采用电气牵引，且轮轨摩擦阻力较小,与公共...</div>
+					</div>
+					<div class='twoPho'>
+						<div class='img2'>
+							<img src="img3/7.png" />
+						</div>
+						<div class='wildill'>节能环保:由于不断上涨的能源消耗和我们的专业知识,维护可持续...</div>
+					</div>
+					<div class='threePho'>
+						<div class='img3'>
+							<img src="img3/8.png"/>
+						</div>
+						<div class='airWrings'>航空与船舰:如果你是在公海行驶,你需要确保你的船只的电力系统...</div>
+					</div>
+					<div class='fourPho'>
+						<div class='img4'>
+							<img src="img3/9.png"/>
+						</div>
+						<div class='tower'>石油.天然气,采矿:在市场中的可靠性,安全性,效率和最短的停机时间...</div>
+					</div>
+					
+				
+				</div>
+			</div>
+			<div id='product'>
+				<div class="produceCt">
+					<div class="leftTop">产品中心</div>
+					<hr />
+					<div class="leftBox">
+						<div class="left1">
+							<ul>
+								<li>&gt&nbsp;汽车电机</li>
+								<li style='margin-top: 5px;'>&gt&nbsp;汽车电机</li>
+								<li style='margin-top: 5px;'>&gt&nbsp;汽车电机</li>
+								<li style='margin-top: 5px;'>&gt&nbsp;汽车电机</li>
+								<li style='margin-top: 5px;'>&gt&nbsp;汽车电机</li>																
+																							
+							</ul>
+						</div>
+						<div class="left2">
+							<ul>
+								<li>&gt&nbsp;汽车电机</li>
+								<li style='margin-top: 5px;'>&gt&nbsp;汽车电机</li>
+								<li style='margin-top: 5px;'>&gt&nbsp;汽车电机</li>
+								<li style='margin-top: 5px;'>&gt&nbsp;汽车电机</li>
+																								
+							</ul>
+						</div>
+						<div class="left3">
+							<ul>
+								<li>&gt&nbsp;汽车电机</li>
+								<li>&gt&nbsp;汽车电机</li>
+								<li>&gt&nbsp;汽车电机</li>
+								<li>&gt&nbsp;汽车电机</li>
+							
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="technic">
+					<div class="centerTop">技术研发</div>
+					<hr />
+					<div class="center1">
+						<ul>
+								<li>&gt&nbsp;汽车电机</li>
+								<li style='margin-top: 5px;'>&gt&nbsp;汽车电机</li>
+								<li style='margin-top: 5px;'>&gt&nbsp;汽车电机</li>
+								<li style='margin-top: 5px;'>&gt&nbsp;汽车电机</li>
+								<li style='margin-top: 5px;'>&gt&nbsp;汽车电机</li>	
+						</ul>
+					</div>
+				</div>
+				<div class="salesNt">
+					<div class="rightTop">营销网络</div>
+					<hr />
+					<div class="right1">
+						<img src="img3/10.png" />
+					</div>
+				</div>
+				
+				<!--<div class="title"></div>-->
+				
+			</div>
+			<div id='footer'></div>
+		</div>
+	</body>
+
+</html>

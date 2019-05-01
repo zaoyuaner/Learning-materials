@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-1.12.3.js"></script>
+		<script>
+			
+			$(function(){
+				
+				/*
+				练习1
+					1, 通过基本选择器获取并打印这首诗的标题
+					2, 将class为pDemo1的p元素的背景颜色设置为黄色
+					3, 将class为pDemo2的p元素的字体颜色设置为红色
+					4, 将class为pDemo的第一个p元素的字体大小设置为25px
+					5, 将所有文字的字体设置为”微软雅黑”
+				*/
+				console.log($('#title').html())
+				$('.pDemo1').css('background', 'yellow')
+				$('.pDemo2').css('color', 'red')
+				$('.pDemo').first().css('font-size', '25px')
+				$('*').css('font-family', '微软雅黑')
+				
+			})
+			
+		</script>
+	</head>
+	<body>
+		<h4 id="title"> 论语 </h4>
+		<div id="divDemo">子在川上曰：
+			<p class="pDemo">“逝者如斯夫！</p>
+			<p class="pDemo">不舍昼夜。”</p>
+			<p class="pDemo1">“逝者如斯夫！</p>
+			<p class="pDemo2">不舍昼夜。”</p>
+		</div>
+	</body>
+</html>

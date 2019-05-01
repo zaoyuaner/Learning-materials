@@ -1,0 +1,198 @@
+《mysql第一天知识总结》
+学习：是什么解释写在后面，怎么用用途写在前面
+一、高频英语单词：
+数据：
+定义语言：DDl
+create 创造
+drop  终止
+操作语言：DML
+insert 插入
+delete 删除
+update 修正校正
+查询语言：DQL
+select 查询
+where  在哪里（查询的位置）
+group by  分组依据
+order by  以...排序
+limit  限制
+控制语言：DCL
+grant  同意
+revoke  撤销
+事物
+处理语言：TPL 
+commit  提交
+rollback 回滚  恢复
+
+identified 确认
+flush privileges 刷新权限
+bind 绑定
+databases 数据库  
+tables  表格
+default 缺省值 默认值
+charset 字符值，指定编码格式
+alter 改变
+exists 存在
+engine 引擎
+modify 修改
+primary key  主键
+unique  唯一
+truncate 被删节的
+
+二、mysql账户：
+
+1、mysql安装：
+   sudo apt-get install -y mysql-server mysql-client
+
+2、数据库的登陆退出与远程连接
+   登陆命令：mysql -uxml -p 回车 输入密码
+
+   忘记密码：
+       修改密码：https://blog.csdn.net/lazybrain/article/details/80112676 就是屏蔽之后再取消屏蔽。
+       屏蔽密码：cd /etc/mysql/mysqld.conf.d/
+                sudo vim mysql.conf
+                [mysqld] 下添加 skip-grant-tables
+                重启sudo service mysql restart
+   
+   远程操作：前提不能屏蔽密码
+       登陆：mysql -uxml -p 回车 输入密码
+       创建新用户：create user 'remote'@'%' identified by '1'
+                  GRANT ALL PRIVILEGES ON *.* TO 'remote'@'%' IDENTIFIED BY '1' WITH GRANT OPTION;
+       刷新权限：flush privileges;
+       退出：quit
+       修改绑定：cd /etc/mysql/mysql.conf.d
+                sudo vim mysqld.cnf
+                #注释"bind-address = 127.0.0.1"
+       重启mysql：sudo service mysql restart
+
+三、数据库操作：
+1、库操作：
+查看库：show databases;
+创建库：create database 数据库名 default charset=utf8;
+删除库：drop database 数据库名;
+查看数据库创建语句：show create database 数据库名;
+修改数据库字符集：alter database 库名 default charset=utf8;
+查看选中的数据库：select database()
+2、进库：
+ 使用库：use 数据库名;
+ 查看库中的表：show tables;
+
+四、数据类型（以二进制的形式存在底层）：
+数值型：int整型 最小整数tinyint  单精度和双精度浮点数 float double
+字符型：char定长字符  varchar不定长字符
+时间类型：年year，日期date，时间time ，年月日时间datetime
+枚举（自定义类型）：enum（，）default   整存零取，实际存值是123...
+集合（多值存储）：一列多值
+
+五、数据库表
+1、数据库表的使用：（一列就是字段，一行就是记录）
+
+建表：（限制：主键唯一非空primary key，非空not null ， 唯一unique， 默认缺省值default）
+    create table [if not exits(默认不存在)] 表名（
+         列名 类型 [限制]，
+         ......
+         列名 类型 [限制]  /  主键复合（列名，列名）
+）设置引擎和字符集;
+
+删表：drop table 表名;
+
+查看表结构：desc 表名;
+查看建表语句：show create table 表名;
+
+改表：
+修改表名：alter table 表名 rename 新表名
+修改字段类型：alter table 表名 modify 字段名 类型 [限制]
+修改字段名和类型：alter table 表名 change 旧字段名 新字段名 类型 [限制];
+
+增加字段（列）：alter table 表名  add 字段名 类型 [限制];
+删除字段（列）：alter table 表名 drop 字段名;
+first，after指定位置插入：
+   alter table student add sno varchar(3) not null after sid; //在sid列后插入
+   alter table student add sid int primary key auto_increment first;//在第一列插入
+
+2、数据操作：
+插入字段与值insert（四种写法）
+
+修改字段值：update ： update 表名 set 字段1=值1,字段2=值2... where 条件  #不加where修改的是所有的记录
+
+删除值：delete与truncate
+ 删除表中的数据，自增主键的值不会重新开始
+ delete from 表名 where 条件；#如果不加条件，会删除表中所有数据,慎重使用
+
+清空表，自增主键的值重新开始编号
+truncate 
+ truncate table 表名,清空表中所有记录，等价于delete from 表名；
+ delete和truncate差别，truncate后，表中自增主键值从1开始
+3、数据查询：select 字段 from 表名 [where 条件] [group by ] [having] [order by ] [limit]
+
+六、字符集和引擎：
+1、查看字符集：show variables like 'character%';
+ 
+2、修改mysql的配置文件
+cd /etc/mysql/mysql.conf.d
+sudo cp mysql.cnf  mysql.cnf.bak
+sudo vim mysql.cnf
+在[mysqld]下增加一句：
+character_set_server = utf8
+保存并重启服务
+sudo systemctl restart mysql.service  #重启服务
+
+3、数据库引擎之间的区别：myisam 和innodb的区别
+
+扩展：行锁，表锁，外键
+
+
+
+                  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			
+			// 变量
+			var age = 10;
+			
+			// 交换2个变量
+			var a = 10;
+			var b = 12;
+			
+			// 方式1
+//			var c = a;
+//			a = b;
+//			b = c;
+			
+			// 方式2
+//			a = a + b;  // a=a+b; b=b;
+//			b = a - b;  // a=a+b; b=a;
+//			a = a - b;  // a=b; b=a;
+			
+			// 方式3
+			a = a ^ b;
+			b = a ^ b;
+			a = a ^ b;
+			
+			console.log(a + "," + b)
+			
+			
+			/*
+			 if语句 （掌握）
+			 switch语句
+
+			示例:
+		      1、判断一个数是偶数还是奇数；
+		      2、求两个数的最大数；
+		      3、判断一个年份是闰年还是平年； （
+		      			1.能被4整除而不能被100整除.（如2004年就是闰年,1800年不是.）
+						2.能被400整除.（如2000年是闰年））*/
+			
+			// 1、判断一个数是偶数还是奇数；
+			var n = 10;
+			if (n%2) {
+				console.log('奇数')
+			} else {
+				console.log('偶数')
+			}
+			
+			// 2、求两个数的最大数；
+			var a = 10
+			var b = 30
+			if (a > b) {
+				console.log(a)
+			}
+			else {
+				console.log(b)
+			}
+			
+			//3、判断一个年份是闰年还是平年；
+			var year = 2020;
+			if ((year%4==0 && year%100!=0) || year%400==0) {
+				console.log(year + "是闰年")
+			} 
+			else {
+				console.log(year + "是平年")
+			}
+			
+			// switch语句 : 一般不判断范围
+			//     switch-case
+			var grade = 'A'
+			switch (grade) {
+				case 'A':
+					console.log('90以上'); 
+					break;
+				case 'B':
+					console.log('60~90');
+					break;
+				case 'C':
+					console.log('60以下');
+					break;
+				default:  // 其他情况
+					console.log('输入不合法');
+			}
+			// case穿透: 使用break来解决
+			
+			/*
+			 1.  开发一款软件，根据公式（身高-108）*2=标准体重，可以有10斤左右的浮动。来观察测试者体重是否合适
+			 2. 成绩判定
+				大于85 优秀
+				大于等于75小于等于85 良好
+				大于等于60小于75 及格
+				小于60  不及格
+			*/
+			// 1.
+			var height = 180
+			var weight = 130
+			var sWeight = (height - 108) * 2
+			console.log(height + "的标准体重是：" + sWeight)
+			if (sWeight-10 < weight && weight < sWeight+10) {
+				console.log("合适")
+			}
+			else {
+				console.log("不合适")
+			}
+			
+			//2.
+			var score = 99
+			if (score > 85) {
+				console.log("优秀")
+			}
+			else if (score >= 75) {
+				console.log("良好")
+			}
+			else if (score >= 60) {
+				console.log("及格")
+			}
+			else {
+				console.log("不及格")
+			}
+			
+			
+			/*
+			 练习: 
+			    1, 判断一个数是不是合数。(指自然数中除了能被1和本身整除外，还能被其他的数整除（不包括0)的数。)  4,6,9,15...
+			    2, 判断一个数是不是素数。(质数，除了1和它本身以外不再有其他的除数整除。)5,7,11,13..
+			*/
+			// 1, 判断一个数是不是合数。
+			var n = 79;
+			for (var i=2; i<n; i++) {
+				if (n%i == 0) {
+					console.log(n + '是合数')
+					break;
+				}
+			}
+			if (i == n) {
+				console.log(n + '是素数')
+			}
+			
+			var n = 79;
+			var f = true
+			for (var i=2; i<n; i++) {
+				if (n%i == 0) {
+					console.log(n + '是合数')
+					f = false;
+					break;
+				}
+			}
+			if (f) {
+				console.log(n + '是素数')
+			}
+			
+			
+			
+			
+			
+			
+		</script>
+		
+	</head>
+	<body>
+	</body>
+</html>

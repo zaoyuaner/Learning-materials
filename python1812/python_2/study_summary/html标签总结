@@ -1,0 +1,234 @@
+形式：单双
+作用：全局、块、行
+分类：添加元素、修改元素
+
+
+1、全局建构标签
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title></title>
+</head>
+<body>
+</body>
+</html>
+
+2、跑马灯
+<marquee ></marquee>
+属性（可选）：
+direction 表示滚动的方向，值可以是left，right，up，down，默认为left 
+behavior 表示滚动的方式，值可以是scroll(连续滚动)slide(滑动一次)alternate(来回滚动) 
+loop 表示循环的次数，值是正整数，默认为无限循环 
+scrollamount 表示运动速度，值是正整数，默认为6 
+scrolldelay 表示停顿时间，值是正整数，默认为0，单位是毫秒 
+align 表示元素的垂直对齐方式，值可以是top，middle，bottom，默认为middle 
+bgcolor 表示运动区域的背景色，值是16进制的RGB颜色，默认为白色 
+height、width 表示运动区域的高度和宽度，值是正整数(单位是像素)或百分数，默认width=100% height为标签内元素的高度。 
+hspace、vspace 表示元素到区域边界的水平距离和垂直距离，值是正整数，单位是像素。 
+onmouseover=this.stop() onmouseout=this.start() 表示当鼠标以上区域的时候滚动停止，当鼠标移开的时候又继续滚动。 
+
+3、标显示窗口的标题
+<title></title>
+
+4、元信息
+<meta></mata>
+属性：
+charset  字符集
+name  描述网页  content name的具体描述
+http-equiv  相当于网页（参数） content 具体参数
+
+5、内容显示
+<body> </body>
+属性：
+topmargin 上外边距
+leftmargin 左外边距
+text 文字颜色
+bgcolor 背景颜色
+background 背景图片，和bgcolor冲突，设置了背景图片，背景颜色就是不显示
+
+6、设置标题
+<h1~6></h1~6> 六级标题
+
+7、水平分割线
+<hr>
+属性：
+width 可以使用绝对值，300，不带单位，也可以使用百分比 50%
+align 对齐方式：left center（默认） right
+
+8、换行
+<br>
+
+9、不换行
+<nobr></nobr>
+
+10、设置段落、引用文本
+段落<p></p>
+文本<blockquote></blockquote>
+
+11、原格式显示
+<pre></pre>
+
+12、设置上下标
+上标<sup></sup>
+下标<sub></sub>
+
+13、设置字体
+<font></font>
+属性：
+face 字体名称，到window目录下font子目录下查看
+color 字体颜色
+size 值取1~7,7最大
+加粗<b|strong></b|strong>
+斜体<i|em|cite></i|em|cite>
+下划线<u></u>
+
+14、添加注释：Ctrl+/
+注释<!-- 注释内容 -->
+
+15、设置列表：类似目录
+有序列表<ol><li></li><ol>
+属性：
+type: 数字，a ,A,I ,i
+start 开始标号，默认从1开始
+
+无序列表<ul><li></li><ul>
+属性：
+type
+  disc 默认 实心圆圈
+  square 实心方块
+  circle 空心圆圈
+
+自定义列表：
+<dl><dt></dt><dd></dd><dl>
+
+16、超链接
+<a></a>
+属性：
+href 所请求的url，注意url必须写协议
+title 鼠标放到超链接上时显示的提示
+target
+  _blank 新窗口打开
+  _self 当前窗口打开，默认
+
+17、锚点
+定义锚点
+<a href='#锚点名'>跳转提示</a>
+....
+<a name='锚点名'></a>
+
+本页面锚点
+<a href="#3">跳转到锚点</a>
+
+跨页面锚点
+<a href="https://baike.baidu.com/item/%E6%9D%A8%E5%B9%82/149851?fr=aladdin#4">杨幂</a>
+
+18、添加图片
+<img>
+属性：
+src 图片来源，可以是相对路径也可以是绝对路径
+title 图片提示文字
+alt 图片不显示的时候的提示文字
+border 图片边框大小，一般默认为0
+width/height 一般只设置一个，另外一个等比例缩放
+
+19、添加视频
+<video></video>
+属性：
+src 视频来源，写法同img的src
+controls 控制面板
+loop 循环播放
+autoplay 自动播放
+width/height 宽高，只设置一个
+
+20、添加音频
+<audio></audio>
+属性：
+src 视频来源，写法同img的src
+controls 控制面板
+loop 循环播放
+autoplay 自动播放
+
+21、制作表格
+<table>
+<caption>标题</caption>
+<tr>行
+<th>表头</th>
+<td>列</td>
+</tr>
+</table>
+属性：
+table 
+  border 表格线
+  cellspacing：单元格的间距
+  cellpadding：单元格到内容距离
+  align：水平对齐 left、center、right
+  height可以不用设置，自动撑开
+tr 行
+  align :水平对齐 left center right
+  valign：垂直对齐 top middle bottom
+  注意：如果没有给该表格设置高度，那么设置valign无效,在以后布局页面的时候，一般不使用valign，只有一种情况使用到，就是图片和文字并排排放的时候，需要设置图片的valign为middle
+td 单元格
+  colspan 跨列 向右合并
+  rowspan 跨行 向下合并
+  width/height
+
+22、制作表单
+<form></form>
+属性：
+action：提交地址，一般是服务器的页面
+method：提交方式，最重要的两种为get方式和post方式，默认是get提交
+
+单行<input>
+属性：
+type 类型：单行文本框（text）、密码框（password）、复选框（checkbox）、单选框（radio）、文件上传（file）、按钮（button）、重置按钮（reset）、提交（submit)
+name： 名称，要提交，必须设置name
+value 默认值
+readonly 只读
+disabled 不可用
+size
+
+下拉框<select></select>
+属性：
+name 必须设置
+size：显示的行数，如果设置这个属性，下拉框会变成列表框
+multiple：是否可以选择多行
+下拉框选项（option）
+  selected：是否选中
+  value 需要设置，否则值就是option中间的文字
+
+
+多行文本<textarea></textarea>
+属性：
+cols：列数
+rows：行数
+  注意textarea标签的内容不能有任何值，否则便会显示
+
+标签<label> </label>
+
+内联框架<iframe></iframe>
+属性：
+src="iframe.html"欲显示於此框窗的文件来源除档案名称，必要加上相对或绝对路径。
+name="test"此框窗名称，这是连结标记的 target 参数所　要的，
+width="300" height="100"框窗的宽及长，以 pixels 为单位。
+scrolling="Yes"使用 Yes 表示容许卷动（内定）， No 则不容许卷动。
+
+23、链接外部css样式
+<link>
+
+24、布局标签
+<div></div> == <header>\<section>\<footer>
+<span></span>
+
+
+
+
+
+
+
+
+
+
+
+
+

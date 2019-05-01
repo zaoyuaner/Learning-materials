@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作业</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    // 1、字符串函数
+    var str1 = 'this is A very good World'
+    a = str1.charAt(8)
+    console.log(a)
+
+    b = str1.charCodeAt(8)
+    console.log(b)
+
+    var str2 = 'everything is worth'
+    str3 = str1.concat(' ','and',' ',str2)
+    console.log(str3)
+
+
+    c = str1.indexOf('is',1)
+    console.log(c)
+
+    d = str1.lastIndexOf('good',15)
+    console.log(d)  //开始包括当前位置之前的字符
+
+    e = str1.localeCompare(str2)
+    console.log(e) // e > 0 ;str1 > str2
+
+    f = str1.match(/is/g)
+    console.log(f) //'is'检索字符串， / 正则规则/g  正则匹配
+
+    g = str1.replace('a','b')
+    console.log(g) //replace(旧，新)
+
+    h = str1.search(/This/i)
+    console.log(h)  //i不区分大小写
+
+    a1 = str1.slice(5,7)
+    console.log(a1)  //包头不包尾 数值的下标
+
+    a2 = str1.split(' ')
+    console.log(a2)
+
+    a3 = str1.substr(0,4) //4是长度
+    console.log(a3)
+
+    a4 = str1.substring(5,7)
+    console.log(a4)
+
+    a5 = str1.toLocaleLowerCase()
+    console.log(a5)
+
+    a6 = str1.toLocaleUpperCase()
+    console.log(a6)
+
+    a7 = str1.toLowerCase()
+    console.log(a7)
+
+    a8 = str1.toUpperCase()
+    console.log(a8)
+
+    // 2、数组函数
+    var l1 = [1,2,3,4]
+    var l2 = [5,6,7,8]
+    b1 = l1.concat(l2)
+    console.log(b1)
+
+    b2 = l1.join(' ')
+    console.log(typeof b2,b2)
+
+    b3 = l1.filter(function fun (minNum) {
+        return minNum < 2
+    })
+    console.log(b3) //筛选
+
+    b4 = l1.every(function fun1(fuhe) {
+        return fuhe >=1
+    })
+    console.log(b4) //匹配
+
+    b5 = l1.indexOf(2)
+    console.log(b5) //输入值返回下标
+
+    b6 = l1.map(function fun2(lei) {
+        return lei*lei
+    })
+    console.log(b6) //遍历输出处理的结果
+
+    b7 =l1.pop()
+    console.log(l1,b7)
+
+    b8 = l1.push(4)
+    console.log(b8) //返回新数组的长度
+
+    b9 = l1.reverse()
+    console.log(b9)
+    l1 = b9.reverse()
+
+    b10 = l1.shift()
+    console.log(b10)
+    console.log(l1) //返回值是弹出的数
+
+    b11 = l1.slice(1)//开始结束下标
+    console.log(b11)
+    
+    var l3 = [3,4,52,6,75,4,6,8,65]
+    b12 = l3.sort(function fu1(a,b) {
+        return b-a
+    })
+    console.log(b12)
+
+    b13 = l1.splice(0,3,1,2,3,4)//index开始 ,删除几个，添加的元素可以多个
+    console.log(l1)
+    console.log(b13)//返回删除的元素
+
+    b14 = l1.toString()
+    console.log(b14)
+
+    b15 = l1.unshift(6)
+    console.log(b15) //添加元素，返回新数组的长度
+
+    // 3、数学函数
+    console.log(Math.abs(-9))
+    console.log(Math.ceil(10/3))
+    console.log(Math.exp(1))
+    console.log(Math.floor(3.6567))
+    console.log(Math.log(3))
+    console.log(Math.max(2,3,4,5,67,4,3,6,4,3,5))
+    console.log(Math.min(3,4,3,2,5,6))
+    console.log(Math.pow(2,3))
+    console.log(Math.random())
+    console.log(Math.round(4.5556))
+    console.log(Math.sqrt(4))
+
+    // 4、date对象方法
+
+    var d =new Date()
+    console.log(d)
+
+    var d1 = d.getDate()
+    console.log(d1)
+    console.log(d.getDay())
+    console.log(d.getMonth())
+    console.log(d.getFullYear())
+    console.log(d.getHours())
+    console.log(d.getMinutes())
+    console.log(d.getSeconds())
+    console.log(d.getMilliseconds())
+    console.log(d.getTime())
+    console.log(d.getTimezoneOffset())
+
+    var d2 = Date.parse('Jul 8,2018')
+    console.log(d2) //date 的静态方法，参数必要，时间字符串
+       //修改年月日
+    var d3 = new Date()
+    console.log(d3)
+    d3.setDate(15)
+    console.log(d3)
+    console.log(d3.setDate(15))
+
+    d3.setMonth(3)
+    console.log(d3)
+    d3.setFullYear(2018)
+    console.log(d3)
+    // 设置时分秒毫秒
+    d3.setHours(22)
+    d3.setMinutes(34)
+    d3.setSeconds(56)
+    d3.setMilliseconds(222)
+    console.log(d3)
+
+
+    d3.setTime(234567789) //必要参数设置时间距离1970年的毫秒数
+    console.log(d3)
+
+
+    console.log(d3.toString())
+
+    d4 = d3.toTimeString()
+    console.log(typeof d4 ,d4)
+
+    d5 = d3.toDateString()
+    console.log(typeof d5,d5)
+
+    d6 = d3.toUTCString()
+    console.log(typeof d6, d6)
+
+    console.log(d3.toLocaleString())
+    console.log(d3.toLocaleDateString())
+    console.log(d3.toLocaleTimeString())
+
+    var sd = Date.UTC(2019,1,1)
+    console.log(sd)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

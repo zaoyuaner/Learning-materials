@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			
+			// 分支if
+			var score = 10
+			if (score >= 90){
+				console.log('优秀')
+			}
+			else if (score >= 60){
+				console.log('及格')
+			}
+			else {
+				console.log("不及格")
+			}
+			
+//			if (score > 20) 
+//				console.log('hehe')
+//			console.log('haha')
+			
+			
+			//for
+			var arr = [10, 20, 30, 40]
+			
+			//for-in
+			for (var i in arr) {
+				console.log('i='+ i)  //下标/索引
+			}
+			
+			// 普通for
+			for (var i=0; i<arr.length; i++){
+				console.log('--- i='+ i)
+			}
+			console.log('hehe--i='+ i)
+			
+			// var i=0: 循环初始化
+			// i<arr.length: 循环条件
+			// i++：循环增量
+//			while
+			var j = 0;
+			while (j < arr.length){
+				console.log('--- j='+ j);
+				
+				j++;
+			}
+			
+			console.log(Math.pow(2, 10))  //1024
+			
+			
+		</script>
+		
+	</body>
+</html>

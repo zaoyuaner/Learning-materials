@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			* {margin: 0; padding: 0; border: none;}
+			ul {list-style: none;}
+			
+			#box {
+				width: 600px;
+				height: 300px;
+				border: 6px solid blue;
+				margin: 100px auto;
+				position: relative;
+				overflow: hidden;  
+			}
+			
+			#list1 {
+				width: 1200px;
+				height: 300px;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			#list1 li {
+				width: 600px;
+				height: 300px;
+				float: left;
+				text-align: center;
+				line-height: 300px;
+				font-size: 100px;
+			}
+			
+			#list2 {
+				width: 120px;
+				height: 20px;
+				position: absolute;
+				right: 10px;
+				bottom: 20px;
+			}
+			#list2 li {
+				width: 18px;
+				height: 18px;
+				border: 1px solid yellow;
+				float: left;
+				margin-left: 5px;
+				background: cyan;
+				text-align: center;
+				cursor: pointer;
+			}
+			#list2 li.active {
+				background: purple;
+				color: pink;
+			}
+			
+			#prev, #next {
+				width: 50px;
+				height: 20px;
+				position: absolute;
+				top: 45%;
+				background: cyan;
+				cursor: pointer;
+			} 
+			#prev {
+				left: 0;
+			}
+			#next {
+				right: 0;
+			}
+			
+		</style>
+		
+		<script src="js/jquery-1.12.3.js"></script>
+		<script> 
+			$(function(){
+				
+				
+				
+				
+			})
+			
+		</script>
+		
+	</head> 
+	<body>
+		<div id="box">
+			<ul id="list1">
+				<li style="background: red;">1</li>
+				<li style="background: green;">2</li>
+				<li style="background: pink;">3</li>
+				<li style="background: orange;">4</li>
+			</ul>
+			<ul id="list2">
+				<li class="active">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+			</ul>
+			
+			<div id="prev">上一页</div>
+			<div id="next">下一页</div>
+			
+		</div>
+	</body>
+</html>

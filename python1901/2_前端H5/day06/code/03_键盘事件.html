@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	
+	<script>
+		// 键盘事件
+		// 	onkeydown, onkeypress, onkeyup
+		// onkeydown,onkeypress: 按住不放，会持续触发
+		
+		// onkeydown： 任意键按下（除了音量键等功能以外）, 不区分大小写，统一按大写
+		window.onkeydown = function(e){
+			// console.log("键盘上的任意键按下！")
+			// e: 事件对象
+			//console.log(e.keyCode)  // 键码
+		}
+		
+		// onkeypress： 字符键按下（包括数字，字母，空格，回车），区分大小写
+		onkeypress = function(e){
+			// console.log("键盘上的字符键按下")
+			console.log(e.charCode)  // 字符编码
+		}
+		
+		// onkeyup ： 松开按键
+		onkeyup = function(){
+			console.log("松开按键")
+		}
+		
+	
+	</script>
+	</body>
+</html>

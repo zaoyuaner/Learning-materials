@@ -1,0 +1,2243 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>梦芭莎</title>
+    <link rel="stylesheet" type="text/css"
+          href="/static/css/swiper.min.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="/static/css/reset.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="/static/css/index.css"/>
+    
+    <script src="/static/js/swiper.min.js"></script>
+    <script src="/static/js/jquery-1.12.3.js"></script>
+    <script src="/static/js/index.js"></script>
+    <script src="/static/js/move.js"></script>
+    
+</head>
+<body>
+<!--顶部登录注册部分-->
+<div class="top clearfix">
+    <div class="main">
+        <div class="top-left">
+            <span>100%正品保证</span>
+            <span>10年实力电商</span>
+        </div>
+        <div id="top-right">
+            <ul>
+                {% if user %}
+                <li><a href="#">用户名：{{ user.username }}</a></li>
+                <li><a href="/logout/" style="color: red;">
+                    退出</a></li>
+                    {% else %}
+                <li>
+                    <a href="/login/" style="padding-left: 14px;">登录</a>
+                </li>
+                {% endif %}
+
+
+                <li><a href="/register/" style="padding-left: 12px;
+">注册</a></li>
+                <li><a href="javascript:;" style="padding-left: 16px;">微信
+                    <img class="wechat"
+                         src="/static/images/weixin-m.jpg"/>
+                </a>
+
+                </li>
+                <li>
+                    <a href="javascript:;" style="padding-left: 10px;">微博
+                        <img class="weibo"
+                             src="/static/images/weibo.jpg"/>
+                    </a>
+                </li>
+                <li><a href="javascript:;"><i
+                        class="icon-shouji iconfont"></i>手机版
+                    <img class="tel" src="/static/images/tel.jpg"/>
+                </a>
+                </li>
+                <li><a href="javascript:;" style="padding-left: 10px;">收藏梦芭莎</a>
+                </li>
+                <li><a href="javascript:;"
+                       style="padding-left: 10px; padding-right: 11px;">English</a>
+                </li>
+                <li><a href="javascript:;" target="_blank"
+                       style="padding-left: 12px; border-right: none;">购物车<i
+                        class="iconfont icon-gouwuche1"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--顶部图标部分-->
+<div class="top-middle">
+    <div class="main">
+        <a href="javascript:;" target="_blank"><img
+                src="/static/images/list-pic1.jpg"/></a>
+        <a href="javascript:;" target="_blank"><img
+                src="/static/images/list-pic1.jpg"/></a>
+        <a href="javascript:;" target="_blank"><img
+                src="/static/images/list-pic1.jpg"/></a>
+        <a href="javascript:;" target="_blank"><img
+                src="/static/images/list-pic1.jpg"/></a>
+        <a href="javascript:;" target="_blank"><img
+                src="/static/images/list-pic1.jpg"/></a>
+        <a href="javascript:;" target="_blank"><img
+                src="/static/images/list-pic1.jpg"/></a>
+        <a href="javascript:;" target="_blank"><img
+                src="/static/images/list-pic1.jpg"/></a>
+        <a href="javascript:;" target="_blank"><img
+                src="/static/images/list-pic1.jpg"/></a>
+        <a href="javascript:;" target="_blank"><img
+                src="/static/images/list-pic1.jpg"/></a>
+    </div>
+</div>
+<!--搜索部分-->
+<div class="top-ser">
+    <div class="main clearfix">
+        <div class="logo">
+            <a href="javascript:;">Moonbasa&nbsp;梦芭莎</a>
+        </div>
+        <div class="middle-ser">
+            <div class="search">
+                <div class="search-t">
+                    <input class="text" type="text"
+                           placeholder="双节特惠，限时250-50，满350-100"/>
+                    <input class="btn" type="button" value="搜索"/>
+                </div>
+                <div class="search-b">
+                    <ul>
+                        <li><a href="javascript:;" class="col"
+                               style="padding: 0 4px 0 12px;">秋新品</a>
+                        </li>
+                        <li><a href="javascript:;"
+                               style="padding: 0 4px 0 7px;">连衣裙</a>
+                        </li>
+                        <li><a href="javascript:;"
+                               style="padding: 0 4px 0 7px;">T恤</a></li>
+                        <li><a href="javascript:;"
+                               style="padding: 0 4px 0 7px;">文胸</a></li>
+                        <li><a href="javascript:;"
+                               style="padding: 0 4px 0 7px;">小衫</a></li>
+                        <li><a href="javascript:;"
+                               style="padding: 0 4px 0 7px;">衬衫</a></li>
+                        <li><a href="javascript:;"
+                               style="padding: 0 4px 0 7px;">休闲裤</a>
+                        </li>
+                        <li><a href="javascript:;"
+                               style="padding: 0 4px 0 7px; border-right: none;">半身裙</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="middle-right">
+            <a href="javascript:;"><img src="/static/images/woman.gif"/></a>
+        </div>
+    </div>
+</div>
+<!--导航栏-->
+<nav>
+    <div class="main">
+        <ul id="nav1">
+            <li><a href="javascript:;" style="padding-left: 0;"><i
+                    class="iconfont icon-shouyexian"></i>首页</a></li>
+            <li><a href="javascript:;"><i
+                    class="iconfont icon-meiguoguan"></i>美国馆</a></li>
+            <li><a href="javascript:;">名品馆</a></li>
+            <li><a href="javascript:;">原创荟</a></li>
+            <li><a href="javascript:;">女装馆</a></li>
+            <li><a href="javascript:;">内衣馆</a></li>
+            <li><a href="javascript:;">男装馆</a></li>
+            <li><a href="javascript:;">美妆馆</a></li>
+        </ul>
+        <ul id="nav2">
+            <li><a href="javascript:;">经典热卖</a></li>
+            <li><a href="javascript:;">潮流风向</a></li>
+            <li><a href="javascript:;"
+                   style="padding-right: 0; color: #ff3a91;">折扣专辑</a>
+            </li>
+            <img src="/static/images/161116093842.gif" class="hot"/>
+        </ul>
+    </div>
+</nav>
+<!-------左边菜单导航-------------->
+<div class="main" style="position: relative;">
+    <div id="nav-left">
+        <ul id="nav-list">
+            <li class="li1">
+                <div class="con1">
+                    <h3><a href="javascript:;">女装</a></h3>
+                    <h4>
+                        <a href="javascript:;">新品</a>
+                        <a href="javascript:;">连衣裙</a>
+                        <a href="javascript:;">时尚T恤</a>
+                        <a href="javascript:;">百搭衬衫</a>
+                        <a href="javascript:;">休闲裤</a>
+                    </h4>
+                </div>
+                <!-----二级菜单--------->
+                <div id="nav_second" class="show">
+                    <dl>
+                        <dt>大家都在买</dt>
+                        <dd>
+                            <a href="javascript:;"
+                               target="_blank">新品</a>
+                            <a href="javascript:;"
+                               target="_blank">秋冬连衣裙</a>
+                            <a href="javascript:;"
+                               target="_blank">T恤</a>
+                            <a href="javascript:;"
+                               target="_blank">百搭衬衫</a>
+                            <a href="javascript:;"
+                               target="_blank">潮流卫衣</a>
+                            <a href="javascript:;"
+                               target="_blank">半裙</a>
+                            <a href="javascript:;"
+                               target="_blank">针织毛衣</a>
+                            <a href="javascript:;"
+                               target="_blank">外套</a>
+                            <a href="javascript:;"
+                               target="_blank">休闲裤</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>女士裙装</dt>
+                        <dd>
+                            <a href="javascript:;"
+                               target="_blank">连衣裙</a>
+                            <a href="javascript:;"
+                               target="_blank">印花连衣裙</a>
+                            <a href="javascript:;"
+                               target="_blank">半身裙</a>
+                            <a href="javascript:;"
+                               target="_blank">牛仔裙</a>
+                            <a href="javascript:;"
+                               target="_blank">百褶裙</a>
+                            <a href="javascript:;"
+                               target="_blank">秋冬长裙</a>
+                            <a href="javascript:;"
+                               target="_blank">欧美风</a>
+                            <a href="javascript:;"
+                               target="_blank">日韩风</a>
+                            <a href="javascript:;"
+                               target="_blank">文艺风</a>
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt>女士上装</dt>
+                        <dd>
+                            <a href="javascript:;"
+                               target="_blank">连衣裙</a>
+                            <a href="javascript:;"
+                               target="_blank">印花连衣裙</a>
+                            <a href="javascript:;"
+                               target="_blank">半身裙</a>
+                            <a href="javascript:;"
+                               target="_blank">牛仔裙</a>
+                            <a href="javascript:;"
+                               target="_blank">百褶裙</a>
+                            <a href="javascript:;"
+                               target="_blank">秋冬长裙</a>
+                            <a href="javascript:;"
+                               target="_blank">欧美风</a>
+                            <a href="javascript:;"
+                               target="_blank">日韩风</a>
+                            <a href="javascript:;"
+                               target="_blank">文艺风</a>
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt>女士下装</dt>
+                        <dd>
+                            <a href="javascript:;"
+                               target="_blank">连衣裙</a>
+                            <a href="javascript:;"
+                               target="_blank">印花连衣裙</a>
+                            <a href="javascript:;"
+                               target="_blank">半身裙</a>
+                            <a href="javascript:;"
+                               target="_blank">牛仔裙</a>
+                            <a href="javascript:;"
+                               target="_blank">百褶裙</a>
+                            <a href="javascript:;"
+                               target="_blank">秋冬长裙</a>
+                            <a href="javascript:;"
+                               target="_blank">欧美风</a>
+                            <a href="javascript:;"
+                               target="_blank">日韩风</a>
+                            <a href="javascript:;"
+                               target="_blank">文艺风</a>
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt>潮流元素推荐</dt>
+                        <dd>
+                            <a href="javascript:;"
+                               target="_blank">连衣裙</a>
+                            <a href="javascript:;"
+                               target="_blank">印花连衣裙</a>
+                            <a href="javascript:;"
+                               target="_blank">半身裙</a>
+                            <a href="javascript:;"
+                               target="_blank">牛仔裙</a>
+                            <a href="javascript:;"
+                               target="_blank">百褶裙</a>
+                            <a href="javascript:;"
+                               target="_blank">秋冬长裙</a>
+                            <a href="javascript:;"
+                               target="_blank">欧美风</a>
+                            <a href="javascript:;"
+                               target="_blank">日韩风</a>
+                            <a href="javascript:;"
+                               target="_blank">文艺风</a>
+                        </dd>
+                    </dl>
+                </div>
+            </li>
+            <li class="li2">
+                <div class="con2">
+                    <h3><a href="javascript:;">内衣</a></h3>
+                    <h4>
+                        <a href="javascript:;">新品上线</a>
+                        <a href="javascript:;">无钢圈</a>
+                        <a href="javascript:;">文胸</a>
+                        <a href="javascript:;">内裤</a>
+                        <a href="javascript:;">家居服</a>
+                        <a href="javascript:;">百搭打底</a>
+                    </h4>
+                </div>
+                <!-----二级菜单--------->
+                <div id="nav_second" class="show">
+                    <dl>
+                        <dt>文胸</dt>
+                        <dd>
+                            <a href="javascript:;"
+                               target="_blank">A杯</a>
+                            <a href="javascript:;"
+                               target="_blank">B杯</a>
+                            <a href="javascript:;"
+                               target="_blank">CD杯</a>
+                            <a href="javascript:;"
+                               target="_blank">百搭衬衫</a>
+                            <a href="javascript:;"
+                               target="_blank">潮流卫衣</a>
+                            <a href="javascript:;"
+                               target="_blank">半裙</a>
+                            <a href="javascript:;"
+                               target="_blank">针织毛衣</a>
+                            <a href="javascript:;"
+                               target="_blank">外套</a>
+                            <a href="javascript:;"
+                               target="_blank">休闲裤</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>女士裙装</dt>
+                        <dd>
+                            <a href="javascript:;"
+                               target="_blank">连衣裙</a>
+                            <a href="javascript:;"
+                               target="_blank">印花连衣裙</a>
+                            <a href="javascript:;"
+                               target="_blank">半身裙</a>
+                            <a href="javascript:;"
+                               target="_blank">牛仔裙</a>
+                            <a href="javascript:;"
+                               target="_blank">百褶裙</a>
+                            <a href="javascript:;"
+                               target="_blank">秋冬长裙</a>
+                            <a href="javascript:;"
+                               target="_blank">欧美风</a>
+                            <a href="javascript:;"
+                               target="_blank">日韩风</a>
+                            <a href="javascript:;"
+                               target="_blank">文艺风</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>潮流元素推荐</dt>
+                        <dd>
+                            <a href="javascript:;"
+                               target="_blank">连衣裙</a>
+                            <a href="javascript:;"
+                               target="_blank">印花连衣裙</a>
+                            <a href="javascript:;"
+                               target="_blank">半身裙</a>
+                            <a href="javascript:;"
+                               target="_blank">牛仔裙</a>
+                            <a href="javascript:;"
+                               target="_blank">百褶裙</a>
+                            <a href="javascript:;"
+                               target="_blank">秋冬长裙</a>
+                            <a href="javascript:;"
+                               target="_blank">欧美风</a>
+                            <a href="javascript:;"
+                               target="_blank">日韩风</a>
+                            <a href="javascript:;"
+                               target="_blank">文艺风</a>
+                        </dd>
+                    </dl>
+                </div>
+            </li>
+            <li class="li3">
+                <div class="con3">
+                    <h3><a href="javascript:;">男装</a></h3>
+                    <h4>
+                        <a href="javascript:;">新品</a>
+                        <a href="javascript:;">T恤</a>
+                        <a href="javascript:;">衬衫</a><br/>
+                        <a href="javascript:;">薄外套</a>
+                        <a href="javascript:;">裤子</a>
+
+                    </h4>
+                </div>
+                <!-----二级菜单--------->
+                <div id="nav_second" class="show">
+                    <dl>
+                        <dt>大家都在买</dt>
+                        <dd>
+                            <a href="javascript:;"
+                               target="_blank">新品</a>
+                            <a href="javascript:;"
+                               target="_blank">秋冬连衣裙</a>
+                            <a href="javascript:;"
+                               target="_blank">T恤</a>
+                            <a href="javascript:;"
+                               target="_blank">百搭衬衫</a>
+                            <a href="javascript:;"
+                               target="_blank">潮流卫衣</a>
+                            <a href="javascript:;"
+                               target="_blank">半裙</a>
+                            <a href="javascript:;"
+                               target="_blank">针织毛衣</a>
+                            <a href="javascript:;"
+                               target="_blank">外套</a>
+                            <a href="javascript:;"
+                               target="_blank">休闲裤</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>女士裙装</dt>
+                        <dd>
+                            <a href="javascript:;"
+                               target="_blank">连衣裙</a>
+                            <a href="javascript:;"
+                               target="_blank">印花连衣裙</a>
+                            <a href="javascript:;"
+                               target="_blank">半身裙</a>
+                            <a href="javascript:;"
+                               target="_blank">牛仔裙</a>
+                            <a href="javascript:;"
+                               target="_blank">百褶裙</a>
+                            <a href="javascript:;"
+                               target="_blank">秋冬长裙</a>
+                            <a href="javascript:;"
+                               target="_blank">欧美风</a>
+                            <a href="javascript:;"
+                               target="_blank">日韩风</a>
+                            <a href="javascript:;"
+                               target="_blank">文艺风</a>
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt>女士上装</dt>
+                        <dd>
+                            <a href="javascript:;"
+                               target="_blank">连衣裙</a>
+                            <a href="javascript:;"
+                               target="_blank">印花连衣裙</a>
+                            <a href="javascript:;"
+                               target="_blank">半身裙</a>
+                            <a href="javascript:;"
+                               target="_blank">牛仔裙</a>
+                            <a href="javascript:;"
+                               target="_blank">百褶裙</a>
+                            <a href="javascript:;"
+                               target="_blank">秋冬长裙</a>
+                            <a href="javascript:;"
+                               target="_blank">欧美风</a>
+                            <a href="javascript:;"
+                               target="_blank">日韩风</a>
+                            <a href="javascript:;"
+                               target="_blank">文艺风</a>
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt>女士下装</dt>
+                        <dd>
+                            <a href="javascript:;"
+                               target="_blank">连衣裙</a>
+                            <a href="javascript:;"
+                               target="_blank">印花连衣裙</a>
+                            <a href="javascript:;"
+                               target="_blank">半身裙</a>
+                            <a href="javascript:;"
+                               target="_blank">牛仔裙</a>
+                            <a href="javascript:;"
+                               target="_blank">百褶裙</a>
+                            <a href="javascript:;"
+                               target="_blank">秋冬长裙</a>
+                            <a href="javascript:;"
+                               target="_blank">欧美风</a>
+                            <a href="javascript:;"
+                               target="_blank">日韩风</a>
+                            <a href="javascript:;"
+                               target="_blank">文艺风</a>
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt>潮流元素推荐</dt>
+                        <dd>
+                            <a href="javascript:;"
+                               target="_blank">连衣裙</a>
+                            <a href="javascript:;"
+                               target="_blank">印花连衣裙</a>
+                            <a href="javascript:;"
+                               target="_blank">半身裙</a>
+                            <a href="javascript:;"
+                               target="_blank">牛仔裙</a>
+                            <a href="javascript:;"
+                               target="_blank">百褶裙</a>
+                            <a href="javascript:;"
+                               target="_blank">秋冬长裙</a>
+                            <a href="javascript:;"
+                               target="_blank">欧美风</a>
+                            <a href="javascript:;"
+                               target="_blank">日韩风</a>
+                            <a href="javascript:;"
+                               target="_blank">文艺风</a>
+                        </dd>
+                    </dl>
+                </div>
+            </li>
+            <li class="li4">
+                <div class="con4">
+                    <h3><a href="javascript:;">鞋包</a></h3>
+                    <h4>
+                        <a href="javascript:;">美鞋</a>
+                        <a href="javascript:;">鞋包</a>
+                        <a href="javascript:;">配饰</a>
+
+                    </h4>
+                </div>
+                <div id="nav-second" class="show">
+
+                </div>
+            </li>
+            <li class="li5" style="border-bottom: none;">
+                <div class="con5">
+                    <h3><a href="javascript:;">美妆</a></h3>
+                    <h4>
+                        <a href="javascript:;">护肤</a>
+                        <a href="javascript:;">手工皂</a>
+                        <a href="javascript:;">护理</a>
+
+                    </h4>
+                </div>
+                <!-----二级菜单--------->
+                <div id="nav_second" class="show">
+                    <dl>
+                        <dt>大家都在买</dt>
+                        <dd>
+                            <a href="javascript:;"
+                               target="_blank">新品</a>
+                            <a href="javascript:;"
+                               target="_blank">秋冬连衣裙</a>
+                            <a href="javascript:;"
+                               target="_blank">T恤</a>
+                            <a href="javascript:;"
+                               target="_blank">百搭衬衫</a>
+                            <a href="javascript:;"
+                               target="_blank">潮流卫衣</a>
+                            <a href="javascript:;"
+                               target="_blank">半裙</a>
+                            <a href="javascript:;"
+                               target="_blank">针织毛衣</a>
+                            <a href="javascript:;"
+                               target="_blank">外套</a>
+                            <a href="javascript:;"
+                               target="_blank">休闲裤</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>女士裙装</dt>
+                        <dd>
+                            <a href="javascript:;"
+                               target="_blank">连衣裙</a>
+                            <a href="javascript:;"
+                               target="_blank">印花连衣裙</a>
+                            <a href="javascript:;"
+                               target="_blank">半身裙</a>
+                            <a href="javascript:;"
+                               target="_blank">牛仔裙</a>
+                            <a href="javascript:;"
+                               target="_blank">百褶裙</a>
+                            <a href="javascript:;"
+                               target="_blank">秋冬长裙</a>
+                            <a href="javascript:;"
+                               target="_blank">欧美风</a>
+                            <a href="javascript:;"
+                               target="_blank">日韩风</a>
+                            <a href="javascript:;"
+                               target="_blank">文艺风</a>
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt>女士上装</dt>
+                        <dd>
+                            <a href="javascript:;"
+                               target="_blank">连衣裙</a>
+                            <a href="javascript:;"
+                               target="_blank">印花连衣裙</a>
+                            <a href="javascript:;"
+                               target="_blank">半身裙</a>
+                            <a href="javascript:;"
+                               target="_blank">牛仔裙</a>
+                            <a href="javascript:;"
+                               target="_blank">百褶裙</a>
+                            <a href="javascript:;"
+                               target="_blank">秋冬长裙</a>
+                            <a href="javascript:;"
+                               target="_blank">欧美风</a>
+                            <a href="javascript:;"
+                               target="_blank">日韩风</a>
+                            <a href="javascript:;"
+                               target="_blank">文艺风</a>
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt>女士下装</dt>
+                        <dd>
+                            <a href="javascript:;"
+                               target="_blank">连衣裙</a>
+                            <a href="javascript:;"
+                               target="_blank">印花连衣裙</a>
+                            <a href="javascript:;"
+                               target="_blank">半身裙</a>
+                            <a href="javascript:;"
+                               target="_blank">牛仔裙</a>
+                            <a href="javascript:;"
+                               target="_blank">百褶裙</a>
+                            <a href="javascript:;"
+                               target="_blank">秋冬长裙</a>
+                            <a href="javascript:;"
+                               target="_blank">欧美风</a>
+                            <a href="javascript:;"
+                               target="_blank">日韩风</a>
+                            <a href="javascript:;"
+                               target="_blank">文艺风</a>
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt>潮流元素推荐</dt>
+                        <dd>
+                            <a href="javascript:;"
+                               target="_blank">连衣裙</a>
+                            <a href="javascript:;"
+                               target="_blank">印花连衣裙</a>
+                            <a href="javascript:;"
+                               target="_blank">半身裙</a>
+                            <a href="javascript:;"
+                               target="_blank">牛仔裙</a>
+                            <a href="javascript:;"
+                               target="_blank">百褶裙</a>
+                            <a href="javascript:;"
+                               target="_blank">秋冬长裙</a>
+                            <a href="javascript:;"
+                               target="_blank">欧美风</a>
+                            <a href="javascript:;"
+                               target="_blank">日韩风</a>
+                            <a href="javascript:;"
+                               target="_blank">文艺风</a>
+                        </dd>
+                    </dl>
+                </div>
+
+            </li>
+        </ul>
+        <div id="nav-bottom">
+            <a href="javascript:;" target="_blank"><img
+                    src="/static/images/nav-bottom.jpg"/></a>
+        </div>
+    </div>
+
+</div>
+<!--轮播图-->
+
+<div id="banner">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+
+</div>
+
+<!-----品牌推荐------------>
+<div id="brank">
+    <div class="main">
+        <div id="brank_box">
+            <ul id="brank_nav">
+                <li class="on">品牌推荐</li>
+                <li><a href="javascript:;">美国品牌</a></li>
+                <li><a href="javascript:;">名品馆</a></li>
+                <li><a href="javascript:;">原创荟</a></li>
+            </ul>
+            <div id="brank_list">
+                <ul id="_brankList">
+                    <li>
+                        <div id="brank_list_left">
+                            <a href="javascript:;"><img
+                                    src="/static/images/M9_26_95710.jpg"/></a>
+                        </div>
+                        <div id="brank_list_right">
+                            <ul>
+                                <li><a href="javascript:;"><img
+                                        src="/static/images/mbs-1.jpg"/></a>
+                                </li>
+                                <li><a href="javascript:;"><img
+                                        src="/static/images/mbs-1.jpg"/></a>
+                                </li>
+                                <li><a href="javascript:;"><img
+                                        src="/static/images/mbs-1.jpg"/></a>
+                                </li>
+                                <br/>
+                                <li><a href="javascript:;"><img
+                                        src="/static/images/mbs-1.jpg"/></a>
+                                </li>
+                                <li><a href="javascript:;"><img
+                                        src="/static/images/mbs-1.jpg"/></a>
+                                </li>
+                                <li><a href="javascript:;"><img
+                                        src="/static/images/mbs-1.jpg"/></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="brank_list_left">
+                            <a href="javascript:;"><img
+                                    src="/static/images/pic2.jpg"/></a>
+                        </div>
+                        <div id="brank_list_right">
+                            <ul>
+                                <li><a href="javascript:;"><img
+                                        src="/static/images/pic3.jpg"/></a>
+                                </li>
+                                <li><a href="javascript:;"><img
+                                        src="/static/images/pic3.jpg"/></a>
+                                </li>
+                                <li><a href="javascript:;"><img
+                                        src="/static/images/pic3.jpg"/></a>
+                                </li>
+                                <br/>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="brank_list_left">
+                            <a href="javascript:;"><img
+                                    src="/static/images/M9_26_95710.jpg"/></a>
+                        </div>
+                        <div id="brank_list_right">
+                            <ul>
+                                <li><a href="javascript:;"><img
+                                        src="/static/images/mbs-1.jpg"/></a>
+                                </li>
+                                <li><a href="javascript:;"><img
+                                        src="/static/images/mbs-1.jpg"/></a>
+                                </li>
+                                <li><a href="javascript:;"><img
+                                        src="/static/images/mbs-1.jpg"/></a>
+                                </li>
+                                <br/>
+                                <li><a href="javascript:;"><img
+                                        src="/static/images/mbs-1.jpg"/></a>
+                                </li>
+                                <li><a href="javascript:;"><img
+                                        src="/static/images/mbs-1.jpg"/></a>
+                                </li>
+                                <li><a href="javascript:;"><img
+                                        src="/static/images/mbs-1.jpg"/></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="brank_list_left">
+                            <a href="javascript:;"><img
+                                    src="/static/images/pic2.jpg"/></a>
+                        </div>
+                        <div id="brank_list_right">
+                            <ul>
+                                <li><a href="javascript:;"><img
+                                        src="/static/images/pic3.jpg"/></a>
+                                </li>
+                                <li><a href="javascript:;"><img
+                                        src="/static/images/pic3.jpg"/></a>
+                                </li>
+                                <li><a href="javascript:;"><img
+                                        src="/static/images/pic3.jpg"/></a>
+                                </li>
+                                <br/>
+
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----花好月圆---------->
+<div id="theme1">
+    <div class="main">
+        <div id="theme1-1"></div>
+        <div id="theme1-2">
+            <div id="theme1-2_left">
+                <img src="/static/images/miaosha.jpg"/>
+            </div>
+            <div id="theme1-2_right">
+                <ul>
+                    <li><a href="javascript:;"><img
+                            src="/static/images/ph1.jpg"/></a></li>
+                    <li><a href="javascript:;"><img
+                            src="/static/images/ph2.jpg"/></a></li>
+                    <li><a href="javascript:;"><img
+                            src="/static/images/ph3.jpg"/></a></li>
+                    <li style="border-right: none;"><a
+                            href="javascript:;"><img
+                            src="/static/images/ph4.jpg"/></a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="theme1-3">
+            <ul>
+                <li><a href="javascript:;"><img
+                        src="/static/images/ph5.jpg"/></a></li>
+                <li><a href="javascript:;"><img
+                        src="/static/images/ph6.jpg"/></a></li>
+                <li style="margin-right: 0;"><a href="javascript:;"><img
+                        src="/static/images/ph7.jpg"/></a></li>
+            </ul>
+        </div>
+        <div id="title">
+            双节惠分会场
+        </div>
+        <div id="theme1-4">
+            <ul>
+                <li><a href="javascript:;"><img
+                        src="/static/images/ph8.jpg"/></a></li>
+                <li style="margin-right: 0;"><a href="javascript:;"><img
+                        src="/static/images/ph9.jpg"/></a></li>
+            </ul>
+        </div>
+        <div id="theme1-5">
+            <ul>
+                <li><a href="javascript:;"><img
+                        src="/static/images/ph10.jpg"/></a></li>
+                <li><a href="javascript:;"><img
+                        src="/static/images/ph11.jpg"/></a></li>
+                <li style="margin-right: 0;"><a href="javascript:;"><img
+                        src="/static/images/ph12.jpg"/></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-------梦芭莎旗下品牌--------->
+<div class="floor">
+
+
+    <div id="brands">
+        <div class="main">
+            <div id="title2">
+                <h2>梦芭莎旗下品牌</h2>
+                <span>Monbasa Brands</span>
+            </div>
+            <div id="brands-pic">
+                <a href="javascript:;"><img
+                        src="/static/images/ph46.jpg"/></a>
+                <a href="javascript:;"><img
+                        src="/static/images/ph47.jpg"/></a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{# ------------------------------------------------------------- #}
+{# ------------------------------------------------------------- #}
+{# ------------------------------------------------------------- #}
+
+
+<!-----------梦芭莎美妆馆------------->
+<div class="floor">
+
+    <div id="msb-wo" style="padding-bottom: 30px;">
+        <div class="main">
+            <div id="msb-wo-top"
+                 style="height: 540px; padding-bottom: 15px;">
+                <a href="javascript:;" class="cc">
+                    <img src="/static/images2/2-left.jpg"/>
+                </a>
+                <span>
+                    <img src="/static/images2/2-right.jpg"/>
+                </span>
+            </div>
+            <div id="msb-wo-list">
+                <ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--------意式高端男装--------->
+<div class="floor">
+    <div id="msb-wo" style="padding-bottom: 30px;">
+        <div class="main">
+            <div id="msb-wo-top">
+                <a href="javascript:;" class="cc">
+                    <img src="/static/images/ph21.jpg"/>
+                    <img src="/static/images/ph21.jpg"/>
+                </a>
+                <a href="javascript:;">
+                    <img src="/static/images/ph21.jpg"/>
+                </a>
+
+            </div>
+            <div id="msb-wo-list">
+                <ul>
+
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/ph21.jpg"/>
+                            <p>标题</p>
+                            <span>￥100.00</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/ph21.jpg"/>
+                            <p>标题</p>
+                            <span>￥100.00</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/ph21.jpg"/>
+                            <p>标题</p>
+                            <span>￥100.00</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/ph21.jpg"/>
+                            <p>标题</p>
+                            <span>￥100.00</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/ph21.jpg"/>
+                            <p>标题</p>
+                            <span>￥100.00</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/ph21.jpg"/>
+                            <p>标题</p>
+                            <span>￥100.00</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/ph21.jpg"/>
+                            <p>标题</p>
+                            <span>￥100.00</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/ph21.jpg"/>
+                            <p>标题</p>
+                            <span>￥100.00</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/ph21.jpg"/>
+                            <p>标题</p>
+                            <span>￥100.00</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/ph21.jpg"/>
+                            <p>标题</p>
+                            <span>￥100.00</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{# ------------------------------------------------------------- #}
+{# ------------------------------------------------------------- #}
+{# ------------------------------------------------------------- #}
+
+
+<!--梦芭莎女装--->
+<div class="floor">
+
+    <div id="msb-wo">
+        <div class="main">
+            <div id="msb-wo-top">
+                <a href="javascript:;" class="cc"><img
+                        src="/static/images/ph48.jpg"/><img
+                        src="/static/images/160918190227.png"/></a>
+                <a href="javascript:;"><img
+                        src="/static/images/ph49.jpg"/></a>
+
+            </div>
+            <div id="msb-wo-list">
+                <ul>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/467117304-336-01-L.jpg"/>
+                            <p>梦芭莎时尚英伦格仔精致...</p>
+                            <span>￥239.00</span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/462017315-009-01-L.jpg"/>
+                            <p>梦芭莎时尚英伦格仔精致...</p>
+                            <span>￥239.00</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/461617306-010-01-L.jpg"/>
+                            <p>梦芭莎时尚英伦格仔精致...</p>
+                            <span>￥239.00</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/467217303-009-01-L.jpg"/>
+                            <p>梦芭莎时尚英伦格仔精致...</p>
+                            <span>￥239.00</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/467217304-009-01-L.jpg"/>
+                            <p>梦芭莎时尚英伦格仔精致...</p>
+                            <span>￥239.00</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/467117301-429-01-L.jpg"/>
+                            <p>梦芭莎时尚英伦格仔精致...</p>
+                            <span>￥239.00</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/461617302-010-01-L.jpg"/>
+                            <p>梦芭莎时尚英伦格仔精致...</p>
+                            <span>￥239.00</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/031217303-009-01-L.jpg"/>
+                            <p>梦芭莎时尚英伦格仔精致...</p>
+                            <span>￥239.00</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/031617307-918-01-L.jpg"/>
+                            <p>梦芭莎时尚英伦格仔精致...</p>
+                            <span>￥239.00</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/031617303-714-01-L.jpg"/>
+                            <p>梦芭莎时尚英伦格仔精致...</p>
+                            <span>￥239.00</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!------日韩潮流女装---------->
+    <div id="msb-wo" style="padding-bottom: 30px;">
+        <div class="main">
+            <div id="msb-wo-top">
+                <a href="javascript:;" class="cc"><img
+                        src="/static/images/ph50.jpg"/><img
+                        src="/static/images/160918190342.png"/></a>
+                <a href="javascript:;"><img
+                        src="/static/images/ph51.jpg"/></a>
+
+            </div>
+            <div id="msb-wo-list">
+                <ul>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/437117310-M0B6-01-L.jpg"/>
+                            <p>韩伊儿日韩时尚新颖小碎...</p>
+                            <span>￥269.00</span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/437117303-010-01-L.jpg"/>
+                            <p>韩伊儿日韩时尚新颖小碎...</p>
+                            <span>￥269.00</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/437117314-009-01-L.jpg"/>
+                            <p>韩伊儿日韩时尚新颖小碎...</p>
+                            <span>￥269.00</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/437317307-048-01-L.jpg"/>
+                            <p>韩伊儿日韩时尚新颖小碎...</p>
+                            <span>￥269.00</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/437317311-048-01-L.jpg"/>
+                            <p>韩伊儿日韩时尚新颖小碎...</p>
+                            <span>￥269.00</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/431217317-479-01-L.jpg"/>
+                            <p>韩伊儿日韩时尚新颖小碎...</p>
+                            <span>￥269.00</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/431617303-388-01-L.jpg"/>
+                            <p>韩伊儿日韩时尚新颖小碎...</p>
+                            <span>￥269.00</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/434017305-075-01-L.jpg"/>
+                            <p>韩伊儿日韩时尚新颖小碎...</p>
+                            <span>￥269.00</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/437217315-388-01-L.jpg"/>
+                            <p>韩伊儿日韩时尚新颖小碎...</p>
+                            <span>￥269.00</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/435017319-388-01-L.jpg"/>
+                            <p>韩伊儿日韩时尚新颖小碎...</p>
+                            <span>￥269.00</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-----美国馆------------->
+    <div id="msb-wo" style="padding-bottom: 30px;">
+        <div class="main">
+            <div id="msb-wo-top">
+                <a href="javascript:;" class="cc"><img
+                        src="/static/images/ph52.jpg"/><img
+                        src="/static/images/160918190538.png"/></a>
+                <a href="javascript:;"><img
+                        src="/static/images/ph53.jpg"/></a>
+
+            </div>
+            <div id="msb-wo-list">
+                <ul>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/970068002-CL01-01-L.jpg"/>
+                            <p>JanetChung设计师品牌...</p>
+                            <span>￥199.00</span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/970109440-CL01-01-L.jpg"/>
+                            <p>JanetChung设计师品牌...</p>
+                            <span>￥199.00</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/970111191-CL01-01-L.jpg"/>
+                            <p>JanetChung设计师品牌...</p>
+                            <span>￥199.00</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/970135307-CL01-01-L.jpg"/>
+                            <p>JanetChung设计师品牌...</p>
+                            <span>￥199.00</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/970136702-CL01-01-L.jpg"/>
+                            <p>JanetChung设计师品牌...</p>
+                            <span>￥199.00</span>
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-------梦芭莎美鞋馆--------->
+<div class="floor">
+    <div id="msb-wo" style="padding-bottom: 30px;">
+        <div class="main">
+            <div id="msb-wo-top"
+                 style="height: 380px; padding-bottom: 15px;">
+                <a href="javascript:;" class="cc"><img
+                        src="/static/images/M9_15_170444.jpg"/><img
+                        src="/static/images/160918184752.png"/></a>
+
+            </div>
+            <div id="msb-wo-list">
+                <ul>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/970141435-CL01-01-L.jpg"/>
+                            <p>玛丽兰2017秋季新款真...</p>
+                            <span>￥168.00</span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/970141363-CL01-01-L.jpg"/>
+                            <p>玛丽兰2017秋季新款真...</p>
+                            <span>￥168.00</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/970141201-CL01-01-L.jpg"/>
+                            <p>玛丽兰2017秋季新款真...</p>
+                            <span>￥168.00</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/970139930-CL01-01-L.jpg"/>
+                            <p>玛丽兰2017秋季新款真...</p>
+                            <span>￥168.00</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/970137708-CL01-01-L.jpg"/>
+                            <p>玛丽兰2017秋季新款真...</p>
+                            <span>￥168.00</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!----梦芭莎包，饰品-------->
+<div class="floor">
+    <div id="msb-wo" style="padding-bottom: 30px;">
+        <div class="main">
+            <div id="msb-wo-top"
+                 style="height: 380px; padding-bottom: 15px;">
+                <a href="javascript:;" class="cc"><img
+                        src="/static/images/ph54.jpg"/><img
+                        src="/static/images/160918184839.png"/></a>
+                <a href="javascript:;"><img
+                        src="/static/images/ph55.jpg"/></a>
+            </div>
+            <div id="msb-wo-list" class="bags">
+                <ul>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/970136219-CL01-01-L.jpg"/>
+                            <p>杜莎莎DMS2017欧美时...</p>
+                            <span>￥138.00</span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/970139795-CL01-01-L.jpg"/>
+                            <p>杜莎莎DMS2017欧美时...</p>
+                            <span>￥138.00</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/970138332-CL01-01-L.jpg"/>
+                            <p>杜莎莎DMS2017欧美时...</p>
+                            <span>￥138.00</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/970133237-CL01-01-L.jpg"/>
+                            <p>杜莎莎DMS2017欧美时...</p>
+                            <span>￥138.00</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="/static/images/970140451-CL01-01-L.jpg"/>
+                            <p>杜莎莎DMS2017欧美时...</p>
+                            <span>￥138.00</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-------人气推荐----------->
+<div class="floor">
+    <div id="theme2">
+        <div class="main">
+            <div id="title2">
+                <h2>人气推荐</h2>
+                <span>hot</span>
+            </div>
+            <div id="theme2-1">
+                <ul>
+                    <li><a href="javascript:;"><img
+                            src="/static/images/ph13.jpg"/></a></li>
+                    <li><a href="javascript:;"><img
+                            src="/static/images/ph14.jpg"/></a></li>
+                    <li style="margin-right: 0;"><a href="javascript:;"><img
+                            src="/static/images/ph15.jpg"/></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!---------精选专题-------->
+<div class="floor">
+
+
+    <div id="selection">
+        <div class="main">
+            <div id="title2">
+                <h2>精选专题</h2>
+                <span>selection</span>
+            </div>
+            <div id="selection-list">
+                <div id="selection-list-r">
+                    <div id="more">
+                        <a href="javascript:;">
+                            <span>流行元素</span>
+                            <span>更多</span>
+                        </a>
+                    </div>
+                    <div id="small-pic">
+                        <ul>
+                            <li><a href="javascript:;"><img
+                                    src="/static/images/M9_20_175807_02.jpg"/></a>
+                                <div class="show"></div>
+                            </li>
+                            <li><a href="javascript:;"><img
+                                    src="/static/images/M9_20_175807_03.jpg"/></a>
+                                <div class="show"></div>
+                            </li>
+                            <li><a href="javascript:;"><img
+                                    src="/static/images/M9_20_175807_04.jpg"/></a>
+                                <div class="show"></div>
+                            </li>
+                            <li><a href="javascript:;"><img
+                                    src="/static/images/M9_20_175807_05.jpg"/></a>
+                                <div class="show"></div>
+                            </li>
+                            <li><a href="javascript:;"><img
+                                    src="/static/images/M9_20_175807_06.jpg"/></a>
+                                <div class="show"></div>
+                            </li>
+                            <li><a href="javascript:;"><img
+                                    src="/static/images/M9_20_175807_07.jpg"/></a>
+                                <div class="show"></div>
+                            </li>
+                            <li><a href="javascript:;"><img
+                                    src="/static/images/M9_20_175807_08.jpg"/></a>
+                                <div class="show"></div>
+                            </li>
+                            <li><a href="javascript:;"><img
+                                    src="/static/images/M9_20_175807_09.jpg"/></a>
+                                <div class="show"></div>
+                            </li>
+                            <li><a href="javascript:;"><img
+                                    src="/static/images/M9_20_175807_10.jpg"/></a>
+                                <div class="show"></div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div id="selection-list-l">
+                    <div id="selection-nav">
+                        <ul id="list4">
+                            <li><a href="javascript:;"
+                                   class="diff">花式衬衫</a></li>
+                            <li><a href="javascript:;">元素大赏</a></li>
+                            <li><a href="javascript:;">抢镜攻略</a></li>
+                            <li style="border-bottom: none;"><a
+                                    href="javascript:;">复古经典</a></li>
+                        </ul>
+                    </div>
+                    <ul id="list3">
+                        <li><a href="javascript:;"><img
+                                src="/static/images/M9_26_164418.jpg"/></a>
+                        </li>
+                        <li><a href="javascript:;"><img
+                                src="/static/images/M9_26_164415.jpg"/></a>
+                        </li>
+                        <li><a href="javascript:;"><img
+                                src="/static/images/M9_26_164417.jpg"/></a>
+                        </li>
+                        <li><a href="javascript:;"><img
+                                src="/static/images/M9_18_140705.jpg"/></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!------时尚资讯--------->
+<div class="floor">
+
+
+    <div id="fashion">
+        <div class="main">
+            <div id="title2">
+                <h2>时尚资讯</h2>
+                <span>Fashion Information</span>
+            </div>
+            <div id="fashion-list">
+                <div id="fashion-list1">
+                    <img src="/static/images/new.jpg" class="new"/>
+                    <img src="/static/images/vol.jpg" class="vol"/>
+                    <p class="txt">林更新的“新欢旧爱”首次同台，谁赢了？</p>
+                    <a href="javascript:;"><img
+                            src="/static/images/M9_29_141024_01.png"/></a>
+                </div>
+                <div id="fashion-list2">
+                    <ul>
+                        <li style="margin-bottom: 4px;"><a
+                                href="javascript:;"><img
+                                src="/static/images/M9_29_141024_02.png"/></a>
+                        </li>
+                        <li style="margin-bottom: 4px;"><a
+                                href="javascript:;"><img
+                                src="/static/images/M9_29_141024_03.png"/></a>
+                        </li>
+                        <li><a href="javascript:;"><img
+                                src="/static/images/M9_29_141024_04.png"/></a>
+                        </li>
+                        <li><a href="javascript:;"><img
+                                src="/static/images/M9_29_140431.png"/></a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div id="fashion-list3">
+                    <a href="javascript:;"><img
+                            src="/static/images/M9_29_140429.png"/></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----热门品类---------->
+<div class="floor">
+
+
+    <div id="hot">
+        <div class="main">
+            <div id="title2">
+                <h2>热门品类</h2>
+                <span>what's hot</span>
+            </div>
+            <div id="hot-box">
+                <div id="hot-nav">
+                    <ul>
+                        <li class="long">女装品类</li>
+                        <li>内衣品类</li>
+                        <li style="margin-right: 0;">男装品类</li>
+                    </ul>
+                </div>
+                <div id="hot-list">
+                    <ul id="kinds">
+                        <li>
+                            <div id="hot-list-left">
+                                <a href="javascript:;"><img
+                                        src="/static/images/M9_28_93354.jpg"/></a>
+                                <a href="javascript:;"><img
+                                        src="/static/images/M9_28_93405.jpg"/></a>
+                                <a href="javascript:;"><img
+                                        src="/static/images/M9_28_93411.jpg"/></a>
+                                <a href="javascript:;"><img
+                                        src="/static/images/M9_28_93415.jpg"/></a>
+                                <a href="javascript:;"><img
+                                        src="/static/images/M9_28_93419.jpg"/></a>
+                                <a href="javascript:;"><img
+                                        src="/static/images/M9_28_93423.jpg"/></a>
+                            </div>
+                            <div id="hot-list-right">
+                                <a href="javascript:;"><img
+                                        src="/static/images/M9_28_93102_02.jpg"/></a>
+                                <a href="javascript:;"><img
+                                        src="/static/images/M9_28_93222_03.jpg"/></a>
+                                <a href="javascript:;"><img
+                                        src="/static/images/M9_28_93222_04.jpg"/></a>
+                                <a href="javascript:;"><img
+                                        src="/static/images/M9_28_93222_05.jpg"/></a>
+                                <a href="javascript:;"><img
+                                        src="/static/images/M9_28_93222_06.jpg"/></a>
+                                <a href="javascript:;"><img
+                                        src="/static/images/M9_28_93222_07.jpg"/></a>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div id="hot-list-left">
+                                <a href="javascript:;"><img
+                                        src="/static/images/M10_10_173857.jpg"/></a>
+                                <!--<a href="javascript:;"><img src="/static/images/M9_29_111920.png"/></a>
+                                <a href="javascript:;"><img src="/static/images/M9_28_93405.jpg"/></a>
+                                <a href="javascript:;"><img src="/static/images/M9_28_93354.jpg"/></a>
+                                <a href="javascript:;"><img src="/static/images/M9_28_93405.jpg"/></a>
+                                <a href="javascript:;"><img src="/static/images/M9_28_93405.jpg"/></a>-->
+                                <a href="javascript:;"><img
+                                        src="/static/images/M9_28_93405.jpg"/></a>
+                                <a href="javascript:;"><img
+                                        src="/static/images/M9_28_93411.jpg"/></a>
+                                <a href="javascript:;"><img
+                                        src="/static/images/M9_28_93415.jpg"/></a>
+                                <a href="javascript:;"><img
+                                        src="/static/images/M9_28_93419.jpg"/></a>
+                                <a href="javascript:;"><img
+                                        src="/static/images/M9_28_93423.jpg"/></a>
+                            </div>
+                            <div id="hot-list-right">
+                                <a href="javascript:;"><img
+                                        src="/static/images/M9_29_111038_01.jpg"/></a>
+                                <a href="javascript:;"><img
+                                        src="/static/images/M9_29_111038_02.jpg"/></a>
+                                <a href="javascript:;"><img
+                                        src="/static/images/M9_29_111038_03.jpg"/></a>
+                                <a href="javascript:;"><img
+                                        src="/static/images/M10_10_175357.jpg"/></a>
+                                <a href="javascript:;"><img
+                                        src="/static/images/M9_29_111038_05.jpg"/></a>
+                                <a href="javascript:;"><img
+                                        src="/static/images/M9_29_111038_06.jpg"/></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="hot-list-left">
+                                <a href="javascript:;"><img
+                                        src="/static/images/M9_29_112605.png"/></a>
+                                <a href="javascript:;"><img
+                                        src="/static/images/M9_28_93405.jpg"/></a>
+                                <a href="javascript:;"><img
+                                        src="/static/images/M9_28_93411.jpg"/></a>
+                                <a href="javascript:;"><img
+                                        src="/static/images/M9_28_93415.jpg"/></a>
+                                <a href="javascript:;"><img
+                                        src="/static/images/M9_28_93419.jpg"/></a>
+                                <a href="javascript:;"><img
+                                        src="/static/images/M9_28_93423.jpg"/></a>
+                            </div>
+                            <div id="hot-list-right">
+                                <a href="javascript:;"><img
+                                        src="/static/images/M9_29_112405_01.jpg"/></a>
+                                <a href="javascript:;"><img
+                                        src="/static/images/M9_29_112405_02.jpg"/></a>
+                                <a href="javascript:;"><img
+                                        src="/static/images/M9_29_112405_03.jpg"/></a>
+                                <a href="javascript:;"><img
+                                        src="/static/images/M9_29_112405_04.jpg"/></a>
+                                <a href="javascript:;"><img
+                                        src="/static/images/M9_29_112405_05.jpg"/></a>
+                                <a href="javascript:;"><img
+                                        src="/static/images/M9_29_112405_06.jpg"/></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!---------免海淘美国馆------------>
+<div class="floor">
+
+
+    <div id="free">
+        <div class="main">
+            <div id="free-top">
+                <a href="javascript:;"><img
+                        src="/static/images/M8_24_170551.png"/></a>
+            </div>
+            <div id="free-list">
+                <div id="free-list1">
+                    <a href="javascript:;"><img
+                            src="/static/images/ph16.jpg"/></a>
+                </div>
+                <div id="free-list2">
+                    <a href="javascript:;"><img
+                            src="/static/images/ph17.jpg"/></a>
+                </div>
+                <div id="free-list3">
+                    <a href="javascript:;"><img
+                            src="/static/images/ph18.jpg"/></a>
+                </div>
+                <div id="free-list4">
+                    <a href="javascript:;"
+                       style="margin-bottom: 1px;display: block;"><img
+                            src="/static/images/ph19.jpg"/></a>
+                    <a href="javascript:;"><img
+                            src="/static/images/ph20.jpg"/></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-------每周新品----->
+<div class="floor">
+
+
+    <div id="new">
+        <div class="main">
+            <div id="title2">
+                <h2>每周新品</h2>
+                <span>What's New</span>
+            </div>
+        </div>
+        <div id="new-box">
+            <img src="/static/images/Black_l.png" id="pre"/>
+            <img src="/static/images/Black_r.png" id="next"/>
+            <ul id="new-list">
+                <li>
+                    <div id="new-list-left">
+                        <a href="javascript:;"
+                           style="margin-left: 0;"><img
+                                src="/static/images/ph21.jpg"/></a>
+                        <a href="javascript:;"><img
+                                src="/static/images/ph22.jpg"/></a>
+                        <a href="javascript:;"
+                           style="margin-left: 0;"><img
+                                src="/static/images/ph23.jpg"/></a>
+                        <a href="javascript:;"><img
+                                src="/static/images/ph24.jpg"/></a>
+
+                    </div>
+                    <div id="new-list-right">
+                        <a href="javascript:;"><img
+                                src="/static/images/ph25.jpg"/></a>
+                    </div>
+                </li>
+                <li>
+                    <div id="new-list-left">
+                        <a href="javascript:;"
+                           style="margin-left: 0;"><img
+                                src="/static/images/ph26.jpg"/></a>
+                        <a href="javascript:;"><img
+                                src="/static/images/ph27.jpg"/></a>
+                        <a href="javascript:;"
+                           style="margin-left: 0;"><img
+                                src="/static/images/ph28.jpg"/></a>
+                        <a href="javascript:;"><img
+                                src="/static/images/ph29.jpg"/></a>
+
+                    </div>
+                    <div id="new-list-right">
+                        <a href="javascript:;"><img
+                                src="/static/images/ph30.jpg"/></a>
+                    </div>
+                </li>
+                <li>
+                    <div id="new-list-left">
+                        <a href="javascript:;"
+                           style="margin-left: 0;"><img
+                                src="/static/images/ph31.jpg"/></a>
+                        <a href="javascript:;"><img
+                                src="/static/images/ph32.jpg"/></a>
+                        <a href="javascript:;"
+                           style="margin-left: 0;"><img
+                                src="/static/images/ph33.jpg"/></a>
+                        <a href="javascript:;"><img
+                                src="/static/images/ph34.jpg"/></a>
+
+                    </div>
+                    <div id="new-list-right">
+                        <a href="javascript:;"><img
+                                src="/static/images/ph35.jpg"/></a>
+                    </div>
+                </li>
+                <li>
+                    <div id="new-list-left">
+                        <a href="javascript:;"
+                           style="margin-left: 0;"><img
+                                src="/static/images/ph36.jpg"/></a>
+                        <a href="javascript:;"><img
+                                src="/static/images/ph37.jpg"/></a>
+                        <a href="javascript:;"
+                           style="margin-left: 0;"><img
+                                src="/static/images/ph38.jpg"/></a>
+                        <a href="javascript:;"><img
+                                src="/static/images/ph39.jpg"/></a>
+
+                    </div>
+                    <div id="new-list-right">
+                        <a href="javascript:;"><img
+                                src="/static/images/ph40.jpg"/></a>
+                    </div>
+                </li>
+            </ul>
+            <ul id="cicle">
+                <li class="bla"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+<!-------热销单款--------->
+<div class="floor">
+
+
+    <div id="hot-selling">
+        <div class="main">
+            <div id="title2">
+                <h2>热销单款推荐</h2>
+                <span>Hot selling</span>
+            </div>
+            <div id="selling-box">
+                <div id="selling-nav">
+                    <ul>
+                        <li class="colr">欧美时尚</li>
+                        <li>日韩潮流</li>
+                        <li>原创设计</li>
+                        <li>时尚内衣</li>
+                        <li style="background: none;">商务男装</li>
+
+                    </ul>
+                </div>
+                <div id="selling-list">
+                    <ul>
+                        <li style="margin-bottom: 10px;"><a
+                                href="javascript:;"><img
+                                src="/static/images/ph41.jpg"/></a></li>
+                        <li style="margin-bottom: 10px;"><a
+                                href="javascript:;"><img
+                                src="/static/images/ph42.jpg"/></a></li>
+                        <li style="margin-right: 0;margin-bottom: 10px;">
+                            <a href="javascript:;"><img
+                                    src="/static/images/ph43.jpg"/></a>
+                        </li>
+                        <li><a href="javascript:;"><img
+                                src="/static/images/ph44.jpg"/></a></li>
+                        <li><a href="javascript:;"><img
+                                src="/static/images/ph45.jpg"/></a></li>
+                        <li><a href="javascript:;"><img
+                                src="/static/images/ph44.jpg"/></a></li>
+                        <li><a href="javascript:;"><img
+                                src="/static/images/ph45.jpg"/></a></li>
+                        <li style="margin-right: 0;"><a
+                                href="javascript:;"><img
+                                src="/static/images/ph44.jpg"/></a></li>
+                    </ul>
+
+                    <ul>
+                        <li style="margin-bottom: 10px;"><a
+                                href="javascript:;"><img
+                                src="/static/images/ph41.jpg"/></a></li>
+                        <li style="margin-bottom: 10px;"><a
+                                href="javascript:;"><img
+                                src="/static/images/ph42.jpg"/></a></li>
+                        <li style="margin-right: 0;margin-bottom: 10px;">
+                            <a href="javascript:;"><img
+                                    src="/static/images/ph43.jpg"/></a>
+                        </li>
+                        <li><a href="javascript:;"><img
+                                src="/static/images/ph44.jpg"/></a></li>
+                        <li><a href="javascript:;"><img
+                                src="/static/images/ph45.jpg"/></a></li>
+                        <li><a href="javascript:;"><img
+                                src="/static/images/ph44.jpg"/></a></li>
+                        <li><a href="javascript:;"><img
+                                src="/static/images/ph45.jpg"/></a></li>
+                        <li style="margin-right: 0;"><a
+                                href="javascript:;"><img
+                                src="/static/images/ph44.jpg"/></a></li>
+                    </ul>
+
+                    <ul>
+                        <li style="margin-bottom: 10px;"><a
+                                href="javascript:;"><img
+                                src="/static/images/ph41.jpg"/></a></li>
+                        <li style="margin-bottom: 10px;"><a
+                                href="javascript:;"><img
+                                src="/static/images/ph42.jpg"/></a></li>
+                        <li style="margin-right: 0;margin-bottom: 10px;">
+                            <a href="javascript:;"><img
+                                    src="/static/images/ph43.jpg"/></a>
+                        </li>
+                        <li><a href="javascript:;"><img
+                                src="/static/images/ph44.jpg"/></a></li>
+                        <li><a href="javascript:;"><img
+                                src="/static/images/ph45.jpg"/></a></li>
+                        <li><a href="javascript:;"><img
+                                src="/static/images/ph44.jpg"/></a></li>
+                        <li><a href="javascript:;"><img
+                                src="/static/images/ph45.jpg"/></a></li>
+                        <li style="margin-right: 0;"><a
+                                href="javascript:;"><img
+                                src="/static/images/ph44.jpg"/></a></li>
+                    </ul>
+
+                    <ul>
+                        <li style="margin-bottom: 10px;"><a
+                                href="javascript:;"><img
+                                src="/static/images/ph41.jpg"/></a></li>
+                        <li style="margin-bottom: 10px;"><a
+                                href="javascript:;"><img
+                                src="/static/images/ph42.jpg"/></a></li>
+                        <li style="margin-right: 0;margin-bottom: 10px;">
+                            <a href="javascript:;"><img
+                                    src="/static/images/ph43.jpg"/></a>
+                        </li>
+                        <li><a href="javascript:;"><img
+                                src="/static/images/ph44.jpg"/></a></li>
+                        <li><a href="javascript:;"><img
+                                src="/static/images/ph45.jpg"/></a></li>
+                        <li><a href="javascript:;"><img
+                                src="/static/images/ph44.jpg"/></a></li>
+                        <li><a href="javascript:;"><img
+                                src="/static/images/ph45.jpg"/></a></li>
+                        <li style="margin-right: 0;"><a
+                                href="javascript:;"><img
+                                src="/static/images/ph44.jpg"/></a></li>
+                    </ul>
+
+                    <ul>
+                        <li style="margin-bottom: 10px;"><a
+                                href="javascript:;"><img
+                                src="/static/images/ph41.jpg"/></a></li>
+                        <li style="margin-bottom: 10px;"><a
+                                href="javascript:;"><img
+                                src="/static/images/ph42.jpg"/></a></li>
+                        <li style="margin-right: 0;margin-bottom: 10px;">
+                            <a href="javascript:;"><img
+                                    src="/static/images/ph43.jpg"/></a>
+                        </li>
+                        <li><a href="javascript:;"><img
+                                src="/static/images/ph44.jpg"/></a></li>
+                        <li><a href="javascript:;"><img
+                                src="/static/images/ph45.jpg"/></a></li>
+                        <li><a href="javascript:;"><img
+                                src="/static/images/ph44.jpg"/></a></li>
+                        <li><a href="javascript:;"><img
+                                src="/static/images/ph45.jpg"/></a></li>
+                        <li style="margin-right: 0;"><a
+                                href="javascript:;"><img
+                                src="/static/images/ph44.jpg"/></a></li>
+                    </ul>
+                </div>
+                <div id="selling-circle">
+                    <ul>
+                        <li class="black"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--------时尚搭配法则--------->
+<div class="floor">
+
+
+    <div id="match">
+        <div class="main">
+            <div id="title2">
+                <h2>时尚搭配法则</h2>
+                <span>Mix&Match</span>
+            </div>
+            <div id="match-box">
+                <div id="match-nav">
+                    <ul>
+                        <li class="aa">秋冬毛衣外套搭配，打造时尚出街look</li>
+                        <li>早秋卫衣正当时，时髦如何搭？</li>
+                        <li style="margin-right: 0;">复古英伦格纹，时髦英气</li>
+
+                    </ul>
+                </div>
+                <div id="match-list">
+                    <ul id="match-pic">
+                        <li><a href="javascript:;"><img
+                                src="/static/images/M9_28_140221.jpg"/></a>
+                        </li>
+                        <li><a href="javascript:;"><img
+                                src="/static/images/M9_19_104740.jpg"/></a>
+                        </li>
+                        <li><a href="javascript:;"><img
+                                src="/static/images/M9_12_113012.png"/></a>
+                        </li>
+
+                    </ul>
+                    <ul id="match-cicle">
+                        <li class="bb"></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!------名品大牌------->
+<div class="floor">
+
+</div>
+
+<!--------猜你喜欢------------>
+<div id="like">
+    <div class="main">
+        <div id="title2">
+            <h2>猜你喜欢</h2>
+            <span>Recommended</span>
+        </div>
+        <div id="like-list">
+
+        </div>
+    </div>
+</div>
+
+<!---------底部1------------->
+<div id="footer1">
+    <div class="main" style="position: relative;">
+        <div id="footer1-left">
+            <dl style="padding-left: 40px;">
+                <dt><a href="javascript:;">新手指南</a></dt>
+                <dd><a href="javascript:;">注册新用户</a></dd>
+                <dd><a href="javascript:;">如何订购</a></dd>
+                <dd><a href="javascript:;">如何修改订单</a></dd>
+                <dd><a href="javascript:;">尺码对照表</a></dd>
+            </dl>
+
+            <dl>
+                <dt><a href="javascript:;">支付方式</a></dt>
+                <dd><a href="javascript:;">支付方式</a></dd>
+                <dd><a href="javascript:;">账户提现及退款时限</a></dd>
+                <dd><a href="javascript:;">查看账户余额</a></dd>
+
+            </dl>
+
+            <dl>
+                <dt><a href="javascript:;">配送方式</a></dt>
+                <dd><a href="javascript:;">配送费收取标准</a></dd>
+                <dd><a href="javascript:;">配送范围及配送失效</a></dd>
+                <dd><a href="javascript:;">签收注意事项</a></dd>
+                <dd><a href="javascript:;">海外订购</a></dd>
+
+            </dl>
+
+            <dl>
+                <dt><a href="javascript:;">退换货服务</a></dt>
+                <dd><a href="javascript:;">退换货政策</a></dd>
+                <dd><a href="javascript:;">退换货流程</a></dd>
+                <dd><a href="javascript:;">隐私申明</a></dd>
+
+            </dl>
+
+            <dl>
+                <dt><a href="javascript:;">会员制度及优惠</a></dt>
+                <dd><a href="javascript:;">优惠活动</a></dd>
+                <dd><a href="javascript:;">VIP优惠尊享</a></dd>
+                <dd><a href="javascript:;">大宗购物</a></dd>
+                <dd><a href="javascript:;">积分制度</a></dd>
+
+            </dl>
+
+            <dl>
+                <dt><a href="javascript:;">帮助中心</a></dt>
+                <dd><a href="javascript:;">忘记密码</a></dd>
+                <dd><a href="javascript:;">常见问题</a></dd>
+                <dd><a href="javascript:;">在线客户</a></dd>
+                <dd><a href="javascript:;">联系我们</a></dd>
+
+            </dl>
+
+
+        </div>
+        <div id="footer1-right">
+
+            <dl>
+                <dt><a href="javascript:;">咨询订购</a></dt>
+                <dd>400-716-2828</dd>
+            </dl>
+
+            <dl>
+                <dt><a href="javascript:;">客户服务</a></dt>
+                <dd>400-716-2828</dd>
+            </dl>
+
+        </div>
+        <img src="/static/images/M4_14_150441.png"/>
+    </div>
+</div>
+<!-----底部2---------->
+<div id="footer2">
+    <img src="/static/images/mbs_img_1.jpg"/>
+    <img src="/static/images/mbs_img_2.jpg"/>
+    <img src="/static/images/mbs_img_3.jpg"/>
+    <img src="/static/images/mbs_img_4.jpg"/>
+
+</div>
+<!-------底部3------------->
+<div id="footer3">
+    <div id="footer3-main">
+        <a href="javascript:;">首页</a>
+        <a href="javascript:;">公司简介</a>
+        <a href="javascript:;">旗下品牌</a>
+        <a href="javascript:;">零售店址</a>
+        <a href="javascript:;">梦芭莎网盟</a>
+        <a href="javascript:;">网点代理</a>
+        <a href="javascript:;">网站地图</a>
+        <a href="javascript:;">友情链接</a>
+        <p>Copyright © 2010-2019 梦芭莎官方网站，广州摩拉网络科技有限公司 All Rights
+            Reserved 粤B2-20080069号<img src="/static/images/beian.png"/>粤公网安备44010302000075
+        </p>
+    </div>
+</div>
+<!---------底部4--------------->
+<div id="footer4">
+    <div id="footer4-logo">
+        <img src="/static/images/mbs_f_01.jpg"/>
+        <img src="/static/images/mbs_f_02.jpg"/>
+        <img src="/static/images/logo_down.jpg"
+             style="width: 38px;height: 33px;"/>
+        <img src="/static/images/logo (1).jpg"/>
+        <img src="/static/images/mbs_f_04.jpg"/>
+        <img src="/static/images/mbs_f_05.jpg"/>
+        <img src="/static/images/mbs_f_06.jpg"/>
+        <img src="/static/images/mbs_f_07.jpg"/>
+
+    </div>
+</div>
+<div id="footer5">
+    <div id="footer5-link">
+        友情链接：
+    </div>
+</div>
+<!-------右边菜单------------->
+<div id="right-menu">
+
+</div>
+
+<!-------左边快捷导航----------->
+<div id="leftside">
+    <div id="fast-nav">
+        <img src="/static/images/161122141945_a_01.jpg"/>
+    </div>
+    <ul id="left-nav">
+        <li>
+            <a href="javascript:;">
+                <img src="/static/images/M9_13_175127_2.jpg"/>
+                <img class="second-pic second-show"
+                     src="/static/images/M9_13_175128_2.jpg"/>
+
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;">
+                <img src="/static/images/M9_13_175127_3.jpg"/>
+                <img class="second-pic"
+                     src="/static/images/M9_13_175128_3.jpg"/>
+
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;">
+                <img src="/static/images/M9_13_175127_4.jpg"/>
+                <img class="second-pic"
+                     src="/static/images/M9_13_175128_4.jpg"/>
+
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;">
+                <img src="/static/images/M9_13_175127_5.jpg"/>
+                <img class="second-pic"
+                     src="/static/images/M9_13_175128_5.jpg"/>
+
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;">
+                <img src="/static/images/M9_13_175127_6.jpg"/>
+                <img class="second-pic"
+                     src="/static/images/M9_13_175128_6.jpg"/>
+
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;">
+                <img src="/static/images/M9_13_175127_7.jpg"/>
+                <img class="second-pic"
+                     src="/static/images/M9_13_175128_7.jpg"/>
+
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;">
+                <img src="/static/images/M9_13_175127_8.jpg"/>
+                <img class="second-pic"
+                     src="/static/images/M9_13_175128_8.jpg"/>
+
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;">
+                <img src="/static/images/M9_13_175127_9.jpg"/>
+                <img class="second-pic"
+                     src="/static/images/M9_13_175128_9.jpg"/>
+
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;">
+                <img src="/static/images/M9_13_175127_10.jpg"/>
+                <img class="second-pic"
+                     src="/static/images/M9_13_175128_10.jpg"/>
+
+            </a>
+        </li>
+        <li style="border: none; height: 29px;">
+            <a href="javascript:;">
+                <img src="/static/images/M9_13_175127_11.jpg"/>
+                <img class="second-pic"
+                     src="/static/images/M9_13_175128_11.jpg"/>
+
+            </a>
+        </li>
+        <li style="border: none; height: 29px;">
+            <a href="javascript:;">
+                <img src="/static/images/M9_13_175127_12.jpg"/>
+                <img class="second-pic"
+                     src="/static/images/M9_13_175128_12.jpg"/>
+
+            </a>
+        </li>
+        <li style="border: none; height: 29px;">
+            <a href="javascript:;">
+                <img src="/static/images/M9_13_175127_13.jpg"/>
+                <img class="second-pic"
+                     src="/static/images/M9_13_175128_13.jpg"/>
+
+            </a>
+        </li>
+        <li style="border: none; height: 29px;">
+            <a href="javascript:;">
+                <img src="/static/images/M9_13_175127_14.jpg"/>
+                <img class="second-pic"
+                     src="/static/images/M9_13_175128_14.jpg"/>
+
+            </a>
+        </li>
+        <li style="border: none; height: 29px;">
+            <a href="javascript:;">
+                <img src="/static/images/M9_13_175127_15.jpg"/>
+                <img class="second-pic"
+                     src="/static/images/M9_13_175128_15.jpg"/>
+
+            </a>
+        </li>
+        <li style="border: none; height: 29px;">
+            <a href="javascript:;">
+                <img src="/static/images/M9_13_175127_16.jpg"/>
+                <img class="second-pic"
+                     src="/static/images/M9_13_175128_16.jpg"/>
+
+            </a>
+        </li>
+
+
+    </ul>
+    <div id="backtop" style="cursor: pointer;">
+        <img src="/static/images/M9_13_175127_17.jpg"/>
+    </div>
+</div>
+</body>
+</html>

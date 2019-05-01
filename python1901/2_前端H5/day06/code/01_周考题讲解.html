@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<ul>
+			<li>10</li>
+			<li>20</li>
+			<li>30</li>
+			<li>40</li>
+		</ul>
+		
+		
+		<script>
+			/*
+			 4. 使用JavaScript编程, 输入两个数n，a，得到对应结果:
+				     如果:n=3，a=2；输出 2 + 22 + 222 的值。
+				  如果:n=4，a=3；输出 3 + 33 + 333 + 3333的值。
+				*/
+				var n=4, a=3;
+				var sum = 0
+				var temp = ''
+				for (var i=0; i<n; i++) {
+				temp += a
+				sum += parseInt(temp)
+				}
+				console.log(sum)
+				
+				var n=4, a=3;
+				var sum = 0
+				var temp = 0
+				for (var i=0; i<n; i++) {
+					temp = temp * 10 + a
+					sum += temp
+				}
+				console.log(sum)
+				
+				
+				var n=4, a=3;
+				var sum = 0
+				var temp = 1
+				for (var i=0; i<n; i++) {
+					temp = Math.pow(10, i) * (n-i) * a
+					console.log("temp:" + temp)
+					sum += temp
+				}
+				console.log(sum)
+				
+				
+			/*
+			5, DOM操作,实现点击li,并打印对应li的值,被点击的li显示为高亮(背景颜色变成red),未点击的li不高亮. 
+			<ul>
+				<li>10</li>
+				<li>20</li>
+				<li>30</li>
+				<li>40</li>
+			</ul>
+			*/
+			
+			var aLi = document.getElementsByTagName('li')
+			for (var i=0; i<aLi.length; i++) {
+				aLi[i].onclick = function(){
+					
+					console.log(this.innerHTML)
+					
+					for (var j=0; j<aLi.length; j++) {
+						this.style.backgroundColor = "white"
+					}
+					this.style.backgroundColor = "red"
+				}
+			}
+			
+			
+					
+		
+		</script>
+		
+	</body>
+</html>

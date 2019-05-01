@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+
+		<!--
+			onblur 事件会在对象失去焦点时发生 ，即当鼠标点击时，触发的事件，
+			onfocus 事件在对象获得焦点时发生，即当鼠标点击另一处时所触发的事件
+			焦点：使浏览器能够区分用户输入的对象，当一个元素有焦点的时候，那么他就可以接收用户的输入，
+只有能够响应用户操作额元素才可以接收焦点事件
+		-->
+		<style>
+			.box {
+				border-color: red;
+			}
+			
+			#error {
+				color: red
+			}
+		</style>
+
+		邮箱账号: <input type="text" id="input">
+		<div id="error"></div>
+
+		<script>
+			input.onblur = function() {
+				// if (input.value.indexOf('@')==-1) { 
+				// if(!input.value.includes('@')) {
+				console.log(1)
+				// 正则匹配
+				if(!/^\w+@\w+\.\w+$/.test(this.value)) { 
+					//indexOf()返回的是包含字符串的位置，如果 == -1的话，那也就是不包含这个字符串了。
+					//而es6中新增的字符串方法includes()方法就是为了简化这种需求的判断,includes()返回的是布尔值，也就是true和false
+					input.classList.add('box');
+					error.innerHTML = '请正确的输入您的邮箱账号'
+				}
+			};
+
+			input.onfocus = function() {
+				if(this.classList.contains('box')) {
+					//添加类（add）
+					//移除类(remove)
+					//切换类(toggle)  这个方法的作用就是，当myDiv元素上没有这个CSS类时，它就新增这个CSS类；如果myDiv元素已经有了这个CSS类，它就是删除它。就是反转操作。
+					//是否存在类（contains）
+					this.classList.remove('box');
+					error.innerHTML = "";
+				}
+			};
+		</script>
+	</body>
+
+</html>

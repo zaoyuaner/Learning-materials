@@ -1,0 +1,1016 @@
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Mar 13 14:50:30 2019] ***
+compiled with version: 5.4.0 20160609 on 13 March 2019 06:41:58
+os: Linux-4.4.0-142-generic #168-Ubuntu SMP Wed Jan 16 21:00:45 UTC 2019
+nodename: iZ8vb0m7kgmcpb6mp1i95wZ
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/axf
+writing pidfile to uwsgi.pid
+detected binary path: /root/.virtualenv/axf/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/axf
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3817
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8000 fd 4
+spawned uWSGI http 1 (pid: 3197)
+uwsgi socket 0 bound to TCP address 127.0.0.1:40705 (port auto-assigned) fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Nov 12 2018, 13:43:14)  [GCC 5.4.0 20160609]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1cd1390
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72904 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1cd1390 pid: 3196 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 3196, cores: 1)
+[pid: 3196|app: 0|req: 1/1] 113.87.160.176 () {36 vars in 596 bytes} [Wed Mar 13 06:54:01 2019] GET /axf/ => generated 20929 bytes in 62 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+Not Found: /static/base/js/base.js
+[pid: 3196|app: 0|req: 2/2] 113.88.14.120 () {36 vars in 570 bytes} [Wed Mar 13 06:54:02 2019] GET /static/base/js/base.js => generated 2109 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/home/js/swiper.min.js
+[pid: 3196|app: 0|req: 3/3] 113.88.14.120 () {36 vars in 582 bytes} [Wed Mar 13 06:54:02 2019] GET /static/home/js/swiper.min.js => generated 2127 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/home/js/home.js
+[pid: 3196|app: 0|req: 4/4] 113.87.160.176 () {36 vars in 571 bytes} [Wed Mar 13 06:54:02 2019] GET /static/home/js/home.js => generated 2109 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 3196|app: 0|req: 5/5] 113.88.14.120 () {34 vars in 574 bytes} [Wed Mar 13 06:54:03 2019] GET /favicon.ico => generated 2076 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Mar 13 14:56:17 2019] ***
+compiled with version: 5.4.0 20160609 on 13 March 2019 06:41:58
+os: Linux-4.4.0-142-generic #168-Ubuntu SMP Wed Jan 16 21:00:45 UTC 2019
+nodename: iZ8vb0m7kgmcpb6mp1i95wZ
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/axf
+writing pidfile to uwsgi.pid
+detected binary path: /root/.virtualenv/axf/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/axf
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3817
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8020 fd 4
+spawned uWSGI http 1 (pid: 3246)
+uwsgi socket 0 bound to TCP address 127.0.0.1:36480 (port auto-assigned) fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Nov 12 2018, 13:43:14)  [GCC 5.4.0 20160609]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0xfde390
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72904 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xfde390 pid: 3245 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 3245, cores: 1)
+[pid: 3245|app: 0|req: 1/1] 113.87.160.176 () {36 vars in 596 bytes} [Wed Mar 13 06:56:24 2019] GET /axf/ => generated 20929 bytes in 59 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+Not Found: /static/base/css/base.css
+[pid: 3245|app: 0|req: 2/2] 113.88.14.120 () {36 vars in 589 bytes} [Wed Mar 13 06:56:25 2019] GET /static/base/css/base.css => generated 2115 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/base/css/reset.css
+[pid: 3245|app: 0|req: 3/3] 113.88.14.120 () {36 vars in 591 bytes} [Wed Mar 13 06:56:25 2019] GET /static/base/css/reset.css => generated 2118 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/home/css/swiper.min.css
+[pid: 3245|app: 0|req: 4/4] 113.88.14.120 () {36 vars in 601 bytes} [Wed Mar 13 06:56:25 2019] GET /static/home/css/swiper.min.css => generated 2133 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/base/js/jquery.js
+[pid: 3245|app: 0|req: 5/5] 113.88.14.120 () {36 vars in 574 bytes} [Wed Mar 13 06:56:25 2019] GET /static/base/js/jquery.js => generated 2115 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/home/css/home.css
+[pid: 3245|app: 0|req: 6/6] 113.87.160.176 () {36 vars in 590 bytes} [Wed Mar 13 06:56:25 2019] GET /static/home/css/home.css => generated 2115 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/base/js/base.js
+[pid: 3245|app: 0|req: 7/7] 113.87.160.176 () {36 vars in 571 bytes} [Wed Mar 13 06:56:25 2019] GET /static/base/js/base.js => generated 2109 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/home/js/swiper.min.js
+[pid: 3245|app: 0|req: 8/8] 113.88.14.120 () {36 vars in 582 bytes} [Wed Mar 13 06:56:25 2019] GET /static/home/js/swiper.min.js => generated 2127 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/home/js/home.js
+[pid: 3245|app: 0|req: 9/9] 113.88.14.120 () {36 vars in 570 bytes} [Wed Mar 13 06:56:25 2019] GET /static/home/js/home.js => generated 2109 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/base/js/base.js
+[pid: 3245|app: 0|req: 10/10] 113.87.160.176 () {36 vars in 571 bytes} [Wed Mar 13 06:56:26 2019] GET /static/base/js/base.js => generated 2109 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/home/js/swiper.min.js
+[pid: 3245|app: 0|req: 11/11] 113.88.14.120 () {36 vars in 582 bytes} [Wed Mar 13 06:56:26 2019] GET /static/home/js/swiper.min.js => generated 2127 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/home/js/home.js
+[pid: 3245|app: 0|req: 12/12] 113.87.160.176 () {36 vars in 571 bytes} [Wed Mar 13 06:56:26 2019] GET /static/home/js/home.js => generated 2109 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 3245|app: 0|req: 13/13] 113.88.14.120 () {34 vars in 574 bytes} [Wed Mar 13 06:56:26 2019] GET /favicon.ico => generated 2076 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /mine
+[pid: 3245|app: 0|req: 14/14] 113.88.14.120 () {36 vars in 639 bytes} [Wed Mar 13 06:56:36 2019] GET /mine => generated 2055 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 3245|app: 0|req: 15/15] 113.87.160.176 () {36 vars in 618 bytes} [Wed Mar 13 06:56:36 2019] GET /favicon.ico => generated 2076 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 3245|app: 0|req: 16/16] 113.87.160.176 () {36 vars in 638 bytes} [Wed Mar 13 06:56:44 2019] GET /axf => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 3245|app: 0|req: 17/17] 113.87.160.176 () {36 vars in 640 bytes} [Wed Mar 13 06:56:44 2019] GET /axf/ => generated 20929 bytes in 19 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+Not Found: /static/base/css/reset.css
+[pid: 3245|app: 0|req: 18/18] 113.88.14.120 () {36 vars in 624 bytes} [Wed Mar 13 06:56:44 2019] GET /static/base/css/reset.css => generated 2118 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/base/css/base.css
+[pid: 3245|app: 0|req: 19/19] 113.87.160.176 () {36 vars in 623 bytes} [Wed Mar 13 06:56:44 2019] GET /static/base/css/base.css => generated 2115 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/home/css/swiper.min.css
+[pid: 3245|app: 0|req: 20/20] 113.87.160.176 () {36 vars in 635 bytes} [Wed Mar 13 06:56:44 2019] GET /static/home/css/swiper.min.css => generated 2133 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/home/css/home.css
+[pid: 3245|app: 0|req: 21/21] 113.88.14.120 () {36 vars in 622 bytes} [Wed Mar 13 06:56:44 2019] GET /static/home/css/home.css => generated 2115 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/base/js/base.js
+[pid: 3245|app: 0|req: 22/22] 113.88.14.120 () {36 vars in 603 bytes} [Wed Mar 13 06:56:44 2019] GET /static/base/js/base.js => generated 2109 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/base/js/jquery.js
+[pid: 3245|app: 0|req: 23/23] 113.87.160.176 () {36 vars in 608 bytes} [Wed Mar 13 06:56:44 2019] GET /static/base/js/jquery.js => generated 2115 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/home/js/swiper.min.js
+[pid: 3245|app: 0|req: 24/24] 113.87.160.176 () {36 vars in 616 bytes} [Wed Mar 13 06:56:44 2019] GET /static/home/js/swiper.min.js => generated 2127 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/home/js/home.js
+[pid: 3245|app: 0|req: 25/25] 113.88.14.120 () {36 vars in 604 bytes} [Wed Mar 13 06:56:44 2019] GET /static/home/js/home.js => generated 2109 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/base/js/base.js
+[pid: 3245|app: 0|req: 26/26] 113.88.14.120 () {36 vars in 604 bytes} [Wed Mar 13 06:56:44 2019] GET /static/base/js/base.js => generated 2109 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/home/js/swiper.min.js
+[pid: 3245|app: 0|req: 27/27] 113.87.160.176 () {36 vars in 617 bytes} [Wed Mar 13 06:56:44 2019] GET /static/home/js/swiper.min.js => generated 2127 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/home/js/home.js
+[pid: 3245|app: 0|req: 28/28] 113.87.160.176 () {36 vars in 605 bytes} [Wed Mar 13 06:56:44 2019] GET /static/home/js/home.js => generated 2109 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/base/css/base.css
+[pid: 3245|app: 0|req: 29/29] 113.88.14.120 () {36 vars in 623 bytes} [Wed Mar 13 06:56:50 2019] GET /static/base/css/base.css => generated 2115 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/base/css/reset.css
+[pid: 3245|app: 0|req: 30/30] 113.88.14.120 () {36 vars in 625 bytes} [Wed Mar 13 06:56:50 2019] GET /static/base/css/reset.css => generated 2118 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/home/css/swiper.min.css
+[pid: 3245|app: 0|req: 31/31] 113.87.160.176 () {36 vars in 636 bytes} [Wed Mar 13 06:56:50 2019] GET /static/home/css/swiper.min.css => generated 2133 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/home/css/home.css
+[pid: 3245|app: 0|req: 32/32] 113.87.160.176 () {36 vars in 624 bytes} [Wed Mar 13 06:56:50 2019] GET /static/home/css/home.css => generated 2115 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 3245|app: 0|req: 33/33] 113.87.160.176 () {36 vars in 645 bytes} [Wed Mar 13 06:56:51 2019] GET /axf/ => generated 20929 bytes in 18 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+Not Found: /static/base/css/reset.css
+[pid: 3245|app: 0|req: 34/34] 113.87.160.176 () {36 vars in 630 bytes} [Wed Mar 13 06:56:52 2019] GET /static/base/css/reset.css => generated 2118 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/base/css/base.css
+[pid: 3245|app: 0|req: 35/35] 113.88.14.120 () {36 vars in 627 bytes} [Wed Mar 13 06:56:52 2019] GET /static/base/css/base.css => generated 2115 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/home/css/swiper.min.css
+[pid: 3245|app: 0|req: 36/36] 113.88.14.120 () {36 vars in 639 bytes} [Wed Mar 13 06:56:52 2019] GET /static/home/css/swiper.min.css => generated 2133 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/home/css/home.css
+[pid: 3245|app: 0|req: 37/37] 113.87.160.176 () {36 vars in 628 bytes} [Wed Mar 13 06:56:52 2019] GET /static/home/css/home.css => generated 2115 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/base/js/jquery.js
+[pid: 3245|app: 0|req: 38/38] 113.88.14.120 () {36 vars in 612 bytes} [Wed Mar 13 06:56:52 2019] GET /static/base/js/jquery.js => generated 2115 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/base/js/base.js
+[pid: 3245|app: 0|req: 39/39] 113.87.160.176 () {36 vars in 609 bytes} [Wed Mar 13 06:56:52 2019] GET /static/base/js/base.js => generated 2109 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/home/js/swiper.min.js
+[pid: 3245|app: 0|req: 40/40] 113.88.14.120 () {36 vars in 620 bytes} [Wed Mar 13 06:56:52 2019] GET /static/home/js/swiper.min.js => generated 2127 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/home/js/home.js
+[pid: 3245|app: 0|req: 41/41] 113.88.14.120 () {36 vars in 608 bytes} [Wed Mar 13 06:56:52 2019] GET /static/home/js/home.js => generated 2109 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 3245|app: 0|req: 42/42] 113.87.160.176 () {36 vars in 623 bytes} [Wed Mar 13 06:56:52 2019] GET /favicon.ico => generated 2076 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 3245|app: 0|req: 43/43] 113.88.14.120 () {38 vars in 696 bytes} [Wed Mar 13 06:56:55 2019] GET /axf/ => generated 20929 bytes in 18 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+Not Found: /static/base/css/reset.css
+[pid: 3245|app: 0|req: 44/44] 113.87.160.176 () {36 vars in 651 bytes} [Wed Mar 13 06:56:55 2019] GET /static/base/css/reset.css => generated 2118 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/base/css/base.css
+[pid: 3245|app: 0|req: 45/45] 113.87.160.176 () {36 vars in 649 bytes} [Wed Mar 13 06:56:55 2019] GET /static/base/css/base.css => generated 2115 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/home/css/swiper.min.css
+[pid: 3245|app: 0|req: 46/46] 113.88.14.120 () {36 vars in 660 bytes} [Wed Mar 13 06:56:55 2019] GET /static/home/css/swiper.min.css => generated 2133 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/home/css/home.css
+[pid: 3245|app: 0|req: 47/47] 113.87.160.176 () {36 vars in 649 bytes} [Wed Mar 13 06:56:55 2019] GET /static/home/css/home.css => generated 2115 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/base/js/jquery.js
+[pid: 3245|app: 0|req: 48/48] 113.88.14.120 () {36 vars in 633 bytes} [Wed Mar 13 06:56:55 2019] GET /static/base/js/jquery.js => generated 2115 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/base/js/base.js
+[pid: 3245|app: 0|req: 49/49] 113.87.160.176 () {36 vars in 630 bytes} [Wed Mar 13 06:56:55 2019] GET /static/base/js/base.js => generated 2109 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/home/js/swiper.min.js
+[pid: 3245|app: 0|req: 50/50] 113.88.14.120 () {36 vars in 641 bytes} [Wed Mar 13 06:56:55 2019] GET /static/home/js/swiper.min.js => generated 2127 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/home/js/home.js
+[pid: 3245|app: 0|req: 51/51] 113.88.14.120 () {36 vars in 629 bytes} [Wed Mar 13 06:56:55 2019] GET /static/home/js/home.js => generated 2109 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/home/css/home.css
+[pid: 3245|app: 0|req: 52/52] 113.87.160.176 () {36 vars in 628 bytes} [Wed Mar 13 06:57:03 2019] GET /static/home/css/home.css => generated 2115 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/base/css/reset.css
+[pid: 3245|app: 0|req: 53/53] 113.88.14.120 () {36 vars in 629 bytes} [Wed Mar 13 06:57:03 2019] GET /static/base/css/reset.css => generated 2118 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/base/css/base.css
+[pid: 3245|app: 0|req: 54/54] 113.87.160.176 () {36 vars in 628 bytes} [Wed Mar 13 06:57:03 2019] GET /static/base/css/base.css => generated 2115 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/home/css/swiper.min.css
+[pid: 3245|app: 0|req: 55/55] 113.88.14.120 () {36 vars in 639 bytes} [Wed Mar 13 06:57:03 2019] GET /static/home/css/swiper.min.css => generated 2133 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 3245|app: 0|req: 56/56] 113.88.14.120 () {38 vars in 695 bytes} [Wed Mar 13 06:57:07 2019] GET /axf/ => generated 20929 bytes in 30 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+Not Found: /static/base/css/reset.css
+[pid: 3245|app: 0|req: 57/57] 113.87.160.176 () {36 vars in 650 bytes} [Wed Mar 13 06:57:07 2019] GET /static/base/css/reset.css => generated 2118 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/base/css/base.css
+[pid: 3245|app: 0|req: 58/58] 113.88.14.120 () {36 vars in 645 bytes} [Wed Mar 13 06:57:07 2019] GET /static/base/css/base.css => generated 2115 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/home/css/swiper.min.css
+[pid: 3245|app: 0|req: 59/59] 113.87.160.176 () {36 vars in 659 bytes} [Wed Mar 13 06:57:07 2019] GET /static/home/css/swiper.min.css => generated 2133 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/home/css/home.css
+[pid: 3245|app: 0|req: 60/60] 113.87.160.176 () {36 vars in 647 bytes} [Wed Mar 13 06:57:07 2019] GET /static/home/css/home.css => generated 2115 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/base/js/jquery.js
+[pid: 3245|app: 0|req: 61/61] 113.87.160.176 () {36 vars in 632 bytes} [Wed Mar 13 06:57:07 2019] GET /static/base/js/jquery.js => generated 2115 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/base/js/base.js
+[pid: 3245|app: 0|req: 62/62] 113.87.160.176 () {36 vars in 628 bytes} [Wed Mar 13 06:57:07 2019] GET /static/base/js/base.js => generated 2109 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/home/js/home.js
+[pid: 3245|app: 0|req: 63/63] 113.88.14.120 () {36 vars in 627 bytes} [Wed Mar 13 06:57:07 2019] GET /static/home/js/home.js => generated 2109 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/home/js/swiper.min.js
+[pid: 3245|app: 0|req: 64/64] 113.88.14.120 () {36 vars in 639 bytes} [Wed Mar 13 06:57:07 2019] GET /static/home/js/swiper.min.js => generated 2127 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/home/js/home.js
+[pid: 3245|app: 0|req: 65/65] 113.87.160.176 () {36 vars in 628 bytes} [Wed Mar 13 06:57:07 2019] GET /static/home/js/home.js => generated 2109 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Internal Server Error: /axf/mine/
+Traceback (most recent call last):
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/cache.py", line 32, in _decorator
+    return method(self, *args, **kwargs)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/cache.py", line 81, in get
+    client=client)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/client/default.py", line 205, in get
+    raise ConnectionInterrupted(connection=client, parent=e)
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 142, in mine
+    userid = cache.get(token)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/cache.py", line 39, in _decorator
+    raise e.parent
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/client/default.py", line 203, in get
+    value = client.get(key)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/redis/client.py", line 1264, in get
+    return self.execute_command('GET', name)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/redis/client.py", line 772, in execute_command
+    connection = pool.get_connection(command_name, **options)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/redis/connection.py", line 994, in get_connection
+    connection.connect()
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/redis/connection.py", line 497, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+[pid: 3245|app: 0|req: 66/66] 113.87.160.176 () {38 vars in 720 bytes} [Wed Mar 13 06:59:35 2019] GET /axf/mine/ => generated 96640 bytes in 76 msecs (HTTP/1.1 500) 4 headers in 129 bytes (1 switches on core 0)
+Not Found: /static/home/css/home.css
+[pid: 3245|app: 0|req: 67/67] 113.88.14.120 () {36 vars in 647 bytes} [Wed Mar 13 06:59:39 2019] GET /static/home/css/home.css => generated 2115 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/base/js/jquery.js
+[pid: 3245|app: 0|req: 68/68] 113.88.14.120 () {36 vars in 633 bytes} [Wed Mar 13 06:59:39 2019] GET /static/base/js/jquery.js => generated 2115 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Mar 13 15:07:25 2019] ***
+compiled with version: 5.4.0 20160609 on 13 March 2019 06:41:58
+os: Linux-4.4.0-142-generic #168-Ubuntu SMP Wed Jan 16 21:00:45 UTC 2019
+nodename: iZ8vb0m7kgmcpb6mp1i95wZ
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/axf
+writing pidfile to uwsgi.pid
+detected binary path: /root/.virtualenv/axf/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/axf
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3817
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+The -s/--socket option is missing and stdin is not a socket.
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Mar 13 15:09:42 2019] ***
+compiled with version: 5.4.0 20160609 on 13 March 2019 06:41:58
+os: Linux-4.4.0-142-generic #168-Ubuntu SMP Wed Jan 16 21:00:45 UTC 2019
+nodename: iZ8vb0m7kgmcpb6mp1i95wZ
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/axf
+writing pidfile to uwsgi.pid
+detected binary path: /root/.virtualenv/axf/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/axf
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3817
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8030 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Nov 12 2018, 13:43:14)  [GCC 5.4.0 20160609]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1dbc2d0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72904 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1dbc2d0 pid: 3350 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 3350, cores: 1)
+[pid: 3350|app: 0|req: 1/1] 113.87.160.176 () {40 vars in 619 bytes} [Wed Mar 13 07:09:47 2019] GET /axf/ => generated 20929 bytes in 61 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 2/2] 113.88.14.120 () {42 vars in 719 bytes} [Wed Mar 13 07:09:53 2019] GET /axf/ => generated 20929 bytes in 18 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 3350|app: 0|req: 3/3] 113.87.160.176 () {40 vars in 662 bytes} [Wed Mar 13 07:09:56 2019] GET /favicon.ico => generated 2071 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Internal Server Error: /axf/mine/
+Traceback (most recent call last):
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/cache.py", line 32, in _decorator
+    return method(self, *args, **kwargs)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/cache.py", line 81, in get
+    client=client)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/client/default.py", line 205, in get
+    raise ConnectionInterrupted(connection=client, parent=e)
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 142, in mine
+    userid = cache.get(token)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/cache.py", line 39, in _decorator
+    raise e.parent
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/client/default.py", line 203, in get
+    value = client.get(key)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/redis/client.py", line 1264, in get
+    return self.execute_command('GET', name)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/redis/client.py", line 772, in execute_command
+    connection = pool.get_connection(command_name, **options)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/redis/connection.py", line 994, in get_connection
+    connection.connect()
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/redis/connection.py", line 497, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+[pid: 3350|app: 0|req: 4/4] 113.87.160.176 () {42 vars in 739 bytes} [Wed Mar 13 07:09:57 2019] GET /axf/mine/ => generated 96976 bytes in 79 msecs (HTTP/1.1 500) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 5/5] 113.87.160.176 () {40 vars in 688 bytes} [Wed Mar 13 07:10:00 2019] GET /axf/ => generated 20929 bytes in 30 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 3350|app: 0|req: 6/6] 113.87.160.176 () {40 vars in 661 bytes} [Wed Mar 13 07:10:03 2019] GET /favicon.ico => generated 2071 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Internal Server Error: /axf/market/
+Traceback (most recent call last):
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/cache.py", line 32, in _decorator
+    return method(self, *args, **kwargs)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/cache.py", line 81, in get
+    client=client)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/client/default.py", line 205, in get
+    raise ConnectionInterrupted(connection=client, parent=e)
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 109, in market
+    userid = cache.get(token)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/cache.py", line 39, in _decorator
+    raise e.parent
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/client/default.py", line 203, in get
+    value = client.get(key)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/redis/client.py", line 1264, in get
+    return self.execute_command('GET', name)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/redis/client.py", line 772, in execute_command
+    connection = pool.get_connection(command_name, **options)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/redis/connection.py", line 994, in get_connection
+    connection.connect()
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/redis/connection.py", line 497, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+[pid: 3350|app: 0|req: 7/7] 113.87.160.176 () {42 vars in 742 bytes} [Wed Mar 13 07:10:06 2019] GET /axf/market/ => generated 100470 bytes in 100 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 8/8] 113.87.160.176 () {40 vars in 689 bytes} [Wed Mar 13 07:10:10 2019] GET /axf/ => generated 20929 bytes in 19 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 9/9] 113.87.160.176 () {40 vars in 686 bytes} [Wed Mar 13 07:10:23 2019] GET /axf => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 10/10] 113.87.160.176 () {40 vars in 688 bytes} [Wed Mar 13 07:10:23 2019] GET /axf/ => generated 20929 bytes in 20 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 3350|app: 0|req: 11/11] 113.87.160.176 () {40 vars in 661 bytes} [Wed Mar 13 07:10:25 2019] GET /favicon.ico => generated 2071 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Internal Server Error: /axf/market/
+Traceback (most recent call last):
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/cache.py", line 32, in _decorator
+    return method(self, *args, **kwargs)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/cache.py", line 81, in get
+    client=client)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/client/default.py", line 205, in get
+    raise ConnectionInterrupted(connection=client, parent=e)
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 109, in market
+    userid = cache.get(token)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/cache.py", line 39, in _decorator
+    raise e.parent
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/client/default.py", line 203, in get
+    value = client.get(key)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/redis/client.py", line 1264, in get
+    return self.execute_command('GET', name)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/redis/client.py", line 772, in execute_command
+    connection = pool.get_connection(command_name, **options)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/redis/connection.py", line 994, in get_connection
+    connection.connect()
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/redis/connection.py", line 497, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+[pid: 3350|app: 0|req: 12/12] 113.87.160.176 () {42 vars in 673 bytes} [Wed Mar 13 07:10:26 2019] GET /axf/market/ => generated 100387 bytes in 78 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 0)
+Internal Server Error: /axf/market/
+Traceback (most recent call last):
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/cache.py", line 32, in _decorator
+    return method(self, *args, **kwargs)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/cache.py", line 81, in get
+    client=client)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/client/default.py", line 205, in get
+    raise ConnectionInterrupted(connection=client, parent=e)
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 109, in market
+    userid = cache.get(token)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/cache.py", line 39, in _decorator
+    raise e.parent
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/client/default.py", line 203, in get
+    value = client.get(key)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/redis/client.py", line 1264, in get
+    return self.execute_command('GET', name)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/redis/client.py", line 772, in execute_command
+    connection = pool.get_connection(command_name, **options)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/redis/connection.py", line 994, in get_connection
+    connection.connect()
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/redis/connection.py", line 497, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+[pid: 3350|app: 0|req: 13/13] 113.87.160.176 () {42 vars in 742 bytes} [Wed Mar 13 07:10:27 2019] GET /axf/market/ => generated 100470 bytes in 83 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 0)
+Internal Server Error: /axf/mine/
+Traceback (most recent call last):
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/cache.py", line 32, in _decorator
+    return method(self, *args, **kwargs)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/cache.py", line 81, in get
+    client=client)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/client/default.py", line 205, in get
+    raise ConnectionInterrupted(connection=client, parent=e)
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 142, in mine
+    userid = cache.get(token)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/cache.py", line 39, in _decorator
+    raise e.parent
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/client/default.py", line 203, in get
+    value = client.get(key)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/redis/client.py", line 1264, in get
+    return self.execute_command('GET', name)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/redis/client.py", line 772, in execute_command
+    connection = pool.get_connection(command_name, **options)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/redis/connection.py", line 994, in get_connection
+    connection.connect()
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/redis/connection.py", line 497, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+[pid: 3350|app: 0|req: 14/14] 113.87.160.176 () {42 vars in 739 bytes} [Wed Mar 13 07:10:30 2019] GET /axf/mine/ => generated 96976 bytes in 51 msecs (HTTP/1.1 500) 4 headers in 129 bytes (1 switches on core 0)
+Internal Server Error: /axf/cart/
+Traceback (most recent call last):
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/cache.py", line 32, in _decorator
+    return method(self, *args, **kwargs)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/cache.py", line 81, in get
+    client=client)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/client/default.py", line 205, in get
+    raise ConnectionInterrupted(connection=client, parent=e)
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 123, in cart
+    userid = cache.get(token)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/cache.py", line 39, in _decorator
+    raise e.parent
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/client/default.py", line 203, in get
+    value = client.get(key)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/redis/client.py", line 1264, in get
+    return self.execute_command('GET', name)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/redis/client.py", line 772, in execute_command
+    connection = pool.get_connection(command_name, **options)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/redis/connection.py", line 994, in get_connection
+    connection.connect()
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/redis/connection.py", line 497, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+[pid: 3350|app: 0|req: 15/15] 113.87.160.176 () {42 vars in 738 bytes} [Wed Mar 13 07:10:34 2019] GET /axf/cart/ => generated 97102 bytes in 51 msecs (HTTP/1.1 500) 4 headers in 129 bytes (1 switches on core 0)
+Internal Server Error: /axf/market/
+Traceback (most recent call last):
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/cache.py", line 32, in _decorator
+    return method(self, *args, **kwargs)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/cache.py", line 81, in get
+    client=client)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/client/default.py", line 205, in get
+    raise ConnectionInterrupted(connection=client, parent=e)
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 109, in market
+    userid = cache.get(token)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/cache.py", line 39, in _decorator
+    raise e.parent
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django_redis/client/default.py", line 203, in get
+    value = client.get(key)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/redis/client.py", line 1264, in get
+    return self.execute_command('GET', name)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/redis/client.py", line 772, in execute_command
+    connection = pool.get_connection(command_name, **options)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/redis/connection.py", line 994, in get_connection
+    connection.connect()
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/redis/connection.py", line 497, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+[pid: 3350|app: 0|req: 16/16] 113.87.160.176 () {42 vars in 742 bytes} [Wed Mar 13 07:10:47 2019] GET /axf/market/ => generated 100470 bytes in 76 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 17/17] 113.87.160.176 () {42 vars in 720 bytes} [Wed Mar 13 07:11:00 2019] GET /axf/ => generated 20929 bytes in 18 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 18/18] 113.87.160.176 () {42 vars in 739 bytes} [Wed Mar 13 07:11:51 2019] GET /axf/mine/ => generated 6253 bytes in 21 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 19/19] 113.87.160.176 () {42 vars in 752 bytes} [Wed Mar 13 07:11:53 2019] GET /axf/register/ => generated 3495 bytes in 6 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 20/20] 113.87.160.176 () {44 vars in 816 bytes} [Wed Mar 13 07:12:07 2019] GET /axf/checkemail/?email=1314520%40qq.com => generated 49 bytes in 5 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 21/21] 113.87.160.176 () {42 vars in 719 bytes} [Wed Mar 13 07:12:09 2019] GET /axf/ => generated 20929 bytes in 18 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 22/22] 113.87.160.176 () {42 vars in 742 bytes} [Wed Mar 13 07:12:11 2019] GET /axf/market/ => generated 10969 bytes in 18 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 23/23] 113.87.160.176 () {40 vars in 633 bytes} [Wed Mar 13 07:12:12 2019] GET /axf/market/ => generated 10969 bytes in 16 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 24/24] 113.88.14.120 () {42 vars in 744 bytes} [Wed Mar 13 07:12:15 2019] GET /axf/cart/ => generated 2022 bytes in 36 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 25/25] 113.87.160.176 () {42 vars in 742 bytes} [Wed Mar 13 07:12:16 2019] GET /axf/market/ => generated 10969 bytes in 24 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 26/26] 113.88.14.120 () {42 vars in 742 bytes} [Wed Mar 13 07:12:16 2019] GET /axf/mine/ => generated 6253 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 27/27] 113.88.14.120 () {42 vars in 637 bytes} [Wed Mar 13 07:12:16 2019] GET /axf/addcart/?goodsid=983 => generated 61 bytes in 1 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 28/28] 113.88.14.120 () {44 vars in 703 bytes} [Wed Mar 13 07:12:16 2019] GET /axf/login/ => generated 2129 bytes in 7 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 29/29] 113.87.160.176 () {42 vars in 696 bytes} [Wed Mar 13 07:12:20 2019] GET /axf/addcart/?goodsid=984 => generated 61 bytes in 1 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 30/30] 113.87.160.176 () {44 vars in 773 bytes} [Wed Mar 13 07:12:20 2019] GET /axf/login/ => generated 2129 bytes in 8 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 31/31] 113.87.160.176 () {52 vars in 1027 bytes} [Wed Mar 13 07:12:21 2019] POST /axf/register/ => generated 0 bytes in 412 msecs (HTTP/1.1 302) 6 headers in 277 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 32/32] 113.87.160.176 () {46 vars in 912 bytes} [Wed Mar 13 07:12:22 2019] GET /axf/mine/ => generated 6425 bytes in 89 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 33/33] 113.87.160.176 () {44 vars in 881 bytes} [Wed Mar 13 07:12:29 2019] GET /axf/market/ => generated 10969 bytes in 144 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 34/34] 113.87.160.176 () {44 vars in 830 bytes} [Wed Mar 13 07:12:32 2019] GET /axf/addcart/?goodsid=983 => generated 117 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 35/35] 113.87.160.176 () {44 vars in 830 bytes} [Wed Mar 13 07:12:32 2019] GET /axf/addcart/?goodsid=983 => generated 117 bytes in 47 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 36/36] 113.87.160.176 () {44 vars in 830 bytes} [Wed Mar 13 07:12:33 2019] GET /axf/addcart/?goodsid=983 => generated 117 bytes in 15 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 37/37] 113.88.14.120 () {48 vars in 895 bytes} [Wed Mar 13 07:12:33 2019] POST /axf/login/ => generated 0 bytes in 12 msecs (HTTP/1.1 302) 6 headers in 279 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 38/38] 113.88.14.120 () {44 vars in 824 bytes} [Wed Mar 13 07:12:33 2019] GET /axf/market/ => generated 12484 bytes in 29 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 39/39] 113.87.160.176 () {44 vars in 830 bytes} [Wed Mar 13 07:12:34 2019] GET /axf/addcart/?goodsid=984 => generated 155 bytes in 21 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 40/40] 113.87.160.176 () {44 vars in 830 bytes} [Wed Mar 13 07:12:34 2019] GET /axf/addcart/?goodsid=984 => generated 155 bytes in 16 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 41/41] 113.87.160.176 () {44 vars in 830 bytes} [Wed Mar 13 07:12:35 2019] GET /axf/addcart/?goodsid=985 => generated 122 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 42/42] 113.87.160.176 () {44 vars in 879 bytes} [Wed Mar 13 07:12:36 2019] GET /axf/cart/ => generated 5262 bytes in 81 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 43/43] 113.88.14.120 () {44 vars in 783 bytes} [Wed Mar 13 07:12:36 2019] GET /axf/addcart/?goodsid=983 => generated 117 bytes in 17 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 44/44] 113.88.14.120 () {44 vars in 783 bytes} [Wed Mar 13 07:12:36 2019] GET /axf/addcart/?goodsid=983 => generated 117 bytes in 15 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 45/45] 113.88.14.120 () {44 vars in 783 bytes} [Wed Mar 13 07:12:37 2019] GET /axf/addcart/?goodsid=983 => generated 117 bytes in 15 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 46/46] 113.87.160.176 () {44 vars in 881 bytes} [Wed Mar 13 07:12:37 2019] GET /axf/market/ => generated 11845 bytes in 25 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 47/47] 113.88.14.120 () {44 vars in 821 bytes} [Wed Mar 13 07:12:38 2019] GET /axf/cart/ => generated 7659 bytes in 22 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 48/48] 113.87.160.176 () {44 vars in 830 bytes} [Wed Mar 13 07:12:39 2019] GET /axf/subcart/?goodsid=985 => generated 73 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 49/49] 113.87.160.176 () {44 vars in 879 bytes} [Wed Mar 13 07:12:39 2019] GET /axf/cart/ => generated 4413 bytes in 15 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 50/50] 113.87.160.176 () {44 vars in 895 bytes} [Wed Mar 13 07:12:41 2019] GET /axf/generateorder/ => generated 1620 bytes in 156 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 51/51] 113.88.14.120 () {44 vars in 793 bytes} [Wed Mar 13 07:12:42 2019] GET /axf/changecartselect/?cartid=2 => generated 78 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 52/52] 113.88.14.120 () {44 vars in 837 bytes} [Wed Mar 13 07:12:45 2019] GET /axf/generateorder/ => generated 1325 bytes in 23 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 53/53] 113.88.14.120 () {44 vars in 819 bytes} [Wed Mar 13 07:12:50 2019] GET /axf/mine/ => generated 6423 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 54/54] 113.88.14.120 () {44 vars in 845 bytes} [Wed Mar 13 07:12:51 2019] GET /axf/mine/ => generated 6253 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 55/55] 113.87.160.176 () {44 vars in 845 bytes} [Wed Mar 13 07:12:56 2019] GET /axf/cart/ => generated 2022 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 56/56] 113.87.160.176 () {44 vars in 877 bytes} [Wed Mar 13 07:12:57 2019] GET /axf/mine/ => generated 6425 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 57/57] 113.87.160.176 () {44 vars in 849 bytes} [Wed Mar 13 07:12:59 2019] GET /axf/market/ => generated 10969 bytes in 18 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 58/58] 113.87.160.176 () {44 vars in 837 bytes} [Wed Mar 13 07:13:00 2019] GET /axf/ => generated 20929 bytes in 19 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 59/59] 113.87.160.176 () {44 vars in 840 bytes} [Wed Mar 13 07:13:02 2019] GET /axf/mine/ => generated 6253 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 60/60] 113.87.160.176 () {44 vars in 853 bytes} [Wed Mar 13 07:13:04 2019] GET /axf/register/ => generated 3495 bytes in 4 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 61/61] 113.87.160.176 () {44 vars in 887 bytes} [Wed Mar 13 07:13:04 2019] GET /axf/orderlist/ => generated 1296 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 62/62] 113.87.160.176 () {44 vars in 849 bytes} [Wed Mar 13 07:13:17 2019] GET /axf/mine/ => generated 6253 bytes in 7 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 63/63] 113.87.160.176 () {44 vars in 877 bytes} [Wed Mar 13 07:13:28 2019] GET /axf/cart/ => generated 2705 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 64/64] 113.87.160.176 () {44 vars in 881 bytes} [Wed Mar 13 07:13:31 2019] GET /axf/market/ => generated 10969 bytes in 19 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 65/65] 113.87.160.176 () {44 vars in 869 bytes} [Wed Mar 13 07:13:32 2019] GET /axf/ => generated 20929 bytes in 19 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 66/66] 113.87.160.176 () {44 vars in 872 bytes} [Wed Mar 13 07:13:35 2019] GET /axf/mine/ => generated 6425 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 67/67] 113.87.160.176 () {44 vars in 867 bytes} [Wed Mar 13 07:18:11 2019] GET /axf/ => generated 20929 bytes in 19 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 68/68] 113.87.160.176 () {44 vars in 876 bytes} [Wed Mar 13 07:18:16 2019] GET /axf/market/ => generated 10969 bytes in 21 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 69/69] 113.87.160.176 () {44 vars in 879 bytes} [Wed Mar 13 07:18:18 2019] GET /axf/cart/ => generated 2705 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 70/70] 113.87.160.176 () {44 vars in 877 bytes} [Wed Mar 13 07:18:20 2019] GET /axf/mine/ => generated 6425 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+Not Found: /cache/global/img/gs.gif
+[pid: 3350|app: 0|req: 71/71] 80.82.70.187 () {32 vars in 414 bytes} [Wed Mar 13 07:42:57 2019] GET /cache/global/img/gs.gif => generated 2108 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: ''. The domain name provided is not valid according to RFC 1034/1035.
+[pid: 3350|app: 0|req: 72/72] 180.177.186.155 () {26 vars in 264 bytes} [Wed Mar 13 07:53:44 2019] GET / => generated 55107 bytes in 72 msecs (HTTP/1.0 400) 1 headers in 53 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 3350|app: 0|req: 73/73] 113.87.160.176 () {40 vars in 652 bytes} [Wed Mar 13 08:19:39 2019] GET /favicon.ico => generated 2071 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 3350|app: 0|req: 74/74] 175.100.87.42 () {32 vars in 450 bytes} [Wed Mar 13 08:43:18 2019] GET / => generated 2023 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+invalid request block size: 21589 (max 4096)...skip
+invalid request block size: 21589 (max 4096)...skip
+invalid request block size: 21589 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+Not Found: /
+[pid: 3350|app: 0|req: 75/75] 78.36.193.55 () {32 vars in 442 bytes} [Wed Mar 13 08:59:24 2019] GET / => generated 2023 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 3350|app: 0|req: 76/76] 14.102.62.231 () {32 vars in 444 bytes} [Wed Mar 13 09:52:38 2019] GET / => generated 2023 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 3350|app: 0|req: 77/77] 112.125.92.74 () {28 vars in 287 bytes} [Wed Mar 13 10:04:33 2019] HEAD / => generated 2021 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /w00tw00t.at.blackhats.romanian.anti-sec:)
+[pid: 3350|app: 0|req: 78/78] 61.155.218.109 () {38 vars in 501 bytes} [Wed Mar 13 10:08:14 2019] GET /w00tw00t.at.blackhats.romanian.anti-sec:) => generated 2161 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin/scripts/setup.php
+[pid: 3350|app: 0|req: 79/79] 61.155.218.109 () {38 vars in 475 bytes} [Wed Mar 13 10:08:15 2019] GET /phpMyAdmin/scripts/setup.php => generated 2122 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpmyadmin/scripts/setup.php
+[pid: 3350|app: 0|req: 80/80] 61.155.218.109 () {38 vars in 475 bytes} [Wed Mar 13 10:08:15 2019] GET /phpmyadmin/scripts/setup.php => generated 2122 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /pma/scripts/setup.php
+[pid: 3350|app: 0|req: 81/81] 61.155.218.109 () {38 vars in 461 bytes} [Wed Mar 13 10:08:15 2019] GET /pma/scripts/setup.php => generated 2101 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /myadmin/scripts/setup.php
+[pid: 3350|app: 0|req: 82/82] 61.155.218.109 () {38 vars in 469 bytes} [Wed Mar 13 10:08:15 2019] GET /myadmin/scripts/setup.php => generated 2113 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /MyAdmin/scripts/setup.php
+[pid: 3350|app: 0|req: 83/83] 61.155.218.109 () {38 vars in 469 bytes} [Wed Mar 13 10:08:15 2019] GET /MyAdmin/scripts/setup.php => generated 2113 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /mysql/admin/index.php
+[pid: 3350|app: 0|req: 84/84] 2.231.31.252 () {32 vars in 509 bytes} [Wed Mar 13 10:22:00 2019] GET /mysql/admin/index.php?lang=en => generated 2109 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /mysql/dbadmin/index.php
+[pid: 3350|app: 0|req: 85/85] 2.231.31.252 () {32 vars in 513 bytes} [Wed Mar 13 10:22:02 2019] GET /mysql/dbadmin/index.php?lang=en => generated 2115 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 3350|app: 0|req: 86/86] 110.136.119.123 () {32 vars in 445 bytes} [Wed Mar 13 12:39:36 2019] GET / => generated 2023 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 3350|app: 0|req: 87/87] 113.87.160.176 () {40 vars in 651 bytes} [Wed Mar 13 12:51:04 2019] GET /favicon.ico => generated 2071 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 88/88] 113.87.160.176 () {42 vars in 770 bytes} [Wed Mar 13 13:03:42 2019] GET /axf/ => generated 20929 bytes in 18 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 3350|app: 0|req: 89/89] 113.87.160.176 () {42 vars in 743 bytes} [Wed Mar 13 13:03:43 2019] GET /favicon.ico => generated 2071 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 90/90] 113.87.160.176 () {44 vars in 824 bytes} [Wed Mar 13 13:03:45 2019] GET /axf/market/ => generated 10969 bytes in 20 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 91/91] 113.87.160.176 () {44 vars in 827 bytes} [Wed Mar 13 13:03:47 2019] GET /axf/cart/ => generated 2022 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 92/92] 113.87.160.176 () {44 vars in 825 bytes} [Wed Mar 13 13:03:49 2019] GET /axf/mine/ => generated 6253 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 93/93] 113.87.160.176 () {44 vars in 815 bytes} [Wed Mar 13 13:11:02 2019] GET /axf/ => generated 20929 bytes in 20 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 94/94] 113.87.160.176 () {44 vars in 824 bytes} [Wed Mar 13 13:11:04 2019] GET /axf/market/ => generated 10969 bytes in 15 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 95/95] 113.87.160.176 () {44 vars in 827 bytes} [Wed Mar 13 13:11:06 2019] GET /axf/cart/ => generated 2022 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 96/96] 113.87.160.176 () {44 vars in 825 bytes} [Wed Mar 13 13:11:07 2019] GET /axf/mine/ => generated 6253 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 97/97] 113.87.160.176 () {44 vars in 825 bytes} [Wed Mar 13 13:11:14 2019] GET /axf/login/ => generated 2129 bytes in 4 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 98/98] 113.87.160.176 () {44 vars in 824 bytes} [Wed Mar 13 13:11:16 2019] GET /axf/mine/ => generated 6253 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 99/99] 113.87.160.176 () {44 vars in 831 bytes} [Wed Mar 13 13:11:16 2019] GET /axf/register/ => generated 3495 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+Not Found: /echo.php
+[pid: 3350|app: 0|req: 100/100] 139.162.88.63 () {32 vars in 401 bytes} [Wed Mar 13 13:22:14 2019] GET /echo.php?info=1234567890 => generated 2084 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 101/101] 113.88.14.120 () {40 vars in 657 bytes} [Wed Mar 13 13:27:35 2019] GET /axf/ => generated 20929 bytes in 23 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 102/102] 113.88.14.120 () {42 vars in 718 bytes} [Wed Mar 13 13:27:42 2019] GET /axf/ => generated 20929 bytes in 21 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 3350|app: 0|req: 103/103] 113.87.160.176 () {38 vars in 643 bytes} [Wed Mar 13 13:45:33 2019] GET /favicon.ico => generated 2071 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 3350|app: 0|req: 104/104] 113.87.160.176 () {44 vars in 709 bytes} [Wed Mar 13 13:48:08 2019] GET /favicon.ico => generated 2071 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: ''. The domain name provided is not valid according to RFC 1034/1035.
+[pid: 3350|app: 0|req: 105/105] 189.211.190.42 () {26 vars in 263 bytes} [Wed Mar 13 14:04:56 2019] GET / => generated 55106 bytes in 42 msecs (HTTP/1.0 400) 1 headers in 53 bytes (1 switches on core 0)
+Not Found: /acadmin.php
+[pid: 3350|app: 0|req: 106/106] 198.167.223.52 () {36 vars in 577 bytes} [Wed Mar 13 14:10:16 2019] GET /acadmin.php => generated 2071 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 107/107] 113.87.160.176 () {40 vars in 662 bytes} [Wed Mar 13 14:15:31 2019] GET /axf => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 108/108] 113.87.160.176 () {40 vars in 664 bytes} [Wed Mar 13 14:15:31 2019] GET /axf/ => generated 20929 bytes in 19 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 109/109] 113.88.14.120 () {42 vars in 694 bytes} [Wed Mar 13 14:15:55 2019] GET /axf/ => generated 20929 bytes in 20 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 110/110] 113.88.14.120 () {40 vars in 663 bytes} [Wed Mar 13 14:16:17 2019] GET /axf/ => generated 20929 bytes in 19 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 3350|app: 0|req: 111/111] 113.88.14.120 () {38 vars in 642 bytes} [Wed Mar 13 14:16:19 2019] GET /favicon.ico => generated 2071 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 3350|app: 0|req: 112/112] 168.90.76.130 () {32 vars in 450 bytes} [Wed Mar 13 14:29:23 2019] GET / => generated 2023 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 3350|app: 0|req: 113/113] 170.247.18.234 () {32 vars in 444 bytes} [Wed Mar 13 16:15:59 2019] GET / => generated 2023 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /cache/global/img/gs.gif
+[pid: 3350|app: 0|req: 114/114] 80.82.70.187 () {32 vars in 414 bytes} [Wed Mar 13 17:42:16 2019] GET /cache/global/img/gs.gif => generated 2108 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 3350|app: 0|req: 115/115] 185.243.51.212 () {32 vars in 451 bytes} [Wed Mar 13 20:28:45 2019] GET / => generated 2023 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: ''. The domain name provided is not valid according to RFC 1034/1035.
+[pid: 3350|app: 0|req: 116/116] 171.228.20.96 () {26 vars in 262 bytes} [Wed Mar 13 22:25:37 2019] GET / => generated 55105 bytes in 40 msecs (HTTP/1.0 400) 1 headers in 53 bytes (1 switches on core 0)
+Not Found: /
+[pid: 3350|app: 0|req: 117/117] 211.23.154.136 () {34 vars in 354 bytes} [Wed Mar 13 23:32:41 2019] GET / => generated 2020 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 3350|app: 0|req: 118/118] 102.165.51.161 () {36 vars in 542 bytes} [Thu Mar 14 00:07:25 2019] GET / => generated 2020 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /ncsi.txt
+[pid: 3350|app: 0|req: 119/119] 102.165.51.161 () {38 vars in 598 bytes} [Thu Mar 14 00:07:26 2019] GET /ncsi.txt => generated 2066 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /HNAP1/
+[pid: 3350|app: 0|req: 120/120] 102.165.51.161 () {38 vars in 590 bytes} [Thu Mar 14 00:07:28 2019] GET /HNAP1/ => generated 2056 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /hudson/script
+[pid: 3350|app: 0|req: 121/121] 102.165.51.161 () {38 vars in 604 bytes} [Thu Mar 14 00:07:30 2019] GET /hudson/script => generated 2077 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /script
+[pid: 3350|app: 0|req: 122/122] 102.165.51.161 () {38 vars in 590 bytes} [Thu Mar 14 00:07:31 2019] GET /script => generated 2056 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /sqlite/main.php
+[pid: 3350|app: 0|req: 123/123] 102.165.51.161 () {38 vars in 608 bytes} [Thu Mar 14 00:07:32 2019] GET /sqlite/main.php => generated 2083 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /sqlitemanager/main.php
+[pid: 3350|app: 0|req: 124/124] 102.165.51.161 () {38 vars in 622 bytes} [Thu Mar 14 00:07:33 2019] GET /sqlitemanager/main.php => generated 2104 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /SQLiteManager/main.php
+[pid: 3350|app: 0|req: 125/125] 102.165.51.161 () {38 vars in 622 bytes} [Thu Mar 14 00:07:34 2019] GET /SQLiteManager/main.php => generated 2104 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /SQLite/main.php
+[pid: 3350|app: 0|req: 126/126] 102.165.51.161 () {38 vars in 608 bytes} [Thu Mar 14 00:07:35 2019] GET /SQLite/main.php => generated 2083 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /SQlite/main.php
+[pid: 3350|app: 0|req: 127/127] 102.165.51.161 () {38 vars in 608 bytes} [Thu Mar 14 00:07:36 2019] GET /SQlite/main.php => generated 2083 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /main.php
+[pid: 3350|app: 0|req: 128/128] 102.165.51.161 () {38 vars in 594 bytes} [Thu Mar 14 00:07:37 2019] GET /main.php => generated 2062 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /test/sqlite/SQLiteManager-1.2.0/SQLiteManager-1.2.0/main.php
+[pid: 3350|app: 0|req: 129/129] 102.165.51.161 () {38 vars in 698 bytes} [Thu Mar 14 00:07:38 2019] GET /test/sqlite/SQLiteManager-1.2.0/SQLiteManager-1.2.0/main.php => generated 2218 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /SQLiteManager-1.2.4/main.php
+[pid: 3350|app: 0|req: 130/130] 102.165.51.161 () {38 vars in 634 bytes} [Thu Mar 14 00:07:38 2019] GET /SQLiteManager-1.2.4/main.php => generated 2122 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /agSearch/SQlite/main.php
+[pid: 3350|app: 0|req: 131/131] 102.165.51.161 () {38 vars in 626 bytes} [Thu Mar 14 00:07:39 2019] GET /agSearch/SQlite/main.php => generated 2110 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpmyadmin/
+[pid: 3350|app: 0|req: 132/132] 102.165.51.161 () {38 vars in 600 bytes} [Thu Mar 14 00:07:41 2019] GET /phpmyadmin/ => generated 2071 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin/
+[pid: 3350|app: 0|req: 133/133] 102.165.51.161 () {38 vars in 600 bytes} [Thu Mar 14 00:07:41 2019] GET /phpMyAdmin/ => generated 2071 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /PMA/
+[pid: 3350|app: 0|req: 134/134] 102.165.51.161 () {38 vars in 586 bytes} [Thu Mar 14 00:07:42 2019] GET /PMA/ => generated 2050 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /pma/
+[pid: 3350|app: 0|req: 135/135] 102.165.51.161 () {38 vars in 586 bytes} [Thu Mar 14 00:07:43 2019] GET /pma/ => generated 2050 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 136/136] 102.165.51.161 () {38 vars in 590 bytes} [Thu Mar 14 00:07:44 2019] GET /admin/ => generated 0 bytes in 22 msecs (HTTP/1.1 302) 7 headers in 265 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 137/137] 102.165.51.161 () {38 vars in 627 bytes} [Thu Mar 14 00:07:45 2019] GET /admin/login/?next=/admin/ => generated 1650 bytes in 98 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+Not Found: /dbadmin/
+[pid: 3350|app: 0|req: 138/138] 102.165.51.161 () {40 vars in 683 bytes} [Thu Mar 14 00:07:46 2019] GET /dbadmin/ => generated 2062 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /mysql/
+[pid: 3350|app: 0|req: 139/139] 102.165.51.161 () {40 vars in 679 bytes} [Thu Mar 14 00:07:47 2019] GET /mysql/ => generated 2056 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /myadmin/
+[pid: 3350|app: 0|req: 140/140] 102.165.51.161 () {40 vars in 683 bytes} [Thu Mar 14 00:07:48 2019] GET /myadmin/ => generated 2062 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /openserver/phpmyadmin/
+[pid: 3350|app: 0|req: 141/141] 102.165.51.161 () {40 vars in 711 bytes} [Thu Mar 14 00:07:49 2019] GET /openserver/phpmyadmin/ => generated 2104 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpmyadmin2/
+[pid: 3350|app: 0|req: 142/142] 102.165.51.161 () {40 vars in 691 bytes} [Thu Mar 14 00:07:50 2019] GET /phpmyadmin2/ => generated 2074 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin2/
+[pid: 3350|app: 0|req: 143/143] 102.165.51.161 () {40 vars in 691 bytes} [Thu Mar 14 00:07:51 2019] GET /phpMyAdmin2/ => generated 2074 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2/
+[pid: 3350|app: 0|req: 144/144] 102.165.51.161 () {40 vars in 693 bytes} [Thu Mar 14 00:07:52 2019] GET /phpMyAdmin-2/ => generated 2077 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /php-my-admin/
+[pid: 3350|app: 0|req: 145/145] 102.165.51.161 () {40 vars in 693 bytes} [Thu Mar 14 00:07:53 2019] GET /php-my-admin/ => generated 2077 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.2.3/
+[pid: 3350|app: 0|req: 146/146] 102.165.51.161 () {40 vars in 701 bytes} [Thu Mar 14 00:07:54 2019] GET /phpMyAdmin-2.2.3/ => generated 2089 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.2.6/
+[pid: 3350|app: 0|req: 147/147] 102.165.51.161 () {40 vars in 701 bytes} [Thu Mar 14 00:07:55 2019] GET /phpMyAdmin-2.2.6/ => generated 2089 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.5.1/
+[pid: 3350|app: 0|req: 148/148] 102.165.51.161 () {40 vars in 701 bytes} [Thu Mar 14 00:07:56 2019] GET /phpMyAdmin-2.5.1/ => generated 2089 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.5.4/
+[pid: 3350|app: 0|req: 149/149] 102.165.51.161 () {40 vars in 701 bytes} [Thu Mar 14 00:07:57 2019] GET /phpMyAdmin-2.5.4/ => generated 2089 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.5.5-rc1/
+[pid: 3350|app: 0|req: 150/150] 102.165.51.161 () {40 vars in 709 bytes} [Thu Mar 14 00:07:57 2019] GET /phpMyAdmin-2.5.5-rc1/ => generated 2101 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.5.5-rc2/
+[pid: 3350|app: 0|req: 151/151] 102.165.51.161 () {40 vars in 709 bytes} [Thu Mar 14 00:07:58 2019] GET /phpMyAdmin-2.5.5-rc2/ => generated 2101 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.5.5/
+[pid: 3350|app: 0|req: 152/152] 102.165.51.161 () {40 vars in 701 bytes} [Thu Mar 14 00:07:59 2019] GET /phpMyAdmin-2.5.5/ => generated 2089 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.5.5-pl1/
+[pid: 3350|app: 0|req: 153/153] 102.165.51.161 () {40 vars in 709 bytes} [Thu Mar 14 00:08:00 2019] GET /phpMyAdmin-2.5.5-pl1/ => generated 2101 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.5.6-rc1/
+[pid: 3350|app: 0|req: 154/154] 102.165.51.161 () {40 vars in 709 bytes} [Thu Mar 14 00:08:01 2019] GET /phpMyAdmin-2.5.6-rc1/ => generated 2101 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.5.6-rc2/
+[pid: 3350|app: 0|req: 155/155] 102.165.51.161 () {40 vars in 709 bytes} [Thu Mar 14 00:08:02 2019] GET /phpMyAdmin-2.5.6-rc2/ => generated 2101 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.5.6/
+[pid: 3350|app: 0|req: 156/156] 102.165.51.161 () {40 vars in 701 bytes} [Thu Mar 14 00:08:03 2019] GET /phpMyAdmin-2.5.6/ => generated 2089 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.5.7/
+[pid: 3350|app: 0|req: 157/157] 102.165.51.161 () {40 vars in 701 bytes} [Thu Mar 14 00:08:04 2019] GET /phpMyAdmin-2.5.7/ => generated 2089 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.5.7-pl1/
+[pid: 3350|app: 0|req: 158/158] 102.165.51.161 () {40 vars in 709 bytes} [Thu Mar 14 00:08:05 2019] GET /phpMyAdmin-2.5.7-pl1/ => generated 2101 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.0-alpha/
+[pid: 3350|app: 0|req: 159/159] 102.165.51.161 () {40 vars in 713 bytes} [Thu Mar 14 00:08:06 2019] GET /phpMyAdmin-2.6.0-alpha/ => generated 2107 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.0-alpha2/
+[pid: 3350|app: 0|req: 160/160] 102.165.51.161 () {40 vars in 715 bytes} [Thu Mar 14 00:08:07 2019] GET /phpMyAdmin-2.6.0-alpha2/ => generated 2110 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.0-beta1/
+[pid: 3350|app: 0|req: 161/161] 102.165.51.161 () {40 vars in 713 bytes} [Thu Mar 14 00:08:08 2019] GET /phpMyAdmin-2.6.0-beta1/ => generated 2107 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.0-beta2/
+[pid: 3350|app: 0|req: 162/162] 102.165.51.161 () {40 vars in 713 bytes} [Thu Mar 14 00:08:09 2019] GET /phpMyAdmin-2.6.0-beta2/ => generated 2107 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.0-rc1/
+[pid: 3350|app: 0|req: 163/163] 102.165.51.161 () {40 vars in 709 bytes} [Thu Mar 14 00:08:10 2019] GET /phpMyAdmin-2.6.0-rc1/ => generated 2101 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.0-rc2/
+[pid: 3350|app: 0|req: 164/164] 102.165.51.161 () {40 vars in 709 bytes} [Thu Mar 14 00:08:11 2019] GET /phpMyAdmin-2.6.0-rc2/ => generated 2101 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.0-rc3/
+[pid: 3350|app: 0|req: 165/165] 102.165.51.161 () {40 vars in 709 bytes} [Thu Mar 14 00:08:12 2019] GET /phpMyAdmin-2.6.0-rc3/ => generated 2101 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.0/
+[pid: 3350|app: 0|req: 166/166] 102.165.51.161 () {40 vars in 701 bytes} [Thu Mar 14 00:08:12 2019] GET /phpMyAdmin-2.6.0/ => generated 2089 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.0-pl1/
+[pid: 3350|app: 0|req: 167/167] 102.165.51.161 () {40 vars in 709 bytes} [Thu Mar 14 00:08:13 2019] GET /phpMyAdmin-2.6.0-pl1/ => generated 2101 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.0-pl2/
+[pid: 3350|app: 0|req: 168/168] 102.165.51.161 () {40 vars in 709 bytes} [Thu Mar 14 00:08:14 2019] GET /phpMyAdmin-2.6.0-pl2/ => generated 2101 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.0-pl3/
+[pid: 3350|app: 0|req: 169/169] 102.165.51.161 () {40 vars in 709 bytes} [Thu Mar 14 00:08:15 2019] GET /phpMyAdmin-2.6.0-pl3/ => generated 2101 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.1-rc1/
+[pid: 3350|app: 0|req: 170/170] 102.165.51.161 () {40 vars in 709 bytes} [Thu Mar 14 00:08:16 2019] GET /phpMyAdmin-2.6.1-rc1/ => generated 2101 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.1-rc2/
+[pid: 3350|app: 0|req: 171/171] 102.165.51.161 () {40 vars in 709 bytes} [Thu Mar 14 00:08:16 2019] GET /phpMyAdmin-2.6.1-rc2/ => generated 2101 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.1/
+[pid: 3350|app: 0|req: 172/172] 102.165.51.161 () {40 vars in 701 bytes} [Thu Mar 14 00:08:17 2019] GET /phpMyAdmin-2.6.1/ => generated 2089 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.1-pl1/
+[pid: 3350|app: 0|req: 173/173] 102.165.51.161 () {40 vars in 709 bytes} [Thu Mar 14 00:08:18 2019] GET /phpMyAdmin-2.6.1-pl1/ => generated 2101 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.1-pl2/
+[pid: 3350|app: 0|req: 174/174] 102.165.51.161 () {40 vars in 709 bytes} [Thu Mar 14 00:08:19 2019] GET /phpMyAdmin-2.6.1-pl2/ => generated 2101 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.1-pl3/
+[pid: 3350|app: 0|req: 175/175] 102.165.51.161 () {40 vars in 709 bytes} [Thu Mar 14 00:08:20 2019] GET /phpMyAdmin-2.6.1-pl3/ => generated 2101 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.2-rc1/
+[pid: 3350|app: 0|req: 176/176] 102.165.51.161 () {40 vars in 709 bytes} [Thu Mar 14 00:08:21 2019] GET /phpMyAdmin-2.6.2-rc1/ => generated 2101 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.2-beta1/
+[pid: 3350|app: 0|req: 177/177] 102.165.51.161 () {40 vars in 713 bytes} [Thu Mar 14 00:08:22 2019] GET /phpMyAdmin-2.6.2-beta1/ => generated 2107 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.2-rc1/
+[pid: 3350|app: 0|req: 178/178] 102.165.51.161 () {40 vars in 709 bytes} [Thu Mar 14 00:08:23 2019] GET /phpMyAdmin-2.6.2-rc1/ => generated 2101 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.2/
+[pid: 3350|app: 0|req: 179/179] 102.165.51.161 () {40 vars in 701 bytes} [Thu Mar 14 00:08:24 2019] GET /phpMyAdmin-2.6.2/ => generated 2089 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.2-pl1/
+[pid: 3350|app: 0|req: 180/180] 102.165.51.161 () {40 vars in 709 bytes} [Thu Mar 14 00:08:24 2019] GET /phpMyAdmin-2.6.2-pl1/ => generated 2101 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.3/
+[pid: 3350|app: 0|req: 181/181] 102.165.51.161 () {40 vars in 701 bytes} [Thu Mar 14 00:08:25 2019] GET /phpMyAdmin-2.6.3/ => generated 2089 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.3-rc1/
+[pid: 3350|app: 0|req: 182/182] 102.165.51.161 () {40 vars in 709 bytes} [Thu Mar 14 00:08:26 2019] GET /phpMyAdmin-2.6.3-rc1/ => generated 2101 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.3/
+[pid: 3350|app: 0|req: 183/183] 102.165.51.161 () {40 vars in 701 bytes} [Thu Mar 14 00:08:27 2019] GET /phpMyAdmin-2.6.3/ => generated 2089 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.3-pl1/
+[pid: 3350|app: 0|req: 184/184] 102.165.51.161 () {40 vars in 709 bytes} [Thu Mar 14 00:08:28 2019] GET /phpMyAdmin-2.6.3-pl1/ => generated 2101 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.4-rc1/
+[pid: 3350|app: 0|req: 185/185] 102.165.51.161 () {40 vars in 709 bytes} [Thu Mar 14 00:08:29 2019] GET /phpMyAdmin-2.6.4-rc1/ => generated 2101 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.4-pl1/
+[pid: 3350|app: 0|req: 186/186] 102.165.51.161 () {40 vars in 709 bytes} [Thu Mar 14 00:08:29 2019] GET /phpMyAdmin-2.6.4-pl1/ => generated 2101 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.4-pl2/
+[pid: 3350|app: 0|req: 187/187] 102.165.51.161 () {40 vars in 709 bytes} [Thu Mar 14 00:08:30 2019] GET /phpMyAdmin-2.6.4-pl2/ => generated 2101 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.4-pl3/
+[pid: 3350|app: 0|req: 188/188] 102.165.51.161 () {40 vars in 709 bytes} [Thu Mar 14 00:08:31 2019] GET /phpMyAdmin-2.6.4-pl3/ => generated 2101 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.4-pl4/
+[pid: 3350|app: 0|req: 189/189] 102.165.51.161 () {40 vars in 709 bytes} [Thu Mar 14 00:08:32 2019] GET /phpMyAdmin-2.6.4-pl4/ => generated 2101 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.4/
+[pid: 3350|app: 0|req: 190/190] 102.165.51.161 () {40 vars in 701 bytes} [Thu Mar 14 00:08:33 2019] GET /phpMyAdmin-2.6.4/ => generated 2089 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.7.0-beta1/
+[pid: 3350|app: 0|req: 191/191] 102.165.51.161 () {40 vars in 713 bytes} [Thu Mar 14 00:08:34 2019] GET /phpMyAdmin-2.7.0-beta1/ => generated 2107 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.7.0-rc1/
+[pid: 3350|app: 0|req: 192/192] 102.165.51.161 () {40 vars in 709 bytes} [Thu Mar 14 00:08:35 2019] GET /phpMyAdmin-2.7.0-rc1/ => generated 2101 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.7.0-pl1/
+[pid: 3350|app: 0|req: 193/193] 102.165.51.161 () {40 vars in 709 bytes} [Thu Mar 14 00:08:36 2019] GET /phpMyAdmin-2.7.0-pl1/ => generated 2101 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.7.0-pl2/
+[pid: 3350|app: 0|req: 194/194] 102.165.51.161 () {40 vars in 709 bytes} [Thu Mar 14 00:08:37 2019] GET /phpMyAdmin-2.7.0-pl2/ => generated 2101 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.7.0/
+[pid: 3350|app: 0|req: 195/195] 102.165.51.161 () {40 vars in 701 bytes} [Thu Mar 14 00:08:37 2019] GET /phpMyAdmin-2.7.0/ => generated 2089 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.8.0-beta1/
+[pid: 3350|app: 0|req: 196/196] 102.165.51.161 () {40 vars in 713 bytes} [Thu Mar 14 00:08:38 2019] GET /phpMyAdmin-2.8.0-beta1/ => generated 2107 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.8.0-rc1/
+[pid: 3350|app: 0|req: 197/197] 102.165.51.161 () {40 vars in 709 bytes} [Thu Mar 14 00:08:42 2019] GET /phpMyAdmin-2.8.0-rc1/ => generated 2101 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.8.0-rc2/
+[pid: 3350|app: 0|req: 198/198] 102.165.51.161 () {40 vars in 709 bytes} [Thu Mar 14 00:08:43 2019] GET /phpMyAdmin-2.8.0-rc2/ => generated 2101 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.8.0/
+[pid: 3350|app: 0|req: 199/199] 102.165.51.161 () {40 vars in 701 bytes} [Thu Mar 14 00:08:44 2019] GET /phpMyAdmin-2.8.0/ => generated 2089 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.8.0.1/
+[pid: 3350|app: 0|req: 200/200] 102.165.51.161 () {40 vars in 705 bytes} [Thu Mar 14 00:08:44 2019] GET /phpMyAdmin-2.8.0.1/ => generated 2095 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.8.0.2/
+[pid: 3350|app: 0|req: 201/201] 102.165.51.161 () {40 vars in 705 bytes} [Thu Mar 14 00:08:45 2019] GET /phpMyAdmin-2.8.0.2/ => generated 2095 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.8.0.3/
+[pid: 3350|app: 0|req: 202/202] 102.165.51.161 () {40 vars in 705 bytes} [Thu Mar 14 00:08:46 2019] GET /phpMyAdmin-2.8.0.3/ => generated 2095 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.8.0.4/
+[pid: 3350|app: 0|req: 203/203] 102.165.51.161 () {40 vars in 705 bytes} [Thu Mar 14 00:08:47 2019] GET /phpMyAdmin-2.8.0.4/ => generated 2095 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.8.1-rc1/
+[pid: 3350|app: 0|req: 204/204] 102.165.51.161 () {40 vars in 709 bytes} [Thu Mar 14 00:08:48 2019] GET /phpMyAdmin-2.8.1-rc1/ => generated 2101 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.8.1/
+[pid: 3350|app: 0|req: 205/205] 102.165.51.161 () {40 vars in 701 bytes} [Thu Mar 14 00:08:49 2019] GET /phpMyAdmin-2.8.1/ => generated 2089 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.8.2/
+[pid: 3350|app: 0|req: 206/206] 102.165.51.161 () {40 vars in 701 bytes} [Thu Mar 14 00:08:50 2019] GET /phpMyAdmin-2.8.2/ => generated 2089 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /sqlmanager/
+[pid: 3350|app: 0|req: 207/207] 102.165.51.161 () {40 vars in 689 bytes} [Thu Mar 14 00:08:50 2019] GET /sqlmanager/ => generated 2071 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /mysqlmanager/
+[pid: 3350|app: 0|req: 208/208] 102.165.51.161 () {40 vars in 693 bytes} [Thu Mar 14 00:08:51 2019] GET /mysqlmanager/ => generated 2077 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /p/m/a/
+[pid: 3350|app: 0|req: 209/209] 102.165.51.161 () {40 vars in 679 bytes} [Thu Mar 14 00:08:52 2019] GET /p/m/a/ => generated 2056 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /PMA2005/
+[pid: 3350|app: 0|req: 210/210] 102.165.51.161 () {40 vars in 683 bytes} [Thu Mar 14 00:08:53 2019] GET /PMA2005/ => generated 2062 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /pma2005/
+[pid: 3350|app: 0|req: 211/211] 102.165.51.161 () {40 vars in 683 bytes} [Thu Mar 14 00:08:53 2019] GET /pma2005/ => generated 2062 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpmanager/
+[pid: 3350|app: 0|req: 212/212] 102.165.51.161 () {40 vars in 689 bytes} [Thu Mar 14 00:08:54 2019] GET /phpmanager/ => generated 2071 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /php-myadmin/
+[pid: 3350|app: 0|req: 213/213] 102.165.51.161 () {40 vars in 691 bytes} [Thu Mar 14 00:08:55 2019] GET /php-myadmin/ => generated 2074 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /phpmy-admin/
+[pid: 3350|app: 0|req: 214/214] 102.165.51.161 () {40 vars in 691 bytes} [Thu Mar 14 00:08:56 2019] GET /phpmy-admin/ => generated 2074 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /webadmin/
+[pid: 3350|app: 0|req: 215/215] 102.165.51.161 () {40 vars in 685 bytes} [Thu Mar 14 00:08:57 2019] GET /webadmin/ => generated 2065 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /sqlweb/
+[pid: 3350|app: 0|req: 216/216] 102.165.51.161 () {40 vars in 681 bytes} [Thu Mar 14 00:08:58 2019] GET /sqlweb/ => generated 2059 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /websql/
+[pid: 3350|app: 0|req: 217/217] 102.165.51.161 () {40 vars in 681 bytes} [Thu Mar 14 00:08:59 2019] GET /websql/ => generated 2059 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /webdb/
+[pid: 3350|app: 0|req: 218/218] 102.165.51.161 () {40 vars in 679 bytes} [Thu Mar 14 00:08:59 2019] GET /webdb/ => generated 2056 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /mysqladmin/
+[pid: 3350|app: 0|req: 219/219] 102.165.51.161 () {40 vars in 689 bytes} [Thu Mar 14 00:09:00 2019] GET /mysqladmin/ => generated 2071 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /mysql-admin/
+[pid: 3350|app: 0|req: 220/220] 102.165.51.161 () {40 vars in 691 bytes} [Thu Mar 14 00:09:01 2019] GET /mysql-admin/ => generated 2074 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: ''. The domain name provided is not valid according to RFC 1034/1035.
+[pid: 3350|app: 0|req: 221/221] 120.78.231.236 () {26 vars in 263 bytes} [Thu Mar 14 00:42:44 2019] GET / => generated 55106 bytes in 43 msecs (HTTP/1.0 400) 1 headers in 53 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: ''. The domain name provided is not valid according to RFC 1034/1035.
+[pid: 3350|app: 0|req: 222/222] 175.139.166.19 () {26 vars in 263 bytes} [Thu Mar 14 00:52:08 2019] GET / => generated 55106 bytes in 41 msecs (HTTP/1.0 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 223/223] 113.87.160.176 () {42 vars in 765 bytes} [Thu Mar 14 01:37:21 2019] GET /axf/ => generated 20929 bytes in 20 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 224/224] 113.87.160.176 () {42 vars in 765 bytes} [Thu Mar 14 01:37:34 2019] GET /axf/ => generated 20929 bytes in 25 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 3350|app: 0|req: 225/225] 113.87.160.176 () {40 vars in 744 bytes} [Thu Mar 14 01:37:36 2019] GET /favicon.ico => generated 2071 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 226/226] 113.87.160.176 () {44 vars in 815 bytes} [Thu Mar 14 01:37:43 2019] GET /axf/cart/ => generated 6814 bytes in 21 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 227/227] 113.87.160.176 () {44 vars in 794 bytes} [Thu Mar 14 01:37:47 2019] GET /axf/changecartselect/?cartid=7 => generated 78 bytes in 10 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 228/228] 113.87.160.176 () {44 vars in 794 bytes} [Thu Mar 14 01:37:48 2019] GET /axf/changecartselect/?cartid=6 => generated 78 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 229/229] 113.87.160.176 () {44 vars in 838 bytes} [Thu Mar 14 01:37:50 2019] GET /axf/generateorder/ => generated 1470 bytes in 35 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 3350|app: 0|req: 230/230] 113.88.14.120 () {44 vars in 837 bytes} [Thu Mar 14 01:40:32 2019] GET /axf/generateorder/ => generated 1160 bytes in 17 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /
+[pid: 3350|app: 0|req: 231/231] 120.77.57.35 () {32 vars in 349 bytes} [Thu Mar 14 01:53:47 2019] GET / => generated 2027 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: ''. The domain name provided is not valid according to RFC 1034/1035.
+[pid: 3350|app: 0|req: 232/232] 120.78.231.236 () {26 vars in 263 bytes} [Thu Mar 14 02:28:43 2019] GET / => generated 55106 bytes in 39 msecs (HTTP/1.0 400) 1 headers in 53 bytes (1 switches on core 0)
+Not Found: /
+[pid: 3350|app: 0|req: 233/233] 143.255.242.149 () {32 vars in 445 bytes} [Thu Mar 14 02:35:56 2019] GET / => generated 2023 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 3350|app: 0|req: 234/234] 84.241.25.121 () {36 vars in 500 bytes} [Thu Mar 14 02:51:42 2019] GET / => generated 2020 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.18 (64bit) on [Thu Mar 14 11:01:25 2019] ***
+compiled with version: 5.4.0 20160609 on 13 March 2019 06:41:58
+os: Linux-4.4.0-142-generic #168-Ubuntu SMP Wed Jan 16 21:00:45 UTC 2019
+nodename: iZ8vb0m7kgmcpb6mp1i95wZ
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/axf
+writing pidfile to uwsgi.pid
+detected binary path: /root/.virtualenv/axf/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/axf
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3817
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8030 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Nov 12 2018, 13:43:14)  [GCC 5.4.0 20160609]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x15772d0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72904 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x15772d0 pid: 5041 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 5041, cores: 1)
+Not Found: /favicon.ico
+[pid: 5041|app: 0|req: 1/1] 113.88.14.120 () {40 vars in 743 bytes} [Thu Mar 14 03:01:34 2019] GET /favicon.ico => generated 2071 bytes in 13 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 5041|app: 0|req: 2/2] 113.87.160.176 () {42 vars in 785 bytes} [Thu Mar 14 03:01:47 2019] GET /axf/returnurl/ => generated 999 bytes in 13 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+Not Found: /axf/appnorifyurl/
+[pid: 5041|app: 0|req: 3/3] 113.87.160.176 () {42 vars in 791 bytes} [Thu Mar 14 03:02:29 2019] GET /axf/appnorifyurl/ => generated 5492 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+支付成功
+[pid: 5041|app: 0|req: 4/4] 113.87.160.176 () {42 vars in 791 bytes} [Thu Mar 14 03:02:41 2019] GET /axf/appnotifyurl/ => generated 18 bytes in 1 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 0)
+Internal Server Error: /axf/changecartselect/
+Traceback (most recent call last):
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 333, in changecartselect
+    cart = Cart.objects.get(pk=cartid)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django/db/models/query.py", line 380, in get
+    self.model._meta.object_name
+app.models.DoesNotExist: Cart matching query does not exist.
+[pid: 5041|app: 0|req: 5/5] 113.88.14.120 () {44 vars in 793 bytes} [Thu Mar 14 03:03:49 2019] GET /axf/changecartselect/?cartid=7 => generated 12530 bytes in 81 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 0)
+Internal Server Error: /axf/changecartselect/
+Traceback (most recent call last):
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./app/views.py", line 333, in changecartselect
+    cart = Cart.objects.get(pk=cartid)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/root/.virtualenv/axf/lib/python3.5/site-packages/django/db/models/query.py", line 380, in get
+    self.model._meta.object_name
+app.models.DoesNotExist: Cart matching query does not exist.
+[pid: 5041|app: 0|req: 6/6] 113.88.14.120 () {44 vars in 793 bytes} [Thu Mar 14 03:03:53 2019] GET /axf/changecartselect/?cartid=6 => generated 12530 bytes in 22 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 0)
+[pid: 5041|app: 0|req: 7/7] 113.88.14.120 () {42 vars in 774 bytes} [Thu Mar 14 03:03:56 2019] GET /axf/cart/ => generated 5158 bytes in 35 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 5041|app: 0|req: 8/8] 113.88.14.120 () {44 vars in 793 bytes} [Thu Mar 14 03:03:58 2019] GET /axf/changecartselect/?cartid=5 => generated 78 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 5041|app: 0|req: 9/9] 113.88.14.120 () {44 vars in 837 bytes} [Thu Mar 14 03:04:02 2019] GET /axf/generateorder/ => generated 1310 bytes in 28 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /
+[pid: 5041|app: 0|req: 10/10] 139.162.119.197 () {32 vars in 381 bytes} [Thu Mar 14 03:16:04 2019] GET / => generated 2020 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)

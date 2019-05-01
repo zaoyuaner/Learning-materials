@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+</head>
+<body>
+
+{% block nav %}
+    <div class="nav">导航-Base</div>
+
+    {% block nav_content %}
+    {% endblock %}
+{% endblock %}
+
+{% block content %}
+    <div>
+        主体内容
+    </div>
+{% endblock %}
+
+</body>
+</html>

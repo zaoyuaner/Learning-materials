@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+
+<h1>
+    用户名:
+{#    {% if username %}#}
+{#        {{ username }}#}
+{#    {% else %}#}
+{#        游客#}
+{#    {% endif %}#}
+
+    {{ username|default('游客') }}
+</h1>
+
+<p>
+    <a href="/login/">登录</a>
+</p>
+<p>
+    <a href="/register/">注册</a>
+</p>
+
+{% if username %}
+    <p>
+        <a href="/logout/">退出</a>
+    </p>
+{% endif %}
+
+
+<div class="content">
+    <ul>
+        {% for name in names %}
+            <li> {{ loop.index }} - {{ name }}</li>
+        {% else %}
+            <li>没有数据填充</li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+<p>
+    {{ tempstr|upper }}
+</p>
+
+<p>
+    <a href="/cart/">购物车</a>
+</p>
+
+<p>
+    <a href="/createall/">创建数据库和表</a>
+</p>
+
+<p>
+    <a href="/adduser/">创建用户</a>
+</p>
+
+<pa>
+    <a href="/showuser/">显示用户</a>
+</pa>
+
+{% include 'footer.html' %}
+
+
+</body>
+</html>

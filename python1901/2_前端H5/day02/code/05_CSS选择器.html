@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style type="text/css">
+			/* css选择器 */
+			/* 标签选择器 */
+			div {color: red;}
+			
+			/* id选择器 */
+			#box {background: green;}
+			
+			/* class选择器 */
+			.foo {font-size: 40px;}
+			
+			/* 
+			 	*通配符选择器
+			 	一般用于样式重置 
+			 */
+			* {
+				font-family: "微软雅黑"; 
+			}
+			
+			/* 群组选择器 */
+			#box1, .foo {
+				margin-bottom: 20px;  /* 外边距-距离下面元素 */
+			}
+			
+			
+			/*
+			 *  层级选择器
+			 */
+			/* 后代选择器 */
+			#hello .foo3 {background: green;}
+			/* 子选择器 */
+			#hello > .foo3 {background: orange;}
+			
+		</style>
+		
+	</head>
+	<body>
+		
+		<div id="box" class="foo">波音的代码是印度阿三写的</div>
+		<div id="box1">波音的代码是印度阿三写的</div>
+		<div id="box2" class="foo">波音的代码是印度阿三写的</div>
+		
+		<div id="hello">hello
+			<div class="foo2">foo2
+				<div class="foo3">foo3</div>
+			</div>
+			<div class="foo3">foo4</div>
+		</div>
+		
+	</body>
+</html>
