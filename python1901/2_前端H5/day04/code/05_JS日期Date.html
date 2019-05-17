@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+
+<script>
+			
+	// Date : 日期
+	
+	// 创建日期
+	var d = new Date()   //当前时间
+
+	var d = new Date("2020/11/11 10:11:12")
+	var d = new Date("2022-11-11 10:11:12")
+	var d = new Date(2019, 3, 21, 10, 11, 12)   // month: 0~11
+	var d = new Date(1553134272123)   
+	console.log(d)
+	
+	/*
+	 4， 日期Date的常用方法:
+		setDate() / getDate();   从Date对象中返回一个月中的某一天(1~31)
+		getDay();   从Date对象返回一周中的某一天(0~6)
+		set / getMonth();  从Date对象中返回月份(0~11)
+		set / getFullYear();   从Date对象以四位数返回年份 
+		set / getHours();	  返回Date对象的小时(0~23)
+		set / getMinutes();   返回Date对象的分钟(0~59)
+		set / getSeconds();   返回Date对象的秒数(0~59)
+		set / getMilliseconds();   返回Date对象的毫秒
+		set / getTime();   返回1970年1月1日至今的毫秒数
+	*/
+	
+	var d = new Date(2019, 2, 21, 10, 11, 12, 123)
+	console.log(d.getDate())  // 21日
+	console.log(d.getMonth())  // 2(3月份)
+	console.log(d.getFullYear())  // 2019年
+	console.log(d.getHours())  // 10
+	console.log(d.getMinutes())  // 11
+	console.log(d.getSeconds())  // 12
+	console.log(d.getMilliseconds())  // 123
+	
+	console.log(d.getTime())  // 1553134272123 毫秒
+	console.log(d.getDay()) // 星期几， 0~6,0表示星期天
+	
+	console.log(d.toDateString())  //Thu Mar 21 2019
+	console.log(d.toLocaleString())  //2019年3月21日 上午10:11:12
+	console.log(d.toLocaleDateString())  //2019年3月21日
+	console.log(d.toLocaleTimeString())  //上午10:11:12
+	
+	// 时间差
+	var d1 = new Date(2019, 10, 1)
+	var d2 = new Date(2019, 10, 7)
+	console.log(d2 - d1)  //518400000
+	console.log((d2-d1) / (1000*60*60*24))
+	
+	
+	/*
+	 练习:
+		1,  显示当前时间 (显示格式: 2019年 11月 11日 11时 11分 11秒)
+		2,  判断两个日期相差的天数(可先求毫秒数差,再转换成天)
+	*/
+	
+	
+	
+			
+</script>

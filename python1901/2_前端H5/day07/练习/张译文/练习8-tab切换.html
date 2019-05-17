@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				border: none;
+			}
+			ul, li {
+				list-style: none;
+			}
+			
+			#box {
+				width: 500px;
+				height: 400px;
+				margin: 10px auto;
+			}
+			
+			#list1 {
+				height: 26px;
+			}
+			#list1 li {
+				width: 30px;
+				float: left;
+				background: #ddd;
+				height: 26px;
+				line-height: 26px;
+				padding: 0 10px;
+			}
+			
+			#list2 {
+				width: 480px;
+				height: 320px;
+				background: #abcdef;
+				padding: 10px;
+				position: relative;
+			}
+			#list2 li, #list2 img {
+				width: 480px;
+				height: 320px;
+			}
+			#list2 li {
+				position: absolute;
+			}
+			#list1 li.hover {
+				background: #ABCDEF;
+				color: white;
+			}
+			
+		</style>
+		<script src="js/jquery-1.12.3.js"></script>
+		<script>
+			$(function(){
+				
+				//tab切换
+				//   鼠标在移入对应的tab，显示对应的美女图片
+				
+				//默认显示第一个
+				$("#list2").find("li").eq(0).show().siblings().hide();
+				
+				$("#list1 li").mousemove(function(e){
+					
+//					e.preventDefault()
+					$(this).addClass('hover').siblings().removeClass('hover')
+					$(this).parent().next().find("li").eq($(this).index()).show().siblings().hide()
+					
+				})
+				
+				
+				
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<ul id="list1">
+				<li class="hover">tab1</li>
+				<li>tab2</li>
+				<li>tab3</li>
+			</ul>
+			<ul id="list2">
+				<li><img src="images/11.jpg" /></li>
+				<li><img src="images/22.jpg" /></li>
+				<li><img src="images/33.jpg" /></li>
+			</ul>
+		</div>
+	</body>
+</html>

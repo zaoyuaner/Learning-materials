@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+//			定时器
+//			function click() { 
+//			// code block1... 
+//				setTimeout(function() { 
+//				// process ... 
+//				}, 200); 
+//			// code block2 
+//			}
+////假设我们给一个button的onclick事件绑定了此方法, 当我们按下按钮后, 肯定先执行block1的内容, 然后运行到setTimeout的地方, setTimeout会告诉浏览器说, "200ms后我会插一段要执行的代码给你的队列中", 浏览器当然答应了(注意插入代码并不意味着立马执行), setTimeout代码运行后, 紧跟其后的block2代码开始执行, 这里就开始说明问题了, 如果block2的代码执行时间超过200ms, 那结果会是如何? 或许按照你之前的理解, 会理所当然的认为200ms一到, 你的process代码会立马执行...事实是, 在block2执行过程中(执行了200ms后)process代码被插入代码队列, 但一直要等click方法执行结束, 才会执行process代码段, 从代码队列上看process代码是在click后面的, 再加上js以单线程方式执行, 所以应该不难理解. 如果是另一种情况, block2代码执行的时间<200ms, setTimeout在200ms后将process代码插入到代码队列, 而那时执行线程可能已经处于空闲状态了(idle), 那结果就是200ms后, process代码插入队列就立马执行了, 就让你感觉200ms后, 就执行了
+//			
+//			function click() { 
+//			// code block1... 
+//			setInterval(function() { 
+//				// process ... 
+//				}, 200); 
+//				// code block2 
+//			} 
+//			
+			//比如onclick要300ms执行完, block1代码执行完, 在5ms时执行setInterval, 以此为一个时间点, 在205ms时插入process代码, click代码顺利结束, process代码开始执行(相当于图中的timer code), 然而process代码也执行了一个比较长的时间, 超过了接下来一个插入时间点405ms, 这样代码队列后又插入了一份process代码, process继续执行着, 而且超过了605ms这个插入时间点。  可能你还会认为代码队列后面又会继续插入一份process代码...真实的情况是,由于代码队列中已经有了一份未执行的process代码, 所以605ms这个插入时间点将会被"无情"的跳过, 因为js引擎只允许有一份未执行的process代码, 说到这里不知道您是不是会豁然开朗呢...
+			
+//			重复定时器
+//			var i =0;
+//			setInterval(function(){
+//	//			 如果事件处理时间长于间隔时间 
+//				 i++;
+//				 for(var j=0;j<100000000;j++){} 
+//				 document.write(i+' ');
+//				 
+//			},100);
+//			//可以明显感觉到时间间隔不相等
+			
+//	为了避免这种时间间隔的问题，我们可以采用链式调用setTimeout方法来取代setInterval
+			
+			
+		//可以采用链式调用setTimeout来取代setInterval
+//		var i = 0;
+//		setTimeout(function(){
+//			 //处理内容
+//			 i++;
+//			 for(var j=0;j<100000000;j++){}
+//			 document.write(i+' ');
+//			 //
+//			 setTimeout(arguments.callee,100);
+//		},100);
+//		//这样处理效果明显好多了。
+//【callee】
+//arguments对象有一个名为callee的属性，该属性是一个指针，指向拥有这个arguments对象的函数
+		
+		
+		function fn(){
+			console.log(arguments)  // [object Arguments]
+			console.log(arguments.callee)  // 当前函数
+			console.log(arguments.length)  //3
+			console.log(arguments[0] + "," + arguments[1] + "," + arguments[2])
+				// “10,20,30”
+			// console.log(this)
+		}
+		
+		fn(10, 20, 30)
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

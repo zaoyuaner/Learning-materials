@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box">box</div>
+		<div>haha</div>
+	</body>
+	
+	<script src="js/jquery-1.12.3.js"></script>
+	<script>
+		// JS DOM对象（元素节点对象）
+		// JQ对象
+		
+		//JS ： 有大量的属性
+		var jsbox = document.getElementById('box')
+		// console.log(jsbox)
+		// jsbox.innerHTML = "hello 我是JS"
+		// jsbox.html("hello 我是JQ") // 报错
+		
+		// JQ ： 有大量的方法
+		var jqbox = $('#box')
+		// console.log(jqbox)
+		// jqbox.html("hello 我是JQ")
+		// jqbox.innerHTML = "hello 我是JS"  //无效
+		
+		
+		// JS和JQ对象的转换
+		// JS对象转换成JQ对象
+		var jsbox = document.getElementById('box')
+		console.log(jsbox)   // [object HTMLDivElement]
+		console.log($(jsbox))  // JQ对象
+		
+		// JQ对象转换成JS对象
+		var jqbox = $('div')
+		// console.log(jqbox)
+		console.log(jqbox[0])  //[object HTMLDivElement] 
+		console.log(jqbox.get()) // [[object HTMLDivElement],[object HTMLDivElement]]
+		console.log(jqbox.get(0))  // [object HTMLDivElement]
+		
+	</script>
+	
+</html>

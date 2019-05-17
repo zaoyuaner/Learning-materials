@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body style="height: 2000px;">
+	
+		<input type="text" value="hello world" id="ipt" />
+		<br />
+		
+		<form id="form">
+			<input type="text" />
+			<input type="submit" id="submit" />
+			<input type="reset" id="reset" />
+		</form>
+		
+		<script>
+			
+			onload = function(){
+				// console.log("页面加载完成！")
+			}
+			onunload = function(){
+				// console.log("页面卸载完成！")
+			}
+			
+			ipt.onselect = function(){
+				// console.log('选择了文本！')
+			}
+			
+			ipt.onchange = function(){
+				// console.log('修改了文本，并失去焦点')
+			}
+			// 实时检测输入
+			ipt.onkeyup = function(){
+				console.log(this.value);
+			}
+			
+			// focus: 获取焦点
+			ipt.onfocus = function(){
+				console.log('获取到焦点！')
+			}
+			// blur: 失去焦点
+			ipt.onblur = function(){
+				console.log("失去焦点！")
+			}
+			
+			form.onsubmit = function(){
+				console.log("提交")
+			}
+			form.onreset = function(){
+				console.log("重置")
+			}
+			
+			
+			// onscroll: 滚动事件
+			onscroll = function(){
+				// console.log('页面滚动了')
+				
+				// scrollTop: 页面隐藏的高度
+				var scrollTop =  document.documentElement.scrollTop || document.body.scrollTop
+				console.log(scrollTop)
+			}
+			
+			// 当浏览器大小发生变化时触发
+			onresize = function(){
+				console.log(document.documentElement.clientWidth)  // 页面宽度
+				console.log(document.documentElement.clientHeight)  // 页面高度
+			}
+			
+			
+			
+		</script>
+	</body>
+</html>

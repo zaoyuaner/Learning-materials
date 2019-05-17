@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+
+<script>
+	
+	// Object: JS的超类
+	
+	// 创建对象
+	//方式1
+	var obj = new Object()
+	obj.name = "思聪"
+	obj.age = 31
+	obj.playgame = function(){
+		console.log(this.name + "喜欢玩英雄联盟,IG")
+	}
+	obj.playgame()
+	
+	// 方式2
+	var obj = {
+		"name": "沈大师",
+		age: 40,
+		readBooks: function(){
+			console.log(this.name + "喜欢看书")
+		}
+	}
+	obj.readBooks()
+	console.log(obj.name)
+	console.log(obj["name"])
+
+	function getVal(key){
+		return obj[key]
+	}
+	console.log(getVal("age"))
+	
+	//删除
+	delete obj.age
+	console.log(obj.age)  //undefined, 已经删除了age
+	
+
+	// ES6
+//	var name = "沈大师"
+//	var obj = {
+//		name,
+//		age: 40,
+//		readBooks(){
+//			console.log(this.name + "喜欢看书")
+//		}
+//	}
+//	obj.readBooks()
+	
+	
+	
+	
+	// 扩展
+	// 构造函数(类)
+//	function MyClass(name){
+//		this.name = name
+//	}
+//	var myclass = new MyClass('王思聪')
+//	console.log(myclass.name)  // "王思聪"
+	
+	// 类class
+//	class A extends Object{
+//	}
+//	var a = new A()
+	
+	
+	
+	
+	
+	
+</script>
+

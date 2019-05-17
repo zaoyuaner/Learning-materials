@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-1.12.3.js"></script>
+		<script>
+			$(function(){
+				
+				//练习： 点击保存按钮，在表格中添加一行显示对应的数据
+				//思路:  点击保存-->获取val()-->加一个<tr>
+				//1.获取值
+				$('input').eq(3).click(function(){
+					var id = $('input').eq(0).val()		//获取值
+					var name=$('input').eq(1).val()
+					var tel=$('input').eq(2).val()
+				//创建节点	
+					var tr = $('<tr></tr>').appendTo('#tab')		//创建节点
+					$('<td>'+id+'</td>').appendTo(tr)				//tr为变量
+					$('<td>'+name+'</td>').appendTo(tr)
+					$('<td>'+tel+'</td>').appendTo(tr)
+					$('<td><a href="#">删除</a></td>').appendTo(tr)
+				//	
+					
+				})
+				
+						
+					$('#save').click(function(){
+					var node1 = $('<table><tr><td></td><td></td><td></td><td></td></tr></table>')
+					$('#tab').append('node1')
+					
+					$('#line1+tr').addClass('line2')
+					for (var i=0;i<lengh.tr;i++)
+					$('#line2 td').eq(0).html($(input).eq(0).val())
+					$('#line2 td').eq(1).html($(input).eq(1).val())
+					$('#line2 td').eq(2).html($(input).eq(2).val())
+					$('#line2 td').eq(3).append(<a>删除</a>)($(input).eq(2).val())
+					var node2 = $('<a>删除</a>')
+					$('#tab').append('node1')
+				})
+				
+				
+			// 添加节点： append, appendTo
+//			 $('#box').append(node1)
+//			 node1.appendTo($('#box'))
+			// node1.appendTo('#box')
+			})
+		</script>
+	</head>
+	<body>
+		ID:<input type="text" /> <br />
+		姓名:<input type="text" /> <br />
+		Tel:<input type="text" /> <br />
+		<input type="button" id="save"  value="保存" />
+		
+		<table border="1" id="tab">
+			<tr id='line1'>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Tel</th>
+				<th>操作</th>
+			</tr>
+			<!--<tr>
+				<td>30</td>
+				<td>张三</td>
+				<td>13454547889</td>
+				<td><a href="#">删除</a></td>
+			</tr>-->
+		</table>
+		
+		
+	</body>
+</html>

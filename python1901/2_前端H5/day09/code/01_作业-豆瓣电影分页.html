@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.active {
+				background: pink;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<ul id="list">
+			
+		</ul>
+		
+		<div>
+			<button class="active">1</button>
+			<button>2</button>
+			<button>3</button>
+			<button>4</button>
+			<button>5</button>
+		</div>
+	</body>
+	
+	<script src="js/jquery-1.12.3.js"></script>
+	<script>
+		$(function(){
+			
+			//获取第一页数据
+			getMovie(1)
+			function getMovie(page){
+				var url = "http://60.205.181.47/movies/?page=" + page
+				
+				$.get(url, function(data){
+					
+					// 清空旧节点
+					$('#list').empty()
+					
+					var movies = data.movie
+					for (var i=0; i<movies.length; i++) {
+						var movie = movies[i] // 电影名称
+						
+						// 将title显示在页面上
+						$('<li>'+ movie +'</li>').appendTo('#list')
+					}
+					
+				})
+			}
+			
+			// 分页
+			$('button').click(function(){
+				var index = $(this).index()
+				
+				getMovie(index + 1)
+				
+				$(this).addClass('active').siblings().removeClass('active')
+			})
+			
+			
+		})
+	</script>
+	
+</html>

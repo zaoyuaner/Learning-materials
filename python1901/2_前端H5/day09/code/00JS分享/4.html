@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		
+		console.log(false == "")  // true
+		console.log(false == [])  // true
+		console.log(false == {})  // false
+		console.log("" == 0)      // true
+		console.log("" == [])     // true
+		console.log("" == {})     // false
+		console.log(0 == [] )     // true
+		console.log(0 == {})      // false
+		console.log(0 == null )   // false 
+		
+//		console.log(false)		//"false"
+//		console.log("")			//""
+//		console.log([]) 		//"[]"
+//		console.log({})			//"[object Object]"	
+//		console.log(0)			//"0"
+//		console.log(null ) 		// "null"
+		
+		console.log("")
+		console.log(Number([]))  // 0
+		console.log(Number({}))  // NaN
+		console.log(Number(null))  // 0
+		if (Number([])) {
+			console.log(10)
+		}
+		
+	</script>	
+</html>

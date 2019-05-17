@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style type="text/css">
+			
+			#box {
+				width: 200px;
+				height: 200px;
+				background: red;
+				/*border:10px solid green;*/  /* border复合写法 */
+				
+				/*border-width: 10px;*/
+				border-top-width: 5px;
+				border-right-width: 4px;
+				border-bottom-width: 10px;
+				border-left-width: 20px;
+				
+				/*border-style: solid;*/ 
+				border-top-style: dashed;
+				border-right-style: dotted;
+				border-bottom-style: double;
+				border-left-style:solid;
+				/*
+				 solid: 实线
+				 dashed: 虚线
+				 dotted: 点线
+				 double: 双线
+				 */			
+				
+				/*border-color: pink;*/
+				border-top-color: pink;
+				border-right-color: green;
+				border-bottom-color: gray;
+				border-left-color: yellow;
+				
+				
+				border-right: none; /* 取消右边框 */
+				
+			}
+			
+			#box2 {
+				width: 120px;
+				height: 120px;
+				background: red;
+				margin-top: 20px;
+				
+				/* 圆角 */
+				/*border-radius: 50px;*/
+				border-radius: 50%;
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+		<div id="box">div</div>
+		
+		<div id="box2">div2</div>
+		
+	</body>
+</html>

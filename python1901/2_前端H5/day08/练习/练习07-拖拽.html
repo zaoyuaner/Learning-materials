@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-1.12.3.js"></script>
+		<script>
+			$(function(){
+				
+				//练习
+				//  实现拖拽
+				$('img').mousedown(function(e){
+					e.preventDefault()  //阻止默认行为
+					// e.stopPropagation()  //阻止冒泡
+					var x = e.offsetX
+					var y = e.offsetY
+					
+					$(document).mousemove(function(e){
+						$('img').css({left:e.pageX-x, top:e.pageY-y})
+					})
+					$(document).mouseup(function(){
+						$(document).off('mousemove mouseup')
+					})
+				})
+				
+			})
+		</script>
+	</head>
+	<body style="background: black;">
+		<img src="images/girl.gif" width="200" height="200" style="position: absolute; left: 10px; top: 10px;" />
+	</body>
+</html>

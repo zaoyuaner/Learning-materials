@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<li>王者荣耀</li>
+			<li>斗地主</li>
+			<li>升级</li>
+			<li class="gold">黄金矿工</li>
+			<li class="tank">坦克大战</li>
+			<li>魂斗罗</li>
+			<li>植物大战僵尸</li>
+		</ul>
+	</body>
+	
+	<script src="js/jquery-1.12.3.js"></script>
+	<script>
+		$(function(){
+			
+			// 伪类选择器
+			// :first : 匹配到第一个
+//			 $('ul li:even').css('color', 'red')
+//			 $('ul li:odd').css('color', 'deepskyblue')
+//			 $('ul li:gt(4)').css('color', 'orange')
+//			 $('ul li:not(".gold")').css('color', 'red')
+//			$('ul li').not(".tank").css('color', 'red')
+//			$('ul li').not(".gold,.tank").css('background', 'green')
+//			 $('ul li').first().css('color', 'red')
+			
+			// :last : 匹配到最后一个
+//			 $('ul li:last').css('color', 'red')
+			// $('ul li').last().css('color', 'red')
+			
+			// :eq(index) : 匹配到第index个
+//			 $('ul li:eq(1)').css('color', 'red')
+			// $('ul li').eq(2).css('color', 'red')
+//			 $('ul li').eq(-2).css('color', 'red')  //倒数第2个
+			
+			//:even : 偶数
+			//:odd : 奇数
+			//:gt(): 大于
+			//:lt(): 小于
+			//:not(): 去除指定元素
+//			$('ul li:even').css('color', 'red')
+//			$('ul li:odd').css('color', 'blue')
+//			$('ul li:gt(2)').css('background', 'pink')
+//			$('ul li:lt(2)').css('background', 'green')
+			
+			//$('ul li:not(".gold,.tank")').css('background', 'green')
+//			$('ul li').not(".gold,.tank").css('background', 'green')
+//			
+//			// length
+//			// size()
+//			console.log( $('ul li').length )
+//			console.log( $('ul li').size() )
+			
+			console.log($('ul li').length)
+		})
+	</script>
+	
+</html>

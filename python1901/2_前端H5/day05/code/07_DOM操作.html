@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box">
+			<p id="box1">hello</p>	
+			<p id="box2">hello</p>	
+		</div>
+		
+	</body>
+	<script>
+		/*
+		 DOM操作所涉及的方法有: 
+	      createElement(); 创建一个元素节点
+	      appendChild(); 添加一个新子节点到子节点的末尾
+	      cloneNode(); 复制节点
+	      removeChild(); 移除节点
+		
+	      createTextNode(); 创建一个文本节点
+	      insertBefore(); 将新节点插入到某节点前面
+	      replaceChild(); 将新节点替换旧节点
+		*/
+		
+	    // createElement(); 创建一个元素节点
+	    // appendChild(); 添加一个新子节点到子节点的末尾
+		var node1 = document.createElement("div");   // <div></div>
+		// console.log(node1);  // [object HTMLDivElement]
+		box.appendChild(node1)
+		node1.innerHTML = "思聪"
+		
+		// cloneNode(); 复制节点
+		//   cloneNode()： 不复制内容
+		//   cloneNode(true)： 复制内容
+		var newBox2 = box2.cloneNode(true)  
+		box.appendChild(newBox2)
+		
+		//removeChild(); 移除节点
+		// box.removeChild(box1)
+		//box1.parentNode.removeChild(box1)
+		
+		
+		// createTextNode(); 创建一个文本节点
+	    // insertBefore(); 将新节点插入到某节点前面
+	    // replaceChild(); 将新节点替换旧节点
+		
+		var node2 = document.createTextNode("我是文本")
+		// box.appendChild(node2)
+		// box.insertBefore(node2, box1)
+		box.replaceChild(node2, box1)
+		
+		
+		
+	</script>
+</html>

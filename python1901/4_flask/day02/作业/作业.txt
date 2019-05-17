@@ -1,0 +1,20 @@
+
+作业:
+
+	1. 使用装饰器去实现登录校验的功能
+		@login_required
+		装饰器的定义条件:
+			外层函数嵌套内层函数
+			外层函数返回内层函数
+			内层函数调用外层函数的参数
+	2. 创建博客项目
+		项目名为blog
+		将博客前端页面放在blog/templates/web/下
+		将博客后端页面放在blog/templates/back/下
+
+		将博客前端的样式css、js、images等内容放在blog/static/web/下
+		将博客后端的样式css、js、images等内容放在blog/static/back/下
+
+
+
+

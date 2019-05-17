@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body style="width: 2000px; height: 2000px;">
+		
+		<div id="box" style="width: 300px; height: 300px; background: pink; position: absolute; left: 100px; top: 100px;"></div>
+		
+		
+		<script>
+			document.onclick = function(e){
+				// console.log(arguments.length)  // 1
+				// e: 事件对象 / event对象
+				var e = e || event
+				
+				// console.log(e.button)  // 0表示鼠标左键，1表示轮滚，2表示右键
+				// clientX,clientY: 距离浏览器边界的距离
+				// pageX,pageY: 距离页面内容边界的距离（重点）
+				// screenX,screenY: 距离显示器边界的距离
+//				console.log(e.clientX +","+ e.clientY)
+//				console.log(e.pageX +","+ e.pageY) 
+//				console.log(e.screenX +","+ e.screenY)
+				
+			}
+			
+			box.onclick = function(e){
+				var e = e || event;
+				// offsetX, offsetY : 距离所点击的元素边界的距离 (重点)
+				console.log(e.offsetX +","+ e.offsetY)				
+			}
+			
+		</script>
+	</body>
+</html>

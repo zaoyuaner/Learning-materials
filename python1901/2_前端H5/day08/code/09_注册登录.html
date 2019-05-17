@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	
+	</body>
+	
+	<script src="js/jquery-1.12.3.js"></script>
+	<script>
+		$(function(){
+			
+//			$.ajax({
+//				type: 'POST',
+//				url: 'http://10.20.153.122:5000/register/',
+//				data: {name:"zs", pwd:'123456'},
+//				
+//				success: function(d){
+//					console.log(d)
+//					console.log(1)
+//				}, 
+//				error: function(e){
+//					console.log(e)
+//					console.log(2)
+//				}  
+//				
+//			})
+
+			$.ajax({
+				type: 'POST',
+				url: 'http://10.20.153.122:5000/login/',
+				data: {name:"zs", pwd:'123456'},
+				
+				success: function(d){
+					console.log(d)
+					console.log(1)
+				}, 
+				error: function(e){
+					console.log(e)
+					console.log(2)
+				}  
+				
+			})
+
+		})
+	</script>
+</html>

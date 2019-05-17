@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-1.12.3.js"></script>
+		<script>
+			$(function(){
+//				
+//				//练习
+//				//  鼠标在页面上移动， 让精灵跟随移动
+				$(document).mousemove(function(e){
+					$('img').css({left: e.pageX-$('img').width()/2, top:e.pageY-$('img').height()/2})
+				})
+
+		})
+		</script>
+	</head>
+	<body style="background: black;">
+		<img src="images/girl.gif" width="200" height="200" style="position: absolute; left: 10px; top: 10px;" />
+		
+	</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>聊天室</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.0/jquery.js"></script>
+</head>
+<body>
+    <!--聊天窗口-->
+    <p>聊天板</p>
+    <div id="content" style="width: 500px; height: 300px; border:1px solid">
+
+    </div>
+
+    <!--输入窗口-->
+    <p>输入框</p>
+    <input id="message">
+
+    <button class="btn">提交</button>
+
+
+
+    <script>
+        var websocket = new WebSocket('ws:127.0.0.1:8000/chat/')
+        websocket.onmessage = function (e) {
+            console.log(e)
+            $('#content').append('<br/>')
+            $('#content').append(e.data)
+
+        }
+        $('.btn').click(function () {
+            var content = $('#message').val()
+            websocket.send(content)
+        })
+    </script>
+</body>
+</html>

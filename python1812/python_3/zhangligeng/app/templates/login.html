@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>梦芭莎-登录</title>
+		<link rel="stylesheet" type="text/css" href="/static/css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="/static/css/login.css"/>
+
+		<script src="/static/js/jquery-1.12.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/static/js/login.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="top" class="clearfix">
+			<div class="main">
+				<a href="#"><img src="/static/images/M4_5_134701.jpg"/></a>
+				<div id="con">
+					<div id="con-left">
+						<img src="/static/images/M8_23_104640.jpg"/>
+					</div>
+					<div id="con-right">
+						<div id="login-top">
+							<ul>
+								<li class="active">普通登录</li>
+								<li>无密码登录</li>
+							</ul>
+						</div>
+						<!----普通登录------>
+						<div id="login-con">
+							<!----点击二维码登录---->
+							<div id="scan-click"></div>
+
+							<!--验证登录-->
+                            <form action="/login/" method="post">
+								<div id="account">
+									<img class="true" src="/static/images/l_090.jpg"/>
+									<input type="text"
+                                           placeholder="手机号"
+                                           name="username"/>
+									<div id="tip1">
+										<img src="/static/images/l_060.jpg"/><span></span>
+									</div>
+								</div>
+
+								<div id="password">
+									<img class="true" src="/static/images/l_090.jpg"/>
+									<input type="password"
+                                           placeholder="密码"
+                                           name="password"/>
+									<div id="tip2">
+										<img src="/static/images/l_060.jpg"/><span></span>
+									</div>
+								</div>
+
+								<a class="a1" href="#">忘记密码?</a>
+								<a class="a2" href="/register/">注册</a>
+								<input type="submit" id="btn" value="立即登录" />
+							</form>
+							<div id="login-other">
+								<span>其他登录方式:</span><a href="#"><img src="/static/images/wx.jpg"/></a>
+								<a href="#"><img src="/static/images/qqlogo0.jpg"/></a>
+								<a href="#"><img src="/static/images/l_050.jpg"/></a>
+
+								<a href="#"><img src="/static/images/weibologin0.jpg"/></a>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div id="footer-main">
+				<a href="#">首页</a>
+				<a href="#">公司简介</a>
+				<a href="#">旗下品牌</a>
+				<a href="#">零售店址</a>
+				<a href="#">梦芭莎网盟</a>
+				<a href="#">网点代理</a>
+				<a href="#">网站地图</a>
+				<a href="#">友情链接</a>
+				<p>Copyright © 2010-2019 梦芭莎官方网站，广州摩拉网络科技有限公司 All Rights Reserved 粤B2-20080069号 粤公网安备44010302000075</p>
+			</div>
+		</div>
+		<!----跳转显示------>
+		<div id="box-show" style="position: absolute;top: 0px;left: 0px;background: white;width: 400px;height: 200px;display: none;box-shadow: 2px 2px 2px 5px #ccc;font-size: 24px;">
+			登录成功，<span>5</span>s后跳转到首页
+		</div>
+	</body>
+</html>

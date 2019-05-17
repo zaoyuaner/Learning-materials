@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+		<ul>
+			<li>1111</li>
+			<li>2222</li>
+			<li>3333</li>
+			<li>4444</li>
+			<li>5555</li>
+		</ul>
+		<ul>
+			<li>aaa</li>
+		</ul>
+	</body>
+	<script src="js/jquery-1.12.3.js"></script>
+	<script>
+		$(function(){
+			// :first : 所有li的第一个
+			// :first-child ： 每个ul的第一个li
+//			 $('ul li:first').css('color', 'red')
+//			$('ul li:first-child').css('color', 'red')
+			
+//			$('ul li:last-child').css('color', 'blue')
+			
+			//:nth-child(n) : 第n个， 从1开始
+//			 $('ul li:nth-child(2)').css('color', 'red')
+//			 $('ul li:nth-child(2n)').css('color', 'red')
+//			 $('ul li:nth-child(3n+2)').css('color', 'red')
+			
+			// :only-child
+			$('ul li:only-child').css('color', 'red')
+			
+			
+		})
+	</script>
+	
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<!--
+			表单form: 作用：可以发送http请求给服务器
+				method：get/post  请求方式
+				action: 请求的服务器地址url
+		-->
+		
+		<form action="" method="get">
+			
+			<!-- 单行文本框 -->
+			<input type="text" value="hello" placeholder="请输入用户名" /> <br>
+			
+			<!-- 按钮 -->
+			<input type="button" value="input按钮" /> <br>
+			<input type="submit" value="submit按钮" />
+			<input type="reset" />  <br>
+			<button>button按钮</button> <br>
+			
+			<!-- 密码输入框 -->
+			<input type="password" style="width: 100px;" />
+			
+			<!-- 单选框 -->
+			<h3>请选择一个你的爱好：</h3>
+			<input type="radio" name="like" checked />编程
+			<input type="radio" name="like" disabled />吃饭
+			<input type="radio" name="like" />睡觉
+			<input type="radio" name="like" />打豆豆
+			
+			<!-- 多选框 -->
+			<h3>请选择你的爱好：</h3>
+			<input type="checkbox" name="like1" checked />编程
+			<input type="checkbox" name="like1" />吃饭
+			<input type="checkbox" name="like1" checked disabled />睡觉
+			<input type="checkbox" name="like1" checked />打豆豆
+			
+			<!-- 下拉菜单 -->
+			<h3>请选择一个你的爱好：</h3>
+			<select>
+				<option value="code">编程</option>
+				<option selected>吃饭</option>
+				<option>睡觉</option>
+				<option>打豆豆</option>
+			</select>
+			<br />
+			<!-- 多行文本框 -->
+			<textarea rows="5" cols="30">hello
+			</textarea>
+			
+			
+			
+			<br><br><br><br><br>
+			
+			<input type="color" />
+			<input type="date" />
+			<input type="number" />
+			
+		</form>
+		
+					<br><br><br><br><br>
+			<br><br><br><br><br>
+
+	</body>
+</html>

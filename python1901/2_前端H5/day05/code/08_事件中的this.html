@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<div id="box">
+			<div class="foo">王思聪</div>
+			<div class="foo">王健林</div>
+			<div class="foo">王宝强</div>
+			<div class="foo">王大锤</div>
+		</div>
+		
+	</body>
+	
+	<script>
+//		document.getElementById() 
+		var aDiv = box.getElementsByClassName("foo")
+		for (var i=0; i<aDiv.length; i++) { 
+			aDiv[i].index = i
+			aDiv[i].onclick = function(){
+				// console.log(this.innerHTML)  // 所点击的div的内容
+				// console.log(i)  // i是不可以当成下标来用
+				//console.log(this.index);
+				
+				for (var j=0; j<aDiv.length; j++){
+					aDiv[j].style.border = 'none';
+				}
+				this.style.border = "1px solid orange"
+				
+			}
+		}
+		//console.log("哈哈， i=" + i)
+		
+		
+	</script>
+	
+</html>

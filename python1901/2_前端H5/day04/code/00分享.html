@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+	body{
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		margin: 10%;
+	}
+	button{
+		display: inline-block;
+		outline: none;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+		font: 14px/% Arial, Helvetica,sans-serif;
+		padding: 0.5em 2em 0.55em;
+		text-shadow: 0 1px 1px rgba(0,0,0,.3);
+		-webkit-border-radius: 0.5em;
+		-moz-border-radius: 0.5em;
+		border-radius: 0.5em;
+		background-color: #00ffaa;
+		color: white;
+	}
+	button:hover{
+		text-decoration: none;
+	}
+</style>
+</head>
+<body>
+	<div id="cun">
+<video src="https://qiniu-xpc0.xpccdn.com/5c8f05b84363b.mp4" id="myVideo" width="630" ></video><br/>
+<button id="playPause" onclick="playPause()">播放\暂停</button>
+<button onclick="goBack(5);">快进5秒</button>
+<button onclick="goBack(-5);">倒退5秒</button>
+<button onclick="volume(0.1);">音量+</button>
+<button onclick="volume(-0.1);">音量-</button>
+<button onclick="isMuted()" id="isMuted">静音</button>
+</div>
+</body>
+<script type="text/javascript">
+	var myVideo=document.getElementById('myVideo');
+	/*function playPause() {
+		if(myVideo.paused)
+			myVideo.play();
+		else
+			myVideo.pause();
+		}*/
+		function goBack(val) {
+			myVideo.currentTime += val;
+		}
+		function volume(val) {
+			myVideo.volume += val;
+		}
+		/*function isMuted() {
+			if(myVideo.muted)
+				myVideo.muted=false;
+			else
+				myVideo.muted=true;
+		}*/
+	function playPause() {
+		var ppButton=document.getElementById("playPause");
+		if(myVideo.paused){
+			myVideo.play();
+			ppButton.innerHTML="暂停";
+	}
+	else{
+		myVideo.pause();
+		ppButton.innerHTML="播放"
+		}
+	}
+	function isMuted() {
+		var imButton=document.getElementById('isMuted');
+		if(myVideo.muted){
+			myVideo.muted=false
+			imButton.innerHTML="静音";
+	}
+	else{
+		myVideo.muted=true;
+		ppButton.innerHTML="声音"
+		}
+	}
+</script>
+</html>

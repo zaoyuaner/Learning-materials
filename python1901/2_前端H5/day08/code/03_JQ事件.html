@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button class="btn1">按钮1</button>
+		<button class="btn2">按钮2</button>
+	
+		<div id="box" style="width: 300px; height: 100px; background: pink;">
+			<button class="btn3">按钮3</button>
+			
+		</div>
+		
+	<script src="js/jquery-1.12.3.js"></script>
+	<script>
+		$(function(){
+			
+			// trigger() : 主动触发事件
+			// triggerHandler() : 主动触发事件，不会触发默认行为
+//			$('.btn1').click(function(){
+//				console.log("click")
+//			})
+//			$('.btn2').click(function(){
+//				$('.btn1').triggerHandler('click')
+//			})
+			
+			
+			// on() : 绑定事件
+			// off() ： 删除事件
+			
+			// on()
+			// 绑定一个事件
+			$('.btn1').on('click', function(){
+				console.log('click-on')
+			})
+			
+			// 绑定多个事件
+			$('.btn1').on({
+				'mouseenter': function(){
+					console.log('移入')
+				},
+				'mouseleave': function(){
+					console.log('移出')
+				}
+			})
+			
+			// off()
+			// $('.btn1').off()  // 删除所有事件
+			// $('.btn1').off('mouseenter')  
+			$('.btn1').off('mouseenter mouseleave')  
+			
+			
+			// 事件委托
+//			$('.btn3').click(function(){
+//				console.log('btn3-click')
+//			})
+			
+			// on: 事件委托
+			$('#box').on('click', ".btn3", function(){
+				console.log('btn3-click-on')
+				console.log(this)  // btn
+			})
+			
+			// 后创建的按钮
+			$('.btn2').click(function(){
+				$('<button class="btn3">按钮</button>').appendTo('#box')
+			})
+			
+		})
+	</script>
+	</body>
+</html>

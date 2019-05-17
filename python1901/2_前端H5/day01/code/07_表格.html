@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<!--
+			table标签
+			作用：显示数据
+			表格组成
+				<table width="value" height="value" border="value" bgcolor="value" cellspacing="value" cellpadding="value">
+					<tr>
+						<td></td>
+						<td></td>
+					</tr>
+				</table>
+			
+			注：一个tr表示一行;一个td表示一列(一个单元格)  
+			
+			*数据表格的相关属性
+				1）width="表格的宽度"
+				2）height="表格的高度"
+				3）border="表格的边框"
+				4）bgcolor="表格的背景色" bg=background
+				5）bordercolor="表格的边框颜色"
+				6）cellspacing="单元格与单元格之间的间距" 外边距
+				7）cellpadding="单元格与内容之间的空隙" 内边距
+				8）对齐方式：align="left/center/right";
+				9)合并单元格属性：
+					colspan=“所要合并的单元格的列数"合并列;
+					rowspan=“所要合并单元格的行数”合并行;
+		-->
+		
+		<table border="1" width="300" height="150" bgcolor="green" bordercolor="red" cellspacing="0" cellpadding="20">
+			<tr>
+				<th>姓名</th>
+				<th>年龄</th>
+				<th>性别</th>
+			</tr>
+			<tr>
+				<td>范冰冰</td>
+				<td>39</td>
+				<td>女</td>
+			</tr>
+			<tr>
+				<td>李晨</td>
+				<td>40</td>
+				<td>男</td>
+			</tr>
+		</table>
+		
+		
+		<hr />
+		
+		<table border="1" width="300" height="150" cellspacing="0" align="center">
+			<tr height="30">
+				<th width="50">姓名</th>
+				<th colspan="2">年龄/性别</th>
+				<!--<th>性别</th>-->
+			</tr>
+			<tr align="center">
+				<td rowspan="2">强东</td> <!-- 合并行 -->
+				<td>
+					<b>45</b>
+					<input type="text" />
+				</td>
+				<td>男</td>
+			</tr>
+			<tr>
+				<!--<td>强东</td>-->
+				<td>45</td>
+				<td>男</td>
+			</tr>
+		</table>
+		<hr />
+		
+		<table border="1" width="300" height="150" cellspacing="0" align="center">
+			
+			<tbody>
+				<tr align="center">
+					<td>强东</td> 
+					<td>45</td>
+					<td>男</td>
+				</tr>
+				<tr>
+					<td>强东</td>
+					<td>45</td>
+					<td>男</td>
+				</tr>
+			</tbody>
+			
+			<thead>
+				<tr height="30">
+					<th width="50">姓名</th>
+					<th>年龄</th>
+					<th>性别</th>
+				</tr>
+			</thead>
+			
+			<tfoot>
+				<tr height="30">
+					<th width="50">姓名</th>
+					<th>年龄</th>
+					<th>性别</th>
+				</tr>
+			</tfoot>
+			
+		</table>
+		
+		<br />
+		<br />
+		<br />
+		
+	</body>
+</html>

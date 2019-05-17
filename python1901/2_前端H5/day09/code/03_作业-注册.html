@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h2>注册</h2>
+		<form>
+			用户名：<input type="text" /> <br />
+			密码：<input type="password" /> <br />
+			<input type="button" value="注册" />
+		</form>
+	</body>
+	
+	<script src="js/jquery-1.12.3.js"></script>
+	<script>
+		$(function(){
+			
+			/*
+			 * 注册（POST）
+				注册接口:  http://60.205.181.47/register/
+				参数:name=zhangsan, 用户名（必须）
+				参数:pwd=123456,密码（必须）
+			 */
+			
+			$('input').eq(2).click(function(){
+				var name = $('input').eq(0).val()
+				var pwd = $('input').eq(1).val()
+				
+				$.ajax({
+					type: 'post',
+					url: 'http://60.205.181.47/register/',
+					data: {name: name, pwd: pwd},
+					success: function(data){
+						console.log(data)
+					},
+					error: function(e){
+						console.log(e)
+					}
+				})
+				
+			})
+			
+			
+			
+		})
+	</script>
+</html>

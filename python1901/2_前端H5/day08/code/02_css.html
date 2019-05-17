@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body style="height: 2000px;">
+		<div id="box1" style="width: 300px; height: 300px; background: pink; position: absolute; left: 100px; top: 100px;">
+			<div id="box2" style="width: 100px; height: 100px; background: green; position: absolute; left: 50px; top: 50px;"></div>
+		</div>
+		
+		<button style="position: absolute; top: 500px;">改变scrollTop</button>
+		
+		<div id="box3" style="width: 100px; height: 100px; background: green; position: absolute; left: 50px; top: 550px; padding: 10px; border: 10px solid red; margin: 10px;"></div>
+
+	</body>
+	<script src="js/jquery-1.12.3.js"></script>
+	<script>
+		$(function(){
+			
+			// css
+			// offset() : 相对页面的偏移
+			// position() : 相对父级定位参照物的偏移
+//			console.log($('#box1').offset().left)  // 100
+//			console.log($('#box1').offset().top)  // 100
+//			console.log($('#box2').offset().left)  // 150
+//			console.log($('#box2').offset().top)  // 150
+//
+//			console.log($('#box1').position().left)  // 100
+//			console.log($('#box1').position().top)  // 100
+//			console.log($('#box2').position().left)  // 50
+//			console.log($('#box2').position().top)  // 50
+			
+			// $('#box1').offset({left: 10})
+			$('#box1').css({left: 10})  //推荐
+			
+			
+			// scrollTop()
+//			console.log($(window).scrollTop())
+//			console.log($(document).scrollTop())
+			
+			$('button').click(function(){
+				$(document).scrollTop(100)		
+			})
+			
+			// width(), height()
+			//   width()  : 宽度
+			//	 innerWidth() ： width + padding
+			//   outerWidth() ： width + padding + border
+			//   outerWidth(true) ： width + padding + border + margin
+			console.log($('#box3').width())  // 100
+			console.log($('#box3').innerWidth())  // 120
+			console.log($('#box3').outerWidth())  // 140
+			console.log($('#box3').outerWidth(true))  // 160
+			
+			
+		})
+	</script>
+</html>

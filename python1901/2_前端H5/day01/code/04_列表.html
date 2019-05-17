@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<!--
+			列表:
+				ul: 无序列表  （使用最多）
+				ol： 有序列表
+				dl： 自定义列表
+		-->
+		
+		<ul>
+			<li>无序列表</li>
+			<li>无序列表</li>
+			<li>无序列表</li>
+		</ul>
+		
+		
+		<ol type="a">
+			<li>有序列表</li>
+			<li>有序列表</li>
+			<li>有序列表</li>
+		</ol>
+		<!--
+			1)、type:规定列表中的列表项目的项目符号的类型
+				语法：<ol type="a"></ol>
+				1 数字顺序的有序列表（默认值）（1, 2, 3, 4）。
+				a 字母顺序的有序列表，小写（a, b, c, d）。
+				A 字母顺序的有序列表，大写（A,B,C,D)
+				i 罗马数字，小写（i, ii, iii, iv, v, vi）。
+				I 罗马数字，大写（I, ii, iii, iv）。
+			2)、start 属性规定有序列表的开始点。
+				语法：<ol start="5"></ol>
+		-->
+		<ol type='I' start='3'>
+			<li>权利的游戏1</li>
+			<li>权利的游戏2</li>
+			<li>权利的游戏3</li>
+			<li>权利的游戏4</li>
+			<li>权利的游戏5</li>
+			<li>权利的游戏6</li>
+			<li>权利的游戏7</li>
+			<li>权利的游戏8</li>
+		</ol>
+		
+		<!--自定义列表，一般和css结合使用-->
+		<dl>
+			<dt>权利的游戏第一季</dt>
+			<dd>第1集</dd>
+			<dd>第2集</dd>
+			<dd>第3集</dd>
+			
+			<dt>权利的游戏第二季</dt>
+			<dd>第1集</dd>
+			<dd>第2集</dd>
+			<dd>第3集</dd>
+		</dl>
+		
+		
+	</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<div>
+			<button>1</button>
+			<button>2</button>
+			<button>3</button>
+			<button>4</button>
+			<button>5</button>
+		</div>
+		
+		<ul id="list">
+			
+		</ul>
+		
+	</body>
+	
+	<script src="js/jquery-1.12.3.js"></script>
+	<script>
+		$(function(){
+			
+			//https://movie.douban.com/j/new_search_subjects?sort=T&range=0,10&tags=&start=1
+			
+			// 
+			// Ajax 同源策略, 浏览器的一个安全策略
+			//  不能跨域 ，不能跨源
+			//	
+			// "XMLHttpRequest cannot load https://movie.douban.com/j/new_search_subjects?sort=T&range=0,10&tags=&start=0. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://127.0.0.1:8020' is therefore not allowed access."
+			// 
+			
+			
+			//获取第一页数据
+			getMovie(1)
+			function getMovie(page){
+				var url = "http://10.20.153.122:5000/movies?page=" + page
+				
+				$.get(url, function(data){
+					var movies = data.data
+					for (var i=0; i<movies.length; i++) {
+						var movie = movies[i]
+						var title = movie.title  // 电影名称
+						
+						// 将title显示在页面上
+						$('<li>'+ title +'</li>').appendTo('#list')
+					}
+					
+				})
+			}
+			//
+			$('button').click
+			
+			
+		})
+	</script>
+	
+</html>

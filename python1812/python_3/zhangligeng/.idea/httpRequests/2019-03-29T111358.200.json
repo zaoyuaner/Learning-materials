@@ -1,0 +1,10 @@
+{
+  "date": "1553829237.8534398",
+  "token": "11b04c2fd7a1528c9436cbae31a2d3a0",
+  "status": 200,
+  "msg": "注册成功!!!",
+  "user": {
+    "username": "qq",
+    "permissions": 0
+  }
+}

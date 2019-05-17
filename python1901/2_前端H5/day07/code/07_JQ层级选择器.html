@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" value="0" />
+		<div>
+			<input type="text" value="1" />
+		</div>
+		<input type="text" value="2" />
+	
+		
+		<div id="box">
+			<input type="text" value="3" />
+			<div>
+				<input type="text" value="4" />
+			</div>
+		</div>
+		
+		<input type="text" value="5" />
+		<div>
+			<input type="text" value="6" />
+		</div>
+		<input type="text" value="7" />
+		
+		
+		<ul id="list">
+			<li>111</li>
+			<li>222</li>
+			<li>333</li>
+			<li>444</li>
+		</ul>	
+		
+	</body>
+	
+	<script src="js/jquery-1.12.3.js"></script>
+	<script>
+		$(function(){
+			// 层级选择器
+//			$('#box').prev().css('border', '3px solid red') 
+			
+			
+			
+			// 后代选择器
+//			 $('#box input').css('border', '3px solid red')
+			// $('#box').find('input').css('border', '3px solid green')
+			
+			// 子选择器
+			// $('#box > input').css('border', '3px solid red')
+			// $('#box').children('input').css('border', '3px solid green')
+			
+			// 兄弟
+			// + : 表示同级的后一个， next()
+			// ~ ： 表示同级的后面所有指定选择器的元素, nextAll()
+			// $('#box + input').css('border', '3px solid red')
+//			 $('#box').next().css('border', '3px solid red')
+			//$('#box ~ input').css('border', '3px solid red')
+			//$('#box').nextAll('input').css('border', '3px solid red')
+			
+			// $('#box').prev().css('border', '3px solid red')
+			// $('#box').prevAll('input').css('border', '3px solid red')
+			
+			// 所有兄弟节点
+//			$('#box').siblings('input').css('border', '3px solid red')
+			
+			
+			 //ul
+			$('#list li').click(function(){
+				$(this).css('background', 'red')
+						.siblings().css('background', 'white')
+			}) 
+			
+		})
+	</script>
+	
+</html>

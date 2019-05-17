@@ -1,0 +1,10 @@
+def news():
+    return "新闻"
+def home():
+    return "首页"
+def video():
+    return "视频"
+def image():
+    return "美图"
+def music():
+    return "音乐"

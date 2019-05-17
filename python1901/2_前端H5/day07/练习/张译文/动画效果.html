@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.foo{
+				width: 100px;
+				height: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<button>开始动画</button>
+		<div class="foo" style="background: red;"></div>
+		<div class="foo" style="background: green;"></div>
+		<div class="foo" id='box' style="background: green;"
+	
+	</body>
+	<script src="js/jquery-1.12.3.js"></script>
+	<script>
+		//show():显示|hide():隐藏|toggle():切换
+			//fadeIn:淡入|fadeOut
+			//animate:动画(位置|大小|透明度)
+			//jQuery.fx.off:关闭页面上的动画|jQuery.fx.interval:设置帧数
+		$(function(){
+			$('button').click(function(){
+//				$('div').show('fast')
+//				$('div').show(3000,function(){		//回调
+//					console.log('动画结束')
+//				$('div').hide()
+//				$('div').hide(5000)
+//				$('div').toggle(1000)
+//				$('div').slideDown(5000)
+//				$('div').fadeIn(2000)    //淡入
+//				$('div').fadeOut(2000)    //淡出
+//				
+//				$('div').fadeTo(2000,0.5)    //修改透明度
+				//animate():位置|大小|透明度
+				$('#box').animate({left:300;top:300},3000,
+					function(){		//回调
+					console.log('动画结束')})
+				$('#box').animate({left:300},3000)
+				
+
+
+				})
+			})
+			
+			
+			
+		})
+	
+	
+	</script>
+</html>

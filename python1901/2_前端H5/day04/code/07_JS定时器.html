@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script>
+	
+	// 定时器：周期性的执行
+//	setInterval(function(){
+//		console.log("hello")
+//	}, 3000)
+	
+	
+	// 定时器是：异步
+	
+	var n = 0;
+	// 开启定时器
+	var timer = setInterval(function(){
+		n++;
+		console.log("n=" + n)
+		
+		if (n == 5){
+			//停止定时器
+			clearInterval(timer)
+		}
+		
+	}, 2000)
+	
+	console.log("timer:" + timer)  // 定时器id
+	
+	
+	// 延时器
+	// setTimeout() : 延迟指定时间后调用一次函数
+	// clearTimeout() ： 清除延时器
+	var timer2 = setTimeout(function(){
+		console.log("熊猫直播 凉凉")
+	}, 3000)
+	
+//	clearTimeout(timer2)
+	
+	
+	
+</script>
+
+

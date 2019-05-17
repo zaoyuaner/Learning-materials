@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+
+		var fullname = 'John Doe';
+		var obj = {
+   		   	fullname: 'Colin Ihrig',
+           	prop: {
+              	fullname: 'Aurelio De Rosa',
+  			  	getFullname: function() {
+    		      	return this.fullname;
+				}
+			} 
+	      };
+		 
+//		console.log(obj.prop.getFullname());  // "Aurelio De Rosa"		
+											  //作为obj.prop对象的函数被调用,当前的上下文指代后者，并且函数返回这个对象的fullname属性
+		
+//		var test = obj.prop.getFullname; 	 //"John Doe"		
+//		console.log(test());		//"John Doe"	//当前的上下文是全局对象window，这是因为test被隐式地作为全局对象的属性,函数返回window的fullname
+		
+		obj.test = obj.prop.getFullname; 	 
+		console.log(obj.test());
+		
+//		这段代码打印结果是：Aurelio De Rosa 和 John Doe 。
+//		原因是，JavaScript中关键字this所引用的是函数上下文，取决于函数是如何调用的，而不是怎么被定义的。
+//		在第一个console.log()，getFullname()是作为obj.prop对象的函数被调用。
+//		因此，当前的上下文指代后者，并且函数返回这个对象的fullname属性。
+//		相反，当getFullname被赋值给test变量时，当前的上下文是全局对象window，这是因为test被隐式地作为全局对象的属性。
+//		基于这一点，函数返回window的fullname，在本例中即为第一行代码设置的。
+	</script>
+</html>

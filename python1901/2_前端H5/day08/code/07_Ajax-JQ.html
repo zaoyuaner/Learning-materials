@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+
+	</body>
+	<script src="js/jquery-1.12.3.js"></script>
+	<script>
+		$(function(){
+			
+			// $.ajax()
+			/*
+			 * type： 请求方式，默认是get
+			 * url: 接口
+			 * data: 参数
+			 * async: 是否异步，默认是true
+			 * success: 请求成功后的响应
+			 * error: 请求失败后的响应
+			 */
+//			$.ajax({
+//				type: "get",
+//				url: "persons2.json",
+//				data: {}, 
+//				async: true,
+//				
+//				success: function(data){
+//					// console.log(data)  // JSON对象
+//					console.log(data.status)
+//					console.log(data.msg)
+//					console.log(data.data[0].name)
+//					
+//				}, 
+//				error: function(e){
+//					console.log(e)
+//				}
+//			})
+			
+			
+			// $.get()
+			$.get('persons.json', function(data){
+				console.log(data.data[0].name)
+			})
+			
+			// $.post()
+//			$.post('persons.json', {}, function(data){
+//				console.log(data.data[0].name)
+//			})
+			
+		})
+	</script>
+</html>

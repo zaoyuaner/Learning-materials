@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box1 {
+				width: 400px;
+				height: 400px;
+				background: pink;
+				/*margin-left: 100px;*/
+				
+				/* 绝对定位 */
+				position: absolute;
+				left: 50px;
+				top: 50px;
+				/*right: 10px;*/
+				/*bottom: 10px;*/
+			}
+			
+			.box2 {
+				width: 200px;
+				height: 200px;
+				background: green;
+				
+				/* 绝对定位 */
+				position: absolute;
+				left: 20px;
+				top: 20px;
+			}
+			
+			.box3 {
+				width: 100px;
+				height: 100px;
+				background: orange;
+				
+				/* 绝对定位 */
+				position: absolute;
+				left: 20px;
+				top: 20px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<!--
+			定位: 
+				static: 默认,没有定位
+				absolute: 绝对定位
+				relative: 相对定位
+				fixed: 固定定位
+			
+			特点：
+				定位： 脱离文档流，提升层级（整层）
+				浮动： 提升层级（半层）
+			
+			定位参照物：
+				position:absolute
+				1.如果父元素有定位，则父元素为参照物，如果父元素没有定位，则继续查找父元素的父元素，一直查找到最近的有定位的元素为参照物
+				2.如果所有祖先元素都没有定位，则以页面作为参照物
+			
+			
+		-->
+		
+		<div class="box1">box1
+			
+			<div class="box2">box2
+				
+				<div class="box3">box3</div>
+				
+			</div>
+			
+		</div>
+		
+		<div style="width: 300px; height: 300px; background: rgba(100, 100, 200, 0.5);">hello</div>
+		
+		
+	</body>
+</html>

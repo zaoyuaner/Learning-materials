@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.foo1, .foo2, .foo3 {
+				/*width: 100px;
+				height: 100px;
+				background: green;*/
+				/*display: block;*/ /* 块元素 */
+				/*display: inline;*/ /* 内联元素 */
+				/*display: inline-block;*/  /* 内联块：支持宽高，不独占一行 */
+			}
+			
+			.foo1 {width: 100px; height: 100px; background: red; float: left;}
+			.foo2 {width: 100px; height: 100px; background: green; float: left;}
+			.foo3 {width: 100px; height: 100px; background: orange; float: left;}
+			.foo4 {width: 100px; height: 100px; background: pink; float: left;}
+			
+			/*.foo1 {width: 100px; height: 100px; background: red; float: right;}
+			.foo2 {width: 100px; height: 100px; background: green; float: right;}
+			.foo3 {width: 100px; height: 100px; background: orange; float: right;}
+			.foo4 {width: 100px; height: 100px; background: pink; float: right;}*/
+			
+			
+			/*
+			 float: 浮动， left, right, none
+			 	作用：让元素可以在一行显示
+			 
+			 	特点：浮动会提升层级(半层)
+			 
+			 */
+			
+			.foo1 {
+				font-size: 20px;
+				text-align: center; /* 水平居中 */
+				line-height: 100px;  /* 垂直居中 */
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="foo1">div1</div> 
+		<div class="foo2">div2</div> 
+		<div class="foo3">div3</div> 
+		<div class="foo4">div4</div> 
+		
+		<div style="width: 500px; height: 300px; background: #ccc;">div5</div>
+		
+	</body>
+</html>

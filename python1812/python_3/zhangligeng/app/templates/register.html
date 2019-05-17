@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>梦芭莎-注册</title>
+		<link rel="stylesheet" type="text/css" href="/static/css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="/static/css/register.css"/>
+
+		<script src="/static/js/jquery-1.12.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/static/js/register.js" type="text/javascript" charset="utf-8"></script>
+
+	</head>
+	<body>
+		<div id="top" class="clearfix">
+			<div class="main">
+				<a href="/static/html/index.html/"><img
+                        src="/static/images/M4_5_134701.jpg"/></a>
+				<div id="con">
+					<div id="con-left">
+						<img src="/static/images/M8_23_104640.jpg"/>
+					</div>
+					<div id="con-right">
+						<div id="reg-top">
+							<ul>
+								<li class="login">登录</li>
+								<li class="active">注册</li>
+							</ul>
+						</div>
+						<div id="reg-con">
+							<!----点击二维码登录---->
+							<!--<div id="scan-click"></div>-->
+
+							<!--验证登录-->
+                            <form action="/register/" method="post">
+								
+								<!----手机号------>
+								<div id="tel">
+									<!--<img class="true" src="/static/images/l_090.jpg"/>-->
+									<input type="text"
+                                           placeholder="输入合法的手机号"
+                                           name="username"/>
+									<div id="tip2">
+										<img src="/static/images/l_060.jpg"/><span></span>
+									</div>
+								</div>
+
+								<!----密码------->
+								<div id="password">
+									<img class="true" src="/static/images/l_090.jpg"/>
+									<input type="password"
+                                           placeholder="输入4~20位的密码"
+                                           name="password"/>
+									<div id="tip3">
+										<img src="/static/images/l_060.jpg"/><span></span>
+									</div>
+								</div>
+								
+								
+								<!----确定密码------>
+								<div id="pwd-conf">
+									<img class="true" src="/static/images/l_090.jpg"/>
+									<input type="password"
+                                           placeholder="确认密码"
+                                           />
+									<div id="tip4">
+										<img src="/static/images/l_060.jpg"/><span></span>
+									</div>
+								</div>
+
+								<!---邮箱----->
+								<div id="email">
+									<input type="text"
+                                           placeholder="输入合法的邮箱"
+                                           name="email"/>
+									<div id="tip1">
+										<img src="/static/images/l_060.jpg"/><span></span>
+									</div>
+								</div>
+								
+								<!----验证码------->
+								<input type="submit" id="btn"
+                                       value="同意以下协议，提交" /><br />
+								<input class="check" type="checkbox" checked="checked" />同意<a href="#" style="color: #e30164;">梦芭莎注册条款</a>
+							</form>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="footer">
+			<div id="footer-main">
+				<a href="#">首页</a>
+				<a href="#">公司简介</a>
+				<a href="#">旗下品牌</a>
+				<a href="#">零售店址</a>
+				<a href="#">梦芭莎网盟</a>
+				<a href="#">网点代理</a>
+				<a href="#">网站地图</a>
+				<a href="#">友情链接</a>
+				<p>Copyright © 2010-2019 梦芭莎官方网站，广州摩拉网络科技有限公司 All Rights Reserved 粤B2-20080069号 粤公网安备44010302000075</p>
+			</div>
+		</div>
+	</body>
+</html>
