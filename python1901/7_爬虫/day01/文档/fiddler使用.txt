@@ -1,0 +1,37 @@
+打开软件：
+1、配置软件，配置fiddler能够抓取https的包
+	Tools==>Options==>HTTPS
+	选中 Capture Https Connects 
+	选中 Decrypt Https Traffic
+	选中 Ignore
+	然后将fiddler关闭再次打开即可
+2、fiddler软件介绍
+	左边栏、右边栏
+	左边栏：所有的请求
+		html   <>
+		css    图片中的标记
+		js     前面标注有js
+		json   前面标注有json
+		post   一个书本，一个箭头
+	右边栏：点击左边栏其中一个请求，这个请求的详细信息就会显示到右边栏
+		右上边栏：http请求信息
+			点击  Insepctors
+			webforms：post请求所有的表单数据
+			raw：整个请求以纯文本的格式显示给你
+		右下边栏：http请求响应信息
+			有一个黄色的提示信息：响应体被编码过，需要点击进行解码，然后点击即可
+			headers：响应头信息
+			textview：响应的信息以文本的形式显示出来
+			imageview：如果图片，在这里显示图片
+			webview：模拟浏览器显示
+			cookies：cookie信息
+			raw：将响应的信息以纯文本的形式展示给你
+			json：一些接口返回给你json，在这里查看
+3、禁止fiddler抓包，file，点击第一个选项取消对号即可
+4、清楚所有的请求， 点击x号，remove all
+5、左下角黑色框框，输入指令的地方
+	select json
+	select html
+	select image
+	cls 清楚所有请求
+	?main  搜索
